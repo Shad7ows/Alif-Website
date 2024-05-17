@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --text--: #fff;
+  --back--: linear-gradient(
+    180deg,
+    #08061B 50%,
+    #0c172b 80%
+  );
+  --bur--: #5a3397;
+  --blu--: #182d55;
+}
+body {
+  font-family: "Tajawal", sans-serif;
+  /* background: var(--back--); */
+  background: var(--back--);
+  color: var(--text--);
+  text-align: right;
+  text-decoration: none;
+  overflow-x: hidden;
+}
+a {
+  color: var(--text--);
+  text-decoration: none;
+}
+a.but {
+  background-color: var(--bur--);
+  margin: 10px 0;
+  text-align: center;
+  padding: 10px 30px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.test {
+  width: 100%;
+}
+/* header */
+header {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo img {
+  width: 60px;
+  margin-right: 50px;
+}
+header ul {
+  display: flex;
+  flex-direction: row-reverse;
+}
+header li {
+  display: flex;
+  margin: 0 20px;
+  font-weight: bold;
+}
+header .donate {
+  display: flex;
+}
+header .donate span.line {
+  position: relative;
+  top: 26px;
+  border: solid 1px var(--text--);
+  width: 80px;
+  height: 0px;
+}
+@media (max-width: 900px) {
+  header li {
+    margin: 0 10px;
+    font-size: 80%;
+  }
+}
+@media (max-width: 550px) {
+  header a.but {
+    padding: 10px 20px;
+    font-size: 10px;
+  }
+  header .donate span.line {
+    width: 10px;
+  }
+}
+/* first section */
+img.back {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: -1;
+}
+img.code {
+  position: absolute;
+  left: 40px;
+  top: 100px;
+  width: 200px;
+  z-index: -1;
+}
+
+div.first {
+  margin: 50px 10%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 20;
+}
+div.first .text h1 {
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+div.first .text h5 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+div.first .logo img {
+  width: 380px;
+}
+div.first .butons a.but {
+  margin-left: 40px;
+}
+div.first .butons span.line {
+  position: relative;
+  display: flex;
+  bottom: -12px;
+  left: 420px;
+  width: 200px;
+  height: 0px;
+  border: solid 1px var(--text--);
+}
+div.first .card {
+  width: 380px;
+  height: 380px;
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+
+div.first .card-inner {
+  width: inherit;
+  height: inherit;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 10px 10px 40px -10px #182d55bd;
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+
+div.first .card:hover {
+  transform: scale(1.02) rotate(0.5deg);
+}
+
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(10px);
+  }
+}
+
+@media (max-width: 700px) {
+  div.first {
+    flex-direction: column-reverse;
+  }
+  div.first .logo {
+    margin-bottom: 50px;
+  }
+}
