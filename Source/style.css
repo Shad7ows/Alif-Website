@@ -7,11 +7,11 @@
 :root {
   --text--: #fff;
   --back--: linear-gradient(
-    180deg,
+    135deg,
     #08061B 50%,
     #0c172b 80%
   );
-  --bur--: #5a3397;
+  --bur--: #5b3398;
   --blu--: #182d55;
 }
 body {
@@ -21,18 +21,22 @@ body {
   color: var(--text--);
   text-align: right;
   text-decoration: none;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 a {
   color: var(--text--);
   text-decoration: none;
 }
+a.underline {
+  text-decoration: underline;
+}
 a.but {
   background-color: var(--bur--);
-  margin: 10px 0;
+  box-shadow: inset 0 0 15px 1px #771eff;
+  margin: 7px 0;
   text-align: center;
-  padding: 10px 30px;
-  border-radius: 15px;
+  padding: 12px 27px;
+  border-radius: 12px;
   font-size: 12px;
   font-weight: bold;
 }
@@ -49,17 +53,18 @@ header {
   align-items: center;
 }
 header .logo img {
-  width: 60px;
-  margin-right: 50px;
+  width: 45px;
+  margin-right: 160px;
 }
 header ul {
+  margin-right: 350px;
   display: flex;
   flex-direction: row-reverse;
 }
 header li {
   display: flex;
-  margin: 0 20px;
-  font-weight: bold;
+  margin: 0 25px;
+  font-weight: normal;
 }
 header .donate {
   display: flex;
@@ -68,7 +73,7 @@ header .donate span.line {
   position: relative;
   top: 26px;
   border: solid 1px var(--text--);
-  width: 80px;
+  width: 155px;
   height: 0px;
 }
 @media (max-width: 900px) {
@@ -86,24 +91,28 @@ header .donate span.line {
     width: 10px;
   }
 }
+
 /* first section */
-img.back {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  z-index: -1;
+div.background {
+    background-image: url("imgs\\Background.png");
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -2;
 }
 img.code {
   position: absolute;
-  left: 40px;
-  top: 100px;
-  width: 200px;
+  left: 70px;
+  top: 145px;
+  width: 175px;
   z-index: -1;
 }
 
 div.first {
-  margin: 50px 10%;
+  margin: 110px 10%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -111,45 +120,57 @@ div.first {
   z-index: 20;
 }
 div.first .text h1 {
-  font-size: 50px;
+  font-size: 60px;
+  font-weight: bold;
   margin-bottom: 40px;
 }
 div.first .text h5 {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 70px;
 }
 div.first .logo img {
-  width: 380px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
 }
 div.first .butons a.but {
-  margin-left: 40px;
+  margin-left: 50px;
 }
 div.first .butons span.line {
   position: relative;
   display: flex;
   bottom: -12px;
-  left: 420px;
+  left: 400px;
   width: 200px;
   height: 0px;
   border: solid 1px var(--text--);
+  z-index: -1;
 }
 div.first .card {
-  width: 380px;
-  height: 380px;
+  width: 400px;
+  height: 400px;
   transition: all 0.2s;
   position: relative;
-  cursor: pointer;
+  /* cursor: pointer; */
+  
 }
 
 div.first .card-inner {
   width: inherit;
   height: inherit;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 10px 10px 40px -10px #182d55bd;
-  backdrop-filter: blur(2px);
+  /* background: rgba(255, 255, 255, 0.05); */
+  background: linear-gradient(
+    135deg,
+    rgba(32, 121, 255, 0.05),
+    rgba(32, 121, 255, 0.01) 
+    );
+  box-shadow: 1px 1px 1px 1px #2079ffbd;
+  backdrop-filter: blur(4px);
   border-radius: 20px;
-  animation: move-up6 2s ease-in infinite alternate-reverse;
+  animation: move-up6 2s ease-in-out infinite alternate-reverse;
 }
 
 div.first .card:hover {
