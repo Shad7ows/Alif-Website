@@ -14,6 +14,81 @@
   --bur--: #5b3398;
   --blu--: #182d55;
 }
+
+
+
+/* --- Header --- */
+.container {
+    margin: 45px 175px 45px 175px;
+}
+
+.container header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 45px;
+}
+
+header ul {
+    display: flex;
+    margin-right: 275px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    font-size: 1vw;
+}
+
+header li {
+    display: flex;
+    margin: 0 25px 0 25px;
+    font-weight: normal;
+}
+
+header .contribute {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+header .contribute span.line {
+    position: absolute;
+    width: 300px;
+    height: 1px;
+    background: white;
+    transform: translate(-75px, 0);
+    align-self: center;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+@media (max-width: 900px) {
+    header ul {
+        /*font-size: 20%;*/
+    }
+    header .contribute {
+
+    }
+}
+
+@media (max-width: 550px) {
+    header ul {
+        display: none;
+    }
+
+    header .contribute {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
 body {
   font-family: "Tajawal", sans-serif;
   /* background: var(--back--); */
@@ -30,7 +105,7 @@ a {
 a.underline {
   text-decoration: underline;
 }
-a.but {
+a.button {
   background-color: var(--bur--);
   box-shadow: inset 0 0 15px 1px #771eff;
   margin: 7px 0;
@@ -44,53 +119,7 @@ a.but {
 .test {
   width: 100%;
 }
-/* header */
-header {
-  margin: 30px 0;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center;
-}
-header .logo img {
-  width: 45px;
-  margin-right: 160px;
-}
-header ul {
-  margin-right: 350px;
-  display: flex;
-  flex-direction: row-reverse;
-}
-header li {
-  display: flex;
-  margin: 0 25px;
-  font-weight: normal;
-}
-header .donate {
-  display: flex;
-}
-header .donate span.line {
-  position: relative;
-  top: 26px;
-  border: solid 1px var(--text--);
-  width: 155px;
-  height: 0px;
-}
-@media (max-width: 900px) {
-  header li {
-    margin: 0 10px;
-    font-size: 80%;
-  }
-}
-@media (max-width: 550px) {
-  header a.but {
-    padding: 10px 20px;
-    font-size: 10px;
-  }
-  header .donate span.line {
-    width: 10px;
-  }
-}
+
 
 /* first section */
 div.background {
@@ -136,7 +165,7 @@ div.first .logo img {
   transform: translate(-50%, -50%);
   width: 250px;
 }
-div.first .butons a.but {
+div.first .butons a.button {
   margin-left: 50px;
 }
 div.first .butons span.line {
