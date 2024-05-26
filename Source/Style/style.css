@@ -133,7 +133,8 @@ a {
 }
 
 .container .right h1 {
-  font-size: 65px;
+  /* font-size: 65px; */
+  font-size: 4.4vw;
   font-weight: bold;
 }
 
@@ -297,6 +298,23 @@ a {
   .container header .space {
     display: block;
     width: 50%;
+  }
+
+  .container .right h1 {
+    font-size: 39px;
+    font-weight: bold;
+  }
+
+  .container .right h5 {
+    font-size: 14px;
+  }
+
+  .body .left .code {
+    display: none;
+  }
+
+  .body .left .logo-card {
+    display: none;
   }
 }
 
