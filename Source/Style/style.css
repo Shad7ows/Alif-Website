@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900');
-@import url('/font-awesome-4.6.3/css/font-awesome.min.css');
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900");
+@import url("/font-awesome-4.6.3/css/font-awesome.min.css");
 
 * {
   margin: 0;
@@ -36,7 +36,10 @@ header {
   align-items: center;
 }
 
-header .menu {
+.hamburger {
+  display: none;
+}
+.hamburger input {
   display: none;
 }
 
@@ -61,7 +64,9 @@ header li {
   margin: 0 2vw 0 2vw;
   font-weight: bold;
 }
-
+.v5 {
+  display: none;
+}
 header .contribute {
   display: flex;
   flex-direction: row-reverse;
@@ -78,14 +83,12 @@ header .contribute .line {
   opacity: 0.7;
 }
 
-
 .contribute .button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(91,51,152,0.1);
-  box-shadow: 1px 1px 5px #771eff,
-  inset 0px 0px 10px #771eff;
+  background: rgba(91, 51, 152, 0.1);
+  box-shadow: 1px 1px 5px #771eff, inset 0px 0px 10px #771eff;
   width: 140px;
   height: 45px;
   border-top: solid 2px #2079ffbd;
@@ -95,7 +98,6 @@ header .contribute .line {
   font-weight: bold;
   backdrop-filter: blur(3px);
 }
-
 
 /* --- Body --- */
 body {
@@ -153,9 +155,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(91,51,152,0.1);
-  box-shadow: 1px 1px 5px #771eff,
-  inset 0px 0px 10px #771eff;
+  background: rgba(91, 51, 152, 0.1);
+  box-shadow: 1px 1px 5px #771eff, inset 0px 0px 10px #771eff;
   width: 140px;
   height: 45px;
   border-top: solid 2px #2079ffbd;
@@ -259,10 +260,9 @@ a {
   width: 40px;
   height: 40px;
   border: 1px solid #2079ff;
-  background: rgba(51,91,152,0.2);
+  background: rgba(51, 91, 152, 0.2);
   backdrop-filter: blur(6px);
-  box-shadow: 0px 2px 4px #2079ff,
-              inset 0px 0px 6px #771eff;
+  box-shadow: 0px 2px 4px #2079ff, inset 0px 0px 6px #771eff;
 }
 
 .footer .circle img {
@@ -278,26 +278,90 @@ a {
 }
 
 @media (max-width: 600px) {
-  header .menu{
-    display: block;
-    width: 50%;
-  }
-
-  header .menu img{
-    width: 30px;
-  }
-
   header ul {
-    display: none;
-  }
-
-  header .contribute {
-    display: none;
-  }
-
-  .container header .space {
+    background: #06071C;
+    text-align: right;
+    height: 100%;
+    width: 100%;
     display: block;
-    width: 50%;
+    margin: auto;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    transition: transform 0.5s ease-in-out;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    transform: translateX(100%);
+  }
+
+  header ul.open {
+    transform: translateX(0);
+  }
+
+  header ul li {
+    text-align: right;
+    margin: 20px 20px;
+    background-color: #182d55;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  header ul li:hover {
+    background-color: #0a3d91;
+  }
+
+  .v5 {
+    color: #182d55;
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+  }
+
+  .logo {
+    margin: 20px 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger svg {
+    height: 2.5em;
+    width: 2.5em;
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .line {
+    fill: none;
+    stroke: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .line-top-bottom {
+    stroke-dasharray: 12 63;
+  }
+
+  .hamburger input:checked + svg {
+    transform: rotate(-45deg);
+  }
+
+  .hamburger input:checked + svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+  }
+
+
+  .space {
+    display: block;
+    width: 100%;
   }
 
   .container .right h1 {
@@ -309,13 +373,8 @@ a {
     font-size: 14px;
   }
 
-  .body .left .code {
-    display: none;
-  }
-
+  .body .left .code,
   .body .left .logo-card {
     display: none;
   }
 }
-
-
