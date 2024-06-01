@@ -12,6 +12,11 @@
   --blu--: #182d55;
 }
 
+a {
+  color: var(--text--);
+  text-decoration: none;
+}
+
 /* --- Background --- */
 .background {
   background-image: url("../Assets/Background.png");
@@ -115,52 +120,50 @@
 
 
 /* --- Content --- */
-
-.content {
+.content-section {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  margin-top: 5vh;
+  min-height: 300px;
+  max-height: 600px;
 }
 
-a {
-  color: var(--text--);
-  text-decoration: none;
-}
-
-.content .right {
+.content-section .right {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: auto;
 }
 
-.content .right .bottom {
+
+.content-section .right .title {
+  font-size: 4svw;
+  font-weight: bold;
+  margin-bottom: 2svh;
+}
+
+.content-section .right .paragraph {
+  width: 45svw;
+  font-size: 1.8svw;
+  font-weight: normal;
+  color: rgb(215, 215, 215);
+  line-height: 40px;
+  margin-bottom: auto;
+  word-wrap: break-word;
+}
+
+.content-section .right .bottom {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.content .right .dynamic-space {
-  height: 15vh;
+.content-section .right .bottom .download {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.container .right h1 {
-  /* font-size: 65px; */
-  font-size: 4.4vw;
-  font-weight: bold;
-}
-
-.container .fixed-space {
-  height: 20px;
-}
-
-.container .right h5 {
-  font-size: 20px;
-  font-weight: normal;
-  color: rgb(215, 215, 215);
-  line-height: 40px;
-}
-
-.right .download .button {
+.content-section .right .bottom .download .button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,13 +180,7 @@ a {
   align-self: flex-start;
 }
 
-.content .right .bottom .download {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.content .right .bottom .download .line {
+.content-section .right .bottom .download .line {
   position: absolute;
   width: 9vw;
   height: 1px;
@@ -194,18 +191,19 @@ a {
   opacity: 0.7;
 }
 
-.content .right .bottom .underline-button {
+.content-section .right .bottom .underline-button {
   align-self: center;
   margin-right: 50px;
   text-decoration: underline;
 }
 
-.content .left {
+.content-section .left {
+  position: relative;
   display: flex;
   flex-direction: row-reverse;
 }
 
-.content .left .logo-card {
+.content-section .left .logo-card {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,18 +216,24 @@ a {
   box-shadow: 2px 2px 1px #182d55;
 }
 
-.content .left .logo {
+.content-section .left .logo {
   width: 70%;
 }
 
-.content .left .code {
+.content-section .left .code {
   position: absolute;
   left: 0;
   top: 0;
   transform: translate(-75px, -60px);
-  width: 200px;
+  width: 18svw;
   z-index: -1;
 }
+
+
+
+
+
+
 
 .content .right .logo-card {
   display: none;
@@ -279,6 +283,9 @@ a {
 .footer-section .circle .img {
   width: 23px;
 }
+
+
+
 
 
 /* --- Slide Menu --- */
@@ -332,7 +339,7 @@ header .space {
 
 
 
-  
+
 
   
 
@@ -347,6 +354,9 @@ header .space {
     margin-left: 0;
   }
 }
+
+
+
 
 
 
@@ -489,7 +499,7 @@ header .space {
 
 
 /* --- Footer --- */
-  .footer-section {
+  .footer-section .text {
     display: none;
   }
 }
