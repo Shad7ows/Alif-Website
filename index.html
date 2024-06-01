@@ -4,6 +4,7 @@
 <html lang="ar">
     <head>
         <title>لغة البرمجة الف</title>
+        <link rel="icon" type="svg" href="/Source/Assets/AlifLogo.svg"/>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="Source/Style/style.css" />
@@ -11,8 +12,23 @@
 
     <body class="page">
         <div class="background"></div>
-        <section class="container header">
-            <header>
+
+        <!-- <section class="menu-section">
+            <div class="menu">
+                <label class="hamburger">
+                    <input type="checkbox" id="hamburger">
+                    <svg viewBox="0 0 32 32">
+                        <path class="line line-top-bottom"
+                            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                        </path>
+                        <path class="line" d="M7 16 27 16"></path>
+                    </svg>
+                </label>
+            </div>
+        </section> -->
+
+        <section class="container header-section">
+            <header class="header">
                 <div class="menu">
                     <label class="hamburger">
                         <input type="checkbox" id="hamburger">
@@ -27,20 +43,21 @@
                 <div class="logo">
                     <img src="Source/Assets/AlifLogo.svg" />
                 </div>
-                <div class="space"></div>
-                <ul>
-                    <li><a href="#">الـتـعـلـيـم</a></li>
-                    <li><a href="#">الـوثـائـق</a></li>
-                    <li><a href="#">الـدعـم</a></li>
-                    <p class="v5">V5</p>
-                </ul>
-                <div class="contribute">
-                    <span class="line"></span>
-                    <a href="#" class="button">المساهمة</a>
+                <div class="top-menu">
+                    <ul class="list">
+                        <li class="item"><a href="#">الـتـعـلـيـم</a></li>
+                        <li class="item"><a href="#">الـوثـائـق</a></li>
+                        <li class="item"><a href="#">الـدعـم</a></li>
+                    </ul>
+                    <div class="contribute">
+                        <span class="line"></span>
+                        <a href="#" class="button">المساهمة</a>
+                    </div>
                 </div>
             </header>
         </section>
-        <section class="container content">
+
+        <!-- <section class="container content-section">
             <div class="right">
                 <h1>
                     البرمجة<br />
@@ -48,11 +65,17 @@
                 </h1>
                 <div class="fixed-space"></div>
                 <h5>
-                    قم بتجربة لغة البرمجة العربية ألف والتي ستفتح لك آفاق <br />
-                    جديدة في البرمجة
+                    قم بتجربة لغة البرمجة العربية ألف والتي ستفتح لك آفاق جديدة في البرمجة
                 </h5>
                 <div class="dynamic-space"></div>
-                <div class="bottom"> 
+
+                <div class="logo-card">
+                    <img class="logo" src="Source/Assets/AlifLogo.svg" />
+                </div>
+                <img class="code" src="Source/Assets/Code.png" />
+                <div class="dynamic-space-card"></div>
+
+                <div class="bottom">
                     <div class="download">
                         <span class="line"></span>
                         <a href="#" class="button">تحميل اللغة</a>
@@ -65,16 +88,20 @@
                     <img class="logo" src="Source/Assets/AlifLogo.svg" />
                 </div>
                 <img class="code" src="Source/Assets/Code.png" />
+        </section> -->
+
+        <section class="container footer-section">
+            <a class="item text" href="#">الـرخـصـة</a>
+            <a class="item text" href="#">مـن نـحـن</a>
+            <a class="item text" href="#">ألـف2</a>
+            <div class="item circle">
+                <img class="img" src="Source/Assets/Instagram.svg" />
+            </div>
+            <div class="item circle">
+                <img class="img" src="Source/Assets/Youtube.svg" />
+            </div>
         </section>
-        <section class="container footer">
-            <ul>
-                <li><a href="#">الـرخـصـة</a></li>
-                <li><a href="#">مـن نـحـن</a></li>
-                <li><a href="#">ألـف2</a></li>
-                <li><div class="circle"><img src="Source/Assets/Instagram.svg" /></div></li>
-                <li><div class="circle"><img src="Source/Assets/Youtube.svg" /></div></li>
-            </ul>
-        </section>
-        <script src="Source/js/script.js"></script>
+
+        <script class="scripe" src="Source/JavaScript/script.js"></script>
     </body>
 </html>
