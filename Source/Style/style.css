@@ -117,8 +117,6 @@ a {
 }
 
 
-
-
 /* --- Content --- */
 .content-section {
   display: flex;
@@ -229,27 +227,10 @@ a {
   z-index: -1;
 }
 
-
-
-
-
-
-
-.content .right .logo-card {
+.content-section .right .for-tab {
   display: none;
 }
 
-.content .right .logo {
-  display: none;
-}
-
-.content .right .code {
-  display: none;
-}
-
-.content .right .dynamic-space-card {
-  display: none;
-}
 
 /* --- Footer --- */
 .footer-section {
@@ -315,7 +296,18 @@ header .space {
 /* -- Media Adjustment -- */
 @media (max-width: 720px) {
 
-/* --- Header --- */
+  .page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    font-family: "Tajawal";
+    color: var(--text--);
+    text-align: right;
+  }
+
+  /* --- Header --- */
   .header-section .header {
     flex-direction: column;
     align-items: stretch;
@@ -334,24 +326,85 @@ header .space {
     margin: 0 0 0 6svw;
   }
 
+  /* --- Content --- */
+  .content-section {
+    min-height: 600px;
+    max-height: 800px;
+  }
 
+  .content-section .left {
+    display: none;
+  }
 
+  .content-section .right .title {
+    font-size: 8svw;
+    margin-bottom: 2svh;
+  }
+  
+  .content-section .right .paragraph {
+    width: 65svw;
+    font-size: 3svw;
+    margin-bottom: 100px;
+  }
 
-
-
-
-
+  .content-section .right .for-tab {
+    position: relative;
+    display: flex;
+  }
+  
+  .content-section .right .for-tab .logo-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid #182d5555;
+    border-left: 2px solid #182d5555;
+    height: 75%;
+    aspect-ratio: 1;
+    border-radius: 30px;
+    backdrop-filter: blur(6px);
+    box-shadow: 2px 2px 1px #182d55;
+  }
+  
+  .content-section .right .for-tab .logo {
+    width: 70%;
+  }
+  
+  .content-section .right .for-tab .code {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-65px, -40px);
+    width: 18svw;
+    z-index: -1;
+  }
   
 
-
-
-/* --- Footer --- */
+  /* --- Footer --- */
   .footer-section {
     justify-content: space-evenly;
+    z-index: -1;
   }
 
   .footer-section .item {
     margin-left: 0;
+  }
+  
+  .footer-section .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #2079ff;
+    background: rgba(51, 91, 152, 0.2);
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 2px 4px #2079ff, inset 0px 0px 6px #771eff;
+  }
+  
+  .footer-section .circle .img {
+    width: 23px;
   }
 }
 
@@ -362,6 +415,7 @@ header .space {
 
 @media (max-width: 480px) {
   
+
   /* --- Header --- */
   .header-section .header {
     align-items: center;
@@ -369,7 +423,8 @@ header .space {
   }
 
   .header-section .header .logo {
-    margin-left: 40%;
+    margin-left: 45%;
+    margin-bottom: 0;
   }
   
   .header-section .header .top-menu {
@@ -380,18 +435,49 @@ header .space {
     display: flex;
   }
 
+  /* --- Content --- */
+  .content-section {
+    min-height: 600px;
+    max-height: 800px;
+  }
+
+  .content-section .left {
+    display: none;
+  }
+
+  .content-section .right .title {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .content-section .right .paragraph {
+    width: 80svw;
+    font-size: 16px;
+    margin-bottom: 90px;
+  }
+
+  .content-section .right .for-tab {
+    position: relative;
+    display: flex;
+    margin-bottom: 100px;
+  }
+  
+  .content-section .right .for-tab .logo-card {
+    height: 100%;
+  }
+  
+  .content-section .right .for-tab .code {
+    transform: translate(-15px, -45px);
+    width: 50svw;
+    z-index: -1;
+  }
 
 
 
 
 
 
-
-
-
-
-
-
+/* 
   header ul {
     background: #06071C;
     text-align: right;
@@ -475,23 +561,7 @@ header .space {
     display: block;
     width: 100%;
   }
-
-  .container .right h1 {
-    font-size: 39px;
-    font-weight: bold;
-  }
-
-  .container .right h5 {
-    font-size: 14px;
-  }
-
-  .content .left .code,
-  .content .left .logo-card {
-    display: none;
-  }
-
-
-
+ */
 
 
 
