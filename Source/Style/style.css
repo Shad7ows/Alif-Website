@@ -536,7 +536,7 @@ input {
     border-radius: 30px;
     width: 70%;
     height: 70%;
-    row-gap: 60px;
+    row-gap: 7svh;
     margin-top: 50px;
   }
 
@@ -550,7 +550,7 @@ input {
     border-color: blue;
     margin-top: 50px;
     transition: 1s;
-    animation: stroke-color 18s linear infinite;
+    animation: stroke-color 3s linear infinite;
   }
 
   @keyframes stroke-color {
