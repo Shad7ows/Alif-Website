@@ -143,19 +143,20 @@ input {
 
 
 .content-section .right .title {
-  font-size: 4svw;
+  font-size: calc(36px + 1svw);
   font-weight: bold;
   margin-bottom: 2svh;
 }
 
 .content-section .right .paragraph {
-  width: 45svw;
-  font-size: 1.8svw;
+  width: calc(240px + 18svw);
+  font-size: calc(10px + 1svw);
   font-weight: normal;
   color: rgb(215, 215, 215);
   line-height: 40px;
   margin-bottom: auto;
   word-wrap: break-word;
+  align-self: end;
 }
 
 .content-section .right .bottom {
@@ -231,7 +232,7 @@ input {
   left: 0;
   top: 0;
   transform: translate(-75px, -60px);
-  width: 18svw;
+  width: calc(150px + 5svw);
   z-index: -1;
 }
 
@@ -277,7 +278,7 @@ input {
 
 
 /* -- Media Adjustment -- */
-@media (max-width: 720px) {
+@media (max-width: 960px) {
 
   .background {
     width: 100%;
@@ -316,8 +317,8 @@ input {
 
   /* --- Content --- */
   .content-section {
-    min-height: 600px;
-    max-height: 800px;
+    min-height: 720px;
+    max-height: 960px;
     justify-content: center;
   }
 
@@ -331,14 +332,15 @@ input {
   }
 
   .content-section .right .title {
-    font-size: 8svw;
+    font-size: calc(36px + 2svw);
     margin-bottom: 2svh;
   }
   
   .content-section .right .paragraph {
-    width: 80svw;
-    font-size: 3svw;
-    margin-bottom: 100px;
+    width: 60svw;
+    font-size: calc(16px + 1svw);
+    margin-bottom: 120px;
+    align-self: end;
   }
 
   .content-section .right .for-tab {
@@ -369,8 +371,8 @@ input {
     position: absolute;
     left: 0;
     top: 0;
-    transform: translate(0px, -50px);
-    width: 30svw;
+    transform: translate(50px, -50px);
+    width: calc(70px + 15svw);
     z-index: -1;
   }
   
