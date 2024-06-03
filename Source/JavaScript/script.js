@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const hamburgerCheckbox = document.getElementById('hamburger');
-  const navUl = document.querySelector('header ul');
+  const MenuCheckbox = document.getElementById('lines');
+  const NavUl = document.querySelector('.menu-section');
+  const PageClose = document.querySelector('.page');
 
-  hamburgerCheckbox.addEventListener('change', function () {
-    if (hamburgerCheckbox.checked) {
-      navUl.classList.add('open');
+  MenuCheckbox.addEventListener('change', function () {
+    if (MenuCheckbox.checked) {
+      NavUl.classList.add('open');
+      PageClose.classList.add('close');
     } else {
-      navUl.classList.remove('open');
+      NavUl.classList.remove('open');
+      PageClose.classList.remove('close');
     }
   });
 });
