@@ -537,6 +537,7 @@ input {
     width: 70%;
     height: 70%;
     row-gap: 60px;
+    margin-top: 50px;
   }
 
   .menu-section .stroke-anim {
@@ -545,15 +546,16 @@ input {
     border-radius: 30px;
     width: 70%;
     height: 70%;
-    border: 1px solid;
-    border-color: blueviolet;
+    border-bottom: 1px solid;
+    border-color: blue;
+    margin-top: 50px;
     transition: 1s;
     animation: stroke-color 18s linear infinite;
   }
 
   @keyframes stroke-color {
     50% {
-      filter: hue-rotate(350deg)
+      filter: hue-rotate(30deg)
     }
   }
 
