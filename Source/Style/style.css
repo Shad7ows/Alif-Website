@@ -150,7 +150,7 @@ input {
 
 .content-section .right .paragraph {
   width: calc(240px + 18svw);
-  font-size: calc(10px + 1svw);
+  font-size: calc(7px + 1svw);
   font-weight: normal;
   color: rgb(215, 215, 215);
   line-height: 40px;
