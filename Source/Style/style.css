@@ -219,7 +219,7 @@ input {
   aspect-ratio: 1;
   border-radius: 30px;
   backdrop-filter: blur(6px);
-  box-shadow: 2px 2px 1px #182d55;
+  box-shadow: 2px 2px 1px #2079FF;
 }
 
 .content-section .left .logo {
@@ -358,7 +358,7 @@ input {
     aspect-ratio: 1;
     border-radius: 30px;
     backdrop-filter: blur(6px);
-    box-shadow: 2px 2px 1px #182d55;
+    box-shadow: 2px 2px 1px #2079FF;
   }
   
   .content-section .right .for-tab .logo {
