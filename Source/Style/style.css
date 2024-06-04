@@ -1,4 +1,12 @@
 @font-face {
+  font-family: 'Tajawal';
+  src: url('../Fonts/Tajawal-Black.woff2') format('woff2'),
+      url('../Fonts/Tajawal-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
     font-family: 'Tajawal';
     src: url('../Fonts/Tajawal-ExtraBold.woff2') format('woff2'),
          url('../Fonts/Tajawal-ExtraBold.ttf') format('truetype');
@@ -7,11 +15,11 @@
 }
 
 @font-face {
-    font-family: 'Tajawal';
-    src: url('../Fonts/Tajawal-Regular.woff2') format('woff2'),
-         url('../Fonts/Tajawal-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Tajawal';
+  src: url('../Fonts/Tajawal-Bold.woff2') format('woff2'),
+      url('../Fonts/Tajawal-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
@@ -24,9 +32,9 @@
 
 @font-face {
     font-family: 'Tajawal';
-    src: url('../Fonts/Tajawal-Bold.woff2') format('woff2'),
-        url('../Fonts/Tajawal-Bold.ttf') format('truetype');
-    font-weight: bold;
+    src: url('../Fonts/Tajawal-Regular.woff2') format('woff2'),
+        url('../Fonts/Tajawal-Regular.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
 }
 
@@ -35,14 +43,6 @@
     src: url('../Fonts/Tajawal-Light.woff2') format('woff2'),
         url('../Fonts/Tajawal-Light.ttf') format('truetype');
     font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Tajawal';
-    src: url('../Fonts/Tajawal-Black.woff2') format('woff2'),
-        url('../Fonts/Tajawal-Black.ttf') format('truetype');
-    font-weight: 900;
     font-style: normal;
 }
 
@@ -83,7 +83,7 @@ input {
 
 /* --- Background --- */
 .background {
-  background-image: url("../Assets/Background.png");
+  background-image: url("../Assets/Background.webp");
   background-size: cover;
   position: fixed;
   width: 100svw;
@@ -591,7 +591,7 @@ input {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #031c4acd;
+    background-color: #021232cd;
     border-radius: 30px;
     width: 70%;
     height: 70%;
@@ -607,15 +607,15 @@ input {
     height: 70%;
     border-bottom: 1px solid;
     border-color: blue;
-    box-shadow: inset 0 -6px 18px -7px blue;
+    box-shadow: inset 0 -6px 18px -6px blue;
     margin-top: 50px;
-    transition: 1s;
-    animation: stroke-color 3s linear infinite;
+    transition: 4s;
+    animation: stroke-color 4s linear infinite;
   }
 
   @keyframes stroke-color {
     50% {
-      filter: hue-rotate(30deg)
+      filter: hue-rotate(35deg)
     }
   }
 
