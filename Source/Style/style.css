@@ -165,15 +165,19 @@ input {
   align-items: center;
   justify-content: center;
   background: rgba(91, 51, 152, 0.1);
-  box-shadow: 1px 1px 5px #771eff, inset 0px 0px 10px #771eff;
+  box-shadow: 1px 1px 4px 0px #771eff,
+           0px 0px 70px -5px #771eff99,
+           inset 0px 0px 16px #771eff99;
   width: 140px;
   height: 45px;
-  border-top: solid 2px #2079ffbd;
-  border-left: solid 2px #2079ffbd;
+  border-top: solid 2px #2079ffee;
+  border-left: solid 2px #2079ffee;
   border-radius: 18px;
   font-size: 15px;
   font-weight: bold;
   backdrop-filter: blur(3px);
+  transition: 1s;
+  animation: glowe 5s infinite ;
 }
 
 .header-section .header .top-menu .contribute .line {
@@ -238,16 +242,20 @@ input {
   align-items: center;
   justify-content: center;
   background: rgba(91, 51, 152, 0.1);
-  box-shadow: 1px 1px 5px #771eff, inset 0px 0px 10px #771eff;
+  box-shadow: 1px 1px 4px 0px #771eff,
+           0px 0px 70px -5px #771eff99,
+           inset 0px 0px 16px #771eff99;
   width: 140px;
   height: 45px;
-  border-top: solid 2px #2079ffbd;
-  border-left: solid 2px #2079ffbd;
+  border-top: solid 2px #2079ffee;
+  border-left: solid 2px #2079ffee;
   border-radius: 18px;
   font-size: 15px;
   font-weight: bold;
   backdrop-filter: blur(3px);
   align-self: flex-start;
+  transition: 1s;
+  animation: glowe 5s infinite ;
 }
 
 .content-section .right .bottom .download .line {
@@ -620,15 +628,27 @@ input {
     animation: stroke-color 4s linear infinite;
   }
 
-  @keyframes stroke-color {
-    50% {
-      filter: hue-rotate(35deg)
-    }
-  }
-
-
   /* --- Footer --- */
   .footer-section .text {
     display: none;
+  }
+}
+
+
+
+
+
+
+@keyframes glowe {
+  50% {
+    box-shadow: 1px 1px 4px 0px #771eff,
+    0px 0px 70px -5px #771eff55,
+    inset 0px 0px 8px #771effaa;
+  }
+}
+
+@keyframes stroke-color {
+  50% {
+    filter: hue-rotate(35deg)
   }
 }
