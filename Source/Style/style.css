@@ -302,8 +302,8 @@ input {
   position: absolute;
   left: 0;
   top: 0;
-  transform: translate(-75px, -60px);
-  width: calc(150px + 5svw);
+  transform: translate(-60px, -45px);
+  width: calc(100px + 5svw);
   z-index: -1;
 }
 
@@ -442,8 +442,8 @@ input {
     position: absolute;
     left: 0;
     top: 0;
-    transform: translate(50px, -50px);
-    width: calc(70px + 15svw);
+    transform: translate(90px, -50px);
+    width: calc(60px + 15svw);
     z-index: -1;
   }
   
@@ -482,7 +482,12 @@ input {
 
 
 @media (max-width: 480px) {
-  
+
+  .background {
+    background-image: url("../Assets/Background-Mobile.webp");
+  }
+
+
   /* --- Header --- */
   .header-section .header {
     align-items: center;
@@ -570,7 +575,7 @@ input {
   
   .content-section .right .for-tab .code {
     transform: translate(-15px, -45px);
-    width: 50svw;
+    width: 40svw;
     z-index: -1;
   }
 
