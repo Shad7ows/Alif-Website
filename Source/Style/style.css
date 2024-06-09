@@ -177,7 +177,7 @@ input {
   font-weight: bold;
   backdrop-filter: blur(3px);
   transition: 1s;
-  animation: glowe 5s infinite ;
+  animation: glowe 3s infinite ;
 }
 
 .header-section .header .top-menu .contribute .line {
@@ -255,7 +255,7 @@ input {
   backdrop-filter: blur(3px);
   align-self: flex-start;
   transition: 1s;
-  animation: glowe 5s infinite ;
+  animation: glowe 3s infinite ;
 }
 
 .content-section .right .bottom .download .line {
