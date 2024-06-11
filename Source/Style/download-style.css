@@ -1,0 +1,78 @@
+  
+  /* --- Content --- */
+
+  
+  /* download */
+  .OS {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .OS .down_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 2px 2px 1px #182d55; 
+    border-radius: 30px;
+    cursor: pointer;
+    border-left: 2px solid #182d5555;
+    border-top: 2px solid #182d5555;
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    transform-style: preserve-3d;
+    transition: ease-in-out 1s;
+  }
+  .OS .down_card:hover {
+    transform: rotateY(180deg);
+  }
+  .down_card .front,
+  .down_card .download {
+    position: absolute;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  .OS .down_card .front {
+    margin: 0 10px;
+    transform-style: preserve-3d;
+    transform: translateZ(70px);
+  }
+  
+  .down_card .download {
+    transform-style: preserve-3d;
+    transform:  translateZ(-70px) rotateY(180deg);
+  }
+  
+  .down_card .download .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(91, 51, 152, 0.1);
+    box-shadow: 1px 1px 4px 0px #771eff, 0px 0px 70px -5px #771eff99,
+      inset 0px 0px 16px #771eff99;
+    width: 140px;
+    height: 45px;
+    border-top: solid 2px #2079ffee;
+    border-left: solid 2px #2079ffee;
+    border-radius: 18px;
+    font-size: 15px;
+    font-weight: bold;
+    backdrop-filter: blur(3px);
+    align-self: flex-start;
+    transition: 1s;
+    animation: glowe 3s infinite;
+  }
+  
+  /* -- Media Adjustment -- */
+  @media (max-width: 960px) {}
+  
+  @media (max-width: 480px) {}
+  
+  @keyframes move-up6 {
+    to {
+      transform: translateY(-10px);
+    }
+  }
+  
