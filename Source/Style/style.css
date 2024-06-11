@@ -1,68 +1,65 @@
 @font-face {
-  font-family: 'Tajawal';
-  src: url('../Fonts/Tajawal-Black.woff2') format('woff2'),
-      url('../Fonts/Tajawal-Black.ttf') format('truetype');
+  font-family: "Tajawal";
+  src: url("../Fonts/Tajawal-Black.woff2") format("woff2"),
+    url("../Fonts/Tajawal-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
-  font-display:swap;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Tajawal';
-    src: url('../Fonts/Tajawal-ExtraBold.woff2') format('woff2'),
-         url('../Fonts/Tajawal-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-    font-display:swap;
+  font-family: "Tajawal";
+  src: url("../Fonts/Tajawal-ExtraBold.woff2") format("woff2"),
+    url("../Fonts/Tajawal-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Tajawal';
-  src: url('../Fonts/Tajawal-Bold.woff2') format('woff2'),
-      url('../Fonts/Tajawal-Bold.ttf') format('truetype');
+  font-family: "Tajawal";
+  src: url("../Fonts/Tajawal-Bold.woff2") format("woff2"),
+    url("../Fonts/Tajawal-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
-  font-display:swap;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Tajawal';
-    src: url('../Fonts/Tajawal-Medium.woff2') format('woff2'),
-        url('../Fonts/Tajawal-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display:swap;
+  font-family: "Tajawal";
+  src: url("../Fonts/Tajawal-Medium.woff2") format("woff2"),
+    url("../Fonts/Tajawal-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Tajawal';
-    src: url('../Fonts/Tajawal-Regular.woff2') format('woff2'),
-        url('../Fonts/Tajawal-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display:swap;
+  font-family: "Tajawal";
+  src: url("../Fonts/Tajawal-Regular.woff2") format("woff2"),
+    url("../Fonts/Tajawal-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Tajawal';
-    src: url('../Fonts/Tajawal-Light.woff2') format('woff2'),
-        url('../Fonts/Tajawal-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display:swap;
+  font-family: "Tajawal";
+  src: url("../Fonts/Tajawal-Light.woff2") format("woff2"),
+    url("../Fonts/Tajawal-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Tajawal';
-    src: url('../Fonts/Tajawal-ExtraLight.woff2') format('woff2'),
-        url('../Fonts/Tajawal-ExtraLight.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
-    font-display:swap;
+  font-family: "Tajawal";
+  src: url("../Fonts/Tajawal-ExtraLight.woff2") format("woff2"),
+    url("../Fonts/Tajawal-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
 }
-
-
-
 
 * {
   margin: 0;
@@ -99,7 +96,6 @@ input {
   z-index: -3;
 }
 
-
 /* --- Page --- */
 .page {
   display: flex;
@@ -115,7 +111,6 @@ input {
 .container {
   margin: 4svh 9svw 4svh 9svw;
 }
-
 
 /* --- Header --- */
 .header-section .header {
@@ -165,9 +160,8 @@ input {
   align-items: center;
   justify-content: center;
   background: rgba(91, 51, 152, 0.1);
-  box-shadow: 1px 1px 4px 0px #771eff,
-           0px 0px 70px -5px #771eff99,
-           inset 0px 0px 16px #771eff99;
+  box-shadow: 1px 1px 4px 0px #771eff, 0px 0px 70px -5px #771eff99,
+    inset 0px 0px 16px #771eff99;
   width: 140px;
   height: 45px;
   border-top: solid 2px #2079ffee;
@@ -177,7 +171,7 @@ input {
   font-weight: bold;
   backdrop-filter: blur(3px);
   transition: 1s;
-  animation: glowe 3s infinite ;
+  animation: glowe 3s infinite;
 }
 
 .header-section .header .top-menu .contribute .line {
@@ -190,7 +184,6 @@ input {
   z-index: -1;
   opacity: 0.7;
 }
-
 
 /* --- Content --- */
 .content-section {
@@ -207,7 +200,6 @@ input {
   justify-content: space-between;
   margin-left: auto;
 }
-
 
 .content-section .right .title {
   font-size: calc(36px + 1svw);
@@ -242,9 +234,8 @@ input {
   align-items: center;
   justify-content: center;
   background: rgba(91, 51, 152, 0.1);
-  box-shadow: 1px 1px 4px 0px #771eff,
-           0px 0px 70px -5px #771eff99,
-           inset 0px 0px 16px #771eff99;
+  box-shadow: 1px 1px 4px 0px #771eff, 0px 0px 70px -5px #771eff99,
+    inset 0px 0px 16px #771eff99;
   width: 140px;
   height: 45px;
   border-top: solid 2px #2079ffee;
@@ -255,7 +246,7 @@ input {
   backdrop-filter: blur(3px);
   align-self: flex-start;
   transition: 1s;
-  animation: glowe 3s infinite ;
+  animation: glowe 3s infinite;
 }
 
 .content-section .right .bottom .download .line {
@@ -291,7 +282,8 @@ input {
   aspect-ratio: 1;
   border-radius: 30px;
   backdrop-filter: blur(6px);
-  box-shadow: 2px 2px 1px #2079FF;
+  box-shadow: 2px 2px 1px #2079ff;
+  animation: move-up6 2s ease-in infinite alternate-reverse;
 }
 
 .content-section .left .logo {
@@ -344,13 +336,71 @@ input {
   width: 23px;
 }
 
+/* download */
+.OS {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.OS .down_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 2px 2px 1px #182d55; 
+  border-radius: 30px;
+  cursor: pointer;
+  border-left: 2px solid #182d5555;
+  border-top: 2px solid #182d5555;
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  transform-style: preserve-3d;
+  transition: ease-in-out 2s;
+}
+.OS .down_card:hover {
+  transform: scale(1.05) rotate(1.5deg) rotateY(180deg);
+}
+.down_card .front,
+.down_card .download {
+  position: absolute;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+.OS .down_card .front {
+  margin: 0 10px;
+  transform-style: preserve-3d;
+  transform: translateZ(70px);
+}
 
+.down_card .download {
+  transform-style: preserve-3d;
+  transform:  translateZ(-70px) rotateY(180deg);
+}
 
-
+.down_card .download .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(91, 51, 152, 0.1);
+  box-shadow: 1px 1px 4px 0px #771eff, 0px 0px 70px -5px #771eff99,
+    inset 0px 0px 16px #771eff99;
+  width: 140px;
+  height: 45px;
+  border-top: solid 2px #2079ffee;
+  border-left: solid 2px #2079ffee;
+  border-radius: 18px;
+  font-size: 15px;
+  font-weight: bold;
+  backdrop-filter: blur(3px);
+  align-self: flex-start;
+  transition: 1s;
+  animation: glowe 3s infinite;
+}
 
 /* -- Media Adjustment -- */
 @media (max-width: 960px) {
-
   .background {
     width: 100%;
     height: 100%;
@@ -377,7 +427,7 @@ input {
     margin-bottom: 5svh;
     align-self: center;
   }
-  
+
   .header-section .header .top-menu .list {
     margin-left: auto;
   }
@@ -406,7 +456,7 @@ input {
     font-size: calc(36px + 2svw);
     margin-bottom: 2svh;
   }
-  
+
   .content-section .right .paragraph {
     width: 60svw;
     font-size: calc(16px + 1svw);
@@ -420,7 +470,7 @@ input {
     justify-content: center;
     margin-bottom: 50px;
   }
-  
+
   .content-section .right .for-tab .logo-card {
     display: flex;
     align-items: center;
@@ -431,13 +481,13 @@ input {
     aspect-ratio: 1;
     border-radius: 30px;
     backdrop-filter: blur(6px);
-    box-shadow: 2px 2px 1px #2079FF;
+    box-shadow: 2px 2px 1px #2079ff;
   }
-  
+
   .content-section .right .for-tab .logo {
     width: 70%;
   }
-  
+
   .content-section .right .for-tab .code {
     position: absolute;
     left: 0;
@@ -446,7 +496,6 @@ input {
     width: calc(60px + 15svw);
     z-index: -1;
   }
-  
 
   /* --- Footer --- */
   .footer-section {
@@ -457,7 +506,7 @@ input {
   .footer-section .item {
     margin-left: 0;
   }
-  
+
   .footer-section .circle {
     display: flex;
     align-items: center;
@@ -471,22 +520,16 @@ input {
     backdrop-filter: blur(6px);
     box-shadow: 0px 2px 4px #2079ff, inset 0px 0px 6px #771eff;
   }
-  
+
   .footer-section .circle .img {
     width: 23px;
   }
 }
 
-
-
-
-
 @media (max-width: 480px) {
-
   .background {
     background-image: url("../Assets/Background-Mobile.webp");
   }
-
 
   /* --- Header --- */
   .header-section .header {
@@ -499,7 +542,7 @@ input {
     margin-bottom: 0;
     z-index: 5;
   }
-  
+
   .header-section .header .top-menu {
     display: none;
   }
@@ -508,7 +551,7 @@ input {
     display: flex;
     z-index: 5;
   }
-  
+
   .header-section .header .menu .lines {
     display: flex;
     cursor: pointer;
@@ -526,7 +569,7 @@ input {
     stroke-linejoin: round;
     stroke-width: 3;
     transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-     stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .header-section .header .menu .lines .svg .top-bottom {
@@ -556,7 +599,7 @@ input {
     font-size: 36px;
     margin-bottom: 10px;
   }
-  
+
   .content-section .right .paragraph {
     width: 80svw;
     font-size: 16px;
@@ -568,17 +611,16 @@ input {
     display: flex;
     margin-bottom: 100px;
   }
-  
+
   .content-section .right .for-tab .logo-card {
     height: 100%;
   }
-  
+
   .content-section .right .for-tab .code {
     transform: translate(-15px, -45px);
     width: 40svw;
     z-index: -1;
   }
-
 
   /* --- Slider Menu --- */
   .page {
@@ -639,21 +681,21 @@ input {
   }
 }
 
-
-
-
-
-
 @keyframes glowe {
   50% {
-    box-shadow: 1px 1px 4px 0px #771eff,
-    0px 0px 70px -5px #771eff55,
-    inset 0px 0px 8px #771effaa;
+    box-shadow: 1px 1px 4px 0px #771eff, 0px 0px 70px -5px #771eff55,
+      inset 0px 0px 8px #771effaa;
   }
 }
 
 @keyframes stroke-color {
   50% {
-    filter: hue-rotate(35deg)
+    filter: hue-rotate(35deg);
+  }
+}
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-10px);
   }
 }
