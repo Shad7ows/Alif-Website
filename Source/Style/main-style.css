@@ -317,7 +317,7 @@ input {
   position: absolute;
   left: 0;
   top: 0;
-  transform: translate(-60px, -45px);
+  transform: translate(-70px, -30px);
   width: calc(100px + 5svw);
   z-index: -1;
 }
@@ -453,8 +453,8 @@ input {
     position: absolute;
     left: 0;
     top: 0;
-    transform: translate(90px, -50px);
-    width: calc(60px + 15svw);
+    transform: translate(85px, -45px);
+    width: calc(90px + 10svw);
     z-index: -1;
   }
   
