@@ -63,8 +63,10 @@
 
 :root {
   --text--: #fff;
-  --bur--: #5b3398;
-  --blu--: #182d55;
+  --bur--: #5B3398;
+  --light-bur--: #771EFF;
+  --blu--: #335B98;
+  --light-blu--: #2079FF;
 }
 
 a {
@@ -89,6 +91,28 @@ input {
   height: 100svh;
   background-position-x: right;
   z-index: -3;
+}
+
+/* --- Component --- */
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(91, 51, 152, 0.1);
+  box-shadow: 1px 1px 3px 0px #771eff,
+           0px 0px 50px -5px #771effff,
+           inset 0px 0px 16px #771eff99;
+  width: 140px;
+  height: 45px;
+  border-top: solid 2px #2079ffee;
+  border-left: solid 2px #2079ffee;
+  border-radius: 18px;
+  font-size: 15px;
+  font-weight: bold;
+  backdrop-filter: blur(3px);
+  transition: 1s;
+  animation: glowe 5s ease-in-out infinite ;
 }
 
 
@@ -152,7 +176,7 @@ input {
   align-items: center;
 }
 
-.header-section .header .top-menu .contribute .button {
+/* .header-section .header .top-menu .contribute .button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -170,7 +194,7 @@ input {
   backdrop-filter: blur(3px);
   transition: 1s;
   animation: glowe 3s infinite ;
-}
+} */
 
 .header-section .header .top-menu .contribute .line {
   position: absolute;
@@ -229,7 +253,7 @@ input {
   align-items: center;
 }
 
-.content-section .right .bottom .download .button {
+/* .content-section .right .bottom .download .button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -248,7 +272,7 @@ input {
   align-self: flex-start;
   transition: 1s;
   animation: glowe 3s infinite ;
-}
+} */
 
 .content-section .right .bottom .download .line {
   position: absolute;
@@ -277,8 +301,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 2px solid #182d5555;
-  border-left: 2px solid #182d5555;
+  border: 2px solid #182d5555;
   height: 100%;
   aspect-ratio: 1;
   border-radius: 30px;
@@ -414,8 +437,7 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 2px solid #182d5555;
-    border-left: 2px solid #182d5555;
+    border: 2px solid #182d5555;
     height: 90%;
     aspect-ratio: 1;
     border-radius: 30px;
@@ -609,10 +631,10 @@ input {
     height: 70%;
     border-bottom: 1px solid;
     border-color: blue;
-    box-shadow: inset 0 -6px 18px -6px blue;
+    box-shadow: inset 0 -9px 21px -3px blue;
     margin-top: 50px;
-    transition: 4s;
-    animation: stroke-color 4s linear infinite;
+    transition: 1s;
+    animation: stroke-color 5s ease-in-out infinite;
   }
 
   /* --- Footer --- */
@@ -623,8 +645,8 @@ input {
 
 @keyframes glowe {
   50% {
-    box-shadow: 1px 1px 4px 0px #771eff,
-    0px 0px 70px -5px #771eff55,
+    box-shadow: 1px 1px 3px 0px #771eff,
+    0px 0px 50px -5px #771eff55,
     inset 0px 0px 8px #771effaa;
   }
 }
