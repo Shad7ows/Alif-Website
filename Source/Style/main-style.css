@@ -73,11 +73,16 @@ a {
   color: var(--text--);
   text-decoration: none;
 }
+a.active {
+  color: var(--bur--);
+}
 
 input {
   display: none;
 }
-
+h1 {
+  text-align: center;
+}
 .menu-section {
   display: none;
 }
@@ -226,6 +231,7 @@ input {
 
 
 .content-section .right .title {
+  text-align: right;
   font-size: calc(36px + 1svw);
   font-weight: bold;
   margin-bottom: 2svh;
@@ -655,3 +661,4 @@ input {
     filter: hue-rotate(35deg)
   }
 }
+

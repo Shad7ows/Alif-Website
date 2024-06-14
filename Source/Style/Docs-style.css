@@ -1,0 +1,111 @@
+:root {
+  --text--: #fff;
+  --bur--: #5B3398;
+  --light-bur--: #771EFF;
+  --blu--: #335B98;
+  --light-blu--: #2079FF;
+}
+
+a {
+  color: var(--blu--);
+}
+.grammar li {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* code card  */
+code {
+  font-family: 'tajawal';
+}
+.code-editor {
+  max-width: 100%;
+  border: 2px solid #182d5555;
+  box-shadow: 2px 2px 1px #2079FF;
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  padding: 2px;
+  margin: 20px 0;
+}
+
+.code-editor .header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 10px;
+}
+
+.code-editor .title {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text--);
+}
+
+.code-editor .icon {
+  width: 20px;
+  transition: .2s ease;
+}
+
+.code-editor .icon:hover {
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: #6e7281;
+}
+
+.code-editor .editor-content {
+  margin: 0 10px 10px;
+  color: white;
+}
+
+.code-editor .property {
+  margin-left: 30px;
+}
+
+.code-editor .property:hover {
+  cursor: text;
+}
+
+.code-editor .editor-content .color-0 {
+  color: rgb(86 156 214);
+}
+
+.code-editor .editor-content .color-1 {
+  color: rgb(182 206 168);
+}
+
+.code-editor .editor-content .color-2 {
+  color: rgb(156 220 254);
+}
+
+.code-editor .editor-content .color-3 {
+  color: rgb(207 146 120);
+}
+
+.code-editor .color-preview-1,.color-preview-2 {
+  height: 8px;
+  width: 8px;
+  border: 1px solid #fff;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.code-editor .color-preview-1 {
+  background-color: #1d1e22;
+}
+
+.code-editor .color-preview-1 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* code colors  */
+.grammar .comment {
+  color: #999;
+}
+.grammar .var_type {
+  color: #335B98;
+}
+.grammar .var_val {
+  color: #771EFF;
+}
+.grammar .var {
+  color: #A62093;
+}
