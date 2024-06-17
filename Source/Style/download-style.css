@@ -1,59 +1,253 @@
 /* --- Content --- */
-  .content-section {
+.content-section {
     max-height: 900px;
-  }
+}
 
-  .content-section .os {
+.content-section .os {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
     row-gap: 45px;
     column-gap: 45px;
-  }
+}
 
-  .content-section .os .card {
+.content-section .os .card {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     /* flex-direction: column; */
+    background-image: linear-gradient(135deg,
+            rgba(0, 0, 248, 0.12),
+            rgba(0, 9, 32, 0.1),
+            rgba(0, 0, 248, 0.12),
+            rgba(0, 9, 32, 0.1),
+            transparent);
+    background-size: 200% 200%;
+    background-position: right;
     text-align: center;
     cursor: pointer;
     border: 2px solid #182d5555;
     height: calc(245px + 3svw);
     width: calc(200px + 3svw);
     border-radius: 30px;
-    /* backdrop-filter: blur(6px); */
     box-shadow: 2px 2px 1px #2079FF;
     transform-style: preserve-3d;
     transition: ease-in-out 1s;
-  }
+}
 
-  .os .card:hover {
+.os .card:hover {
+    box-shadow: -2px 2px 1px #2079FF;
+    background-position: left;
     transform: rotateY(180deg);
-  }
-  .card .front,
-  .card .back {
+}
+
+.card .front,
+.card .back {
     position: absolute;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-backface-visibility: hidden;
+    /* Safari */
     backface-visibility: hidden;
-  }
-  .os .card .front {
+}
+
+.os .card .front {
     display: flex;
     flex-direction: column;
     row-gap: 50px;
     top: 40px;
     transform-style: preserve-3d;
-    transform: translateZ(75px);
-  }
-  
-  .card .back {
-    transform-style: preserve-3d;
-    transform:  translateZ(-70px) rotateY(180deg);
-  }
-  
-  /* -- Media Adjustment -- */
-  @media (max-width: 960px) {}
-  
-  @media (max-width: 480px) {}
+    transform: translateZ(45px);
+}
 
-  
+.num {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: calc(18px + 1svw);
+    letter-spacing: 2px;
+    transform: translate3d(-15px, 11px, 30px);
+    backface-visibility: hidden;
+}
+
+.card .back {
+    transform-style: preserve-3d;
+    transform: translateZ(-45px) rotateY(180deg);
+}
+
+/* -- Media Adjustment -- */
+@media (max-width: 960px) {}
+
+@media (max-width: 480px) {}
+
+
+.btn {
+    position: absolute;
+    transform: translateY(100px);
+    width: 150px;
+    height: 45px;
+}
+
+.btn a {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 45px;
+    color: white;
+    z-index: 2;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: 0.5s;
+}
+
+.btn:hover a {
+    font-size: 1.1rem;
+}
+
+.btn a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewX(45deg) translateX(0);
+    transition: 0.5s;
+}
+
+.btn:hover a::before {
+    transform: skewX(45deg) translateX(200%);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width: 30px;
+    height: 10px;
+    /* background: blue; */
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0;
+}
+
+.btn:hover::before {
+    bottom: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+    transition-delay: 0.2s;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -5px;
+    width: 30px;
+    height: 10px;
+    /* background: blueviolet; */
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0;
+}
+
+.btn:hover::after {
+    top: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+    transition-delay: 0.2s;
+}
+
+.btn::before,
+.btn::after {
+    background: #2079FF;
+    box-shadow: 0 0 5px #3184ff,
+    0 0 15px #3184ff,
+    0 0 30px #3184ff,
+    0 0 60px #3184ff,
+    0 0 120px #3184ff;
+}
+
+.btn::after {
+    background: #771EFF;
+    box-shadow: 0 0 5px #8b3dff,
+    0 0 15px #8b3dff,
+    0 0 30px #8b3dff,
+    0 0 60px #8b3dff,
+    0 0 120px #8b3dff;
+}
+
+
+
+
+
+
+
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.cards-back {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: 500;
+    width: 150px;
+    height: 45px;
+    border-radius: 30px;
+    backdrop-filter: blur(15px);
+    border-top: 1px solid #ffffff50;
+    border-bottom: 1px solid #ffffff50;
+    transition: 1s;
+    z-index: 2;
+}
+
+.cards-back:hover {
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.cards {
+    display: flex;
+    position: relative;
+    width: 150px;
+    height: 45px;
+    border-radius: 30px;
+}
+
+.cards::before,
+.cards::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: conic-gradient(from var(--gradient-angle), #2079FF, #771EFF, #2079FF, #771EFF, #771EFF);
+    border-radius: inherit;
+    animation: rotate 30s ease-in-out infinite;
+}
+
+.cards::after {
+    filter: blur(0.5rem);
+}
+
+@keyframes rotate {
+    0% { --gradient-angle: 0deg; }
+    100% { --gradient-angle: 360deg; }
+}

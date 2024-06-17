@@ -95,7 +95,7 @@ input {
 
 /* --- Component --- */
 
-.button {
+/* .button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,8 +113,64 @@ input {
   backdrop-filter: blur(3px);
   transition: 1s;
   animation: glowe 5s ease-in-out infinite ;
+} */
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
 
+.button-front {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: bold;
+  width: 140px;
+  height: 45px;
+  border-radius: 30px;
+  backdrop-filter: blur(15px);
+  border-top: 1px solid #ffffff50;
+  border-bottom: 1px solid #ffffff50;
+  transition: 1s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.button-front:hover {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.button {
+  display: flex;
+  position: relative;
+  width: 140px;
+  height: 45px;
+  border-radius: 30px;
+}
+
+.button::before,
+.button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: conic-gradient(from var(--gradient-angle), #2079FF, #771EFF, #2079FF, #771EFF, #771EFF);
+  border-radius: inherit;
+  animation: rotate 18s ease-in-out infinite;
+}
+
+.button::after {
+  filter: blur(1.5rem);
+}
+
+@keyframes rotate {
+  0% { --gradient-angle: 0deg; }
+  100% { --gradient-angle: 360deg; }
+}
 
 /* --- Page --- */
 .page {
@@ -176,26 +232,6 @@ input {
   align-items: center;
 }
 
-/* .header-section .header .top-menu .contribute .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(91, 51, 152, 0.1);
-  box-shadow: 1px 1px 4px 0px #771eff,
-           0px 0px 70px -5px #771eff99,
-           inset 0px 0px 16px #771eff99;
-  width: 140px;
-  height: 45px;
-  border-top: solid 2px #2079ffee;
-  border-left: solid 2px #2079ffee;
-  border-radius: 18px;
-  font-size: 15px;
-  font-weight: bold;
-  backdrop-filter: blur(3px);
-  transition: 1s;
-  animation: glowe 3s infinite ;
-} */
-
 .header-section .header .top-menu .contribute .line {
   position: absolute;
   width: 9svw;
@@ -252,27 +288,6 @@ input {
   flex-direction: row;
   align-items: center;
 }
-
-/* .content-section .right .bottom .download .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(91, 51, 152, 0.1);
-  box-shadow: 1px 1px 4px 0px #771eff,
-           0px 0px 70px -5px #771eff99,
-           inset 0px 0px 16px #771eff99;
-  width: 140px;
-  height: 45px;
-  border-top: solid 2px #2079ffee;
-  border-left: solid 2px #2079ffee;
-  border-radius: 18px;
-  font-size: 15px;
-  font-weight: bold;
-  backdrop-filter: blur(3px);
-  align-self: flex-start;
-  transition: 1s;
-  animation: glowe 3s infinite ;
-} */
 
 .content-section .right .bottom .download .line {
   position: absolute;
