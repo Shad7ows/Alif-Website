@@ -95,7 +95,8 @@ input {
 
 /* --- Component --- */
 
-/* .button {
+/* -- button1 -- */
+.button1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,15 +114,17 @@ input {
   backdrop-filter: blur(3px);
   transition: 1s;
   animation: glowe 5s ease-in-out infinite ;
-} */
+}
 
+
+/* -- button2 -- */
 @property --gradient-angle {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
 }
 
-.button-front {
+.button2-front {
   display: flex;
   position: absolute;
   align-items: center;
@@ -139,12 +142,12 @@ input {
   cursor: pointer;
 }
 
-.button-front:hover {
+.button2-front:hover {
   font-size: 16px;
   letter-spacing: 1px;
 }
 
-.button {
+.button2 {
   display: flex;
   position: relative;
   width: 140px;
@@ -152,8 +155,8 @@ input {
   border-radius: 30px;
 }
 
-.button::before,
-.button::after {
+.button2::before,
+.button2::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -163,7 +166,7 @@ input {
   animation: rotate 18s ease-in-out infinite;
 }
 
-.button::after {
+.button2::after {
   filter: blur(1.5rem);
 }
 
@@ -171,6 +174,114 @@ input {
   0% { --gradient-angle: 0deg; }
   100% { --gradient-angle: 360deg; }
 }
+
+
+/* -- button3 -- */
+.button3 {
+  position: relative;
+  width: 140px;
+  height: 45px;
+}
+
+.button3 .label {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 45px;
+  color: white;
+  z-index: 2;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: 0.5s;
+}
+
+.button3:hover .label {
+  font-size: 1.1rem;
+}
+
+.button3 .label::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(45deg) translateX(0);
+  transition: 0.5s;
+}
+
+.button3:hover .label::before {
+  transform: skewX(45deg) translateX(200%);
+}
+
+.button3::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1px;
+  width: 45px;
+  height: 10px;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.button3:hover::before {
+  bottom: 0;
+  height: 55%;
+  width: 85%;
+  transition-delay: 0.2s;
+}
+
+.button3::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1px;
+  width: 45px;
+  height: 10px;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.button3:hover::after {
+  top: 0;
+  height: 55%;
+  width: 85%;
+  transition-delay: 0.2s;
+}
+
+.button3::before {
+  z-index: 1;
+  background: #2079FF;
+  box-shadow: 0 0 5px #3184ff,
+  0 0 15px #3184ff,
+  0 0 30px #3184ff,
+  0 0 60px #3184ff,
+  0 0 120px #3184ff;
+}
+
+.button3::after {
+  background: #771EFF;
+  box-shadow: 0 0 5px #8b3dff,
+  0 0 15px #8b3dff,
+  0 0 30px #8b3dff,
+  0 0 60px #8b3dff,
+  0 0 120px #8b3dff;
+}
+
+
 
 /* --- Page --- */
 .page {
