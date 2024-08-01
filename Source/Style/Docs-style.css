@@ -1,14 +1,11 @@
 :root {
   --text--: #fff;
-  --bur--: #5B3398;
-  --light-bur--: #771EFF;
-  --blu--: #335B98;
-  --light-blu--: #2079FF;
+  --bur--: #5b3398;
+  --light-bur--: #771eff;
+  --blu--: #335b98;
+  --light-blu--: #2079ff;
 }
 
-a {
-  color: var(--blu--);
-}
 .grammar li {
   display: flex;
   flex-direction: row-reverse;
@@ -16,12 +13,12 @@ a {
 
 /* code card  */
 code {
-  font-family: 'tajawal';
+  font-family: "tajawal";
 }
 .code-editor {
   max-width: 100%;
   border: 2px solid #182d5555;
-  box-shadow: 2px 2px 1px #2079FF;
+  box-shadow: 2px 2px 1px #2079ff;
   backdrop-filter: blur(3px);
   border-radius: 10px;
   padding: 2px;
@@ -43,7 +40,7 @@ code {
 
 .code-editor .icon {
   width: 20px;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 
 .code-editor .icon:hover {
@@ -81,7 +78,8 @@ code {
   color: rgb(207 146 120);
 }
 
-.code-editor .color-preview-1,.color-preview-2 {
+.code-editor .color-preview-1,
+.color-preview-2 {
   height: 8px;
   width: 8px;
   border: 1px solid #fff;
@@ -101,11 +99,51 @@ code {
   color: #999;
 }
 .grammar .var_type {
-  color: #335B98;
+  color: #335b98;
 }
 .grammar .var_val {
-  color: #771EFF;
+  color: #771eff;
 }
 .grammar .var {
-  color: #A62093;
+  color: #a62093;
+}
+
+/* support */
+.title {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.support-content {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  justify-content: end;
+  font-weight: bold;
+}
+
+.support-content h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.support-content a {
+  color: #a62093;
+}
+
+.support-content .sual {
+  color: #538ce2;
+  font-weight: 800;
+  margin: 30px 0 10px 0px;
+  cursor: pointer;
+}
+
+.support-content .egaba {
+  margin: 10px 20px 0 0;
+  display: none;
+}
+
+.support-content .egaba.active {
+  display: block;
 }

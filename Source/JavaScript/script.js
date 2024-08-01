@@ -13,3 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// open egaba
+
+function showEgaba(element) {
+  const egaba = element.nextElementSibling;
+  egaba.classList.toggle("active");
+}
+

@@ -1,162 +1,120 @@
 <!DOCTYPE html>
 
 <html lang="ar">
-  <head>
-    <title>قواعد لغة الف</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="تحميل لغة البرمجة العربية ألف بنسختها الخامسة"
-    />
-    <link
-      rel="shortcut icon"
-      href="../Assets/AlifLogo.svg"
-      type="image/x-icon"
-    />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href="../Fonts/Tajawal-Bold.woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href="../Fonts/Tajawal-Regular.woff2"
-      crossorigin
-    />
-    <link rel="stylesheet" href="../Style/main-style.css" defer />
-    <link rel="stylesheet" href="../Style/Docs-style.css" defer />
-  </head>
 
-  <body class="page">
-    <div class="background"></div>
+<head>
+  <title>قواعد لغة الف</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="تحميل لغة البرمجة العربية ألف بنسختها الخامسة" />
+  <link rel="shortcut icon" href="../Assets/AlifLogo.svg" type="image/x-icon" />
+  <link rel="preload" as="font" type="font/woff2" href="../Fonts/Tajawal-Bold.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="../Fonts/Tajawal-Regular.woff2" crossorigin />
+  <link rel="stylesheet" href="../Style/main-style.css" defer />
+  <link rel="stylesheet" href="../Style/Docs-style.css" defer />
+</head>
 
-    <section class="container header-section">
-      <header class="header">
-        <div class="menu">
-          <label class="lines">
-            <input type="checkbox" id="lines" />
-            <svg class="svg" viewBox="0 0 32 32">
-              <path
-                class="line top-bottom"
-                d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
-              ></path>
-              <path class="line middle" d="M7 16 27 16"></path>
-            </svg>
-          </label>
-        </div>
+<body class="page">
+  <div class="background"></div>
 
-        <div class="logo">
-          <a href="../../index.html"
-            ><img alt="شعار ألف" src="../Assets/AlifLogo.svg"
-          /></a>
-        </div>
-        <div class="top-menu">
-          <ul class="list">
-            <li class="item"><a href="#">الـتـعـلـيـم</a></li>
-            <li class="item"><a href="#" class="active">الـوثـائـق</a></li>
-            <li class="item"><a href="#">الـدعـم</a></li>
-          </ul>
-          <div class="contribute">
-            <span class="line"></span>
-            <a href="#" class="button">المساهمة</a>
-          </div>
-        </div>
-      </header>
-    </section>
-
-    <section class="menu-section">
-      <div class="stroke-anim"></div>
-      <div class="slide-menu">
-        <a href="#">الـتـعـلـيــم</a>
-        <a href="#">الـوثـائـق</a>
-        <a href="#">الـدعـم</a>
-        <a href="#">الـرخـصـة</a>
-        <a href="#">مـن نـحـن</a>
-        <a href="#">ألـف2</a>
+  <section class="container header-section">
+    <header class="header">
+      <div class="menu">
+        <label class="lines">
+          <input type="checkbox" id="lines" />
+          <svg class="svg" viewBox="0 0 32 32">
+            <path class="line top-bottom"
+              d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+            </path>
+            <path class="line middle" d="M7 16 27 16"></path>
+          </svg>
+        </label>
       </div>
-    </section>
 
-    <h1>قواعد مُطَابِق ألـف نـ5.0</h1>
-    <section class="container content-section">
-      <div class="grammar">
-        <h4>
-          هذه قواعد ألف نـ5 الخاصة بـ مُطابِق ألف. نسق القواعد هو خليط من
-          <a
-            href="https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form"
-            >EBNF</a
-          >
-          و PEG, حيث EBNF اختصار لـ Extended Backus-Naur form وهي شفرة تدوين خاص
-          بقواعد لغات الحاسب, اما
-          <a href="https://en.wikipedia.org/wiki/Parsing_expression_grammar"
-          >PEG</a>
-          فهو اختصار لـ Parsing Expression Grammar وهو شكل من اشكال نسق القواعد.
-        </h4><br>
-        <h2>تنسيق القواعد:</h2><br>
-        <ol type="1">
-          <li><span class="var">س ص</span> يقوم بمطابقة س ومن ثم ص&nbsp; </li>
-          <div class="code-editor">
-            <div class="header">
-              <span class="title">ألف</span>
-            </div>
-            <div class="editor-content">
-              <code class="code">
+      <div class="logo">
+        <a href="../../index.html"><img alt="شعار ألف" src="../Assets/AlifLogo.svg" /></a>
+      </div>
+      <div class="top-menu">
+        <ul class="list">
+          <li class="item"><a href="learn.html">الـتـعـلـيـم</a></li>
+          <li class="item"><a href="#" class="active">الـوثـائـق</a></li>
+          <li class="item"><a href="Support.html">الـدعـم</a></li>
+        </ul>
+        <div class="contribute">
+          <span class="line"></span>
+          <a href="#" class="button1">المساهمة</a>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <section class="menu-section">
+    <div class="stroke-anim"></div>
+    <div class="slide-menu">
+      <a href="learn.html">الـتـعـلـيــم</a>
+      <a href="#" class="active">الـوثـائـق</a>
+      <a href="Support.html">الـدعـم</a>
+      <a href="#">الـرخـصـة</a>
+      <a href="#">مـن نـحـن</a>
+      <a href="#">ألـف2</a>
+    </div>
+  </section>
+
+  <h1 class="title">قواعد مُطَابِق ألـف نـ5.0</h1>
+  <section class="container content-section">
+    <div class="grammar">
+      <h4>
+        هذه قواعد ألف نـ5 الخاصة بـ مُطابِق ألف. نسق القواعد هو خليط من
+        <a href="https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form">EBNF</a>
+        و PEG, حيث EBNF اختصار لـ Extended Backus-Naur form وهي شفرة تدوين خاص
+        بقواعد لغات الحاسب, اما
+        <a href="https://en.wikipedia.org/wiki/Parsing_expression_grammar">PEG</a>
+        فهو اختصار لـ Parsing Expression Grammar وهو شكل من اشكال نسق القواعد.
+      </h4><br>
+      <h2>تنسيق القواعد:</h2><br>
+      <ol type="1">
+        <li><span class="var">س ص</span> يقوم بمطابقة س ومن ثم ص&nbsp; </li>
+        <div class="code-editor">
+          <div class="header">
+            <span class="title">ألف</span>
+          </div>
+          <div class="editor-content">
+            <code class="code">
                 <span class="var">س > ص</span><br>
                 <span class="comment"> يقوم بمطابقة س او ص, ايهما يسبق ينهي الدالة # <br> وقد يكون على الشكل التالي #</span><br>
                 <span class="var">اسم_دالة:</span>
               </code>
-            </div>
           </div>
-          <li><span class="var">(س)</span> يقوم بمطابقة المجموعة &nbsp;</li>
-          <li><span class="var">&nbsp;[س]</span>او<span class="var">&nbsp; س؟ &nbsp;</span> او   مطابقة س اختيارية</li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ol>
-          
         </div>
-    </section>
+        <li><span class="var">(س)</span> يقوم بمطابقة المجموعة &nbsp;</li>
+        <li><span class="var">&nbsp;[س]</span>او<span class="var">&nbsp; س؟ &nbsp;</span> او مطابقة س اختيارية</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
 
-    <section class="container footer-section">
-      <a class="item text" href="#">الـرخـصـة</a>
-      <a class="item text" href="#">مـن نـحـن</a>
-      <a class="item text" href="#">ألـف2</a>
-      <div class="item circle">
-        <img
-          alt="انستاغرام"
-          class="img"
-          width="30px"
-          height="30px"
-          src="../Assets/Instagram.svg"
-        />
-      </div>
-      <div class="item circle">
-        <img
-          alt="يوتيوب"
-          class="img"
-          width="30px"
-          height="30px"
-          src="../Assets/Youtube.svg"
-        />
-      </div>
-      <div class="item circle">
-        <img
-          alt="غيتهب"
-          class="img"
-          width="30px"
-          height="30px"
-          src="../Assets/Github.svg"
-        />
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <script class="scripe" src="../JavaScript/script.js" defer></script>
-  </body>
+  <section class="container footer-section">
+    <a class="item text" href="#">الـرخـصـة</a>
+    <a class="item text" href="#">مـن نـحـن</a>
+    <a class="item text" href="#">ألـف2</a>
+    <div class="item circle">
+      <img alt="انستاغرام" class="img" width="30px" height="30px" src="../Assets/Instagram.svg" />
+    </div>
+    <div class="item circle">
+      <img alt="يوتيوب" class="img" width="30px" height="30px" src="../Assets/Youtube.svg" />
+    </div>
+    <div class="item circle">
+      <img alt="غيتهب" class="img" width="30px" height="30px" src="../Assets/Github.svg" />
+    </div>
+  </section>
+
+  <script class="scripe" src="../JavaScript/script.js" defer></script>
+</body>
+
 </html>

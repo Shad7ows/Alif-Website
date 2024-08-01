@@ -1,60 +1,59 @@
 @font-face {
-  font-family: 'Tajawal';
-  src: url('../Fonts/Tajawal-Black.woff2') format('woff2'),
-      url('../Fonts/Tajawal-Black.ttf') format('truetype');
+  font-family: "Tajawal";
+  src: url("../Fonts/Tajawal-Black.woff2") format("woff2"),
+    url("../Fonts/Tajawal-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
-  font-display:swap;
+  font-display: swap;
 }
 @font-face {
-    font-family: 'Tajawal';
-    src: url('../Fonts/Tajawal-ExtraBold.woff2') format('woff2'),
-         url('../Fonts/Tajawal-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-    font-display:swap;
+  font-family: "Tajawal";
+  src: url("../Fonts/Tajawal-ExtraBold.woff2") format("woff2"),
+    url("../Fonts/Tajawal-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: 'Tajawal';
-  src: url('../Fonts/Tajawal-Bold.woff2') format('woff2'),
-      url('../Fonts/Tajawal-Bold.ttf') format('truetype');
+  font-family: "Tajawal";
+  src: url("../Fonts/Tajawal-Bold.woff2") format("woff2"),
+    url("../Fonts/Tajawal-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
-  font-display:swap;
+  font-display: swap;
 }
 @font-face {
-    font-family: 'Tajawal';
-    src: url('../Fonts/Tajawal-Medium.woff2') format('woff2'),
-        url('../Fonts/Tajawal-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display:swap;
+  font-family: "Tajawal";
+  src: url("../Fonts/Tajawal-Medium.woff2") format("woff2"),
+    url("../Fonts/Tajawal-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-    font-family: 'Tajawal';
-    src: url('../Fonts/Tajawal-Regular.woff2') format('woff2'),
-        url('../Fonts/Tajawal-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display:swap;
+  font-family: "Tajawal";
+  src: url("../Fonts/Tajawal-Regular.woff2") format("woff2"),
+    url("../Fonts/Tajawal-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-    font-family: 'Tajawal';
-    src: url('../Fonts/Tajawal-Light.woff2') format('woff2'),
-        url('../Fonts/Tajawal-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display:swap;
+  font-family: "Tajawal";
+  src: url("../Fonts/Tajawal-Light.woff2") format("woff2"),
+    url("../Fonts/Tajawal-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-    font-family: 'Tajawal';
-    src: url('../Fonts/Tajawal-ExtraLight.woff2') format('woff2'),
-        url('../Fonts/Tajawal-ExtraLight.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
-    font-display:swap;
+  font-family: "Tajawal";
+  src: url("../Fonts/Tajawal-ExtraLight.woff2") format("woff2"),
+    url("../Fonts/Tajawal-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
 }
-
 
 * {
   margin: 0;
@@ -63,10 +62,10 @@
 
 :root {
   --text--: #fff;
-  --bur--: #5B3398;
-  --light-bur--: #771EFF;
-  --blu--: #335B98;
-  --light-blu--: #2079FF;
+  --bur--: #5b3398;
+  --light-bur--: #771eff;
+  --blu--: #335b98;
+  --light-blu--: #2079ff;
 }
 
 a {
@@ -106,9 +105,8 @@ h1 {
   align-items: center;
   justify-content: center;
   background: rgba(91, 51, 152, 0.1);
-  box-shadow: 1px 1px 3px 0px #771eff,
-           0px 0px 50px -5px #771effff,
-           inset 0px 0px 16px #771eff99;
+  box-shadow: 1px 1px 3px 0px #771eff, 0px 0px 50px -5px #771effff,
+    inset 0px 0px 16px #771eff99;
   width: 140px;
   height: 45px;
   border-top: solid 2px #2079ffee;
@@ -118,9 +116,8 @@ h1 {
   font-weight: bold;
   backdrop-filter: blur(3px);
   transition: 1s;
-  animation: glowe 5s ease-in-out infinite ;
+  animation: glowe 5s ease-in-out infinite;
 }
-
 
 /* -- button2 -- */
 @property --gradient-angle {
@@ -162,11 +159,18 @@ h1 {
 
 .button2::before,
 .button2::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: conic-gradient(from var(--gradient-angle), #2079FF, #771EFF, #2079FF, #771EFF, #771EFF);
+  background: conic-gradient(
+    from var(--gradient-angle),
+    #2079ff,
+    #771eff,
+    #2079ff,
+    #771eff,
+    #771eff
+  );
   border-radius: inherit;
   animation: rotate 18s ease-in-out infinite;
 }
@@ -176,10 +180,13 @@ h1 {
 }
 
 @keyframes rotate {
-  0% { --gradient-angle: 0deg; }
-  100% { --gradient-angle: 360deg; }
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
 }
-
 
 /* -- button3 -- */
 .button3 {
@@ -214,7 +221,7 @@ h1 {
 }
 
 .button3 .label::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -230,7 +237,7 @@ h1 {
 }
 
 .button3::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -249,7 +256,7 @@ h1 {
 }
 
 .button3::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -269,24 +276,16 @@ h1 {
 
 .button3::before {
   z-index: 1;
-  background: #2079FF;
-  box-shadow: 0 0 5px #3184ff,
-  0 0 15px #3184ff,
-  0 0 30px #3184ff,
-  0 0 60px #3184ff,
-  0 0 120px #3184ff;
+  background: #2079ff;
+  box-shadow: 0 0 5px #3184ff, 0 0 15px #3184ff, 0 0 30px #3184ff,
+    0 0 60px #3184ff, 0 0 120px #3184ff;
 }
 
 .button3::after {
-  background: #771EFF;
-  box-shadow: 0 0 5px #8b3dff,
-  0 0 15px #8b3dff,
-  0 0 30px #8b3dff,
-  0 0 60px #8b3dff,
-  0 0 120px #8b3dff;
+  background: #771eff;
+  box-shadow: 0 0 5px #8b3dff, 0 0 15px #8b3dff, 0 0 30px #8b3dff,
+    0 0 60px #8b3dff, 0 0 120px #8b3dff;
 }
-
-
 
 /* --- Page --- */
 .page {
@@ -298,12 +297,12 @@ h1 {
   font-family: "Tajawal";
   color: var(--text--);
   text-align: right;
+  overflow-x: hidden;
 }
 
 .container {
   margin: 4svh 9svw 4svh 9svw;
 }
-
 
 /* --- Header --- */
 .header-section .header {
@@ -359,13 +358,11 @@ h1 {
   opacity: 0.7;
 }
 
-
 /* --- Content --- */
 .content-section {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  min-height: 300px;
   max-height: 600px;
 }
 
@@ -375,7 +372,6 @@ h1 {
   justify-content: space-between;
   margin-left: auto;
 }
-
 
 .content-section .right .title {
   text-align: right;
@@ -438,7 +434,7 @@ h1 {
   aspect-ratio: 1;
   border-radius: 30px;
   backdrop-filter: blur(6px);
-  box-shadow: 2px 2px 1px #2079FF;
+  box-shadow: 2px 2px 1px #2079ff;
 }
 
 .content-section .left .logo {
@@ -465,11 +461,12 @@ h1 {
   align-items: center;
   justify-content: end;
   font-size: 18px;
+  padding-bottom: 30px;
 }
 
 .footer-section .item {
   display: flex;
-  margin-left: 6svw;
+  margin-left: 5svw;
   font-weight: normal;
 }
 
@@ -490,8 +487,6 @@ h1 {
 .footer-section .circle .img {
   width: 23px;
 }
-
-
 
 /* -- Media Adjustment -- */
 @media (max-width: 960px) {
@@ -521,7 +516,7 @@ h1 {
     margin-bottom: 5svh;
     align-self: center;
   }
-  
+
   .header-section .header .top-menu .list {
     margin-left: auto;
   }
@@ -550,7 +545,7 @@ h1 {
     font-size: calc(36px + 2svw);
     margin-bottom: 2svh;
   }
-  
+
   .content-section .right .paragraph {
     width: 60svw;
     font-size: calc(16px + 1svw);
@@ -564,7 +559,7 @@ h1 {
     justify-content: center;
     margin-bottom: 50px;
   }
-  
+
   .content-section .right .for-tab .logo-card {
     display: flex;
     align-items: center;
@@ -574,13 +569,13 @@ h1 {
     aspect-ratio: 1;
     border-radius: 30px;
     backdrop-filter: blur(6px);
-    box-shadow: 2px 2px 1px #2079FF;
+    box-shadow: 2px 2px 1px #2079ff;
   }
-  
+
   .content-section .right .for-tab .logo {
     width: 70%;
   }
-  
+
   .content-section .right .for-tab .code {
     position: absolute;
     left: 0;
@@ -589,7 +584,7 @@ h1 {
     width: calc(90px + 10svw);
     z-index: -1;
   }
-  
+
   /* --- Footer --- */
   .footer-section {
     justify-content: space-evenly;
@@ -599,7 +594,7 @@ h1 {
   .footer-section .item {
     margin-left: 0;
   }
-  
+
   .footer-section .circle {
     display: flex;
     align-items: center;
@@ -613,12 +608,11 @@ h1 {
     backdrop-filter: blur(6px);
     box-shadow: 0px 2px 4px #2079ff, inset 0px 0px 6px #771eff;
   }
-  
+
   .footer-section .circle .img {
     width: 23px;
   }
 }
-
 
 @media (max-width: 480px) {
   .background {
@@ -636,7 +630,7 @@ h1 {
     margin-bottom: 0;
     z-index: 5;
   }
-  
+
   .header-section .header .top-menu {
     display: none;
   }
@@ -645,7 +639,7 @@ h1 {
     display: flex;
     z-index: 5;
   }
-  
+
   .header-section .header .menu .lines {
     display: flex;
     cursor: pointer;
@@ -663,7 +657,7 @@ h1 {
     stroke-linejoin: round;
     stroke-width: 3;
     transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-     stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .header-section .header .menu .lines .svg .top-bottom {
@@ -681,7 +675,6 @@ h1 {
 
   /* --- Content --- */
   .content-section {
-    min-height: 600px;
     max-height: 800px;
   }
 
@@ -693,7 +686,7 @@ h1 {
     font-size: 36px;
     margin-bottom: 10px;
   }
-  
+
   .content-section .right .paragraph {
     width: 80svw;
     font-size: 16px;
@@ -705,11 +698,11 @@ h1 {
     display: flex;
     margin-bottom: 100px;
   }
-  
+
   .content-section .right .for-tab .logo-card {
     height: 100%;
   }
-  
+
   .content-section .right .for-tab .code {
     transform: translate(-15px, -45px);
     width: 40svw;
@@ -777,14 +770,12 @@ h1 {
 
 @keyframes glowe {
   50% {
-    box-shadow: 1px 1px 3px 0px #771eff,
-    0px 0px 50px -5px #771eff55,
-    inset 0px 0px 8px #771effaa;
+    box-shadow: 1px 1px 3px 0px #771eff, 0px 0px 50px -5px #771eff55,
+      inset 0px 0px 8px #771effaa;
   }
 }
 @keyframes stroke-color {
   50% {
-    filter: hue-rotate(35deg)
+    filter: hue-rotate(35deg);
   }
 }
-

@@ -17,9 +17,10 @@
 
 .content-section .os .card {
     position: relative;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
+    padding-top: 20px;
     background-image: linear-gradient(135deg,
             rgba(0, 0, 248, 0.12),
             rgba(0, 9, 32, 0.1),
@@ -31,7 +32,7 @@
     text-align: center;
     cursor: pointer;
     border: 2px solid #182d5555;
-    height: calc(245px + 3svw);
+    /* height: calc(245px + 3svw); */
     width: calc(200px + 3svw);
     border-radius: 30px;
     box-shadow: 2px 2px 1px #2079FF;
@@ -42,15 +43,14 @@
 .os .card:hover {
     box-shadow: -2px 2px 1px #2079FF;
     background-position: left;
-    transform: rotateY(180deg);
+    /* transform: rotateY(180deg); */
 }
 
 .card .front,
 .card .back {
-    position: absolute;
-    /* Safari */
+    /* position: absolute;
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    backface-visibility: hidden; */
 }
 
 .os .card .front {
@@ -72,7 +72,10 @@
 }
 
 .card .back {
-    transform: translateZ(-45px) rotateY(180deg);
+    /* transform: translateZ(-45px) rotateY(180deg); */
+}
+.card .back .button1{
+    margin: 30px auto;
 }
 
 /* -- Media Adjustment -- */
