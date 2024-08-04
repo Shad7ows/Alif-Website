@@ -1,0 +1,149 @@
+:root {
+  --text--: #fff;
+  --bur--: #5b3398;
+  --light-bur--: #771eff;
+  --blu--: #335b98;
+  --light-blu--: #2079ff;
+}
+
+.grammar li {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* code card  */
+code {
+  font-family: "tajawal";
+}
+.code-editor {
+  max-width: 100%;
+  border: 2px solid #182d5555;
+  box-shadow: 2px 2px 1px #2079ff;
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  padding: 2px;
+  margin: 20px 0;
+}
+
+.code-editor .header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 10px;
+}
+
+.code-editor .title {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text--);
+}
+
+.code-editor .icon {
+  width: 20px;
+  transition: 0.2s ease;
+}
+
+.code-editor .icon:hover {
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: #6e7281;
+}
+
+.code-editor .editor-content {
+  margin: 0 10px 10px;
+  color: white;
+}
+
+.code-editor .property {
+  margin-left: 30px;
+}
+
+.code-editor .property:hover {
+  cursor: text;
+}
+
+.code-editor .editor-content .color-0 {
+  color: rgb(86 156 214);
+}
+
+.code-editor .editor-content .color-1 {
+  color: rgb(182 206 168);
+}
+
+.code-editor .editor-content .color-2 {
+  color: rgb(156 220 254);
+}
+
+.code-editor .editor-content .color-3 {
+  color: rgb(207 146 120);
+}
+
+.code-editor .color-preview-1,
+.color-preview-2 {
+  height: 8px;
+  width: 8px;
+  border: 1px solid #fff;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.code-editor .color-preview-1 {
+  background-color: #1d1e22;
+}
+
+.code-editor .color-preview-1 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* code colors  */
+.grammar .comment {
+  color: #999;
+}
+.grammar .var_type {
+  color: #335b98;
+}
+.grammar .var_val {
+  color: #771eff;
+}
+.grammar .var {
+  color: #a62093;
+}
+
+/* support */
+.title {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.support-content {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  justify-content: end;
+  font-weight: bold;
+}
+
+.support-content h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.support-content a {
+  color: #a62093;
+}
+
+.support-content .sual {
+  color: #538ce2;
+  font-weight: 800;
+  margin: 30px 0 10px 0px;
+  cursor: pointer;
+}
+
+.support-content .egaba {
+  margin: 10px 20px 0 0;
+  display: none;
+}
+
+.support-content .egaba.active {
+  display: block;
+}
