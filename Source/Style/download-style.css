@@ -74,4 +74,11 @@ h1 {
 /* -- Media Adjustment -- */
 @media (max-width: 960px) {}
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+
+    /* --- Content --- */
+    .content-section {
+        max-height: 100%;
+    }
+
+}
