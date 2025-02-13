@@ -51,17 +51,17 @@
     max-height: 9vh;
 }
 
-.platform {
+.os .card .platform {
     margin-bottom: 10px;
 }
 
-.info {
+.os .card .info {
     color: #ddd;
     margin-bottom: 35px;
     padding: 1px 10px 1px 10px;
 }
 
-.vers {
+.os .card .vers {
     margin-top: 5px;
     font-size: .7em;
     color: gray;
