@@ -87,8 +87,8 @@ input {
   background-image: url("../Assets/Background.webp");
   background-size: cover;
   position: fixed;
-  width: 100svw;
-  height: 100svh;
+  width: 100lvw;
+  height: 100lvh;
   background-position-x: right;
   z-index: -3;
 }
@@ -167,7 +167,7 @@ input {
 }
 
 .button2::after {
-  filter: blur(1.5rem);
+  filter: blur(2rem);
 }
 
 @keyframes rotate {
@@ -296,7 +296,7 @@ input {
 }
 
 .container {
-  margin: 4svh 9svw 4svh 9svw;
+  margin: 5svh 9svw 5svh 9svw;
 }
 
 
@@ -360,8 +360,8 @@ input {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  min-height: 300px;
-  max-height: 600px;
+  min-height: 250px;
+  max-height: 390px;
 }
 
 .content-section .right {
@@ -469,20 +469,22 @@ input {
 
 .footer-section .circle {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
-  position: relative;
   border-radius: 100%;
   width: 40px;
   height: 40px;
   border: 1px solid #2079ff;
+  cursor: pointer;
   background: rgba(51, 91, 152, 0.2);
   backdrop-filter: blur(6px);
   box-shadow: 0px 2px 4px #2079ff, inset 0px 0px 6px #771eff;
 }
 
 .footer-section .circle .img {
-  width: 23px;
+  width: 60%;
+  aspect-ratio: 1;
 }
 
 
@@ -587,29 +589,10 @@ input {
   /* --- Footer --- */
   .footer-section {
     justify-content: space-evenly;
-    z-index: -1;
   }
 
   .footer-section .item {
     margin-left: 0;
-  }
-  
-  .footer-section .circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    border-radius: 100%;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #2079ff;
-    background: rgba(51, 91, 152, 0.2);
-    backdrop-filter: blur(6px);
-    box-shadow: 0px 2px 4px #2079ff, inset 0px 0px 6px #771eff;
-  }
-  
-  .footer-section .circle .img {
-    width: 23px;
   }
 }
 
