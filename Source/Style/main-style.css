@@ -71,6 +71,7 @@
 
 a {
   color: var(--text--);
+  cursor: pointer;
   text-decoration: none;
 }
 
@@ -82,13 +83,18 @@ input {
   display: none;
 }
 
+/* --- Scroll Bar --- */
+::-webkit-scrollbar{
+  width: 5px;
+  background-color: #0b051c;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #0b051c;
+}
 /* --- Background --- */
 .background {
   background-image: url("../Assets/Background.webp");
   background-size: cover;
-  position: fixed;
-  width: 100lvw;
-  height: 100lvh;
   background-position-x: right;
   z-index: -3;
 }
@@ -281,15 +287,32 @@ input {
   0 0 120px #8b3dff;
 }
 
-
+/* --- card --- */
+.card {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 248, 0.12),
+    rgba(0, 9, 32, 0.1),
+    rgba(0, 0, 248, 0.12),
+    rgba(0, 9, 32, 0.1),
+    transparent
+  );
+  padding: 15px;
+  background-size: 200% 200%;
+  border: 2px solid #182d5555;
+  border-radius: 30px;
+  box-shadow: 2px 2px 1px #2079FF;
+}
 
 /* --- Page --- */
 .page {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100svw;
-  height: 100svh;
+  background-image: url("../Assets/Background.webp");
+  background-color: #0b051c;
+  background-size: cover;
+  background-position-x: right;
   font-family: "Tajawal";
   color: var(--text--);
   text-align: right;
@@ -360,7 +383,6 @@ input {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  min-height: 250px;
   max-height: 390px;
 }
 
@@ -452,6 +474,17 @@ input {
   display: none;
 }
 
+
+/* --- About US --- */
+.aboutUs{
+  width: 100%;
+  height: 100%;
+}
+.aboutUs .card{
+  width: 100%;
+  height: 100%;
+}
+
 /* --- Footer --- */
 .footer-section {
   display: flex;
@@ -500,8 +533,6 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
-    height: 100%;
     font-family: "Tajawal";
     color: var(--text--);
     text-align: right;
@@ -528,7 +559,6 @@ input {
 
   /* --- Content --- */
   .content-section {
-    min-height: 720px;
     max-height: 960px;
     justify-content: center;
   }
@@ -658,7 +688,6 @@ input {
 
   /* --- Content --- */
   .content-section {
-    min-height: 600px;
     max-height: 800px;
   }
 
@@ -731,6 +760,9 @@ input {
     row-gap: 7svh;
     margin-top: 50px;
   }
+  .menu-section .slide-menu a {
+    z-index: 2;
+  }
 
   .menu-section .stroke-anim {
     position: absolute;
@@ -738,11 +770,12 @@ input {
     border-radius: 30px;
     width: 70%;
     height: 70%;
+    z-index: 1;
     border-bottom: 1px solid;
     border-color: blue;
     box-shadow: inset 0 -9px 21px -3px blue;
     margin-top: 50px;
-    transition: 1s;
+    transition: .5s;
     animation: stroke-color 5s ease-in-out infinite;
   }
 
