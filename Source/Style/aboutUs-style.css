@@ -1,8 +1,18 @@
 .card {
-  padding: 10px;
+  padding: 45px;
   border: 2px solid #182d5555;
   height: 100%;
   border-radius: 30px;
   backdrop-filter: blur(6px);
   box-shadow: 2px 2px 1px #2079ff;
+}
+
+
+.card p {
+  line-height: 1.8em;
+}
+
+.card h1 {
+  font-size: 1.8em;
+  line-height: 2em;
 }

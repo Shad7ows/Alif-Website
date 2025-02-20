@@ -40,26 +40,20 @@
             box-shadow: 2px 2px 1px #2079FF;
         }
 
-        .space {
-            font-size: 80px;
-        }
-
         .line {
+            align-self: center;
             position: absolute;
-            width: 100%;
-            border: solid 1px white;
-            right: 0;
-            bottom: 225px;
+            width: 16384px;
+            border: solid 1px #bbb;
         }
 
 
         .button2-front {
-            font-size: 50px;
+            font-size: 3em;
+            font-weight: 300;
             width: 700px;
             height: 200px;
             border-radius: 200px;
-            left: 50%;
-            transform: translate(-50%);
         }
 
         .button2-front:hover {
@@ -67,6 +61,7 @@
         }
 
         .button2 {
+            justify-content: center;
             width: 700px;
             height: 200px;
             border-radius: 200px;
@@ -82,8 +77,9 @@
         <div class="button2-front">
             <div id="countdown" dir="rtl"></div>
         </div>
-        <div class="button2"></div>
-        <div class="line"></div>
+        <div class="button2">
+            <div class="line"></div>
+        </div>
     </div>
     <div class="space"></div>
 
@@ -94,8 +90,11 @@
             const now = new Date();
             const timeDifference = newYear - now;
 
+            const element = document.getElementById('countdown');
             if (timeDifference <= 0) {
-                document.getElementById("countdown").innerHTML = "حان وقت اصدار اللغة (من المفترض ان يكون الان تم حذف هاذه الصفحة 😁)";
+                element.innerHTML = "حان وقت اصدار اللغة (من المفترض ان يكون الان تم حذف هاذه الصفحة 😁)";
+                element.style.fontSize = '20px';
+                element.style.fontWeight = 'normal';
                 return;
             }
 
@@ -104,7 +103,7 @@
             const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-            document.getElementById("countdown").innerHTML = `${seconds} : ${minutes} : ${hours} ساعة | ${days} يوم`;
+            element.innerHTML = `${seconds} : ${minutes} : ${hours} ساعة | ${days} يوم`;
         }
 
         setInterval(updateCountdown, 1000);
