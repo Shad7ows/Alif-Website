@@ -82,17 +82,6 @@ input {
   display: none;
 }
 
-/* --- Background --- */
-.background {
-  background-image: url("../Assets/Background.webp");
-  background-size: cover;
-  position: fixed;
-  width: 100lvw;
-  height: 100lvh;
-  background-position-x: right;
-  z-index: -3;
-}
-
 /* --- Component --- */
 
 /* -- button1 -- */
@@ -286,10 +275,13 @@ input {
 /* --- Page --- */
 .page {
   display: flex;
+  background-image: url("../Assets/Background.webp");
+  background-size: cover;
+  background-position-x: right;
+  background-color: #08051b;
   flex-direction: column;
   justify-content: space-between;
   width: 100svw;
-  height: 100svh;
   font-family: "Tajawal";
   color: var(--text--);
   text-align: right;
@@ -501,7 +493,6 @@ input {
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: 100%;
     font-family: "Tajawal";
     color: var(--text--);
     text-align: right;
