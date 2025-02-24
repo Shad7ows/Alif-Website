@@ -595,7 +595,7 @@ input {
 @media (max-width: 480px) {
   .page {
     background-image: url("../Assets/Background-Mobile.webp");
-    height: 1080px;
+    height: auto;
   }
 
   /* --- Header --- */
@@ -654,7 +654,6 @@ input {
   }
 
   /* --- Content --- */
-
   .content-section .left {
     display: none;
   }
@@ -737,6 +736,7 @@ input {
     margin-top: 50px;
     transition: 1s;
     animation: stroke-color 5s ease-in-out infinite;
+    pointer-events: none;
   }
 
   /* --- Footer --- */

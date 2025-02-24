@@ -1,3 +1,4 @@
+
 .card {
   padding: 45px;
   border: 2px solid #182d5555;
@@ -15,11 +16,4 @@
 .card h1 {
   font-size: 1.6em;
   line-height: 2em;
-}
-
-
-/* --- Space --- */
-.page .space {
-  display: flex;
-  height: 10px;
 }
