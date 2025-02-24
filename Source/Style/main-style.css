@@ -482,6 +482,12 @@ input {
 }
 
 
+/* --- Space --- */
+.page .space {
+  height: 0;
+}
+
+
 
 /* -- Media Adjustment -- */
 @media (max-width: 960px) {
@@ -589,6 +595,7 @@ input {
 @media (max-width: 480px) {
   .page {
     background-image: url("../Assets/Background-Mobile.webp");
+    height: 1080px;
   }
 
   /* --- Header --- */
@@ -647,10 +654,6 @@ input {
   }
 
   /* --- Content --- */
-  .content-section {
-    min-height: 600px;
-    max-height: 800px;
-  }
 
   .content-section .left {
     display: none;
@@ -737,8 +740,19 @@ input {
   }
 
   /* --- Footer --- */
+  .footer-section {
+    display: flex;
+    margin-top: 50px;
+  }
+
   .footer-section .text {
     display: none;
+  }
+
+  /* --- Space --- */
+  .page .space {
+    display: flex;
+    height: 10px;
   }
 }
 
