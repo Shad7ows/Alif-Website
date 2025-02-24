@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لغة البرمجة العربية الف</title>
+    <link rel="shortcut icon" href="Source/Assets/AlifLogo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="Source/Style/main-style.css">
+    <style>
+        * {
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Tajawal";
+            color: #fff;
+            background-color: #182d5555;
+            background-size: cover;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            flex-direction: column;
+            background-image: url("Source/Assets/Background.webp");
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #182d5555;
+            height: 300px;
+            aspect-ratio: 1;
+            z-index: 1;
+            border-radius: 30px;
+            backdrop-filter: blur(6px);
+            box-shadow: 2px 2px 1px #2079FF;
+        }
+
+        .line {
+            align-self: center;
+            position: absolute;
+            width: 16384px;
+            border: solid 1px #bbb;
+        }
+
+
+        .button2-front {
+            font-size: 3em;
+            font-weight: 300;
+            width: 700px;
+            height: 200px;
+            border-radius: 200px;
+            transition: ease-in-out 0.5s;
+        }
+
+        .button2-front:hover {
+            font-size: 4em;
+        }
+
+        .button2 {
+            justify-content: center;
+            width: 700px;
+            height: 200px;
+            border-radius: 200px;
+            transition: ease-in-out 0.5s;
+        }
+
+        @media (max-width: 960px) {
+            .button2-front {
+                font-size: 2.5em;
+                font-weight: 300;
+                width: 600px;
+                height: 150px;
+                border-radius: 200px;
+            }
+
+            .button2-front:hover {
+                font-size: 2.6em;
+            }
+
+            .button2 {
+                justify-content: center;
+                width: 600px;
+                height: 150px;
+                border-radius: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                background-image: url("Source/Assets/Background-Mobile.webp");
+                background-size: 100% 100%;
+            }
+
+            .button2-front {
+                font-size: 1.3em;
+                font-weight: 300;
+                width: 350px;
+                height: 100px;
+                border-radius: 200px;
+            }
+
+            .button2-front:hover {
+                font-size: 1.4em;
+            }
+
+            .button2 {
+                justify-content: center;
+                width: 350px;
+                height: 100px;
+                border-radius: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="Source/Assets/AlifLogo.svg" width="200px" alt="">
+    </header>
+    <div class="coutdown">
+        <div class="button2-front">
+            <div id="countdown" dir="rtl"></div>
+        </div>
+        <div class="button2">
+            <div class="line"></div>
+        </div>
+    </div>
+    <div class="space"></div>
+
+
+    <script>
+        function updateCountdown() {
+            const newYear = new Date("2025-06-26");
+            const now = new Date();
+            const timeDifference = newYear - now;
+
+            const element = document.getElementById('countdown');
+            if (timeDifference <= 0) {
+                element.innerHTML = "حان وقت اصدار اللغة (من المفترض ان يكون الان تم حذف هاذه الصفحة 😁)";
+                element.style.fontSize = '20px';
+                element.style.fontWeight = 'normal';
+                return;
+            }
+
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            element.innerHTML = `${seconds} : ${minutes} : ${hours} ساعة | ${days} يوم`;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+
+</html>

@@ -67,6 +67,7 @@
   --light-bur--: #771EFF;
   --blu--: #335B98;
   --light-blu--: #2079FF;
+  overflow: hidden;
 }
 
 a {
