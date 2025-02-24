@@ -1,0 +1,70 @@
+.docs {
+  margin-bottom: 30px;
+}
+
+.headings {
+  position: relative;
+  min-width: 250px;
+  z-index: 10;
+}
+
+.heads {
+  padding-left: 20px;
+  position: sticky;
+  top: 30px;
+}
+
+.heads a:hover {
+  color: var(--bur--);
+}
+
+@media (max-width: 700px) {
+  .headings {
+    display: none;
+  }
+}
+.code {
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #182d5555;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  box-shadow: 2px 2px 1px #2079ff;
+}
+.sec {
+  margin: 20px 0;
+}
+hr{
+  width: 70%;
+  margin: auto;
+  border: 1px solid gray;
+}
+
+.keyword {
+  color: #fe8730;
+  font-weight: 500;
+}
+.function {
+  color: rgb(218, 183, 68);
+  font-weight: 500;
+}
+.number {
+  color: #c786c7;
+  font-weight: 500;
+}
+.string {
+  color: #4e7433;
+  font-weight: 500;
+}
+.operator {
+  color: #e06c75;
+  font-weight: 400;
+}
+.comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.boolean {
+  color: #7981e6;
+  font-weight: 400;
+}
