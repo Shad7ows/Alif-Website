@@ -71,7 +71,12 @@ h1 {
 }
 
 /* -- Media Adjustment -- */
-@media (max-width: 960px) {}
+@media (max-width: 960px) {
+    .page {
+        height: auto;
+    }
+
+}
 
 @media (max-width: 480px) {
 
