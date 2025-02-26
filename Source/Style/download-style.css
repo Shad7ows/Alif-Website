@@ -1,6 +1,6 @@
 /* --- Content --- */
 .content-section {
-    max-height: 900px;
+    height: auto;
 }
 
 .content-section .os {
