@@ -353,8 +353,7 @@ input {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  min-height: 250px;
-  max-height: 390px;
+  height: calc(200px + 25svh);
 }
 
 .content-section .right {
@@ -523,9 +522,8 @@ input {
 
   /* --- Content --- */
   .content-section {
-    min-height: 720px;
-    max-height: 960px;
     justify-content: center;
+    height: calc(700px + 20svh);
   }
 
   .content-section .left {
@@ -584,6 +582,13 @@ input {
   /* --- Footer --- */
   .footer-section {
     justify-content: space-evenly;
+    margin-top: 50px;
+  }
+  
+  /* --- Space --- */
+  .page .space {
+    display: flex;
+    height: 10px;
   }
 
   .footer-section .item {
