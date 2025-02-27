@@ -33,8 +33,7 @@ let docs = [
                 ناتج القسمة: 8 \\* 3 = 2 
                 قوة: 4 ^ 2 = 16 
                 جذر: \\^ 4 = 2 
-                أولوية: (3 + 6) * 2 = 18 
-                `,
+                أولوية: (3 + 6) * 2 = 18 `,
     نص_تحت: ``,
     شفرة_تحت: ``,
   },
@@ -48,8 +47,7 @@ let docs = [
                 اكبر من: 3 > 6 
                 اصغر من: 6 < 9 
                 اكبر من او يساوي: 6 >= 6 
-                اصغر من او يساوي: 9 <= 3 
-                `,
+                اصغر من او يساوي: 9 <= 3 `,
     نص_تحت: ``,
     شفرة_تحت: ``,
   },
@@ -59,8 +57,7 @@ let docs = [
     نص_فوق: ``,
     شفرة_فوق: `و : صح و صح 
                 او : صح او صح
-                ليس : ليس خطا 
-                `,
+                ليس : ليس خطا `,
     نص_تحت: ``,
     شفرة_تحت: ``,
   },
@@ -69,8 +66,7 @@ let docs = [
     العنوان: `الإسناد`,
     نص_فوق: ``,
     شفرة_فوق: `س = 9
-                س, ص = 9, 7
-                `,
+                س, ص = 9, 7 `,
     نص_تحت: ``,
     شفرة_تحت: ``,
   },
@@ -84,8 +80,7 @@ let docs = [
                 س \= 7
                 س ^= 3
                 س \*= 7
-                س \\= 9
-                `,
+                س \\= 9 `,
     نص_تحت: ``,
     شفرة_تحت: ``,
   },
@@ -93,8 +88,7 @@ let docs = [
     الاسم: `الإسناد`,
     العنوان: `الإسناد الشرطي`,
     نص_فوق: ``,
-    شفرة_فوق: `س = 9 اذا 6 == 6 والا 7  
-                `,
+    شفرة_فوق: `س = 9 اذا 6 == 6 والا 7 `,
     نص_تحت: `حيث س تساوي 9 اذا تحقق الشرط وفي حال لم يتحقق الشرط س تساوي 7.`,
     شفرة_تحت: ``,
   },
@@ -103,8 +97,7 @@ let docs = [
     العنوان: `الحذف`,
     نص_فوق: ``,
     شفرة_فوق: `س = 5
-                احذف س 
-                `,
+                احذف س `,
     نص_تحت: ``,
     شفرة_تحت: ``,
   },
@@ -115,8 +108,7 @@ let docs = [
     شفرة_فوق: `ادخل("نص هنا: ") 
                 اطبع("نص هنااو متغير") 
                 اقصى(2, 9) 
-                ادنى(3, 7)
-                `,
+                ادنى(3, 7) `,
     نص_تحت: `الدوال الضمنية هي مجموعة من الدوال المضمنة في اللغة نفسها، ومع ذلك من الممكن كتابة دالة فوقها.`,
     شفرة_تحت: ``,
   },
@@ -125,8 +117,7 @@ let docs = [
     العنوان: `النصوص`,
     نص_فوق: ``,
     شفرة_فوق: `س = "هذا نص عادي"
-                س = م"هذا نص منسق حيث يمكن تمرير عمليات فيه من خلال {7 + 9} القوسين المتعرجين"
-                `,
+                س = م"هذا نص منسق حيث يمكن تمرير عمليات فيه من خلال {7 + 9} القوسين المتعرجين"`,
     نص_تحت: `كما نلاحظ حيث أنه يوجد نص عادي ونص منسق والذي يقبل تمرير حالات بسيطة ضمن القوسين المتعرجين`,
     شفرة_تحت: ``,
   },
@@ -140,8 +131,7 @@ let docs = [
                 س.امسح("سلام")
                 س.ادرج(0, 99)
                 س[2]
-                س = [9 لاجل _ في مدى(9)]
-                `,
+                س = [9 لاجل _ في مدى(9)] `,
     نص_تحت: `حيث س.اضف(7) يقوم بإضافة عدد 7 الى نهاية المصفوفة س.امسح("سلام") يقوم بمسح او حذف العنصر "سلام" من المصفوفة س.ادرج(0, 99) يقوم بإدراج العدد 99 في موقع المؤشر 0 أي اول عنصر س[2] الوصول لقيمة العنصر الثالث. س = [9 لاجل _ في مدى(9)] هذه الحالة تسمى المصفوفة الضمنية حيث يتم إنشاء مصفوفة عن طريق حالة تكرار خاصية التكرار خلال المصفوفة, حيث يتم التكرار عبر القيم.
           `,
     شفرة_تحت: ``,
@@ -151,8 +141,7 @@ let docs = [
     العنوان: `مترابطة`,
     نص_فوق: ``,
     شفرة_فوق: `س = 3, 5, 7
-                س = (5, 7, 9)
-                `,
+                س = (5, 7, 9) `,
     نص_تحت: `خاصية التكرار خلال المترابطة, حيث يتم التكرار عبر القيم.`,
     شفرة_تحت: ``,
   },
@@ -161,8 +150,7 @@ let docs = [
     العنوان: `فهرس`,
     نص_فوق: ``,
     شفرة_فوق: `س = {"أ": 5, "ب": 7, "ت": 9}
-                س.مفاتيح()
-                `,
+                س.مفاتيح() `,
     نص_تحت: `حيث س.مفاتيح() تقوم بإرجاع مفاتيح الفهرس. خاصية التكرار خلال الفهرس, حيث يتم التكرار عبر المفاتيح وليس القيم.`,
     شفرة_تحت: ``,
   },
@@ -170,8 +158,7 @@ let docs = [
     الاسم: `استورد`,
     العنوان: `الاستيراد`,
     نص_فوق: ``,
-    شفرة_فوق: `استورد مثال
-                `,
+    شفرة_فوق: `استورد مثال `,
     نص_تحت: `حيث يمكن استيراد ملفات ذات لاحقة .alifl في الوقت الحالي وسيتم تعديل ذلك لاحقا عندما يتم استيراد مكتبة يتم تنفيذها وعند إعادة استيرادها لا يتم تنفيذها مرة اخرى`,
     شفرة_تحت: ``,
   },
@@ -185,8 +172,7 @@ let docs = [
                 الرياضيات
                 الرياضيات.جيب(30)
                 الرياضيات.تجيب(60)
-                الرياضيات.ظل(90) --> النتيجة تحسب بالراديان
-                `,
+                الرياضيات.ظل(90) --> النتيجة تحسب بالراديان `,
     نص_تحت: ``,
     شفرة_تحت: ``,
   },
@@ -200,8 +186,7 @@ let docs = [
                 اواذا س == 9:
               &emsp;  اطبع("س تساوي 9") 
                 والا:
-              &emsp;  اطبع("س ليست اكبر من 9 ولا تساويها")
-                `,
+              &emsp;  اطبع("س ليست اكبر من 9 ولا تساويها") `,
     نص_تحت: ``,
     شفرة_تحت: ``,
   },
@@ -212,8 +197,7 @@ let docs = [
             حيث تبدأ الحلقة بالعدد 0 وتقوم بإسناده إلى المتغير ب ومن ثم تنفذ جسم الحلقة.
             يتكرر الأمر حتى وصول الحلقة إلى العدد 9 - وهو العاشر لأن الحلقة بدأت من 0 - وبالتالي يتوقف التنفيذ.`,
     شفرة_فوق: `لاجل ب في مدى(10):
-                &emsp; اطبع(ب)
-                `,
+                &emsp; اطبع(ب) `,
     نص_تحت: `سيتم إسناد 20 إلى المتغير ب ومن ثم يقوم بتنفيذ الحلقة.
                 بعد الإنتهاء سيتم إسناد 22 إلى المتغير ب وذلك لأن عدد التزايد المحدد هو 2.
                 وهكذا حتى يصل المتغير ب الى العدد 100.`,
@@ -348,17 +332,17 @@ for (let i = 0; i < docs.length; i++) {
 
   let نص_فوق = doc.نص_فوق?.trim() ? `<p dir="rtl">${doc.نص_فوق}</p>` : "";
   let شفرة_فوق = doc.شفرة_فوق?.trim()
-    ? `<div class="code">${doc.شفرة_فوق}</div>`
+    ? `<div class="IDE"><div class="nums"></div><div class="code">${doc.شفرة_فوق}</div></div>`
     : "";
   let نص_تحت = doc.نص_تحت?.trim() ? `<p dir="rtl">${doc.نص_تحت}</p>` : "";
   let شفرة_تحت = doc.شفرة_تحت?.trim()
-    ? `<div class="code">${doc.شفرة_تحت}</div>`
+    ? `<div class="IDE"><div class="nums"></div><div class="code">${doc.شفرة_تحت}</div></div>`
     : "";
 
   if (نص_فوق || شفرة_فوق || نص_تحت || شفرة_تحت) {
     docsDiv.innerHTML += `
       <div class="sec" dir="rtl" id="${doc.الاسم}">
-          <h4>${i + 1}. ${doc.العنوان}:</h4>
+          <h4><a href="#${doc.الاسم}">${i + 1}. ${doc.العنوان}:</a></h4>
           ${نص_فوق}
           ${شفرة_فوق}
           ${نص_تحت}
@@ -371,13 +355,38 @@ for (let i = 0; i < docs.length; i++) {
 
 // تلوين الشفرة
 function highlightAlif(code) {
+  let stringPattern = /م?"[^"]*"|'[^']*'/g;
+  let formattedStringPattern = /"([^"]*?)\{(.*?)\}([^"]*?)"/g;
+  let stringMatches = [];
+
+  let sanitizedCode = code.replace(
+    formattedStringPattern,
+    (match, before, expr, after, offset) => {
+      let formattedReplacement = `<span class="string">"${before}</span>{${expr}}<span class="string">"${after}"</span>`;
+      stringMatches.push({
+        index: offset,
+        length: match.length,
+        replacement: formattedReplacement,
+      });
+      return "☀".repeat(match.length);
+    }
+  );
+
+  sanitizedCode = sanitizedCode.replace(stringPattern, (match, offset) => {
+    stringMatches.push({
+      index: offset,
+      length: match.length,
+      replacement: `<span class="string">${match}</span>`,
+    });
+    return "☀".repeat(match.length);
+  });
+
   let patterns = [
     { txt: /#.*$/gm, className: "comment" },
     { txt: /\b\d+(\.\d+)?\b/g, className: "number" },
-    { txt: /م?"[^"]*"|'[^']*'/g, className: "string" },
-    { txt: /(?<!\w)(صح|خطا)(?!\w)/g, className: "boolean" },
+    { txt: /(?<!\w)( صح | خطا )(?!\w)/g, className: "boolean" },
     {
-      txt: /(?<!\w)(دالة|اذا|استورد|ارجع|بينما|لاجل|استمر|توقف|احذف|اواذا|والا|صنف|الرياضيات|نوع)(?!\w)/g,
+      txt: /(?<!\w)(دالة|اذا|استورد|ارجع|بينما|لاجل|استمر|توقف|احذف|اواذا|والا|صنف|الزمن|الرياضيات|نوع)(?!\w)/g,
       className: "keyword",
     },
     {
@@ -391,10 +400,9 @@ function highlightAlif(code) {
   ];
 
   let matches = [];
-
   patterns.forEach(({ txt, className }) => {
     let match;
-    while ((match = txt.exec(code)) !== null) {
+    while ((match = txt.exec(sanitizedCode)) !== null) {
       matches.push({
         index: match.index,
         length: match[0].length,
@@ -403,6 +411,7 @@ function highlightAlif(code) {
     }
   });
 
+  matches = matches.concat(stringMatches);
   matches.sort((a, b) => a.index - b.index);
 
   let highlightedCode = "";
@@ -416,8 +425,61 @@ function highlightAlif(code) {
   return highlightedCode.replace(/\n/g, "<br>");
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  function countLines(codeDiv) {
+      let tempDiv = document.createElement("div");
+      tempDiv.innerHTML = codeDiv.innerHTML;
+
+      tempDiv.querySelectorAll("br").forEach(br => br.replaceWith("\n"));
+
+      return tempDiv.innerText.split("\n").length;
+  }
+  function addNumLines(codeDiv, numsDiv) {
+      let lines = countLines(codeDiv);
+      numsDiv.innerHTML = Array.from({ length: lines }, (_, i) => `<div>${i + 1}</div>`).join("");
+  }
+  function syncScroll(codeDiv, numsDiv) {
+      numsDiv.scrollTop = codeDiv.scrollTop;
+  }
+  document.querySelectorAll(".IDE").forEach(ide => {
+      let codeDiv = ide.querySelector(".code");
+      let numsDiv = ide.querySelector(".nums");
+      if (codeDiv && numsDiv) {
+          codeDiv.addEventListener("input", () => addNumLines(codeDiv, numsDiv));
+          codeDiv.addEventListener("scroll", () => syncScroll(codeDiv, numsDiv));
+          addNumLines(codeDiv, numsDiv);
+      }
+  });
+});
+
+// نسخ الشفرة
+function copyCode(but, code) {
+  let formattedCode = code
+    .replace(/  /g, "")
+    .replace(/&gt; /g, "")
+    .replace(/&lt; /g, "")
+    .replace(/<br>/g, "\n")
+    .replace(/<\/span>/g, "")
+    .replace(/<span class="[^"]+">/g, "")
+    .replace(/<div class="copy">نسخ<\/div>/g, "");
+
+  navigator.clipboard.writeText(formattedCode);
+  but.innerHTML = "نُسِخ";
+  setTimeout(function () {
+    but.innerHTML = "نسخ";
+  }, 3000);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".code").forEach((block) => {
     block.innerHTML = highlightAlif(block.innerHTML);
+
+    let copyButton = document.createElement("div");
+    copyButton.className = "copy";
+    copyButton.innerText = "نسخ";
+    copyButton.onclick = function () {
+      copyCode(this, block.innerHTML);
+    };
+    block.appendChild(copyButton);
   });
 });

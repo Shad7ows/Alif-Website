@@ -16,19 +16,54 @@
   padding-left: 20px;
   position: sticky;
   top: 30px;
+  max-height: 90vh;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
 }
 
 .heads a:hover {
   color: var(--bur--);
 }
 
-.code {
+@media (max-width: 700px) {
+  .headings {
+    display: none;
+  }
+}
+.IDE {
+  position: relative;
+  display: flex;
   padding: 10px;
+  font-size: 16px;
   margin: 10px 0;
   border: 2px solid #182d5555;
   border-radius: 20px;
   backdrop-filter: blur(6px);
   box-shadow: 2px 2px 1px #2079ff;
+}
+.IDE .nums{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: gray;
+  border-left: solid 1px #555;
+  padding-left: 5px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+.IDE .code{
+  width: 100%;
+}
+.IDE .copy{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: gray;
+  cursor: pointer;
 }
 .sec {
   margin: 20px 0;
