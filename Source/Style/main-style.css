@@ -277,6 +277,7 @@ input {
   display: flex;
   background-image: url("../Assets/Background.webp");
   background-size: cover;
+  background-attachment: fixed;
   background-position-x: right;
   background-color: #08051b;
   flex-direction: column;
