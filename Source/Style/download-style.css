@@ -35,6 +35,7 @@
     width: calc(200px + 3svw);
     border-radius: 30px;
     box-shadow: 2px 2px 1px #2079FF;
+    backdrop-filter: blur(5px);
 }
 
 .os .card {

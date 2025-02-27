@@ -601,6 +601,7 @@ input {
 @media (max-width: 480px) {
   .page {
     background-image: url("../Assets/Background-Mobile.webp");
+    background-size: contain;
     height: auto;
   }
 
