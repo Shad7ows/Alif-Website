@@ -5,6 +5,7 @@
   height: fit-content;
   border-radius: 30px;
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   box-shadow: 2px 2px 1px #2079ff;
 }
 
