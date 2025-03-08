@@ -12,6 +12,7 @@
     <link rel="preload" as="font" type="font/woff2" href="../Fonts/Tajawal-Regular.woff2" crossorigin />
     <link rel="stylesheet" href="../Style/main-style.css" defer />
     <link rel="stylesheet" href="../Style/docs-style.css" defer />
+    <link rel="stylesheet" href="../Style/aos.css" defer />
 </head>
 
 <body class="page">
@@ -69,6 +70,213 @@
             <div class="heads"></div>
         </div>
         <div class="docs" dir="rtl">
+            <br>
+
+            <center style="font-family: Tajawal">
+
+                <h1>بسم الله الرحمن الرحيم</h1>
+            </center>
+
+            <hr>
+            <right style="direction: rtl">
+
+                <br>
+
+                <p>في هذا الملف سيتم شرح طريقة عمل لغة ألف5 بإختصار وباستخدام الأمثلة.</p>
+                <br>
+
+                <hr>
+                <p>يمكن تشغيل البرنامج المكتوب بلغة ألف5 بإحدى طريقتين:</p>
+                <ul>
+                    <li data-aos="fade-up">من خلال تمرير كلمة alif في الطرفية، حيث ستبدأ الطرفية بإستقبال الشفرة
+                        لتنفيذها بشكل فوري - حيث سيتم تنفيذ العمليات البسيطة فقط وهي العمليات الأحادية السطر - "غير
+                        متاحة في الوقت الحالي"</li>
+                    <li data-aos="fade-up">أو تمرير كلمة alif بالإضافة إلى اسم الملف test.alif حيث سيتم تنفيذ الشفرة
+                        المكتوبة في الملف test</li>
+                </ul>
+                <hr>
+                <br>
+
+
+
+                <h3>اوامر الطرفية التي يمكن تنفيذها:</h3>
+                <ol>
+                    <li data-aos="fade-up" id="النسخة-الحالية">
+                        <h5>النسخة الحالية:</h5>
+                        <pre><div class="nums"><p>1</p></div><code>alif -v<br><div class="copy">نسخ</div></code></pre>
+                    </li>
+                    <li data-aos="fade-up" id="المساعدة">
+                        <h5>المساعدة:</h5>
+                        <pre><div class="nums"><p>1</p></div><code>alif -h<br><div class="copy">نسخ</div></code></pre>
+                    </li>
+                </ol>
+                <h3>العمليات التي تستطيع اللغة تنفيذها:</h3>
+                <ol>
+                    <li data-aos="fade-up" id="التعليقات-التوضيحية-&quot;#&quot;">
+                        <h5>التعليقات التوضيحية "#":</h5>
+                        <pre><div class="nums"><p>1</p><p>2</p></div><code>س <span class="operator">=</span> <span class="number">9</span> <span class="comment"># هذا تعليق يوضح عمل الشفرة المكتوبة</span><br><span class="comment"># تعليق في سطر فارغ</span><br><div class="copy">نسخ</div></code></pre>
+                    </li>
+                    <li data-aos="fade-up" id="العمليات-الحسابية">
+                        <h5>العمليات الحسابية:</h5>
+                        <pre><div class="nums"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p></div><code>جمع: <span class="number">1</span> <span class="operator">+</span> <span class="number">2</span> <span class="operator">=</span> <span class="number">3</span><br>طرح: <span class="number">9</span> <span class="operator">- </span><span class="number">3</span> <span class="operator">=</span> <span class="number">6</span><br>ضرب: <span class="number">2</span> <span class="operator">*</span> <span class="number">8</span> <span class="operator">=</span> <span class="number">16</span><br>قسمة: <span class="number">9</span> <span class="operator">\</span> <span class="number">3</span> <span class="operator">=</span> <span class="number">3</span><br>باقي القسمة: <span class="number">8</span> <span class="operator">\</span><span class="operator">\</span> <span class="number">5</span> <span class="operator">=</span> <span class="number">3</span><br>ناتج القسمة: <span class="number">8</span> <span class="operator">\</span><span class="operator">*</span> <span class="number">3</span> <span class="operator">=</span> <span class="number">2</span><br>قوة: <span class="number">4</span> <span class="operator">^</span> <span class="number">2</span> <span class="operator">=</span> <span class="number">16</span><br>جذر: <span class="operator">\</span><span class="operator">^</span> <span class="number">4</span> <span class="operator">=</span> <span class="number">2</span><br>أولوية: (<span class="number">3</span> <span class="operator">+</span> <span class="number">6</span>) <span class="operator">*</span> <span class="number">2</span> <span class="operator">=</span> <span class="number">18</span><br><div class="copy">نسخ</div></code></pre>
+                    </li>
+                    <li data-aos="fade-up" id="المقارنة">
+                        <h5>المقارنة:</h5>
+                        <pre><div class="nums"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p></div><code>يساوي: <span class="number">9</span> <span class="operator">==</span> <span class="number">9</span><br>لا يساوي: <span class="number">9</span> <span class="operator">!=</span> <span class="number">9</span><br>اكبر من: <span class="number">3</span> &gt; <span class="number">6</span><br>اصغر من: <span class="number">6</span> &lt; <span class="number">9</span><br>اكبر من<span class="operator"> او </span>يساوي: <span class="number">6</span> &gt;<span class="operator">=</span> <span class="number">6</span><br>اصغر من<span class="operator"> او </span>يساوي: <span class="number">9</span> &lt;<span class="operator">=</span> <span class="number">3</span><br><div class="copy">نسخ</div></code></pre>
+                    </li>
+                    <li data-aos="fade-up" id="العمليات-المنطقية">
+                        <h5>العمليات المنطقية:</h5>
+                        <pre><div class="nums"><p>1</p><p>2</p><p>3</p></div><code>و:<span class="boolean"> صح </span> <span class="operator"> و </span>صح<br>او:<span class="boolean"> صح </span> <span class="operator"> او </span>صح<br>ليس:<span class="operator"> ليس </span> <span class="boolean"> خطا </span><br><div class="copy">نسخ</div></code></pre>
+                    </li>
+                    <li data-aos="fade-up" id="الإسناد">
+                        <h5>الإسناد:</h5>
+                        <pre><div class="nums"><p>1</p><p>2</p></div><code>س <span class="operator">=</span> <span class="number">9</span><br>س, ص <span class="operator">=</span> <span class="number">9</span>, <span class="number">7</span><br><div class="copy">نسخ</div></code></pre>
+                    </li>
+                    <li data-aos="fade-up" id="إسناد-رجعي">
+                        <h5>إسناد رجعي:</h5>
+                        <pre><div class="nums"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p></div><code>س <span class="operator">+=</span> <span class="number">5</span><br>س <span class="operator">-=</span> <span class="number">3</span><br>س <span class="operator">*=</span> <span class="number">2</span><br>س <span class="operator">\</span><span class="operator">=</span> <span class="number">7</span><br>س <span class="operator">^=</span> <span class="number">3</span><br>س <span class="operator">\</span><span class="operator">*=</span> <span class="number">7</span><br>س <span class="operator">\</span><span class="operator">\</span><span class="operator">=</span> <span class="number">9</span><br><div class="copy">نسخ</div></code></pre>
+                    </li>
+                    <li data-aos="fade-up" id="إسناد-الشرطي">
+                        <h5>إسناد الشرطي:</h5>
+                        <pre><div class="nums"><p>1</p></div><code>س <span class="operator">=</span> <span class="number">9</span> <span class="keyword">اذا</span> <span class="number">6</span> <span class="operator">==</span> <span class="number">6</span> <span class="keyword">والا</span> <span class="number">7</span>  <br><div class="copy">نسخ</div></code></pre>
+                        <p> حيث س تساوي 9 اذا تحقق الشرط
+                            وفي حال لم يتحقق الشرط س تساوي 7.</p>
+                    </li>
+                    <li data-aos="fade-up" id="الحذف">
+                        <h5>الحذف:</h5>
+                        <pre><div class="nums"><p>1</p><p>2</p></div><code>س <span class="operator">=</span> <span class="number">5</span><br><span class="keyword">احذف</span> س<br><div class="copy">نسخ</div></code></pre>
+                    </li>
+                    <li data-aos="fade-up" id="الدوال-الضمنية">
+                        <h5>الدوال الضمنية:</h5>
+                        <pre><div class="nums"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p></div><code><span class="function">ادخل</span>(<span class="string">"نص هنا: "</span>)<br><span class="function">اطبع</span>(<span class="string">"نص هنا او متغير"</span>)<br><span class="function">اقصى</span>(<span class="number">2</span>, <span class="number">9</span>)<br><span class="function">ادنى</span>(<span class="number">3</span>, <span class="number">7</span>)<br><span class="function">طول</span>(س) --&gt; حيث س مصفوفة<span class="operator"> او </span>مترابطة<span class="operator"> او </span>فهرس<br><div class="copy">نسخ</div></code></pre>
+                        <p> الدوال الضمنية هي مجموعة من الدوال المضمنة في اللغة نفسها، ومع ذلك من الممكن كتابة دالة
+                            فوقها. </p>
+                    </li>
+                    <li data-aos="fade-up" id="النصوص">
+                        <h5>النصوص:</h5>
+                        <pre><div class="nums"><p>1</p><p>2</p></div><code>س <span class="operator">=</span> <span class="string">"هذا نص عادي"</span><br>س <span class="operator">=</span> م<span class="string">"هذا نص منسق حيث يمكن تمرير عمليات فيه من خلال </span>{7 + 9}<span class="string">" القوسين المتعرجين"</span><br><div class="copy">نسخ</div></code></pre>
+                        <p>كما نلاحظ حيث أنه يوجد نص عادي ونص منسق والذي يقبل تمرير حالات بسيطة ضمن القوسين المتعرجين
+                        </p>
+                    </li>
+                    <li data-aos="fade-up" id="مصفوفة">
+                        <h5>مصفوفة:</h5>
+                        <pre><div class="nums"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p></div><code>س <span class="operator">=</span> [<span class="number">5</span>, <span class="string">"سلام"</span>, صح]<br>س.<span class="function">اضف</span>(<span class="number">7</span>)<br>س.<span class="function">امسح</span>(<span class="string">"سلام"</span>)<br>س.<span class="function">ادرج</span>(<span class="number">0</span>, <span class="number">99</span>)<br>س[<span class="number">2</span>]<br>س <span class="operator">=</span> [<span class="number">9</span> <span class="keyword">لاجل</span> _ في <span class="function">مدى</span>(<span class="number">9</span>)]<br><div class="copy">نسخ</div></code></pre>
+                        <p> حيث
+                            س.اضف(7) يقوم بإضافة عدد 7 الى نهاية المصفوفة
+                            س.امسح("سلام") يقوم بمسح او حذف العنصر "سلام" من المصفوفة
+                            س.ادرج(0, 99) يقوم بإدراج العدد 99 في موقع المؤشر 0 أي اول عنصر
+                            س[2] الوصول لقيمة العنصر الثالث.
+                            س = [9 لاجل _ في مدى(9)] هذه الحالة تسمى المصفوفة الضمنية حيث يتم إنشاء مصفوفة عن طريق حالة
+                            تكرار
+                            خاصية التكرار خلال المصفوفة, حيث يتم التكرار عبر القيم. </p>
+                    </li>
+                    <li data-aos="fade-up" id="مترابطة">
+                        <h5>مترابطة:</h5>
+                        <pre><div class="nums"><p>1</p><p>2</p></div><code>س <span class="operator">=</span> <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span><br>س <span class="operator">=</span> (<span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>)<br><div class="copy">نسخ</div></code></pre>
+                        <p>خاصية التكرار خلال المترابطة, حيث يتم التكرار عبر القيم.</p>
+                    </li>
+                    <li data-aos="fade-up" id="فهرس">
+                        <h5>فهرس:</h5>
+                        <pre><div class="nums"><p>1</p><p>2</p></div><code>س <span class="operator">=</span> {<span class="string">"أ"</span>: <span class="number">5</span>, <span class="string">"ب"</span>: <span class="number">7</span>, <span class="string">"ت"</span>: <span class="number">9</span>}<br>س.<span class="function">مفاتيح</span>()<br><div class="copy">نسخ</div></code></pre>
+                        <p>حيث س.مفاتيح() تقوم بإرجاع مفاتيح الفهرس.
+                            خاصية التكرار خلال الفهرس, حيث يتم التكرار عبر المفاتيح وليس القيم.</p>
+                    </li>
+                    <li data-aos="fade-up" id="الاستيراد">
+                        <h5>الاستيراد:</h5>
+                        <pre><div class="nums"><p>1</p></div><code><span class="keyword">استورد</span> مثال<br><div class="copy">نسخ</div></code></pre>
+                        <p>حيث يمكن استيراد ملفات ذات لاحقة .alifl في الوقت الحالي وسيتم تعديل ذلك لاحقا
+                            عندما يتم استيراد مكتبة يتم تنفيذها وعند إعادة استيرادها لا يتم تنفيذها مرة اخرى</p>
+                    </li>
+                    <li data-aos="fade-up" id="المكتبات-الضمنية">
+                        <h5>المكتبات الضمنية:</h5>
+                        <p>المكتبات الضمنية وهي المكتبات الداخلية الخاصة بلغة ألف</p>
+                        <pre><div class="nums"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p></div><code>الوقت<br>الوقت.<span class="function">الوقت</span>() --&gt; حيث يقوم بإحضار الوقت الحالي بالثواني<br>الوقت.<span class="function">غفوة</span>(<span class="number">9</span>)  --&gt; حيث يأخذ الممر الحالي غفوة لمدة <span class="number">9</span> ثواني<br><br><span class="keyword">الرياضيات</span><br><span class="keyword">الرياضيات</span>.<span class="function">جيب</span>(<span class="number">30</span>)<br><span class="keyword">الرياضيات</span>.<span class="function">تجيب</span>(<span class="number">60</span>)<br><span class="keyword">الرياضيات</span>.<span class="function">ظل</span>(<span class="number">90</span>) --&gt; النتيجة تحسب بالراديان<br><div class="copy">نسخ</div></code></pre>
+                    </li>
+                    <li data-aos="fade-up" id="حالة-&quot;اذا&quot;">
+                        <h5>حالة "اذا":</h5>
+                        <pre><div class="nums"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p></div><code>س <span class="operator">=</span> <span class="number">6</span><br><span class="keyword">اذا</span> س &gt; <span class="number">9</span>:<br>    <span class="function">اطبع</span>(<span class="string">"س أكبر من 9"</span>)<br><span class="keyword">اواذا</span> س <span class="operator">==</span> <span class="number">9</span>:<br>    <span class="function">اطبع</span>(<span class="string">"س تساوي 9"</span>) <br><span class="keyword">والا</span>:<br>    <span class="function">اطبع</span>(<span class="string">"س ليست اكبر من 9 ولا تساويها"</span>)<br><div class="copy">نسخ</div></code></pre>
+                    </li>
+                    <li data-aos="fade-up" id="حالة-&quot;لاجل&quot;">
+                        <h5>حالة "لاجل":</h5>
+                        <pre><div class="nums"><p>1</p><p>2</p></div><code><span class="keyword">لاجل</span> ب في <span class="function">مدى</span>(<span class="number">10</span>):<br>    <span class="function">اطبع</span>(ب)<br><div class="copy">نسخ</div></code></pre>
+                        <p>في هذا المثال يتم عمل حلقة "لاجل" لتنفيذ برنامج يطبع قيمة ب .<br>حيث تبدأ الحلقة بالعدد 0
+                            وتقوم بإسناده إلى المتغير ب ومن ثم تنفذ جسم الحلقة.<br>يتكرر الأمر حتى وصول الحلقة إلى العدد
+                            9 - وهو العاشر لأن الحلقة بدأت من 0 - وبالتالي يتوقف التنفيذ.</p>
+                        <pre><div class="nums"><p>1</p><p>2</p></div><code><span class="keyword">لاجل</span> ب في <span class="function">مدى</span>(<span class="number">2</span>,<span class="number">100</span>,<span class="number">20</span>):<br>    <span class="function">اطبع</span>(ب)<br><div class="copy">نسخ</div></code></pre>
+                        <p>سيتم إسناد 20 إلى المتغير ب ومن ثم يقوم بتنفيذ الحلقة.<br>بعد الإنتهاء سيتم إسناد 22 إلى
+                            المتغير ب وذلك لأن عدد التزايد المحدد هو 2.<br>وهكذا حتى يصل المتغير ب الى العدد 100. </p>
+                        <pre><div class="nums"><p>1</p><p>2</p></div><code><span class="keyword">لاجل</span> ب <span class="function">في </span>(<span class="string">"سلام"</span>, <span class="number">1</span> , خطأ):<br>    <span class="function">اطبع</span>(ب)<br><div class="copy">نسخ</div></code></pre>
+                        <p>حيث هنا سيقوم بطباعة القيم الموجودة ضمن المترابطة.</p>
+                    </li>
+                    <li data-aos="fade-up" id="حالة-&quot;بينما&quot;">
+                        <h5>حالة "بينما":</h5>
+                        <pre><div class="nums"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p></div><code>س <span class="operator">=</span> <span class="number">1</span><br><span class="keyword">بينما</span> س &lt; <span class="number">10</span>:<br>    <span class="keyword">اذا</span> س <span class="operator">==</span> <span class="number">4</span>:<br>        س <span class="operator">+=</span> <span class="number">3</span><br>        <span class="keyword">استمر</span><br>    <span class="keyword">اواذا</span> س <span class="operator">==</span> <span class="number">9</span>:<br>        <span class="keyword">توقف</span><br>    <span class="function">اطبع</span>(س)<br>    س <span class="operator">+=</span> <span class="number">1</span><br><div class="copy">نسخ</div></code></pre>
+                        <p>سيتم التحقق من الشرط (س &lt; 10) ، إذا كان صحيحاً سيتم تنفيذ جسم الحالة.<br>اذا كانت س تساوي
+                            4 فإن استمر لن تكمل باقي الجسم وسيعود للتحقق من س في بداية الحالة بينما
+                            واذا كانت س تساوي 9 سيقوم بالتوقف عن التكرار والخروج من الحالة بينما</p>
+                    </li>
+                    <li data-aos="fade-up" id="تعريف-دالة">
+                        <h5>تعريف دالة:</h5>
+                        <pre><div class="nums"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p></div><code><span class="keyword">دالة</span> <span class="function">السرعة</span>(المسافة, <span class="keyword">الزمن</span> <span class="operator">=</span> <span class="number">1</span>):<br>    <span class="keyword">ارجع</span> المسافة <span class="operator">\</span> <span class="keyword">الزمن</span><br><br>سرعة_سقوط_الكرة <span class="operator">=</span> <span class="function">السرعة</span>(<span class="number">10</span>, <span class="number">5</span>)<br><br><span class="function">اطبع</span>(سرعة_سقوط_الكرة)<br><div class="copy">نسخ</div></code></pre>
+                        <p>في هذا المثال تم توضيح تعريف الدالة مع تمرير معاملان أحدهما لا يمتلك قيمة افتراضية والآخر
+                            يمتلك قيمة افتراضية.<br>كما أنه تم توضيح طريقة إرجاع قيمة من الدالة.<br>والمثال عبارة عن
+                            دالة لحساب السرعة في حال تحديد قيمة المسافة المقطوعة والزمن.<br>وفي حال عدم تحديد قيمة الزمن
+                            فإن الدالة ستقوم بإستخدام القيمة الإفتراضية الممررة.</p>
+                        <pre><div class="nums"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p></div><code><span class="keyword">دالة</span> <span class="function">السرعة</span>(ش <span class="operator">=</span> <span class="number">6</span>):<br>    <span class="function">اطبع</span>(ش)<br>    <span class="keyword">لاجل</span> ص <span class="function">في </span>(<span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>):<br>        <span class="keyword">اذا</span> ص <span class="operator">==</span> <span class="number">9</span>:<br>            <span class="keyword">توقف</span><br>    <span class="keyword">ارجع</span> ص<br><br><span class="function">اطبع</span>(<span class="function">السرعة</span>(<span class="number">7</span>))<br><div class="copy">نسخ</div></code></pre>
+                    </li>
+                    <li data-aos="fade-up" id="تعريف-صنف">
+                        <h5>تعريف صنف:</h5>
+                        <pre><div class="nums"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p><p>20</p><p>21</p><p>22</p><p>23</p><p>24</p><p>25</p><p>26</p><p>27</p><p>28</p><p>29</p><p>30</p><p>31</p><p>32</p><p>33</p><p>34</p><p>35</p><p>36</p><p>37</p><p>38</p><p>39</p><p>40</p><p>41</p><p>42</p><p>43</p><p>44</p><p>45</p></div><code><span class="keyword">صنف</span> مخروط_علوي:<br>    نق_القاعدة <span class="operator">=</span> <span class="number">0</span><br>    الارتفاع <span class="operator">=</span> <span class="number">0</span><br>    بي <span class="operator">=</span> <span class="number">0</span><br><br>    <span class="keyword">دالة</span> <span class="function">_تهيئة_</span>(هذا, نق <span class="operator">=</span> <span class="number">1</span>, ع <span class="operator">=</span> <span class="number">1</span>):    <br>        هذا.نق_القاعدة <span class="operator">=</span> نق<br>        هذا.الارتفاع <span class="operator">=</span> ع<br>        هذا.بي <span class="operator">=</span> <span class="number">3.14</span><br><br>    <span class="keyword">دالة</span> <span class="function">مساحة_القاعدة</span>(هذا):<br>        م_القاعدة <span class="operator">=</span> <span class="number">2</span> <span class="operator">*</span> هذا.بي <span class="operator">*</span> هذا.نق_القاعدة <span class="operator">*</span> هذا.الارتفاع<br>        <span class="keyword">ارجع</span> م_القاعدة<br><br>    <span class="keyword">دالة</span> <span class="function">حجم_المخروط</span>(هذا):<br>        <span class="keyword">ارجع</span> هذا.<span class="function">مساحة_القاعدة</span>() <span class="operator">*</span> هذا.الارتفاع <span class="operator">\</span> <span class="number">3</span><br><br><span class="keyword">صنف</span> مخروط_سفلي:<br>    نق_القاعدة <span class="operator">=</span> <span class="number">0</span><br>    الارتفاع <span class="operator">=</span> <span class="number">0</span><br>    بي <span class="operator">=</span> <span class="number">0</span><br>    مخروط_ع <span class="operator">=</span> عدم<br><br>    <span class="keyword">دالة</span> <span class="function">_تهيئة_</span>(هذا, نق <span class="operator">=</span> <span class="number">1</span>, ع <span class="operator">=</span> <span class="number">1</span>, مخروط_ع <span class="operator">=</span> عدم):    <br>        هذا.نق_القاعدة <span class="operator">=</span> نق<br>        هذا.الارتفاع <span class="operator">=</span> ع<br>        هذا.بي <span class="operator">=</span> <span class="number">3.14</span><br>        هذا.مخروط_ع <span class="operator">=</span> مخروط_ع<br><br>    <span class="keyword">دالة</span> <span class="function">مساحة_القاعدة</span>(هذا):<br>        م_القاعدة <span class="operator">=</span> <span class="number">2</span> <span class="operator">*</span> هذا.بي <span class="operator">*</span> هذا.نق_القاعدة <span class="operator">*</span> هذا.الارتفاع<br>        <span class="keyword">ارجع</span> م_القاعدة<br><br>    <span class="keyword">دالة</span> <span class="function">حجم_المخروط</span>(هذا):<br>        <span class="keyword">ارجع</span> هذا.<span class="function">مساحة_القاعدة</span>() <span class="operator">*</span> هذا.الارتفاع <span class="operator">\</span> <span class="number">3</span><br><br>    <span class="keyword">دالة</span> <span class="function">مح_المخروطين</span>(هذا):<br>        <span class="keyword">ارجع</span> هذا.<span class="function">حجم_المخروط</span>() <span class="operator">+</span> هذا.مخروط_ع.<span class="function">حجم_المخروط</span>()<br>    <br>مخروط_ع <span class="operator">=</span> <span class="function">مخروط_علوي</span>(<span class="number">2</span>, <span class="number">2</span>)<br>مخروط_س <span class="operator">=</span> <span class="function">مخروط_سفلي</span>(<span class="number">3</span>, <span class="number">4</span>, مخروط_ع)<br><br>ح_المخاريط<span class="operator">=</span> مخروط_س.<span class="function">مح_المخروطين</span>()<br><br><span class="function">اطبع</span>(مخروط_ع.<span class="function">حجم_المخروط</span>(), مخروط_س.<span class="function">حجم_المخروط</span>(), ح_المخاريط)<br><div class="copy">نسخ</div></code></pre>
+                        <p>في هذا المثال تم تعريف صنف من نوع مخروط وتم تمرير صنف ككائن ضمن صنف اخر.
+                            تتم تهيئة الصنف عن طريق دالة خاصة تدعى _تهيئة_</p>
+                    </li>
+                    <li data-aos="fade-up" id="تحويل-النوع">
+                        <h5>تحويل النوع:</h5>
+                        <pre><div class="nums"><p>1</p><p>2</p></div><code>س <span class="operator">=</span> <span class="function">صحيح</span>(<span class="string">"1"</span>)<br>س <span class="operator">=</span> <span class="function">عشري</span>(<span class="string">"0.5"</span>)<br><div class="copy">نسخ</div></code></pre>
+                    </li>
+                    <li data-aos="fade-up" id="حالات-خاصة">
+                        <h5>حالات خاصة:</h5>
+                        <pre><div class="nums"><p>1</p><p>2</p></div><code>س <span class="operator">=</span> <span class="function">عشري</span>(<span class="string">"لانهائي"</span>)<br>س <span class="operator">=</span> <span class="function">عشري</span>(<span class="string">"-لانهائي"</span>)<br><div class="copy">نسخ</div></code></pre>
+                        <p>حيث الاولى ترجع قيمة عدد لانهائي موجب والثانية ترجع قيمة عدد لانهائي سالب</p>
+                        <hr>
+                        <p> حالة مقارنة خاصة:</p>
+                        <pre><div class="nums"><p>1</p><p>2</p></div><code>س <span class="operator">=</span> <span class="number">7</span> في [<span class="number">3</span>, <span class="number">2</span>, <span class="number">9</span>]<br>س <span class="operator">=</span> <span class="number">7</span><span class="operator"> ليس </span>في [<span class="number">4</span>, <span class="number">8</span>, <span class="number">3</span>]<br><div class="copy">نسخ</div></code></pre>
+                        <p>حيث الحالة الاولى ترجع خطأ لان 7 ليست في المصفوفة والثانية ترجع صح لان 7 ليست في المصفوفة</p>
+                    </li>
+                </ol>
+            </right>
+
+
+            <center>
+                <br>
+                <br>
+                <br>
+
+                <p>: ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+                    :</p>
+                <br>
+                <br>
+                <br>
+            </center>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th align="center">ملاحظات:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="center">محدد الخطأ غير مكتمل، وقد يتم تحديد مكان الخطأ بدقة أو تظهر رسالة توضح أنه
+                            يوجد خطأ وقد يتم الخروج من البرنامج دون معرفة السبب أو الخطأ.</td>
+                    </tr>
+                    <tr>
+                        <td align="center">لغة ألف5 تقوم بإدارة الذاكرة بشكل تلقائي، ولكن يفضل عدم معالجة كميات ضخمة
+                            جداً من البيانات أو الدخول في حلقات لا نهائية وذلك تفادياً لأي ضرر قد يحصل لجهازك.</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </div>
 
     </section>
@@ -93,8 +301,78 @@
     </section>
 
     <script class="scripe" src="../JavaScript/markdown.js"></script>
-    <script class="scripe" src="../JavaScript/docs-script.js" defer></script>
+    <script class="scripe" src="../JavaScript/aos.js"></script>
+    <!-- <script class="scripe" src="../JavaScript/docs-script.js" defer></script> -->
     <script class="scripe" src="../JavaScript/script.js" defer></script>
+    <script>
+        AOS.init();
+
+        let heads = document.querySelector(".heads");
+        // جعل العرض في المنتصف
+        function scrollToSection(event, id, but) {
+            event.preventDefault();
+            heads.querySelectorAll('a').forEach(link => {
+                link.style.color = "#fff"; // تغيير لون كل الروابط إلى الأبيض
+            });
+            but.style.color = "var(--bur--)";
+            window.location.hash = id;
+            const section = document.getElementById(id);
+            const topPosition = section.offsetTop - 200;
+            window.scrollTo({
+                top: topPosition,
+                behavior: "smooth"
+            });
+        }
+
+        // عرض العناوين الجانبية
+        fetch(
+            "https://raw.githubusercontent.com/Shad7ows/Alif/refs/heads/Alif5.0/documents/إرشادات إستعمال ألف.md"
+        )
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error("الملف غير موجود");
+                }
+                return res.text();
+            })
+            .then((markdown) => {
+                // استخراج كل العناوين
+                let headings = document.querySelectorAll(".docs h5");
+                let head = Array.from(headings).map((h5) => h5.innerText.replace(":", ""));
+                head.forEach((text, i) => {
+                    heads.innerHTML += `
+                    <a href="#${text.replace(/\s+/g, "-")}" onclick="scrollToSection(event, '${text.replace(/\s+/g, "-")}', this)">
+                        <h3 dir="rtl">- ${text}</h3>
+                    </a>`;
+                });
+                // نسخ الشفرة
+                document.querySelectorAll("code").forEach((block) => {
+                    let copyButton = document.createElement("div");
+                    copyButton.className = "copy";
+                    copyButton.innerText = "نسخ";
+                    copyButton.onclick = function () {
+                        copyCode(this, block.innerHTML);
+                    };
+                    block.appendChild(copyButton);
+                });
+            });
+
+        // نسخ الشفرة
+        function copyCode(but, code) {
+            let formattedCode = code
+                .replace(/  /g, "")
+                .replace(/&gt; /g, "")
+                .replace(/&lt; /g, "")
+                .replace(/<br>/g, "\n")
+                .replace(/<\/span>/g, "")
+                .replace(/<span class="[^"]+">/g, "")
+                .replace(/<div class="copy">نسخ<\/div>/g, "");
+            navigator.clipboard.writeText(formattedCode);
+            but.innerHTML = "نُسِخ";
+            setTimeout(function () {
+                but.innerHTML = "نسخ";
+            }, 3000);
+        }
+    </script>
 </body>
 
 </html>
