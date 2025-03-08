@@ -31,6 +31,7 @@ fetch(
     let titles = document.querySelectorAll(".docs li");
     titles.forEach((li) => {
       let h5 = li.querySelector("h5");
+      li.setAttribute("data-aos", "fade-up");
       if (h5) {
         let id = h5.innerText.trim().replace(/\s+/g, "-").replace(":", ""); // تحويل النص إلى ID مناسب
         li.setAttribute("id", id);
