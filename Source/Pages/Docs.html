@@ -183,9 +183,15 @@
                     </li>
                     <li data-aos="fade-up" id="الاستيراد">
                         <h5>الاستيراد:</h5>
-                        <pre><div class="nums"><p>1</p></div><code><span class="keyword">استورد</span> مثال<br><div class="copy">نسخ</div></code></pre>
-                        <p>حيث يمكن استيراد ملفات ذات لاحقة .alifl في الوقت الحالي وسيتم تعديل ذلك لاحقا
+                        <pre><div class="nums"><p>1</p><p>2</p></div><code><span class="keyword">استورد</span> مثال<br>من مثال <span class="keyword">استورد</span> ترحيب<br><div class="copy">نسخ</div></code></pre>
+                        <p>حيث يمكن استيراد ملفات ذات لاحقة .aliflib فقط
                             عندما يتم استيراد مكتبة يتم تنفيذها وعند إعادة استيرادها لا يتم تنفيذها مرة اخرى</p>
+                        <ul>
+                            <li data-aos="fade-up">الاستيراد من الحزم</li>
+                        </ul>
+                        <pre><div class="nums"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p></div><code>مكتبة<span class="operator">\</span>        المستوى-الاعلى للحزمة<br>    |---<span class="operator">- </span>   _تهيئة_.aliflib<br>    |---<span class="operator">- </span>ملف_مكتبة.aliflib<br>    |---<span class="operator">- </span>فرعية<span class="operator">\</span><br>        |---<span class="operator">- </span>   _تهيئة_.aliflib<br>        |---<span class="operator">- </span>ملف_فرعي.aliflib<br><div class="copy">نسخ</div></code></pre>
+                        <pre><div class="nums"><p>1</p><p>2</p><p>3</p><p>4</p></div><code><span class="keyword">استورد</span> مكتبة.فرعية.ملف_فرعي<br>من مكتبة.فرعية <span class="keyword">استورد</span> ملف_فرعي<br>من مكتبة.فرعية.ملف_فرعي <span class="keyword">استورد</span> تم_الاستيراد --&gt; حيث أن تم_الاستيراد هي عبارة عن <span class="keyword">دالة</span> ضمن ملف_فرعي<br><span class="keyword">استورد</span> مكتبة.فرعية --&gt; بشرط أن يتم استيراد <span class="keyword">دالة</span> تم_الاستيراد في ملف _تهيئة_ الخاص بذلك المجلد <span class="string">"أي مجلد فرعية"</span><br><div class="copy">نسخ</div></code></pre>
+                        <p>نفس الحالات تطبق على مجلد مكتبة وملف_مكتبة</p>
                     </li>
                     <li data-aos="fade-up" id="المكتبات-الضمنية">
                         <h5>المكتبات الضمنية:</h5>
