@@ -1,3 +1,6 @@
+.condocs {
+  margin: 7svh;
+}
 .content-section {
   height: auto;
 }
@@ -12,16 +15,27 @@
 
 .headings {
   position: relative;
-  min-width: 250px;
+  min-width: 200px;
   z-index: 10;
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+  transition: 0.5s;
+  margin-left: 50px;
+  border-radius: 20px;
+  transform: translateX(0px);
+  border: 2px solid #182d5555;
+  border-right: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: -2px -2px 1px #2079ff;
 }
-
 .heads {
-  padding-left: 20px;
   position: sticky;
-  top: 30px;
+  top: 70px;
   max-height: 90vh;
   overflow-y: scroll;
+  transition: 0.5s ease;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -31,9 +45,45 @@
   color: var(--bur--);
 }
 
-@media (max-width: 700px) {
+.docsHeader {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  margin-bottom: 20px;
+  padding: 20px 5% 10px  5%;
+  display: flex;
+  justify-content: start;
+  border-bottom: 1px solid #2079ff;
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: 0.5s ease;
+  opacity: 0;
+}
+.docsHeader .but {
+  display: flex;
+  cursor: pointer;
+  fill: var(--text--);
+  align-items: start;
+}
+.docsHeader .but:hover {
+  color: var(--bur--);
+  fill: var(--bur--);
+}
+.docsHeader .but svg {
+  width: 20px;
+  margin-left: 5px;
+}
+@media (max-width: 1100px) {
   .headings {
-    display: none;
+    transform: translateX(300px);
+    position: fixed;
+    height: 100vh;
+    top: -5px;
+    right: 5px;
+  }
+  .docsHeader {
+    opacity: 1;
   }
 }
 pre {
@@ -103,7 +153,11 @@ hr {
   font-weight: 400;
 }
 .comment {
-  color: #5c6370;
+  color: #777;
+  font-style: italic;
+}
+.explain {
+  color: #bbb;
   font-style: italic;
 }
 .boolean {
@@ -113,10 +167,4 @@ hr {
 
 .page .space {
   height: 10px;
-}
-
-@media (max-width: 960px) {
-  .headings {
-    display: none;
-  }
 }
