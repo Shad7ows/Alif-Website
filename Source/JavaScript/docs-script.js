@@ -96,7 +96,7 @@ fetch(
         event.preventDefault();
         const id = link.getAttribute("data-id");
         const section = document.getElementById(id);
-        const topPosition = section.offsetTop - 200;
+        const topPosition = section.offsetTop - 80;
         window.scrollTo({ top: topPosition, behavior: "smooth" });
       });
     });
@@ -105,7 +105,7 @@ fetch(
     window.addEventListener("scroll", () => {
       let currentSection = "";
       titles.forEach((section) => {
-        if (pageYOffset >= section.offsetTop - 200) {
+        if (pageYOffset >= section.offsetTop - 100) {
           currentSection = section.getAttribute("id");
         }
       });
