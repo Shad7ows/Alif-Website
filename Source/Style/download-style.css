@@ -29,20 +29,20 @@
     background-size: 200% 200%;
     background-position: right;
     text-align: center;
-    cursor: pointer;
     border: 2px solid #182d5555;
     height: calc(245px + 11svh);
     width: calc(200px + 3svw);
     border-radius: 30px;
+    flex-direction: column;
+    padding: 25px 15px 25px 15px;
     box-shadow: 2px 2px 1px #2079FF;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
 
-.os .card {
-    display: flex;
-    flex-direction: column;
-    padding: 25px 15px 25px 15px;
+.os .card:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
 }
 
 .os .card img {
