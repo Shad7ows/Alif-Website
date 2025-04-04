@@ -4,6 +4,7 @@ let docsDiv = document.querySelector(".docs");
 let CatDiv = document.querySelector("#Catalogue");
 let GramDiv = document.getElementById("Grammar");
 let headingsDiv = document.querySelector(".headings");
+const openHeadsButton = document.getElementById("openheads");
 // عرض  المستندات
 function showDocs(docType) {
   if (docType == "إرشادات استعمال ألف") {
@@ -127,28 +128,26 @@ function showDocs(docType) {
         });
 
         // فتح أو إغلاق العناوين عند النقر على الزر
-        const openHeadsButton = document.getElementById("openheads");
-        const headingss = document.querySelector(".headings");
         let isheadingsVisible = false;
         openHeadsButton.addEventListener("click", (event) => {
           event.stopPropagation();
           if (isheadingsVisible) {
-            headingss.style.transform = "translateX(300px)";
+            headingsDiv.style.transform = "translateX(300px)";
             docsDiv.style.opacity = 1;
           } else {
-            headingss.style.transform = "translateX(0)";
+            headingsDiv.style.transform = "translateX(0)";
             docsDiv.style.opacity = 0.5;
           }
           isheadingsVisible = !isheadingsVisible;
         });
         document.addEventListener("click", () => {
           if (isheadingsVisible) {
-            headingss.style.transform = "translateX(300px)";
+            headingsDiv.style.transform = "translateX(300px)";
             docsDiv.style.opacity = 1;
             isheadingsVisible = false;
           }
         });
-        headingss.addEventListener("click", (event) => {
+        headingsDiv.addEventListener("click", (event) => {
           event.stopPropagation();
         });
       });
@@ -167,6 +166,7 @@ function showDocs(docType) {
         GramDiv.style.display = "block";
         CatDiv.style.display = "none";
         headingsDiv.style.display = "none";
+        openHeadsButton.style.display = "none";
       })
       .then(() => {
         GramDiv.innerHTML = highlightAlifGrammar(GramDiv.innerHTML);
@@ -313,6 +313,28 @@ function highlightAlifGrammar(code) {
     return "☀".repeat(match.length);
   });
 
+  let spacePattern = /\t\s*\|/g;
+  let spaceMatches = [];
+  sanitizedCode = sanitizedCode.replace(spacePattern, (match, offset) => {
+    spaceMatches.push({
+      index: offset,
+      length: match.length,
+      replacement: `&emsp;<span class="operator">|</span>`,
+    });
+    return "☀".repeat(match.length);
+  });
+
+  let linksPattern = /\[.?\^.?\]/g;
+  let linksMatches = [];
+  sanitizedCode = sanitizedCode.replace(linksPattern, (match, offset) => {
+    linksMatches.push({
+      index: offset,
+      length: match.length,
+      replacement: ``,
+    });
+    return "☀".repeat(match.length);
+  });
+
   let patterns = [
     { txt: /\b\d+(\.\d+)?\b/g, className: "number" },
     { txt: /\s+(صح|خطأ|خطا)(\)|]|\s)+/g, className: "boolean" },
@@ -342,7 +364,7 @@ function highlightAlifGrammar(code) {
     }
   });
 
-  matches = matches.concat(stringMatches).concat(comments).concat(explains).concat(anchorMatches);
+  matches = matches.concat(stringMatches).concat(comments).concat(explains).concat(anchorMatches).concat(spaceMatches).concat(linksMatches);
   matches.sort((a, b) => a.index - b.index);
 
   let highlightedCode = "";
