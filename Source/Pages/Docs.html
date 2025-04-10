@@ -85,7 +85,7 @@
                     </svg>
                     <p>العناوين</p>
                 </div>
-                <div class="but" id="showDocs" onclick="showDocs('قواعد مطابق ألف')">
+                <div class="but" id="showDocs" onclick="openWindow()">
                     <svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19 6H5C4.4 6 4 5.6 4 5C4 4.4 4.4 4 5 4H19C19.6 4 20 4.4 20 5C20 5.6 19.6 6 19 6Z">
                         </path>
@@ -97,11 +97,738 @@
                             d="M19 14H5C4.4 14 4 13.6 4 13C4 12.4 4.4 12 5 12H19C19.6 12 20 12.4 20 13C20 13.6 19.6 14 19 14Z">
                         </path>
                     </svg>
-                    <p>قواعد مطابق ألف</p>
+                    <p>المزيد</p>
                 </div>
             </div>
             <br>
-            <div id="Grammar" style="display: none;"></div>
+
+            <div class="winBack">
+                <div id="window" class="winDocs">
+                    <div class="content">
+                        <h1>المزيد من المستندات</h1>
+                        <button onclick="showDocs('إرشادات استعمال ألف')"> - إرشادات لغة الف</button>
+                        <button onclick="showDocs('قواعد مطابق ألف')"> - قواعد مطابق ألف</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Grammar" style="display: none;">
+                <br>
+                <div style="color: #fff;">
+                    <h1>قواعد <em>مُطَابِق</em> ألـف نـ<span class="number">5.0</span></h1><br>
+                    <p>هذه قواعد ألف نـ<span class="number">5</span> الخاصة بـ <strong>مُطابِق</strong> ألف.<br>نسق
+                        القواعد
+                        هو خليط من EBNF<span class="operator"> و </span>PEG, حيث <a
+                            href="https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form">EBNF</a> اختصار لـ
+                        Extended Backus-Naur form وهي شفرة تدوين خاص بقواعد لغات الحاسب, اما <a
+                            href="https://en.wikipedia.org/wiki/Parsing_expression_grammar">PEG</a> فهو اختصار لـ
+                        Parsing
+                        Expression Grammar وهو شكل من اشكال نسق القواعد.</p><br>
+                </div>
+                <h3>تنسيق القواعد:</h3><br>
+                <ol><br>
+                    <li>اسم_الدالة: تعبير<br> يمكن تضمين النوع بعد اسم الدالة والتي تحدد النوع المرجع من<span
+                            class="keyword"> دالة</span> CPP<span class="operator"> او </span> <span class="keyword">
+                            دالة</span> ألف مقابل الدالة، وذلك إختياري.</li><br>
+                    <li>اسم_الدالة[النوع_المرجع]: تعبير<span class="keyword"><br> إذا</span> تم حذف النوع المرجع فسيتم
+                        إرجاع void<span class="operator">*</span> في CPP<span class="operator"> و </span>أي<span
+                            class="keyword"> نوع</span> في ألف</li><br>
+                    <li>س ص<br> يقوم بمطابقة س ومن ثم ص. </li><br>
+                    <li>س <span class="operator">|</span> ص<br> يقوم بمطابقة س<span class="operator"> او </span>ص, ايهما
+                        يسبق ينهي الدالة.<br> وقد يكون على الشكل التالي، <br> اسم_الدالة[النوع_المرجع]:<br> <span
+                            class="operator">|</span> س<br> <span class="operator">|</span> ص</li><br>
+                    <li>(س)<br> يقوم بمطابقة المجموعة س. </li><br>
+                    <li>[س]<span class="operator"> او </span>س؟ <br> مطابقة س اختيارية. </li><br>
+                    <li>س<span class="operator">*</span><br> إما عدم مطابقة س,<span class="operator"> او </span>مطابقتها
+                        مرة<span class="operator"> او </span>اكثر. </li><br>
+                    <li>س<span class="operator">+</span><br> مطابقة س مرة<span class="operator"> او </span>اكثر. </li>
+                    <br>
+                    <li>س.ص<span class="operator">+</span> <br> يقوم بمطابقة ص مرة أو اكثر، مفصولة ب س. شجرة المطابق لا
+                        تقوم بتضمين الفاصل س. كم أنها تعبر <span class="function">عن </span>(<span class="function">ص
+                        </span>(س ص) <span class="operator">*</span>) </li><br>
+                    <li>&amp;س <br>بدون استهلاك س، يتابع المطابقة في حال نجحت مطابقة س. </li><br>
+                    <li>!س<br>بدون استهلاك س، يتابع المطابقة في حال نجح عدم مطابقة س. </li><br>
+                    <li>~ <br>يلتزم بالمطابَق الحالي حتى لو فشلت عملية المطابقة</li><br>
+                    <li>&amp;&amp;س<br>مطابقة فورية ل س، حيث المطابق لن يتراجع وسيظهر خطأ_نسق<span class="keyword">
+                            اذا</span> تعذرت مطابقة س.</li><br>
+                </ol><br>
+                <h3>قواعد عامة:</h3><br>
+                <ol><br>
+                    <li>النصوص التي تحاط بعلامة تنصيص <span class="string">"نص"</span> تعتبر كلمة مفتاحية. </li><br>
+                    <li>الكلمات عريضة الخط <span class="operator">- </span>اي <strong>عريض</strong> <span
+                            class="operator">- </span>تعتبر كلمة محجوزة. </li><br>
+                    <li>يجب الإلتزام بترتيب الحالات أي: <span class="string">"س | ص يجب ان تبقى بهذا الترتيب ولا تسبق ص
+                            س"</span>. </li><br>
+                    <li>تُستخدم أسماء الدوال التي تبدأ بـ <span class="string">"invalid_"</span> لأخطاء النسق.<ul><br>
+                            <li>لا تُستخدم هذه الدوال في المحاولة الأولى للمطابق.</li><br>
+                            <li>فقط في حال فشل المحاولة الأولى في المطابقة، سيتم تنفيذ محاولة ثانية تتضمن الدوال غير
+                                الصالحة.</li><br>
+                            <li>إذا فشل المطابق في المرحلة الثانية بسبب<span class="boolean"> خطأ </span>النسق، فسيتم
+                                استخدام موقع الفشل العام للمحاولة <span class="function">الأولى </span>(هذا يتجنب
+                                الإبلاغ عن المواقع غير الصحيحة بسبب الدوال الغير صالحة).</li><br>
+                            <li>ترتيب البدائل التي تتضمن دوال غير صالحة مهم.</li><br>
+                        </ul><br></li><br>
+                </ol><br>
+                <hr><br>
+                <h4>حالات البداية:</h4><br>
+                <p>ملف: [حالات] <strong>نهاية</strong><br>طرفية: حالة_سطر </p><br>
+                <hr><br>
+                <h4>الحالات:</h4><br>
+                <p>حالات:<br> <span class="operator">|</span> حالة<span class="operator">+</span> </p><br>
+                <p>حالة:<br> <span class="operator">|</span> حالة_مركبة<br> <span class="operator">|</span> حالات_بسيطة
+                </p><br>
+                <p>حالة_سطر:<br> <span class="operator">|</span> حالة_مركبة <strong>سطر</strong><br> <span
+                        class="operator">|</span> حالة_بسيطة<br> <span class="operator">|</span>
+                    <strong>سطر</strong><br> <span class="operator">|</span> <strong>نهاية</strong>
+                </p><br>
+                <p>حالات_بسيطة:<br> <span class="operator">|</span> حالة_بسيطة !<span class="string">"؛"</span>
+                    <strong>سطر</strong><br> <span class="operator">|</span> <span
+                        class="string">"؛"</span>.حالة_بسيطة<span class="operator">+</span> [<span
+                        class="string">"؛"</span>] <strong>سطر</strong>
+                </p><br>
+                <p>حالة_بسيطة:<br> <span class="operator">|</span> إسناد<br> <span class="operator">|</span>
+                    نوع_بديل<br> <span class="operator">|</span> تعبيرات_نجمة<br> <span class="operator">|</span>
+                    حالة_ارجع<br> <span class="operator">|</span> حالة_استورد<br> <span class="operator">|</span>
+                    حالة_اظهر<br> <span class="operator">|</span> حالة_مرر<br> <span class="operator">|</span>
+                    حالة_حذف<br> <span class="operator">|</span> حالة_ولد<br> <span class="operator">|</span> حالة_متوقع
+                    <br> <span class="operator">|</span> حالة_توقف<br> <span class="operator">|</span>
+                    حالة_استمر<br> <span class="operator">|</span> حالة_عام<br> <span class="operator">|</span>
+                    حالة_نطاق
+                </p><br>
+                <p>حالة_مركبة:<br> <span class="operator">|</span> تعريف_دالة<br> <span class="operator">|</span>
+                    حالة_اذا<br> <span class="operator">|</span> تعريف_صنف<br> <span class="operator">|</span>
+                    حالة_عند<br> <span class="operator">|</span> حالة_لاجل<br> <span class="operator">|</span>
+                    حالة_حاول<br> <span class="operator">|</span> حالة_بينما<br> <span class="operator">|</span>
+                    حالة_طابق </p><br>
+                <hr><br>
+                <h3>الحالات البسيطة:</h3><br>
+                <p>إسناد:<br> <span class="operator">|</span> <strong>اسم</strong> <span class="string">":"</span> تعبير
+                    [ <span class="string">"="</span> قيمة_موضحة]<br> <span class="operator">|</span> (<span
+                        class="string">"("</span> هدف <span class="string">")"</span> <span class="operator">|</span>
+                    هدف_صفة_منخفضة) <span class="string">":"</span> تعبير [<span class="string">"="</span>
+                    قيمة_موضحة]<br> <span class="operator">|</span> (أهداف_نجمة <span class="string">"="</span>)<span
+                        class="operator">+</span> (تعبير_ولد <span class="operator">|</span> تعبيرات_نجمة) !<span
+                        class="string">"="</span> [<strong>تعليق_نوع</strong>]<br> <span class="operator">|</span> هدف
+                    إسناد_رجعي تعبيرات_نجمة ~ (تعبير_ولد <span class="operator">|</span> تعبيرات_نجمة)</p><br>
+                <p>قيمة_موضحة:<br> <span class="operator">|</span> تعبير_ولد<br> <span class="operator">|</span>
+                    تعبيرات_نجمة</p><br>
+                <p>إسناد_رجعي:<br> <span class="operator">|</span> <span class="string">"+="</span> جمع<br> <span
+                        class="operator">|</span> <span class="string">"-="</span> طرح<br> <span
+                        class="operator">|</span> <span class="string">"*="</span> ضرب<br> <span
+                        class="operator">|</span> <span class="string">"\="</span> قسمة<br> <span
+                        class="operator">|</span> <span class="string">"^="</span> أس<br> <span
+                        class="operator">|</span> <span class="string">"\*="</span> باقي القسمة<br> <span
+                        class="operator">|</span> <span class="string">"\\="</span> قسمة بدون باقي<br> <span
+                        class="operator">|</span> <span class="string">"&amp;="</span> <span class="operator"> و
+                    </span>للبتات<br> <span class="operator">|</span> <span class="string">"|="</span> <span
+                        class="operator"> او </span>للبتات<br> <span class="operator">|</span> <span
+                        class="string">"^^="</span> فقط_او للبتات<br> <span class="operator">|</span> <span
+                        class="string">"&lt;&lt;="</span> إزاحة يمين للبتات<br> <span class="operator">|</span> <span
+                        class="string">"&gt;&gt;="</span> إزاحة يسار للبتات</p><br>
+                <p>حالة_ارجع:<br> <span class="operator">|</span> <span class="string">"ارجع"</span> [تعبيرات_نجمة] </p>
+                <br>
+                <p>حالة_اظهر:<br> <span class="operator">|</span> <span class="string">"اظهر"</span> تعبير [<span
+                        class="string">"من"</span> تبعير]<br> <span class="operator">|</span> <span
+                        class="string">"اظهر"</span></p><br>
+                <p>حالة_عام:<br> <span class="operator">|</span> <span class="string">"عام"</span> <span
+                        class="string">","</span>.<strong>اسم</strong><span class="operator">+</span></p><br>
+                <p>حالة_نطاق:<br> <span class="operator">|</span> <span class="string">"نطاق"</span> <span
+                        class="string">","</span>.<strong>اسم</strong><span class="operator">+</span></p><br>
+                <p>حالة_احذف:<br> <span class="operator">|</span> <span class="string">"احذف"</span> حذف_أهداف
+                    &amp;(<span class="string">"؛"</span> <span class="operator">|</span> <strong>سطر</strong>)</p><br>
+                <p>حالة_ولد:<br> <span class="operator">|</span> تعبير_ولد</p><br>
+                <p>حالة_متوقع:<br> <span class="operator">|</span> <span class="string">"متوقع"</span> تعبير [<span
+                        class="string">","</span> تعبير] &lt;----<span class="operator">- </span>التعبير الإختياري هو
+                    رسالة توضيحية للخطأ فقط</p><br>
+                <p>حالة_استورد:<br> <span class="operator">|</span> استورد_اسم<br> <span class="operator">|</span>
+                    استورد_من</p><br>
+                <hr><br>
+                <h4>حالات<span class="keyword"> استورد</span>:</h4><br>
+                <p>استورد_اسم:<br> <span class="operator">|</span> <span class="string">"استورد"</span> اسماء_نقطة</p>
+                <br>
+                <p>استورد_من: <br> <span class="operator">|</span> <span class="string">"من"</span> (<span
+                        class="string">"."</span> <span class="operator">|</span> <span
+                        class="string">"..."</span>)<span class="operator">*</span> اسم_نقطة <span
+                        class="string">"استورد"</span> استورد_من_اهداف<br> <span class="operator">|</span> <span
+                        class="string">"من"</span> (<span class="string">"."</span> <span class="operator">|</span>
+                    <span class="string">"..."</span>)<span class="operator">+</span> <span
+                        class="string">"استورد"</span> استورد_من_اهداف
+                </p><br>
+                <p>استورد_من_اهداف: <br> <span class="operator">|</span> <span class="string">"("</span>
+                    استورد_كـ_اسماء_من [<span class="string">"،"</span>] <span class="string">")"</span><br> <span
+                        class="operator">|</span> استورد_كـ_اسماء_من !<span class="string">"،"</span><br> <span
+                        class="operator">|</span> <span class="string">"*"</span> </p><br>
+                <p>استورد_كـ_اسماء_من:<br> <span class="operator">|</span> <span
+                        class="string">"،"</span>.استورد_كـ_اسم_من<span class="operator">+</span> </p><br>
+                <p>استورد_كـ_اسم_من:<br> <span class="operator">|</span> <strong>اسم</strong> [<span
+                        class="string">"ك"</span> <strong>اسم</strong>] </p><br>
+                <p>اسماء_كـ_نقطة:<br> <span class="operator">|</span> <span class="string">"،"</span>.اسم_كـ_نقطة<span
+                        class="operator">+</span></p><br>
+                <p>اسم_كـ_نقطة:<br> <span class="operator">|</span> اسم_نقطة [<span class="string">"ك"</span>
+                    <strong>اسم</strong>]
+                </p><br>
+                <p>اسم_نقطة:<br> <span class="operator">|</span> اسم_نقطة <span class="string">"."</span>
+                    <strong>اسم</strong><br> <span class="operator">|</span> <strong>اسم</strong>
+                </p><br>
+                <hr><br>
+                <h3>الحالات المركبة:</h3><br>
+                <h4>عناصر عامة:</h4><br>
+                <p>كتلة:<br> <span class="operator">|</span> <strong>سطر</strong> <strong>مسافة_طويلة</strong> حالات
+                    <strong>مسافة_راجعة</strong><br> <span class="operator">|</span> حالات_بسيطة
+                </p><br>
+                <p>زخارف:<br> <span class="operator">|</span> (<span class="string">"@"</span> تعبير_اسم
+                    <strong>سطر</strong>)<span class="operator">+</span>
+                </p><br>
+                <hr><br>
+                <h4>التعريفات:</h4><br>
+                <p>تعريف_صنف:<br> <span class="operator">|</span> زخارف تعريف_صنف_خام<br> <span
+                        class="operator">|</span> تعريف_صنف_خام </p><br>
+                <p>تعريف_صنف_خام:<br> <span class="operator">|</span> <span class="string">"صنف"</span>
+                    <strong>اسم</strong> [معاملات_نوع] [ <span class="string">"("</span> [وسيطات][<span
+                        class="operator">^</span><span class="number">10</span>] <span class="string">")"</span> ] <span
+                        class="string">":"</span> كتلة
+                </p><br>
+                <p>تعريف_دالة:<br> <span class="operator">|</span> زخارف تعريف_دالة_خام<br> <span
+                        class="operator">|</span> تعريف_دالة_خام</p><br>
+                <p>تعريف_دالة_خام: <br> <span class="operator">|</span> <span class="string">"دالة"</span>
+                    <strong>اسم</strong> [معاملات_نوع] <span class="string">"("</span> [معاملات] <span
+                        class="string">")"</span> [<span class="string">"-&gt;"</span> تعبير] <span
+                        class="string">":"</span> [تعليق_نوع_دالة] كتلة<br> <span class="operator">|</span>
+                    <strong>زامن</strong> <span class="string">"دالة"</span> <strong>اسم</strong> [معاملات_نوع] <span
+                        class="string">"("</span> [معاملات] <span class="string">")"</span> [<span
+                        class="string">"-&gt;"</span> تعبير] <span class="string">":"</span> [تعليق_نوع_دالة] كتلة
+                </p>
+                <br>
+                <hr><br>
+                <h4>معاملات الدالة:</h4><br>
+                <p>معاملات :<br> <span class="operator">|</span> بدون_قيمة_شرطة معامل_بدون_قيمة<span
+                        class="operator">*</span> معامل_مع_قيمة<span class="operator">*</span> [الباقي_نجمة]<br> <span
+                        class="operator">|</span> مع_قيمة_شرطة معامل_مع_قيمة<span class="operator">*</span>
+                    [الباقي_نجمة]<br> <span class="operator">|</span> معامل_بدون_قيمة<span class="operator">+</span>
+                    معامل_مع_قيمة<span class="operator">*</span> [الباقي_نجمة]<br> <span class="operator">|</span>
+                    معامل_مع_قيمة<span class="operator">+</span> [الباقي_نجمة]<br> <span class="operator">|</span>
+                    [الباقي_نجمة]</p><br>
+                <p>بدون_قيمة_شرطة:<br> <span class="operator">|</span> معامل_بدون_قيمة<span class="operator">+</span>
+                    <span class="string">"\"</span> <span class="string">"،"</span><br> <span class="operator">|</span>
+                    معامل_بدون_قيمة<span class="operator">+</span> <span class="string">"\"</span> &amp;<span
+                        class="string">")"</span>
+                </p><br>
+                <p>مع_قيمة_شرطة:<br> <span class="operator">|</span> معامل_بدون_قيمة<span class="operator">*</span>
+                    معامل_مع_قيمة<span class="operator">+</span> <span class="string">"\"</span> <span
+                        class="string">"،"</span><br> <span class="operator">|</span> معامل_بدون_قيمة<span
+                        class="operator">*</span> معامل_مع_قيمة<span class="operator">+</span> <span
+                        class="string">"\"</span> &amp;<span class="string">")"</span></p><br>
+                <p>الباقي_نجمة:<br> <span class="operator">|</span> <span class="string">"*"</span> معامل_بدون_قيمة
+                    معامل_ربما_قيمة<span class="operator">*</span> [معامل_كلمات_مفتاحية]<br> <span
+                        class="operator">|</span> <span class="string">"*"</span> معامل_بدون_قيمة_موضح_نجمة
+                    معامل_ربما_قيمة<span class="operator">*</span> [معامل_كلمات_مفتاحية] <br> <span
+                        class="operator">|</span> <span class="string">"*"</span> <span class="string">"،"</span>
+                    معامل_ربما_قيمة<span class="operator">+</span> [معامل_كلمات_مفتاحية]<br> <span
+                        class="operator">|</span> معامل_كلمات_مفتاحية </p><br>
+                <p>معامل_كلمات_مفتاحية:<br> <span class="operator">|</span> <span class="string">"**"</span>
+                    معامل_بدون_قيمة </p><br>
+                <p>معامل_بدون_قيمة:<br> <span class="operator">|</span> معامل <span class="string">","</span>
+                    <strong>تعليق_نوع</strong>؟<br> <span class="operator">|</span> معامل <strong>تعليق_نوع</strong>
+                    &amp;<span class="string">")"</span>
+                </p><br>
+                <p>معامل_بدون_قيمة_موضح_نجمة:<br> <span class="operator">|</span> معامل_موضح_نجمة <span
+                        class="string">"،"</span> <strong>تعليق_نوع</strong>؟<br> <span class="operator">|</span>
+                    معامل_موضح_نجمة <span class="operator">*</span><span class="operator">*</span>تعليق_نوع؟ &amp;<span
+                        class="string">")"</span></p><br>
+                <p>معامل_مع_قيمة:<br> <span class="operator">|</span> معامل قيمة_افتراضية <span
+                        class="string">"،"</span> <strong>تعليق_نوع</strong>؟<br> <span class="operator">|</span> معامل
+                    قيمة_افتراضية <strong>تعليق_نوع</strong>؟ &amp;<span class="string">")"</span> </p><br>
+                <p>معامل_ربما_قيمة:<br> <span class="operator">|</span> معامل قيمة_افتراضية؟ <span
+                        class="string">"،"</span> <strong>تعليق_نوع</strong>؟<br> <span class="operator">|</span> معامل
+                    قيمة_افتراضية؟ <strong>تعليق_نوع</strong>؟ &amp;<span class="string">")"</span> </p><br>
+                <p>معامل:<br> <span class="operator">|</span> <strong>اسم</strong> توضيح؟</p><br>
+                <p>معامل_موضح_نجمة:<br> <span class="operator">|</span> <strong>اسم</strong> موضح_نجمة</p><br>
+                <p>توضيح:<br> <span class="operator">|</span> <span class="string">":"</span> تعبير</p><br>
+                <p>موضح_نجمة:<br> <span class="operator">|</span> <span class="string">":"</span> تعبير_نجمة</p><br>
+                <p>قيمة_افتراضية:<br> <span class="operator">|</span> <span class="string">"="</span> تعبير<br> <span
+                        class="operator">|</span> إفتراضي_غير_صالح </p><br>
+                <hr><br>
+                <h4>حالات<span class="keyword"> إذا</span>:</h4><br>
+                <p>حالة_اذا:<br> <span class="operator">|</span> <span class="string">"اذا"</span> تعبير_اسمي <span
+                        class="string">":"</span> كتلة حالة_اواذا<br> <span class="operator">|</span> <span
+                        class="string">"اذا"</span> تعبيراسمي <span class="string">":"</span> كتلة [حالة_والا] </p><br>
+                <p>حالة_اواذا:<br> <span class="operator">|</span> <span class="string">"اواذا"</span> تعبير_اسمي <span
+                        class="string">":"</span> كتلة حالة_اواذا<br> <span class="operator">|</span> <span
+                        class="string">"اواذا"</span> تعبير_اسمي <span class="string">":"</span> كتلة [حالة_والا] </p>
+                <br>
+                <p>حالة_والا:<br> <span class="operator">|</span> <span class="string">"والا"</span> <span
+                        class="string">":"</span> كتلة </p><br>
+                <hr><br>
+                <h4>حالات<span class="keyword"> بينما</span>:</h4><br>
+                <p>حالة_بينما:<br> <span class="operator">|</span> <span class="string">"بينما"</span> تعبير_اسمي <span
+                        class="string">":"</span> كتلة </p><br>
+                <hr><br>
+                <h4>حالات<span class="keyword"> لاجل</span>:</h4><br>
+                <p>حالة_لاجل:<br> <span class="operator">|</span> <span class="string">"لاجل"</span> أهداف_نجمة <span
+                        class="string">"في"</span> ~ تعبيرات_نجمة <span class="string">":"</span>
+                    [<strong>تعليق_نوع</strong>] كتلة<br> <span class="operator">|</span> <span
+                        class="string">"زامن"</span> <span class="string">"لاجل"</span> أهداف_نجمة <span
+                        class="string">"في"</span> ~ تعبيرات_نجمة <span class="string">":"</span>
+                    [<strong>تعليق_نوع</strong>] كتلة</p><br>
+                <hr><br>
+                <h4>حالات عند:</h4><br>
+                <p>حالة_عند:<br> <span class="operator">|</span> <span class="string">"عند"</span> <span
+                        class="string">"("</span> <span class="string">"،"</span>.عند_عنصر<span
+                        class="operator">+</span> <span class="string">"،"</span>؟ <span class="string">")"</span> <span
+                        class="string">":"</span> [<strong>تعليق_نوع</strong>] كتلة<br> <span class="operator">|</span>
+                    <span class="string">"عند"</span> <span class="string">"،"</span>.عند_عنصر<span
+                        class="operator">+</span> <span class="string">":"</span> [<strong>تعليق_نوع</strong>]
+                    كتلة<br> <span class="operator">|</span> <span class="string">"زامن"</span> <span
+                        class="string">"عند"</span> <span class="string">"("</span> <span
+                        class="string">"،"</span>.عند_عنصر<span class="operator">+</span> <span
+                        class="string">"،"</span>؟ <span class="string">")"</span> <span class="string">":"</span>
+                    كتلة<br> <span class="operator">|</span> <span class="string">"زامن"</span> <span
+                        class="string">"عند"</span> <span class="string">"،"</span>.عند_عنصر<span
+                        class="operator">+</span> <span class="string">":"</span> [<strong>تعليق_نوع</strong>] كتلة
+                </p>
+                <br>
+                <p>عند_عنصر:<br> <span class="operator">|</span> تعبير <span class="string">"ك"</span> هدف_نجمة
+                    &amp;(<span class="string">"،"</span> &gt; <span class="string">")"</span> &gt; <span
+                        class="string">":"</span> )<br> <span class="operator">|</span> تعبير</p><br>
+                <hr><br>
+                <h4>حالات حاول:</h4><br>
+                <p>حالة_حاول:<br> <span class="operator">|</span> <span class="string">"حاول"</span> <span
+                        class="string">":"</span> كتلة كتلة_النهاية<br> <span class="operator">|</span> <span
+                        class="string">"حاول"</span> <span class="string">":"</span> كتلة كتلة_خلل<span
+                        class="operator">+</span> [كتلة_والا] [كتلة_النهاية]<br> <span class="operator">|</span> <span
+                        class="string">"حاول"</span> <span class="string">":"</span> كتلة كتلة_خلل_نجمة<span
+                        class="operator">+</span> [كتلة_والا] [كتلة_النهاية] </p><br>
+                <hr><br>
+                <h4>حالات خلل:</h4><br>
+                <p>كتلة_خلل:<br> <span class="operator">|</span> <span class="string">"خلل"</span> تعبير [<span
+                        class="string">"ك"</span> <strong>اسم</strong>] <span class="string">":"</span> كتلة<br> <span
+                        class="operator">|</span> <span class="string">"خلل"</span> <span class="string">":"</span> كتلة
+                </p><br>
+                <p>كتلة_خلل_نجمة:<br> <span class="operator">|</span> <span class="string">"خلل"</span> <span
+                        class="string">"*"</span> تعبير [<span class="string">"ك"</span> <strong>اسم</strong>] <span
+                        class="string">":"</span> كتلة </p><br>
+                <p>كتلة_النهاية:<br> <span class="operator">|</span> <span class="string">"نهاية"</span> <span
+                        class="string">":"</span> كتلة </p><br>
+                <hr><br>
+                <h4>حالات المطابقة:</h4><br>
+                <p>حالة_مطابقة:<br> <span class="operator">|</span> <span class="string">"طابق"</span> تعبير_موضوع <span
+                        class="string">":"</span> سطر <strong>مسافة_طويلة</strong> كتلة_حال<span
+                        class="operator">+</span> <strong>مسافة_راجعة</strong></p><br>
+                <p>تعبير_موضوع:<br> <span class="operator">|</span> تعبير_اسمي_نجمة <span class="string">"،"</span>
+                    تعبيرات_اسمية_نجمة<br> <span class="operator">|</span> تعبير_اسمي</p><br>
+                <p>كتلة_حال:<br> <span class="operator">|</span> <span class="string">"حال"</span> انماط حماية؟ <span
+                        class="string">":"</span> كتلة</p><br>
+                <p>حماية:<br> <span class="operator">|</span> <span class="string">"اذا"</span> تعبير_اسمي</p><br>
+                <p>انماط:<br> <span class="operator">|</span> نمط_متسلسل_مفتوح<br> <span class="operator">|</span> نمط
+                </p><br>
+                <p>نمط:<br> <span class="operator">|</span> نمط_ك<br> <span class="operator">|</span> نمط_او</p><br>
+                <p>نمط_ك:<br> <span class="operator">|</span> نمط_او <span class="string">"ك"</span> نمط_إلتقاط_هدف</p>
+                <br>
+                <p>نمط_او:<br> <span class="operator">|</span> <span class="string">"|"</span>.نمط_مغلق<span
+                        class="operator">+</span></p><br>
+                <p>نمط_مغلق:<br> <span class="operator">|</span> نمط_حرفي<br> <span class="operator">|</span>
+                    نمط_إلتقاط<br> <span class="operator">|</span> نمط_شامل<br> <span class="operator">|</span>
+                    نمط_قيمة<br> <span class="operator">|</span> نمط_مجموعة<br> <span class="operator">|</span>
+                    نمط_متسلسل<br> <span class="operator">|</span> نمط_فهرس<br> <span class="operator">|</span> نمط_صنف
+                </p><br>
+                <p>نمط_حرفي:<br> <span class="operator">|</span> عدد_إشارة !(<span class="string">"+"</span> <span
+                        class="operator">|</span> <span class="string">"-"</span>)<br> <span class="operator">|</span>
+                    عدد_مركب<br> <span class="operator">|</span> نصوص<br> <span class="operator">|</span> <span
+                        class="string">"عدم"</span><br> <span class="operator">|</span> <span
+                        class="string">"صح"</span><br> <span class="operator">|</span> <span class="string">"خطا"</span>
+                </p><br>
+                <p>تعبير_حرفي: &lt;--<span class="operator">- </span>مماثل لما فوقه؟<br> <span class="operator">|</span>
+                    عدد_إشارة !(<span class="string">"+"</span> <span class="operator">|</span> <span
+                        class="string">"-"</span>)<br> <span class="operator">|</span> عدد_مركب<br> <span
+                        class="operator">|</span> نصوص<br> <span class="operator">|</span> <span
+                        class="string">"عدم"</span><br> <span class="operator">|</span> <span
+                        class="string">"صح"</span><br> <span class="operator">|</span> <span class="string">"خطا"</span>
+                </p><br>
+                <p>عدد_مركب:<br> <span class="operator">|</span> عدد_حقيقي_اشارة <span class="string">"+"</span>
+                    عدد_تخيلي<br> <span class="operator">|</span> عدد_حقيقي_اشارة <span class="string">"-"</span>
+                    عدد_تخيلي</p><br>
+                <p>عدد_اشارة:<br> <span class="operator">|</span> <strong>عدد</strong><br> <span
+                        class="operator">|</span> <span class="string">"-"</span> <strong>عدد</strong></p><br>
+                <p>عدد_حقيقي_اشارة:<br> <span class="operator">|</span> عدد_حقيقي<br> <span class="operator">|</span>
+                    <span class="string">"-"</span> عدد_حقيقي
+                </p><br>
+                <p>عدد_حقيقي:<br> <span class="operator">|</span> <strong>عدد</strong></p><br>
+                <p>عدد_تخيلي:<br> <span class="operator">|</span> <strong>عدد</strong></p><br>
+                <p>نمط_التقاط:<br> <span class="operator">|</span> نمط_التقاط_هدف</p><br>
+                <p>نمط_التقاط_هدف:<br> <span class="operator">|</span> !<span class="string">"_"</span>
+                    <strong>اسم</strong> !(<span class="string">"."</span> <span class="operator">|</span> <span
+                        class="string">"("</span> <span class="operator">|</span> <span class="string">"="</span>)
+                </p>
+                <br>
+                <p>نمط_شامل:<br> <span class="operator">|</span> <span class="string">"_"</span></p><br>
+                <p>نمط_قيمة:<br> <span class="operator">|</span> صفة !(<span class="string">"."</span> <span
+                        class="operator">|</span> <span class="string">"("</span> <span class="operator">|</span> <span
+                        class="string">"="</span>)</p><br>
+                <p>صفة:<br> <span class="operator">|</span> اسم_او_صفة <span class="string">"."</span>
+                    <strong>اسم</strong>
+                </p><br>
+                <p>اسم_او_صفة:<br> <span class="operator">|</span> صفة<br> <span class="operator">|</span>
+                    <strong>اسم</strong>
+                </p><br>
+                <p>نمط_مجموعة:<br> <span class="operator">|</span> <span class="string">"("</span> نمط <span
+                        class="string">")"</span></p><br>
+                <p>نمط_متسلسل:<br> <span class="operator">|</span> <span class="string">"["</span> ربما_نمط_متسلسل؟
+                    <span class="string">"]"</span><br> <span class="operator">|</span> <span class="string">"("</span>
+                    نمط_متسلسل_مفتوح <span class="string">")"</span>
+                </p><br>
+                <p>نمط_متسلسل_مفتوح:<br> <span class="operator">|</span> ربما_نمط_نمة <span class="string">"،"</span>
+                    ربما_نمط_متسلسل؟</p><br>
+                <p>ربما_نمط_متسلسل:<br> <span class="operator">|</span> <span
+                        class="string">"،"</span>.ربما_نمط_نجمة<span class="operator">+</span> <span
+                        class="string">"،"</span>؟</p><br>
+                <p>ربما_نمط_نجمة:<br> <span class="operator">|</span> نمط_نجمة<br> <span class="operator">|</span> نمط
+                </p><br>
+                <p>نمط_نجمة:<br> <span class="operator">|</span> <span class="string">"*"</span>
+                    نمط_التقاط_هدف<br> <span class="operator">|</span> <span class="string">"*"</span> نمط_شامل</p><br>
+                <p>نمط_فهرس:<br> <span class="operator">|</span> <span class="string">"{"</span> <span
+                        class="string">"}"</span><br> <span class="operator">|</span> <span class="string">"{"</span>
+                    نمط_نجمة_مضاعفة <span class="string">"}"</span><br> <span class="operator">|</span> <span
+                        class="string">"{"</span> نمط_عناصر <span class="string">"،"</span> نمط_نجمة_مضاعفة <span
+                        class="string">"،"</span>؟ <span class="string">"}"</span><br> <span class="operator">|</span>
+                    <span class="string">"{"</span> نمط_عناصر <span class="string">"،"</span>؟ <span
+                        class="string">"}"</span>
+                </p><br>
+                <p>نمط_عناصر:<br> <span class="operator">|</span> <span class="string">"،"</span>.نمط_مفتاح_قيمة<span
+                        class="operator">+</span></p><br>
+                <p>نمط_مفتاح_قيمة:<br> <span class="operator">|</span> (تعبير_حرفي <span class="operator">|</span> صفة)
+                    <span class="string">":"</span> نمط
+                </p><br>
+                <p>نمط_نجمة_مضاعفة:<br> <span class="operator">|</span> <span class="string">"**"</span> نمط_التقاط_هدف
+                </p><br>
+                <p>نمط_صنف:<br> <span class="operator">|</span> اسم_او_صفة <span class="string">"("</span> <span
+                        class="string">")"</span><br> <span class="operator">|</span> اسم_او_صفة <span
+                        class="string">"("</span> انماط_مكانية <span class="string">"،"</span>؟ <span
+                        class="string">")"</span><br> <span class="operator">|</span> اسم_او_صفة <span
+                        class="string">"("</span> انماط_مفتاحية <span class="string">"،"</span>؟ <span
+                        class="string">")"</span><br> <span class="operator">|</span> اسم_او_صفة <span
+                        class="string">"("</span> انماط_مكانية <span class="string">"،"</span> انماط_مفتاحية <span
+                        class="string">"،"</span>؟ <span class="string">")"</span></p><br>
+                <p>انماط_مكانية:<br> <span class="operator">|</span> <span class="string">"،"</span>.نمط<span
+                        class="operator">+</span></p><br>
+                <p>انماط_مفتاحية:<br> <span class="operator">|</span> <span class="string">","</span>.نمط_مفتاحي<span
+                        class="operator">+</span></p><br>
+                <p>نمط_مفتاحي:<br> <span class="operator">|</span> <strong>اسم</strong> <span class="string">"="</span>
+                    نمط</p><br>
+                <hr><br>
+                <h4>حالات النوع:</h4><br>
+                <p>نوع_بديل:<br> <span class="operator">|</span> <span class="string">"نوع"</span> <strong>اسم</strong>
+                    [معاملات_نوع] <span class="string">"="</span> تعبير </p><br>
+                <p>معاملات_نوع:<br> <span class="operator">|</span> معاملات_نوع_غير_صالحة<br> <span
+                        class="operator">|</span> <span class="string">"["</span> معامل_متسلسل_نوع <span
+                        class="string">"]"</span></p><br>
+                <p>معامل_متسلسل_نوع:<br> <span class="operator">|</span> <span class="string">"،"</span>.معامل_نوع<span
+                        class="operator">+</span> [<span class="string">"،"</span>]</p><br>
+                <p>معامل_نوع:<br> <span class="operator">|</span> <strong>اسم</strong> [معامل_نوع_حدود]
+                    [معامل_نوع_افتراضي]<br> <span class="operator">|</span> <span class="string">"*"</span>
+                    <strong>اسم</strong> [معامل_نوع_افتراضي_نجمي]<br> <span class="operator">|</span> <span
+                        class="string">"**"</span> <strong>اسم</strong> [معامل_نوع_افتراضي]
+                </p><br>
+                <p>معامل_نوع_حدود:<br> <span class="operator">|</span> <span class="string">":"</span> تعبير</p><br>
+                <p>معامل_نوع_افتراضي:<br> <span class="operator">|</span> <span class="string">"="</span> تعبير</p><br>
+                <p>معامل_نوع_افتراضي_نجمي:<br> <span class="operator">|</span> <span class="string">"="</span>
+                    تعبير_نجمة</p><br>
+                <hr><br>
+                <h4>التعبيرات:</h4><br>
+                <p>تعبير:<br> <span class="operator">|</span> انفصال <span class="string">"اذا"</span> انفصال <span
+                        class="string">"والا"</span> تعبير<br> <span class="operator">|</span> انفصال <br> <span
+                        class="operator">|</span> تعريف_مدلول</p><br>
+                <p>تعبير_ولد:<br> <span class="operator">|</span> <span class="string">"ولد"</span> <span
+                        class="string">"من"</span> تعبير<br> <span class="operator">|</span> <span
+                        class="string">"ولد"</span> [تعبيرات_نجمة] </p><br>
+                <p>تعبيرات_نجمة: <br> <span class="operator">|</span> <span class="function">تعبير_نجمة </span>(<span
+                        class="string">"،"</span> تعبير_نجمة)<span class="operator">+</span> [<span
+                        class="string">"،"</span>]<br> <span class="operator">|</span> تعبير_نجمة <span
+                        class="string">"،"</span><br> <span class="operator">|</span> تعبير_نجمة </p><br>
+                <p>تعبير_نجمة: <br> <span class="operator">|</span> <span class="string">"*"</span> وحدة_او<br> <span
+                        class="operator">|</span> تعبير </p><br>
+                <p>تعبيرات_اسمية_نجمة [<span class="operator">^</span><span class="number">15</span>]:<br> <span
+                        class="operator">|</span> <span class="string">"،"</span>.تعبير_اسمي_نجمة<span
+                        class="operator">+</span> [<span class="string">"،"</span>]</p><br>
+                <p>تعبير_اسمي_نجمة:<br> <span class="operator">|</span> <span class="string">"*"</span>
+                    وحدة_او<br> <span class="operator">|</span> تعبير_اسمي </p><br>
+                <p>تعبير_اسمي:<br> <span class="operator">|</span> تعبير_اسناد<br> <span class="operator">|</span> تعبير
+                    !<span class="string">":="</span></p><br>
+                <p>تعبير_اسناد:<br> <span class="operator">|</span> <strong>اسم</strong> <span
+                        class="string">":="</span> ~ تعبير</p><br>
+                <p>انفصال:<br> <span class="operator">|</span> <span class="function">اتصال </span>(<span
+                        class="string">"او"</span> اتصال)<span class="operator">+</span><br> <span
+                        class="operator">|</span> اتصال </p><br>
+                <p>اتصال:<br> <span class="operator">|</span> <span class="function">عكس </span>(<span
+                        class="string">"و"</span> عكس)<span class="operator">+</span><br> <span
+                        class="operator">|</span> عكس </p><br>
+                <p>عكس:<br> <span class="operator">|</span> <span class="string">"ليس"</span> عكس<br> <span
+                        class="operator">|</span> مقارنة </p><br>
+                <hr><br>
+                <h4>عمليات المقارنة:</h4><br>
+                <p>مقارنة:<br> <span class="operator">|</span> وحدة_او عمليات_مقارنة_وحدة_او_زوج<span
+                        class="operator">+</span><br> <span class="operator">|</span> وحدة_او </p><br>
+                <p>عمليات_مقارنة_وحدة_او_زوج:<br> <span class="operator">|</span> وحدة_او_يساوي<br> <span
+                        class="operator">|</span> وحدة_او_لا_يساوي<br> <span class="operator">|</span>
+                    وحدة_او_اصغر_من_يساوي<br> <span class="operator">|</span> وحدة_او_اصغر_من<br> <span
+                        class="operator">|</span> وحدة_او_اكبر_من_يساوي <br> <span class="operator">|</span>
+                    وحدة_او_اكبر_من<br> <span class="operator">|</span> وحدة_او_ليس_في<br> <span
+                        class="operator">|</span> وحدة_او_في<br> <span class="operator">|</span>
+                    وحدة_او_هل_ليس<br> <span class="operator">|</span> وحدة_او_هل</p><br>
+                <p>وحدة_او_يساوي:<br> <span class="operator">|</span> <span class="string">"=="</span>
+                    وحدة_او<br>وحدة_او_لا_يساوي:<br> <span class="operator">|</span> (<span class="string">"!="</span>)
+                    وحدة_او<br>وحدة_او_اصغر_من_يساوي:<br> <span class="operator">|</span> <span
+                        class="string">"&lt;="</span> وحدة_او<br>وحدة_او_اصغر_من:<br> <span class="operator">|</span>
+                    <span class="string">"&lt;"</span> وحدة_او<br>وحدة_او_اكبر_من_يساوي:<br> <span
+                        class="operator">|</span> <span class="string">"&gt;="</span>
+                    وحدة_او<br>وحدة_او_اكبر_من:<br> <span class="operator">|</span> <span class="string">"&gt;"</span>
+                    وحدة_او<br>وحدة_او_ليس_في:<br> <span class="operator">|</span> <span class="string">"ليس"</span>
+                    <span class="string">"في"</span> وحدة_او<br>وحدة_او_في:<br> <span class="operator">|</span> <span
+                        class="string">"في"</span> وحدة_او<br>وحدة_او_هل_ليس:<br> <span class="operator">|</span> <span
+                        class="string">"هل"</span> <span class="string">"ليس"</span> وحدة_او<br>وحدة_او_هل:<br> <span
+                        class="operator">|</span> <span class="string">"هل"</span> وحدة_او
+                </p><br>
+                <hr><br>
+                <h4>عمليات الوحدات:</h4><br>
+                <p>وحدة_او:<br> <span class="operator">|</span> وحدة_او <span class="string">"|"</span>
+                    وحدة_فقط_او<br> <span class="operator">|</span> وحدة_فقط_او </p><br>
+                <p>وحدة_فقط_او:<br> <span class="operator">|</span> وحدة_فقط_او <span class="string">"*|"</span>
+                    وحدة_و<br> <span class="operator">|</span> وحدة_و </p><br>
+                <p>وحدة_و:<br> <span class="operator">|</span> وحدة_و <span class="string">"&amp;"</span>
+                    تعبير_ازاحة<br> <span class="operator">|</span> تعبير_ازاحة </p><br>
+                <p>تعبير_ازاحة:<br> <span class="operator">|</span> تعبير_ازاحة <span class="string">"&gt;&gt;"</span>
+                    جمع<br> <span class="operator">|</span> تعبير_ازاحة <span class="string">"&lt;&lt;"</span>
+                    جمع<br> <span class="operator">|</span> جمع </p><br>
+                <hr><br>
+                <h4>عمليات رياضية:</h4><br>
+                <p>جمع:<br> <span class="operator">|</span> جمع <span class="string">"+"</span> حد<br> <span
+                        class="operator">|</span> جمع <span class="string">"-"</span> حد<br> <span
+                        class="operator">|</span> حد </p><br>
+                <p>حد:<br> <span class="operator">|</span> حد <span class="string">"*"</span> معامل<br> <span
+                        class="operator">|</span> حد <span class="string">"\"</span> معامل<br> <span
+                        class="operator">|</span> حد <span class="string">"\*"</span> معامل<br> <span
+                        class="operator">|</span> حد <span class="string">"\\"</span> معامل<br> <span
+                        class="operator">|</span> معامل </p><br>
+                <p>معامل:<br> <span class="operator">|</span> <span class="string">"+"</span> معامل<br> <span
+                        class="operator">|</span> <span class="string">"-"</span> معامل<br> <span
+                        class="operator">|</span> <span class="string">"~"</span> معامل<br> <span
+                        class="operator">|</span> أس</p><br>
+                <p>أس:<br> <span class="operator">|</span> جذر <span class="string">"^"</span> معامل<br> <span
+                        class="operator">|</span> جذر </p><br>
+                <p>جذر:<br> <span class="operator">|</span> <span class="string">"\^"</span> جذر<br> <span
+                        class="operator">|</span> اولي_انتظار </p><br>
+                <hr><br>
+                <h4>عناصر أولي:</h4><br>
+                <ul><br>
+                    <li>العناصر الأولية هي مثل : <strong>كائن.شيئ.شيئ</strong><span class="operator"> او
+                        </span><strong>كائن[شيئ]</strong><span class="operator"> او </span><strong><span
+                                class="function">كائن</span>(شيئ)</strong><span class="operator"> او
+                        </span><strong>كائن</strong> ...</li><br>
+                </ul><br>
+                <p>اولي_انتظر:<br> <span class="operator">|</span> <span class="string">"انتظر"</span> اولي<br> <span
+                        class="operator">|</span> اولي </p><br>
+                <p>اولي:<br> <span class="operator">|</span> اولي <span class="string">"."</span>
+                    <strong>اسم</strong><br> <span class="operator">|</span> اولي تعبير_توليدي<br> <span
+                        class="operator">|</span> اولي <span class="string">"("</span> [وسيطات] <span
+                        class="string">")"</span><br> <span class="operator">|</span> اولي <span
+                        class="string">"["</span> قواطع <span class="string">"]"</span><br> <span
+                        class="operator">|</span> جزء
+                </p><br>
+                <p>قواطع:<br> <span class="operator">|</span> قاطع !<span class="string">"،"</span><br> <span
+                        class="operator">|</span> <span class="string">"،"</span>.(قاطع <span class="operator">|</span>
+                    تعبير_نجمي)<span class="operator">+</span> [<span class="string">"،"</span>] </p><br>
+                <p>قاطع:<br> <span class="operator">|</span> [تعبير] <span class="string">":"</span> [تعبير] [<span
+                        class="string">":"</span> [تعبير] ]<br> <span class="operator">|</span> تعبير </p><br>
+                <p>جزء:<br> <span class="operator">|</span> <strong>اسم</strong><br> <span class="operator">|</span>
+                    <span class="string">"صح"</span><br> <span class="operator">|</span> <span
+                        class="string">"خطا"</span><br> <span class="operator">|</span> <span
+                        class="string">"عدم"</span><br> <span class="operator">|</span> نصوص<br> <span
+                        class="operator">|</span> <strong>عدد</strong><br> <span class="operator">|</span> (مترابطة
+                    <span class="operator">|</span> مجموعة <span class="operator">|</span> تعبير_توليدي)<br> <span
+                        class="operator">|</span> (مصفوفة <span class="operator">|</span> مصفوفة_ضمنية[<span
+                        class="operator">^</span><span class="number">12</span>])<br> <span class="operator">|</span>
+                    (فهرس <span class="operator">|</span> فهرس_ضمني <span class="operator">|</span> تشكيلة[<span
+                        class="operator">^</span><span class="number">13</span>] <span class="operator">|</span>
+                    تشكيلة_ضمنية)<br> <span class="operator">|</span> <span class="string">"..."</span>
+                </p><br>
+                <p>مجموعة:<br> <span class="operator">|</span> <span class="string">"("</span> (تعبير_ولد <span
+                        class="operator">|</span> تعبير_اسمي) <span class="string">")"</span></p><br>
+                <hr><br>
+                <h4>دوال المدلول:</h4><br>
+                <p>تعريف_المدلول:<br> <span class="operator">|</span> <span class="string">"مدلول"</span>
+                    [معاملات_مدلول] <span class="string">":"</span> تعبير</p><br>
+                <p>معاملات_مدلول:<br> <span class="operator">|</span> مدلول_معامل_بدون_قيمة_شرطة
+                    مدلول_معامل_بدون_قيمة<span class="operator">*</span> مدلول_معامل_مع_قيمة<span
+                        class="operator">*</span> [مدلول_الباقي_نجمة]<br> <span class="operator">|</span>
+                    مدلول_معامل_مع_قيمة_شرطة مدلول_معامل_مع_قيمة<span class="operator">*</span>
+                    [مدلول_الباقي_نجمة]<br> <span class="operator">|</span> مدلول_معامل_بدون_قيمة<span
+                        class="operator">+</span> مدلول_معامل_مع_قيمة_شرطة<span class="operator">*</span>
+                    [مدلول_الباقي_نجمة]<br> <span class="operator">|</span> مدلول_معامل_مع_قيمة<span
+                        class="operator">+</span> [مدلول_الباقي_نجمة]<br> <span class="operator">|</span>
+                    مدلول_الباقي_نجمة</p><br>
+                <p>مدلول_معامل_بدون_قيمة_شرطة:<br> <span class="operator">|</span> مدلول_معامل_بدون_قيمة<span
+                        class="operator">+</span> <span class="string">"\"</span> <span
+                        class="string">"،"</span><br> <span class="operator">|</span> مدلول_معامل_بدون_قيمة<span
+                        class="operator">+</span> <span class="string">"\"</span> &amp;<span class="string">":"</span>
+                </p><br>
+                <p>مدلول_معامل_مع_قيمة_شرطة:<br> <span class="operator">|</span> مدلول_معامل_بدون_قيمة<span
+                        class="operator">*</span> مدلول_معامل_مع_قيمة<span class="operator">+</span> <span
+                        class="string">"\"</span> <span class="string">"،"</span><br> <span class="operator">|</span>
+                    مدلول_معامل_بدون_قيمة<span class="operator">*</span> مدلول_معامل_مع_قيمة<span
+                        class="operator">+</span> <span class="string">"\"</span> &amp;<span class="string">":"</span>
+                </p><br>
+                <p>مدلول_الباقي_نجمة:<br> <span class="operator">|</span> <span class="string">"*"</span>
+                    مدلول_معامل_بدون_قيمة مدلول_معامل_ربما_قيمة<span class="operator">*</span>
+                    [مدلول_معامل_كلمات_مفتاحية]<br> <span class="operator">|</span> <span class="string">"*"</span>
+                    <span class="string">"،"</span> مدلول_معامل_ربما_قيمة<span class="operator">+</span>
+                    [مدلول_معامل_كلمات_مفتاحية]<br> <span class="operator">|</span> مدلول_معامل_كلمات_مفتاحية
+                </p><br>
+                <p>مدلول_معامل_كلمات_مفتاحية:<br> <span class="operator">|</span> <span class="string">"**"</span>
+                    مدلول_معامل_بدون_قيمة</p><br>
+                <p>مدلول_معامل_بدون_قيمة:<br> <span class="operator">|</span> مدلول_معامل <span
+                        class="string">"،"</span><br> <span class="operator">|</span> مدلول_معامل &amp;<span
+                        class="string">":"</span></p><br>
+                <p>مدلول_معامل_مع_قيمة:<br> <span class="operator">|</span> مدلول_معامل قيمة_افتراضية <span
+                        class="string">"،"</span><br> <span class="operator">|</span> مدلول_معامل قيمة_افتراضية
+                    &amp;<span class="string">":"</span></p><br>
+                <p>مدلول_معامل_ربما_قيمة:<br> <span class="operator">|</span> مدلول_معامل قيمة_افتراضية؟ <span
+                        class="string">"،"</span><br> <span class="operator">|</span> مدلول_معامل قيمة_افتراضية؟
+                    &amp;<span class="string">":"</span></p><br>
+                <p>مدلول_معامل:<br> <span class="operator">|</span> <strong>اسم</strong></p><br>
+                <hr><br>
+                <h4>النصوص:</h4><br>
+                <p>نصوص:<br> <span class="operator">|</span> (نص_تنفيذي <span class="operator">|</span> نص)<span
+                        class="operator">+</span> </p><br>
+                <p>نص:<br> <span class="operator">|</span> <strong>نص</strong></p><br>
+                <p>نص_تنفيذي:<br> <span class="operator">|</span> <strong>نص_تنفيذي_بداية</strong> نص_تنفيذي_اوسط<span
+                        class="operator">*</span> <strong>نص_تنفيذي_نهاية</strong> </p><br>
+                <p>نص_تنفيذي_اوسط:<br> <span class="operator">|</span> نص_تنفيذي_مجال_استبدال<br> <span
+                        class="operator">|</span> <strong>نص_تنفيذي_اوسط</strong> </p><br>
+                <p>نص_تنفيذي_مجال_استبدال:<br> <span class="operator">|</span> <span class="string">"{"</span>
+                    قيمة_موضحة <span class="string">"="</span>؟ [نص_تنفيذي_تحويل] [نص_تنفيذي_تنسيق_كامل] <span
+                        class="string">"}"</span> </p><br>
+                <p>نص_تنفيذي_تحويل:<br> <span class="operator">|</span> <span class="string">"!"</span>
+                    <strong>اسم</strong>
+                </p><br>
+                <p>نص_تنفيذي_تنسيق_كامل:<br> <span class="operator">|</span> <span class="string">":"</span>
+                    نص_تنفيذي_تنسيق<span class="operator">*</span></p><br>
+                <p> نص_تنفيذي_تنسيق:<br> <span class="operator">|</span> <strong>نص_تنفيذي_اوسط</strong><br> <span
+                        class="operator">|</span> نص_تنفيذي_مجال_استبدال </p><br>
+                <hr><br>
+                <h4>الحاويات:</h4><br>
+                <p>مصفوفة:<br> <span class="operator">|</span> <span class="string">"["</span> [تعبيرات_اسمية_نجمة]
+                    <span class="string">"]"</span>
+                </p><br>
+                <p>مترابطة:<br> <span class="operator">|</span> <span class="string">"("</span> [تعبير_اسمي_نجمة <span
+                        class="string">"،"</span> [تعبيرات_اسمية_نجمة]] <span class="string">")"</span> </p><br>
+                <p>تشكيلة:<br> <span class="operator">|</span> <span class="string">"{"</span> [تعبيرات_اسمية_نجمة]
+                    <span class="string">"}"</span>
+                </p><br>
+                <p>فهرس:<br> <span class="operator">|</span> <span class="string">"{"</span> [ازواج_نجمية_مضاعفة] <span
+                        class="string">"}"</span> </p><br>
+                <p>ازواج_نجمية_مضاعفة:<br> <span class="operator">|</span> <span
+                        class="string">"،"</span>.زوج_نجمي_مضاعف </p><br>
+                <p>زوج_نجمي_مضاعف:<br> <span class="operator">|</span> <span class="string">"**"</span>
+                    وحدة_او<br> <span class="operator">|</span> زوج_كلمة_مفتاحية</p><br>
+                <p>زوج_كلمة_مفتاحية:<br> <span class="operator">|</span> تعبير <span class="string">":"</span> تعبير
+                </p><br>
+                <hr><br>
+                <h4>الحاويات الضمنية:</h4><br>
+                <p>مصفوفة_ضمنية:<br> <span class="operator">|</span> <span class="string">"["</span> تعبير_اسمي
+                    لاجل_اذا_بنود <span class="string">"]"</span> </p><br>
+                <p>تشكيلة_ضمنية:<br> <span class="operator">|</span> <span class="string">"{"</span> تعبير_اسمي
+                    لاجل_اذا_بنود <span class="string">"}"</span> </p><br>
+                <p>تعبير_توليدي:<br> <span class="operator">|</span> <span class="string">"("</span> (تعبير_اسناد <span
+                        class="operator">|</span> تعبير !<span class="string">":="</span>) لاجل_اذا_بنود</p><br>
+                <p> فهرس_ضمني:<br> <span class="operator">|</span> <span class="string">"{"</span> زوج_كلمة_مفتاحية
+                    لاجل_اذا_بنود <span class="string">"}"</span></p><br>
+                <p>لاجل_اذا_بنود:<br> <span class="operator">|</span> لاجل_اذا_بند<span class="operator">+</span> </p>
+                <br>
+                <p>لاجل_اذا_بند:<br> <span class="operator">|</span> <span class="string">"زامن"</span> <span
+                        class="string">"لاجل"</span> اهداف_نجمة <span class="string">"في"</span> ~ <span
+                        class="function">انفصال </span>(<span class="string">"اذا"</span> انفصال)<span
+                        class="operator">*</span><br> <span class="operator">|</span> <span class="string">"لاجل"</span>
+                    اهداف_نجمة <span class="string">"في"</span> ~ <span class="function">انفصال </span>(<span
+                        class="string">"اذا"</span> انفصال)<span class="operator">*</span></p><br>
+                <hr><br>
+                <h4>الوسيطات:</h4><br>
+                <p>الوسيطات:<br> <span class="operator">|</span> وسيطات [<span class="string">"،"</span>] &amp;<span
+                        class="string">")"</span> </p><br>
+                <p>وسيطات:<br> <span class="operator">|</span> <span class="string">"،"</span>.(تعبير_نجمي <span
+                        class="operator">|</span> (تعبير_اسناد <span class="operator">|</span> تعبير !<span
+                        class="string">":="</span>) !<span class="string">"="</span>)<span class="operator">+</span>
+                    [<span class="string">"،"</span> وسيطات_مفتاحية]<br> <span class="operator">|</span> وسيطات_مفتاحية
+                </p><br>
+                <p>وسيطات_مفتاحية:<br> <span class="operator">|</span> <span
+                        class="string">"،"</span>.وسيط_مفتاحي_او_نجمي<span class="operator">+</span> <span
+                        class="string">"،"</span> <span class="string">"،"</span>.وسيط_مفتاحي_او_نجمي_مضاعف<br> <span
+                        class="operator">|</span> <span class="string">"،"</span>.وسيط_مفتاحي_او_نجمي<span
+                        class="operator">+</span><br> <span class="operator">|</span> <span
+                        class="string">"،"</span>.وسيط_مفتاحي_او_نجمي_مضاعف</p><br>
+                <p>وسيط_مفتاحي_او_نجمي:<br> <span class="operator">|</span> <strong>اسم</strong> <span
+                        class="string">"="</span> تعبير<br> <span class="operator">|</span> تعبير_نجمي </p><br>
+                <p>وسيط_مفتاحي_او_نجمي_مضاعف:<br> <span class="operator">|</span> <strong>اسم</strong> <span
+                        class="string">"="</span> تعبير<br> <span class="string">"**"</span> تعبير </p><br>
+                <p>تعبير_نجمي:<br> <span class="operator">|</span> <span class="string">"*"</span> تعبير</p><br>
+                <hr><br>
+                <h4>أهداف الإسناد:</h4><br>
+                <p>اهداف_نجمة:<br> <span class="operator">|</span> هدف_نجمة !<span class="string">"،"</span><br> <span
+                        class="operator">|</span> <span class="function">هدف_نجمة </span>(<span
+                        class="string">"،"</span> هدف_نجمة)<span class="operator">*</span> [<span
+                        class="string">"،"</span>] </p><br>
+                <p>هدف_مع_جزء_نجمة:<br> <span class="operator">|</span> هدف_اولي <span class="string">"."</span>
+                    <strong>اسم</strong> !هدف_تالي<br> <span class="operator">|</span> هدف_اولي <span
+                        class="string">"["</span> قواطع <span class="string">"]"</span> !هدف_تالي<br> <span
+                        class="operator">|</span> جزء_نجمة
+                </p><br>
+                <p>جزء_نجمة:<br> <span class="operator">|</span> <strong>اسم</strong><br> <span
+                        class="operator">|</span> <span class="string">"("</span> هدف_مع_جزء_نجمة <span
+                        class="string">")"</span><br> <span class="operator">|</span> <span class="string">"("</span>
+                    [تتالي_اهداف_مترابطة_نجمة] <span class="string">")"</span><br> <span class="operator">|</span> <span
+                        class="string">"["</span> [تتالي_اهداف_مصفوفة_نجمة] <span class="string">"]"</span> </p><br>
+                <p>تتالي_اهداف_مترابطة_نجمة:<br> <span class="operator">|</span> <span class="function">هدف_نجمة
+                    </span>(<span class="string">"،"</span> هدف_نجمة)<span class="operator">+</span> [<span
+                        class="string">"،"</span>]<br> <span class="operator">|</span> هدف_نجمة <span
+                        class="string">"،"</span></p><br>
+                <p>تتالي_اهداف_مصفوفة_نجمة:<br> <span class="operator">|</span> <span
+                        class="string">"،"</span>.هدف_نجمة<span class="operator">+</span> [<span
+                        class="string">"،"</span>] </p><br>
+                <p>هدف_نجمة:<br> <span class="operator">|</span> <span class="string">"*"</span> (!<span
+                        class="string">"*"</span> هدف_نجمة)<br> <span class="operator">|</span> هدف_مع_جزء_نجمة </p><br>
+                <p>هدف:<br> <span class="operator">|</span> هدف_صفة_منخفضة<br> <span class="operator">|</span>
+                    <strong>اسم</strong><br> <span class="operator">|</span> <span class="string">"("</span> هدف <span
+                        class="string">")"</span>
+                </p><br>
+                <p>هدف_صفة_منخفضة:<br> <span class="operator">|</span> هدف_اولي <span class="string">"."</span>
+                    <strong>اسم</strong> !هدف_تالي<br> <span class="operator">|</span> هدف_اولي <span
+                        class="string">"["</span> قواطع <span class="string">"]"</span> !هدف_تالي
+                </p><br>
+                <p>هدف_اولي:<br> <span class="operator">|</span> هداف_اولي <span class="string">"."</span>
+                    <strong>اسم</strong> &amp;تحقق_تالي<br> <span class="operator">|</span> هدف_اولي <span
+                        class="string">"["</span> قواطع <span class="string">"]"</span> &amp;تحقق_تالي<br> <span
+                        class="operator">|</span> هدف_اولي تعبير_توليدي &amp;تحقق_تالي<br> <span
+                        class="operator">|</span> هدف_اولي <span class="string">"("</span> [وسيطات] <span
+                        class="string">")"</span> &amp;تحقق_تالي<br> <span class="operator">|</span> جزء &amp;تحقق_تالي
+                </p><br>
+                <p>تحقق_تالي:<br> <span class="operator">|</span> <span class="string">"("</span><br> <span
+                        class="operator">|</span> <span class="string">"["</span><br> <span class="operator">|</span>
+                    <span class="string">"."</span>
+                </p><br>
+                <hr><br>
+                <h4>أهداف الحذف:</h4><br>
+                <p>حذف_أهداف:<br> <span class="operator">|</span> <span class="string">"،"</span>.حذف_هدف<span
+                        class="operator">+</span> [<span class="string">"،"</span>] </p><br>
+                <p>حذف_هدف:<br> <span class="operator">|</span> هدف_أولي <span class="string">"."</span>
+                    <strong>اسم</strong> !تحقق_التالي<br> <span class="operator">|</span> هدف_أولي <span
+                        class="string">"["</span> قواطع <span class="string">"]"</span> !تحقق_التالي<br> <span
+                        class="operator">|</span> حذف_هدف_جزء
+                </p><br>
+                <p>حذف_هدف_جزء:<br> <span class="operator">|</span> <strong>اسم</strong><br> <span
+                        class="operator">|</span> <span class="string">"("</span> حذف_هدف <span
+                        class="string">")"</span><br> <span class="operator">|</span> <span class="string">"("</span>
+                    [حذف_اهداف] <span class="string">")"</span><br> <span class="operator">|</span> <span
+                        class="string">"["</span> [حذف_اهداف] <span class="string">"]"</span> </p><br>
+                <br>
+            </div>
             <div id="Catalogue"><br>
 
                 <center style="font-family: Tajawal">

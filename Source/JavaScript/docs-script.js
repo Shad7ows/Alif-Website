@@ -7,7 +7,9 @@ let headingsDiv = document.querySelector(".headings");
 const openHeadsButton = document.getElementById("openheads");
 // عرض  المستندات
 function showDocs(docType) {
+  document.title = docType;
   if (docType == "إرشادات استعمال ألف") {
+    location.hash = "";
     fetch(
       "https://raw.githubusercontent.com/Shad7ows/Alif/refs/heads/Alif5.0/documents/إرشادات إستعمال ألف.md"
     )
@@ -19,6 +21,11 @@ function showDocs(docType) {
       })
       .then((markdown) => {
         GramDiv.style.display = "none";
+        CatDiv.style.display = "block";
+        headingsDiv.style.display = "flex";
+        if (screen.width > "400px") {
+          openHeadsButton.style.display = "flex";
+        }
         // document.querySelector("#Catalogue").innerHTML = marked.parse(markdown);
         // إضافة أرقام الأسطر
         // document.querySelectorAll("pre").forEach((pre) => {
@@ -152,6 +159,7 @@ function showDocs(docType) {
         });
       });
   } else if (docType == "قواعد مطابق ألف") {
+    location.hash = "قواعد_مطابق_ألف";
     fetch(
       "https://raw.githubusercontent.com/Shad7ows/Alif/refs/heads/Alif5.0/documents/قواعد مطابق ألف.md"
     )
@@ -162,18 +170,27 @@ function showDocs(docType) {
         return res.text();
       })
       .then((markdown) => {
-        GramDiv.innerHTML = marked.parse(markdown);
+        // GramDiv.innerHTML = marked.parse(markdown);
         GramDiv.style.display = "block";
         CatDiv.style.display = "none";
         headingsDiv.style.display = "none";
         openHeadsButton.style.display = "none";
       })
       .then(() => {
-        GramDiv.innerHTML = highlightAlifGrammar(GramDiv.innerHTML);
+        // GramDiv.innerHTML = highlightAlifGrammar(GramDiv.innerHTML);
       });
   }
 }
-showDocs("إرشادات استعمال ألف");
+let urlHash = location.hash.replace("#", "");
+console.log(urlHash);
+if (
+  urlHash ===
+  "%D9%82%D9%88%D8%A7%D8%B9%D8%AF_%D9%85%D8%B7%D8%A7%D8%A8%D9%82_%D8%A3%D9%84%D9%81"
+) {
+  showDocs("قواعد مطابق ألف");
+} else {
+  showDocs("إرشادات استعمال ألف");
+}
 
 // تلوين الشفرة
 function highlightAlif(code) {
@@ -205,7 +222,7 @@ function highlightAlif(code) {
   sanitizedCode = sanitizedCode.replace(
     formattedStringPattern,
     (match, before, expr, after, offset) => {
-      let formattedReplacement = `<span class="string">"${before}</span>{${expr}}<span class="string">"${after}"</span>`;
+      let formattedReplacement = `<span class="string">"${before}</span>{${expr}}<span class="string">${after}"</span>`;
       stringMatches.push({
         index: offset,
         length: match.length,
@@ -293,14 +310,17 @@ function highlightAlifGrammar(code) {
 
   let anchorTagPattern = /<a\b[^>]*>(.*?)<\/a>/g;
   let anchorMatches = [];
-  sanitizedCode = sanitizedCode.replace(anchorTagPattern, (match, p1, offset) => {
-    anchorMatches.push({
-      index: offset,
-      length: match.length,
-      replacement: match,
-    });
-    return "☀".repeat(match.length);
-  });
+  sanitizedCode = sanitizedCode.replace(
+    anchorTagPattern,
+    (match, p1, offset) => {
+      anchorMatches.push({
+        index: offset,
+        length: match.length,
+        replacement: match,
+      });
+      return "☀".repeat(match.length);
+    }
+  );
 
   let stringPattern = /م?"[^"]*"|'[^']*'/g;
   let stringMatches = [];
@@ -364,7 +384,13 @@ function highlightAlifGrammar(code) {
     }
   });
 
-  matches = matches.concat(stringMatches).concat(comments).concat(explains).concat(anchorMatches).concat(spaceMatches).concat(linksMatches);
+  matches = matches
+    .concat(stringMatches)
+    .concat(comments)
+    .concat(explains)
+    .concat(anchorMatches)
+    .concat(spaceMatches)
+    .concat(linksMatches);
   matches.sort((a, b) => a.index - b.index);
 
   let highlightedCode = "";
@@ -377,6 +403,7 @@ function highlightAlifGrammar(code) {
 
   return highlightedCode.replace(/\n/g, "<br>");
 }
+
 // نسخ الشفرة
 function copyCode(but, code) {
   let formattedCode = code
@@ -390,6 +417,7 @@ function copyCode(but, code) {
 
   navigator.clipboard.writeText(formattedCode);
   but.innerHTML = "نُسِخ";
+  notify("تم النسخ الي الحافظة");
   setTimeout(function () {
     but.innerHTML = "نسخ";
   }, 3000);
