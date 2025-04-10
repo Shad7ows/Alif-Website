@@ -85,7 +85,7 @@
                     </svg>
                     <p>العناوين</p>
                 </div>
-                <div class="but" id="showDocs" onclick="showDocs('قواعد مطابق ألف')">
+                <div class="but" id="showDocs" onclick="openWindow()">
                     <svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19 6H5C4.4 6 4 5.6 4 5C4 4.4 4.4 4 5 4H19C19.6 4 20 4.4 20 5C20 5.6 19.6 6 19 6Z">
                         </path>
@@ -97,10 +97,21 @@
                             d="M19 14H5C4.4 14 4 13.6 4 13C4 12.4 4.4 12 5 12H19C19.6 12 20 12.4 20 13C20 13.6 19.6 14 19 14Z">
                         </path>
                     </svg>
-                    <p>قواعد مطابق ألف</p>
+                    <p>المزيد</p>
                 </div>
             </div>
             <br>
+
+            <div class="winBack">
+                <div id="window" class="winDocs">
+                    <div class="content">
+                        <h1>المزيد من المستندات</h1>
+                        <button onclick="showDocs('إرشادات استعمال ألف')"> - إرشادات لغة الف</button>
+                        <button onclick="showDocs('قواعد مطابق ألف')"> - قواعد مطابق ألف</button>
+                    </div>
+                </div>
+            </div>
+
             <div id="Grammar" style="display: none;"></div>
             <div id="Catalogue"><br>
 

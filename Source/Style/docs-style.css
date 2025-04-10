@@ -5,6 +5,10 @@
   height: auto;
 }
 
+button {
+  font-size: 23px;
+}
+
 .docs {
   margin-bottom: 30px;
   width: 100%;
@@ -173,7 +177,7 @@ hr {
 }
 #Grammar strong,
 #Grammar h3,
-#Grammar h4  {
+#Grammar h4 {
   color: #fff;
 }
 #Grammar li {
