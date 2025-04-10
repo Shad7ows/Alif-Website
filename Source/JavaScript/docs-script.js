@@ -170,14 +170,14 @@ function showDocs(docType) {
         return res.text();
       })
       .then((markdown) => {
-        GramDiv.innerHTML = marked.parse(markdown);
+        // GramDiv.innerHTML = marked.parse(markdown);
         GramDiv.style.display = "block";
         CatDiv.style.display = "none";
         headingsDiv.style.display = "none";
         openHeadsButton.style.display = "none";
       })
       .then(() => {
-        GramDiv.innerHTML = highlightAlifGrammar(GramDiv.innerHTML);
+        // GramDiv.innerHTML = highlightAlifGrammar(GramDiv.innerHTML);
       });
   }
 }
