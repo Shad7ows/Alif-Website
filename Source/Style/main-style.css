@@ -125,7 +125,6 @@ button:hover {
 }
 .winBack #window {
   display: flex;
-  justify-content: end;
   padding: 10px;
   width: 70%;
   margin: 10px 0;
