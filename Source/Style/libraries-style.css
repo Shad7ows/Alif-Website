@@ -61,6 +61,9 @@
   border-radius: 16px;
 }
 
+.winBack #window {
+  justify-content: end;
+}
 #window button {
   border-radius: 5px;
   padding: 2px 10px;
