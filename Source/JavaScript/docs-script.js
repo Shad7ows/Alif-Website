@@ -8,6 +8,7 @@ const openHeadsButton = document.getElementById("openheads");
 // عرض  المستندات
 function showDocs(docType) {
   document.title = docType;
+  location.hash = docType.replaceAll(" ", "_");
   if (docType == "إرشادات استعمال ألف") {
     location.hash = "";
     fetch(
@@ -23,7 +24,7 @@ function showDocs(docType) {
         GramDiv.style.display = "none";
         CatDiv.style.display = "block";
         headingsDiv.style.display = "flex";
-        if (screen.width > "400px") {
+        if (screen.width < 500) {
           openHeadsButton.style.display = "flex";
         }
         // document.querySelector("#Catalogue").innerHTML = marked.parse(markdown);
@@ -159,7 +160,6 @@ function showDocs(docType) {
         });
       });
   } else if (docType == "قواعد مطابق ألف") {
-    location.hash = "قواعد_مطابق_ألف";
     fetch(
       "https://raw.githubusercontent.com/Shad7ows/Alif/refs/heads/Alif5.0/documents/قواعد مطابق ألف.md"
     )
@@ -174,6 +174,7 @@ function showDocs(docType) {
         GramDiv.style.display = "block";
         CatDiv.style.display = "none";
         headingsDiv.style.display = "none";
+        heads.innerHTML = "";
         openHeadsButton.style.display = "none";
       })
       .then(() => {
