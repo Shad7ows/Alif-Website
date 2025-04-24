@@ -60,8 +60,39 @@ for (let i = 0; i < osData.length; i++) {
   }" height="100px" />
             <h1 class="platform">${osData[i].name}</h1>
             <p class="info" dir="rtl">${osData[i].info}</p>
-            <a href="${osData[i].link}" class="button1">تحميل</a>
+            <button onclick="newDownload('${osData[i].os}')" style="width: fit-content;">
+                <a href="${osData[i].link}" class="button1">تحميل</a>
+            </button>
             <h5 class="vers">لغة ألف | نـ5.0.0</h5>
         </div>
     `;
+}
+
+async function newDownload(currentOS) {
+  try {
+    const response = await fetch("https://api.ipify.org?format=json");
+    const data = await response.json();
+    const ip = data.ip;
+
+    const locationResponse = await fetch(`https://ipinfo.io/${ip}/json`);
+    const locationData = await locationResponse.json();
+
+    const country = `${locationData.country}/${locationData.city}/${locationData.timezone}`;
+
+    supabase
+      .from("Downloads")
+      .insert({
+        IP: ip,
+        النظام_المحمل: currentOS,
+        نظام_المستخدم: getOS(),
+        الموقع: country,
+      })
+      .then(({error}) => {
+        if (error) {
+          console.error("Error inserting data:", error);
+        }
+      });
+  } catch (error) {
+    console.error(error);
+  }
 }

@@ -134,30 +134,6 @@ function showDocs(docType) {
             li.setAttribute("id", id);
           }
         });
-
-        // فتح أو إغلاق العناوين عند النقر على الزر
-        let isheadingsVisible = false;
-        openHeadsButton.addEventListener("click", (event) => {
-          event.stopPropagation();
-          if (isheadingsVisible) {
-            headingsDiv.style.transform = "translateX(300px)";
-            docsDiv.style.opacity = 1;
-          } else {
-            headingsDiv.style.transform = "translateX(0)";
-            docsDiv.style.opacity = 0.5;
-          }
-          isheadingsVisible = !isheadingsVisible;
-        });
-        document.addEventListener("click", () => {
-          if (isheadingsVisible) {
-            headingsDiv.style.transform = "translateX(300px)";
-            docsDiv.style.opacity = 1;
-            isheadingsVisible = false;
-          }
-        });
-        headingsDiv.addEventListener("click", (event) => {
-          event.stopPropagation();
-        });
       });
   } else if (docType == "قواعد مطابق ألف") {
     fetch(
@@ -244,9 +220,9 @@ function highlightAlif(code) {
 
   let patterns = [
     { txt: /\b\d+(\.\d+)?\b/g, className: "number" },
-    { txt: /(صح|خطأ|خطا)(\)|]|\s)+/g, className: "boolean" },
+    { txt: /(صح|خطأ|خطا|_تهيئة_|عدم|هذا.)(\)|]|\s)+/g, className: "boolean" },
     {
-      txt: /(?<!\w)(دالة|اذا|استورد|ارجع|بينما|لاجل|استمر|توقف|احذف|اواذا|والا|صنف|الزمن|الرياضيات|نوع)(?!\w)/g,
+      txt: /(?<!\w)(دالة|اذا|استورد|حاول:|خلل:|نهاية:|عام|ارجع|بينما|لاجل|استمر|توقف|احذف|اواذا|والا|صنف|الزمن|الرياضيات|نوع)(?!\w)/g,
       className: "keyword",
     },
     {
