@@ -200,6 +200,13 @@ hr {
     top: -5px;
     right: 5px;
   }
+  #toggleHeadings:checked ~ .headings {
+    transform: translateX(0px);
+  }
+  #toggleHeadings:checked ~ .docs {
+    opacity: 0.5;
+  }
+
   #openheads {
     display: flex;
   }
