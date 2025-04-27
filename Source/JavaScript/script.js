@@ -4,6 +4,12 @@ const supabaseKey =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdmeXhqa3djaHNuY3pzbXRocGl3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyODUyODUsImV4cCI6MjA1OTg2MTI4NX0.b40Gi7Jsk_XkJSW-W5OU8oXyQZMHLUfqVw0R09Njyj4";
 const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
+window.addEventListener('pageshow', function() { // اغلاق النوافذ المفتوحة عند الرجوع
+  document.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
+    checkbox.checked = false;
+  });  
+});
+
 // عرض النافذه
 function openWindow(height) {
   const winBack = document.querySelector(".winBack");
