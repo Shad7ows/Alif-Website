@@ -704,6 +704,7 @@ button:hover {
 
   .header-section .header .menu .lines .svg {
     width: 40px;
+    z-index: 5;
     transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -785,10 +786,6 @@ button:hover {
     transition: 1s;
   }
 
-  .menu-section.open {
-    transform: translateX(0);
-  }
-
   .menu-section .slide-menu {
     display: flex;
     flex-direction: column;
@@ -817,6 +814,9 @@ button:hover {
     pointer-events: none;
   }
 
+  .header-section .header .menu .lines input:checked ~ .menu-section {
+    transform: translateX(-370px);
+  }
   /* --- Footer --- */
   .footer-section {
     display: flex;
