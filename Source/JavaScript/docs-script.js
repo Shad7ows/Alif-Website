@@ -82,6 +82,7 @@ function showDocs(docType) {
           let cleanedText = h5.innerText
             .replace(/"/g, "")
             .replace(/[:]/g, "")
+            .replace(/#/g, "")
             .trim();
           return cleanedText;
         });
@@ -94,6 +95,7 @@ function showDocs(docType) {
         document.querySelectorAll(".section-link").forEach((link) => {
           link.addEventListener("click", (event) => {
             event.preventDefault();
+            document.getElementById("toggleHeadings").checked = false;
             const id = link.getAttribute("data-id");
             const section = document.getElementById(id);
             const topPosition = section.offsetTop - 80;
@@ -222,8 +224,7 @@ function highlightAlif(code) {
     { txt: /\b\d+(\.\d+)?\b/g, className: "number" },
     { txt: /(صح|خطأ|خطا|_تهيئة_|عدم|هذا.)(\)|]|\s)+/g, className: "boolean" },
     {
-      txt: /(?<!\w)(دالة|اذا|استورد|حاول:|خلل:|نهاية:|عام|ارجع|بينما|لاجل|استمر|توقف|احذف|اواذا|والا|صنف|الزمن|الرياضيات|نوع)(?!\w)/g,
-      className: "keyword",
+      txt: /(?<!\w)(دالة|اذا|إذا|استورد|حاول|خلل|نهاية|عام|ارجع|بينما|لأجل|لاجل|استمر|توقف|احذف|اوإذا|اواذا|والا|وإلا|صنف|الزمن|الرياضيات|نوع)(?!\w)/g,      className: "keyword",
     },
     {
       txt: /(\+=|-=|\*=|\/=|\^=|==|!=|<|>|\+|- |\||\*|\\|\^|=| و | او | ليس )/g,
