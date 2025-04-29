@@ -139,7 +139,7 @@ hr {
   font-weight: 500;
 }
 .string {
-  color: #4e7433;
+  color: #32e212;
   font-weight: 500;
 }
 .operator {
@@ -194,9 +194,10 @@ hr {
 
 @media (max-width: 1100px) {
   .headings {
-    transform: translateX(300px);
+    display: flex;
+    transform: translateX(105vw);
     position: fixed;
-    height: 100vh;
+    height: 100svh;
     top: -5px;
     right: 5px;
   }

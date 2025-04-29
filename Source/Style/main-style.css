@@ -149,10 +149,10 @@ button:hover {
   transform: translateY(20px);
   border: 2px solid #182d5555;
   border-radius: 15px;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 2px 2px 1px #2079ff;
-  z-index: 200;
+  z-index: 20;
 }
 /* --- Component --- */
 
