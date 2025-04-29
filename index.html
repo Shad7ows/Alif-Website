@@ -1,163 +1,132 @@
 <!DOCTYPE html>
+
 <html lang="ar">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لغة البرمجة العربية الف</title>
-    <link rel="shortcut icon" href="Source/Assets/AlifLogo.svg" type="image/x-icon">
-    <link rel="stylesheet" href="Source/Style/main-style.css">
-    <style>
-        * {
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: "Tajawal";
-            color: #fff;
-            background-color: #182d5555;
-            background-size: cover;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-            flex-direction: column;
-            background-image: url("Source/Assets/Background.webp");
-        }
-
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid #182d5555;
-            height: 300px;
-            aspect-ratio: 1;
-            z-index: 1;
-            border-radius: 30px;
-            backdrop-filter: blur(6px);
-            box-shadow: 2px 2px 1px #2079FF;
-        }
-
-        .line {
-            align-self: center;
-            position: absolute;
-            width: 16384px;
-            border: solid 1px #bbb;
-        }
-
-
-        .button2-front {
-            font-size: 3em;
-            font-weight: 300;
-            width: 700px;
-            height: 200px;
-            border-radius: 200px;
-            transition: ease-in-out 0.5s;
-        }
-
-        .button2-front:hover {
-            font-size: 4em;
-        }
-
-        .button2 {
-            justify-content: center;
-            width: 700px;
-            height: 200px;
-            border-radius: 200px;
-            transition: ease-in-out 0.5s;
-        }
-
-        @media (max-width: 960px) {
-            .button2-front {
-                font-size: 2.5em;
-                font-weight: 300;
-                width: 600px;
-                height: 150px;
-                border-radius: 200px;
-            }
-
-            .button2-front:hover {
-                font-size: 2.6em;
-            }
-
-            .button2 {
-                justify-content: center;
-                width: 600px;
-                height: 150px;
-                border-radius: 200px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                background-image: url("Source/Assets/Background-Mobile.webp");
-                background-size: 100% 100%;
-            }
-
-            .button2-front {
-                font-size: 1.4em;
-                font-weight: 300;
-                width: 350px;
-                height: 100px;
-                border-radius: 200px;
-            }
-
-            .button2-front:hover {
-                font-size: 1.5em;
-            }
-
-            .button2 {
-                justify-content: center;
-                width: 350px;
-                height: 100px;
-                border-radius: 200px;
-            }
-        }
-    </style>
+    <title>لغة البرمجة الف</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="لغة البرمجة العربية ألف بنسختها الخامسة">
+    <link rel="shortcut icon" href="/Source/Assets/AlifLogo.svg" type="image/x-icon">
+    <link rel="preload" as="font" type="font/woff2" href="Source/Fonts/Tajawal-Bold.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="Source/Fonts/Tajawal-Regular.woff2" crossorigin>
+    <link rel="stylesheet" href="Source/Style/main-style.css" defer />
 </head>
 
-<body>
-    <header>
-        <img src="Source/Assets/AlifLogo.svg" width="200px" alt="">
-    </header>
-    <div class="coutdown">
-        <div class="button2-front">
-            <div id="countdown" dir="rtl"></div>
+<body class="page">
+    <section class="container header-section">
+        <header class="header">
+
+            <div class="menu">
+                <label class="lines">
+                    <input type="checkbox" id="lines">
+                    <svg class="svg" viewBox="0 0 32 32">
+                        <path class="line top-bottom"
+                            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                        </path>
+                        <path class="line middle" d="M7 16 27 16"></path>
+                    </svg>
+                </label>
+            </div>
+
+            <div class="logo">
+                <a href="/"><img alt="شعار ألف" width="36px" height="36px"
+                        src="Source/Assets/AlifLogo.svg" /></a>
+            </div>
+
+            <div class="top-menu">
+                <ul class="list">
+                    <li class="item"><a href="Learn/">الـتـعـلـيـم</a></li>
+                    <li class="item"><a href="Docs/">الـوثـائـق</a></li>
+                    <li class="item"><a href="#">الـدعـم</a></li>
+                </ul>
+                <div class="contribute">
+                    <span class="line"></span>
+                    <!-- button1 -->
+                    <!-- <a href="#" class="button1">المساهمة</a> -->
+                    <!-- button2 -->
+                    <div class="button2-front"><a href="#">المساهمة</a></div>
+                    <div class="button2"></div>
+                    <!-- button3 -->
+                    <!-- <div class="button3"><a href="#" class="label">المساهمة</a></div> -->
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <section class="menu-section">
+        <div class="stroke-anim"></div>
+        <div class="slide-menu">
+            <a href="Learn/">الـتـعـلـيــم</a>
+            <a href="Docs/">الـوثـائـق</a>
+            <a href="#">الـدعـم</a>
+            <a href="License/">الـرخـصـة</a>
+            <a href="AboutUs/">مـن نـحـن</a>
+            <a href="#">ألـف2</a>
         </div>
-        <div class="button2">
-            <div class="line"></div>
+    </section>
+
+    <section class="container content-section">
+        <div class="right">
+            <h1 class="title">
+                البرمجة<br />
+                أصبحت أسهل
+            </h1>
+            <p class="paragraph">
+                قم بتجربة لغة البرمجة العربية ألف والتي ستفتح لك آفاق جديدة في البرمجة
+            </p>
+
+            <div class="for-tab">
+                <div class="logo-card">
+                    <img alt="شعار ألف" class="logo" priority="low" width="256px" height="256px"
+                        src="Source/Assets/AlifLogo.svg" defer />
+                </div>
+                <img alt="شفرة" class="code" src="Source/Assets/Code-Mobile.webp" defer />
+            </div>
+
+            <div class="bottom">
+                <div class="download">
+                    <span class="line"></span>
+                    <!-- button1 -->
+                    <!-- <a href="Source/Pages/Download.html" class="button1">تحميل اللغة</a> -->
+                    <!-- button2 -->
+                    <div class="button2-front"><a href="Download/">تحميل اللغة</a></div>
+                    <div class="button2"></div>
+                    <!-- button3 -->
+                    <!-- <div class="button3"><a class="label" href="Source/Pages/Download.html">تحميل اللغة</a></div> -->
+                </div>
+                <a class="underline-button" href="https://t.me/aliflang">انضم إلى المجتمع</a>
+            </div>
         </div>
-    </div>
-    <div class="space"></div>
+        <div class="left">
+            <div class="logo-card">
+                <img alt="شعار ألف" class="logo" src="Source/Assets/AlifLogo.svg" defer />
+            </div>
+            <img alt="شفرة" class="code" src="Source/Assets/Code.webp" defer />
+        </div>
+    </section>
 
+    <section class="container footer-section">
+        <a class="item text" href="License/">الـرخـصـة</a>
+        <a class="item text" href="AboutUs/">مـن نـحـن</a>
+        <a class="item text" href="#">ألـف2</a>
+        <a class="item circle" href="#">
+            <img class="img" alt="انستاغرام" width="30px" height="30px" src="Source/Assets/Instagram.svg" />
+        </a>
+        <a class="item circle" href="#">
+            <img class="img" alt="يوتيوب" width="30px" height="30px" src="Source/Assets/Youtube.svg" />
+        </a>
+        <a class="item circle" href="https://github.com/alifcommunity/Alif">
+            <img class="img" alt="غيتهب" width="30px" height="30px" src="Source/Assets/Github.svg" />
+        </a>
+    </section>
 
-    <script>
-        function updateCountdown() {
-            const newYear = new Date("2025-06-26");
-            const now = new Date();
-            const timeDifference = newYear - now;
+    <section>
+        <div class="space"></div>
+    </section>
 
-            const element = document.getElementById('countdown');
-            if (timeDifference <= 0) {
-                element.innerHTML = "حان وقت اصدار اللغة (من المفترض ان يكون الان تم حذف هاذه الصفحة 😁)";
-                element.style.fontSize = '20px';
-                element.style.fontWeight = 'normal';
-                return;
-            }
-
-            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
-            element.innerHTML = `${seconds} : ${minutes} : ${hours} ساعة | ${days} يوم`;
-        }
-
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-    </script>
+    <script class="scripe" src="Source/JavaScript/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </body>
 
 </html>
