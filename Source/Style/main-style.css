@@ -489,7 +489,7 @@ input[type="checkbox"] {
 
 /* --- Space --- */
 .page .space {
-  height: 0;
+  height: 25px;
 }
 
 /* -- Media Adjustment -- */
