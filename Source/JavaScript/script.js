@@ -21,6 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+window.addEventListener('pageshow', function() { // اغلاق النوافذ المفتوحة عند الرجوع
+  document.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
+    checkbox.checked = false;
+  });  
+});
+
 // عرض النافذه
 function openWindow(height) {
   const winBack = document.querySelector(".winBack");
@@ -39,7 +45,7 @@ function openWindow(height) {
     winBack.style.opacity = 1;
   }, 20);
   setTimeout(() => {
-    window.style.height = !height ? "100px" : height;
+    window.style.height = !height ? "120px" : height;
   }, 50);
 }
 

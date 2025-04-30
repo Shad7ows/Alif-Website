@@ -271,11 +271,23 @@ hr {
     top: -5px;
     right: 5px;
   }
+  .headBack {
+    position: absolute;
+    display: none;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
   #toggleHeadings:checked ~ .headings {
     transform: translateX(0px);
   }
   #toggleHeadings:checked ~ .docs {
     opacity: 0.5;
+  }
+  #toggleHeadings:checked ~ .headBack {
+    display: flex;
   }
 
   #openheads {
