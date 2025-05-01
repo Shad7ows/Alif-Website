@@ -27,21 +27,27 @@ const osData = [
     name: "لينكس",
     img: "LinuxOS.svg",
     link: "#",
-    info: ` تحميل اللغة لنظام تشغيل لينكس معمارية 64x`,
+    version: "5.0.0",
+    infoIDE: ` تحميل محرر اللغة مع اللغة لنظام تشغيل لينكس معمارية 64x`,
+    infoLang: ` تحميل اللغة لنظام تشغيل لينكس معمارية 64x`,
   },
   {
     os: "Windows",
     name: "ويندوز",
     img: "WindowsOS.svg",
     link: "#",
-    info: `تحميل اللغة لنظام تشغيل ويندوز 10-11 معمارية 64x `,
+    version: "5.0.0",
+    infoIDE: `تحميل محرر اللغة مع اللغة لنظام تشغيل ويندوز 10-11 معمارية 64x `,
+    infoLang: `تحميل اللغة لنظام تشغيل ويندوز 10-11 معمارية 64x `,
   },
   {
     os: "MacOS",
     name: "ماك",
     img: "MacOS.svg",
     link: "#",
-    info: `تحميل اللغة لنظام تشغيل ماك معالج انتل معمارية 64x`,
+    version: "5.0.0",
+    infoIDE: `تحميل محرر اللغة مع اللغة لنظام تشغيل ماك معالج انتل معمارية 64x`,
+    infoLang: `تحميل اللغة لنظام تشغيل ماك معالج انتل معمارية 64x`,
   },
 ];
 
@@ -53,17 +59,30 @@ for (let i = 0; i < osData.length; i++) {
   cardsDiv.innerHTML += `
         <div class="card" style="
             order: ${isCurrent ? middleOrder : i >= middleOrder ? i + 1 : i};
-            ${isCurrent ? "transform: scale(1.1);" : ""}
+            ${isCurrent ? "scale: 1.1;" : ""}
         ">
-            <img alt="${osData[i].name}" class="logo" src="../Source/Assets/${
-    osData[i].img
-  }" height="100px" />
-            <h1 class="platform">${osData[i].name}</h1>
-            <p class="info" dir="rtl">${osData[i].info}</p>
-            <button onclick="newDownload('${osData[i].os}')" style="width: fit-content;">
-                <a href="${osData[i].link}" class="button1">تحميل</a>
-            </button>
-            <h5 class="vers">لغة ألف | نـ5.0.0</h5>
+          <div class="front">
+              <img alt="${osData[i].name}" class="logo" src="../Source/Assets/${
+      osData[i].img
+    }" height="100px" />
+              <h1 class="platform">${osData[i].name}</h1>
+              <p class="info" dir="rtl">${osData[i].infoIDE}</p>
+              <button onclick="newDownload('${osData[i].os}')" style="width: fit-content;">
+                  <a href="${osData[i].link}" class="button1">تحميل</a>
+              </button>
+              <h5 class="vers">محرر لغة ألف | نـ${osData[i].version}</h5>
+          </div>
+          <div class="back">
+                          <img alt="${osData[i].name}" class="logo" src="../Source/Assets/${
+                  osData[i].img
+                }" height="100px" />
+              <h1 class="platform">${osData[i].name}</h1>
+              <p class="info" dir="rtl">${osData[i].infoLang}</p>
+              <button onclick="newDownload('${osData[i].os}')" style="width: fit-content;">
+                  <a href="${osData[i].link}" class="button1">تحميل</a>
+              </button>
+              <h5 class="vers">لغة ألف | نـ${osData[i].version}</h5>
+          </div>
         </div>
     `;
 }
