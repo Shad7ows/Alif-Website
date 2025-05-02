@@ -26,7 +26,8 @@ const osData = [
     os: "Linux",
     name: "لينكس",
     img: "LinuxOS.svg",
-    link: "#",
+    linkIDE: "#",
+    linkLang: "#",
     version: "5.0.0",
     infoIDE: ` تحميل محرر اللغة مع اللغة لنظام تشغيل لينكس معمارية 64x`,
     infoLang: ` تحميل اللغة لنظام تشغيل لينكس معمارية 64x`,
@@ -35,7 +36,8 @@ const osData = [
     os: "Windows",
     name: "ويندوز",
     img: "WindowsOS.svg",
-    link: "#",
+    linkIDE: "#",
+    linkLang: "#",
     version: "5.0.0",
     infoIDE: `تحميل محرر اللغة مع اللغة لنظام تشغيل ويندوز 10-11 معمارية 64x `,
     infoLang: `تحميل اللغة لنظام تشغيل ويندوز 10-11 معمارية 64x `,
@@ -44,7 +46,8 @@ const osData = [
     os: "MacOS",
     name: "ماك",
     img: "MacOS.svg",
-    link: "#",
+    linkIDE: "#",
+    linkLang: "#",
     version: "5.0.0",
     infoIDE: `تحميل محرر اللغة مع اللغة لنظام تشغيل ماك معالج انتل معمارية 64x`,
     infoLang: `تحميل اللغة لنظام تشغيل ماك معالج انتل معمارية 64x`,
@@ -68,7 +71,7 @@ for (let i = 0; i < osData.length; i++) {
               <h1 class="platform">${osData[i].name}</h1>
               <p class="info" dir="rtl">${osData[i].infoIDE}</p>
               <button onclick="newDownload('${osData[i].os}')" style="width: fit-content;">
-                  <a href="${osData[i].link}" class="button1">تحميل</a>
+                  <a href="${osData[i].linkIDE}" class="button1">تحميل</a>
               </button>
               <h5 class="vers">محرر لغة ألف | نـ${osData[i].version}</h5>
           </div>
@@ -79,7 +82,7 @@ for (let i = 0; i < osData.length; i++) {
               <h1 class="platform">${osData[i].name}</h1>
               <p class="info" dir="rtl">${osData[i].infoLang}</p>
               <button onclick="newDownload('${osData[i].os}')" style="width: fit-content;">
-                  <a href="${osData[i].link}" class="button1">تحميل</a>
+                  <a href="${osData[i].linkLang}" class="button1">تحميل</a>
               </button>
               <h5 class="vers">لغة ألف | نـ${osData[i].version}</h5>
           </div>

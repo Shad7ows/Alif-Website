@@ -102,15 +102,14 @@ h1 {
   position: absolute;
   display: flex;
   top: -70px;
-  right: 0;
-  width: 170px;
+  width: 160px;
   font-size: 20px;
   cursor: pointer;
 }
 .swlable .on,
 .swlable .off {
   position: absolute;
-  right: 60px;
+  right: 0;
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 .swlable .on {
@@ -121,35 +120,64 @@ h1 {
   opacity: 1;
   transform: translateY(0);
 }
-#switch:checked ~ label .on {
+#switch:checked ~ .swlable .on {
   opacity: 1;
   transform: translateY(0);
 }
-#switch:checked ~ label .off {
+#switch:checked ~ .swlable .off {
   opacity: 0;
   transform: translateY(20px);
 }
 
-#switch:checked ~ .card {
-  transform: rotate(1.5deg) rotateY(180deg);
+.checkbut {
+  border: 2px solid #182d5555;
+  height: 15px;
+  width: 50px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 1px #2079ff;
+  transform-style: preserve-3d;
+  transition: ease-in-out 1s;
 }
+.checkbut::before {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  border-radius: 100px;
+  width: 27px;
+  background-color: #2079ff;
+  aspect-ratio: 1;
+  transition: ease-in-out 1s;
+}
+.checkbut::before {
+  left: -2px;
+  transform:  translateZ(10px);
+}
+#switch:checked ~ .swlable .checkbut {
+  transform: rotateX(180deg);
+}
+#switch:checked ~ .swlable .checkbut::before {
+  transform: translateX(35px);
+}
+
 .card .front,
 .card .back {
   position: absolute;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  transform-style: preserve-3d;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .os .card .front {
-  transform-style: preserve-3d;
   transform: translateZ(70px);
 }
 .os .card .back {
-  transform-style: preserve-3d;
   transform: translateZ(-70px) rotateY(180deg);
+}
+#switch:checked ~ .card {
+  transform: rotate(1.5deg) rotateY(180deg);
 }
 
 /* -- Media Adjustment -- */
