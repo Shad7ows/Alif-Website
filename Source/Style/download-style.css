@@ -152,9 +152,6 @@ h1 {
   left: -2px;
   transform:  translateZ(10px);
 }
-#switch:checked ~ .swlable .checkbut {
-  transform: rotateX(180deg);
-}
 #switch:checked ~ .swlable .checkbut::before {
   transform: translateX(35px);
 }
@@ -177,7 +174,7 @@ h1 {
   transform: translateZ(-70px) rotateY(180deg);
 }
 #switch:checked ~ .card {
-  transform: rotate(1.5deg) rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 /* -- Media Adjustment -- */
