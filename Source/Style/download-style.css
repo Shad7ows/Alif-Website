@@ -62,10 +62,11 @@ button:active {
   box-shadow: 2px 2px 1px #2079ff;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  transition: 0.5s;
 }
 
 .os .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
   transition: 0.5s;
 }
 
