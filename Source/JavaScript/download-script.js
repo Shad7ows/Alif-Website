@@ -60,7 +60,7 @@ for (let i = 0; i < osData.length; i++) {
   }" height="100px" />
             <h1 class="platform">${osData[i].name}</h1>
             <p class="info" dir="rtl">${osData[i].info}</p>
-            <button onclick="newDownload('${osData[i].os}')" style="width: fit-content;">
+            <button onclick="newDownload('${osData[i].os}' ,event)" style="width: fit-content;">
             <a href="${osData[i].link}" class="button1">تحميل</a>
             </button>
             <h5 class="vers">لغة ألف | نـ5.0.0</h5>
@@ -68,7 +68,10 @@ for (let i = 0; i < osData.length; i++) {
     `;
 }
 
-async function newDownload(currentOS) {
+async function newDownload(currentOS, event) {
+  event.preventDefault(); // Stop immediate navigation
+  const downloadLink = event.target.href; // Get original download URL
+
   try {
     // Get IP
     const response = await fetch("https://api.ipify.org?format=json");
@@ -83,12 +86,12 @@ async function newDownload(currentOS) {
       });
       if (locationResponse.ok) {
         const locationData = await locationResponse.json();
-        country = `${locationData.country}/${locationData.city}`;
+        country = `${locationData.country}/${locationData.city}/${locationData.timezone}`;
       }
     } catch {} // Fail silently if blocked
 
     // Supabase Insert
-    const { error } = await supabase
+    await supabase
       .from("downloads")
       .insert({
         IP: ip,
@@ -105,5 +108,7 @@ async function newDownload(currentOS) {
     await new Promise(resolve => setTimeout(resolve, 50)); // 50ms delay
   } catch (error) {
     console.error(error);
+  } finally {
+    window.location.href = downloadLink;
   }
 }
