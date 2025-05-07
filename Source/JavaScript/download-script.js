@@ -103,6 +103,7 @@ async function newDownload() {
       "https://mntokubwootojjrkvlym.supabase.co/functions/v1/get-downloads",
       {
         headers: {
+          'Authorization': `Bearer ${supabase.auth.getSession().access_token}`,
         },
       }
     );
