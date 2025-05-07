@@ -99,27 +99,35 @@ for (let i = 0; i < osData.length; i++) {
 
 async function newDownload(currentOS) {
   try {
-      const userOS = getOS(); // Still get user OS client-side
-      const response = await fetch('https://mntokubwootojjrkvlym.supabase.co/functions/v1/log-download', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-              currentOS: currentOS,
-              userOS: userOS // Pass OS to the function
-          })
+    // Get IP
+    const ipResponse = await fetch("https://api.ipify.org?format=json");
+    const ipData = await ipResponse.json();
+    const ip = ipData.ip;
+
+    // Attempt geolocation (with fallback)
+    let country = "Blocked/Unknown";
+    try {
+      const locationResponse = await fetch(`https://ip-api.com/json/${ip}?fields=country,city,timezone`);
+      if (locationResponse.ok) {
+        const locationData = await locationResponse.json();
+        country = `${locationData.country}/${locationData.city}/${locationData.timezone}`;
+      }
+    } catch (error) {
+      console.log("Geolocation failed or blocked.");
+    }
+
+    // Insert into Supabase
+    const { error } = await supabase
+      .from("downloads")
+      .insert({
+        IP: ip,
+        النظام_المحمل: currentOS,
+        نظام_المستخدم: getOS(),
+        الموقع: country,
       });
 
-      const result = await response.json();
-
-      if (!response.ok) {
-          console.error("Error from Edge Function:", result.error);
-      } else {
-          console.log("Edge Function success:", result.message);
-      }
-
+    if (error) console.error("Supabase error:", error);
   } catch (error) {
-      console.error("Error calling log-download function:", error);
+    console.error("Critical error:", error);
   }
 }
