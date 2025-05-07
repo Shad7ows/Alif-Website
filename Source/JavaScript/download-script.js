@@ -80,7 +80,7 @@ async function newDownload(currentOS) {
     const country = `${locationData.country}/${locationData.city}/${locationData.timezone}`;
 
     supabase
-      .from("Downloads")
+      .from("downloads")
       .insert({
         IP: ip,
         النظام_المحمل: currentOS,
