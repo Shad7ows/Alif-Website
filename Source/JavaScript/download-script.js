@@ -61,7 +61,7 @@ for (let i = 0; i < osData.length; i++) {
             <h1 class="platform">${osData[i].name}</h1>
             <p class="info" dir="rtl">${osData[i].info}</p>
             <button onclick="newDownload('${osData[i].os}')" style="width: fit-content;">
-                <a href="${osData[i].link}" class="button1">تحميل</a>
+            <a href="${osData[i].link}" class="button1">تحميل</a>
             </button>
             <h5 class="vers">لغة ألف | نـ5.0.0</h5>
         </div>
@@ -72,7 +72,7 @@ async function newDownload(currentOS) {
   try {
     const response = await fetch("https://api.ipify.org?format=json");
     const data = await response.json();
-    const ip = data.ip;
+    const ip = await data.ip;
 
     const locationResponse = await fetch(`https://ipinfo.io/${ip}/json`);
     const locationData = await locationResponse.json();
