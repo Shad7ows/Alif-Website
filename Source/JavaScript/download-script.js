@@ -103,7 +103,6 @@ async function newDownload() {
       "https://mntokubwootojjrkvlym.supabase.co/functions/v1/get-downloads",
       {
         headers: {
-          'Content-Type': 'application/json',
         },
       }
     );
