@@ -92,6 +92,8 @@ async function newDownload(currentOS) {
           console.error("Error inserting data:", error);
         }
       });
+    
+    await new Promise(resolve => setTimeout(resolve, 100)); // 100ms delay
   } catch (error) {
     console.error(error);
   }
