@@ -68,49 +68,35 @@ for (let i = 0; i < osData.length; i++) {
     `;
 }
 
-// async function newDownload(currentOS) {
-//   try {
-//     const response = await fetch("https://api.ipify.org?format=json");
-//     const data = await response.json();
-//     const ip = data.ip;
-
-//     const locationResponse = await fetch(`https://ipinfo.io/${ip}/json`);
-//     const locationData = await locationResponse.json();
-
-//     const country = `${locationData.country}/${locationData.city}/${locationData.timezone}`;
-
-//     supabase
-//       .from("downloads")
-//       .insert({
-//         IP: ip,
-//         النظام_المحمل: currentOS,
-//         نظام_المستخدم: getOS(),
-//         الموقع: country,
-//       })
-//       .then(({error}) => {
-//         if (error) {
-//           console.error("Error inserting data:", error);
-//         }
-//       });
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
-
-async function newDownload() {
+async function newDownload(currentOS) {
   try {
-    const response = await fetch(
-      "https://mntokubwootojjrkvlym.supabase.co/functions/v1/get-downloads",
-      {
-        headers: {
-          'Authorization': `Bearer ${supabase.auth.getSession().access_token}`,
-        },
-      }
-    );
+    try {
+      const response = await fetch("https://api.ipify.org?format=json");
+      const data = await response.json();
+      const ip = data.ip;
+    } catch (error) {
+      ip = "";
+    }
 
-    const data = await response.json();
-    console.log("downloads:", data);
+    const locationResponse = await fetch(`https://ipinfo.io/${ip}/json`);
+    const locationData = await locationResponse.json();
+
+    const country = `${locationData.country}/${locationData.city}/${locationData.timezone}`;
+
+    supabase
+      .from("downloads")
+      .insert({
+        IP: ip,
+        النظام_المحمل: currentOS,
+        نظام_المستخدم: getOS(),
+        الموقع: country,
+      })
+      .then(({error}) => {
+        if (error) {
+          console.error("Error inserting data:", error);
+        }
+      });
   } catch (error) {
-    console.error("Failed to fetch downloads:", error);
+    console.error(error);
   }
 }
