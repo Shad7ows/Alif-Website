@@ -97,7 +97,7 @@ for (let i = 0; i < osData.length; i++) {
 //   }
 // }
 
-async function fetchDownloads() {
+async function newDownload() {
   try {
     const response = await fetch(
       "https://mntokubwootojjrkvlym.supabase.co/functions/v1/get-downloads",
@@ -114,6 +114,3 @@ async function fetchDownloads() {
     console.error("Failed to fetch downloads:", error);
   }
 }
-
-// Call the function
-fetchDownloads();
