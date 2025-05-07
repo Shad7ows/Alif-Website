@@ -70,13 +70,9 @@ for (let i = 0; i < osData.length; i++) {
 
 async function newDownload(currentOS) {
   try {
-    try {
-      const response = await fetch("https://api.ipify.org?format=json");
-      const data = await response.json();
-      const ip = data.ip;
-    } catch (error) {
-      ip = "";
-    }
+    const response = await fetch("https://api.ipify.org?format=json");
+    const data = await response.json();
+    const ip = data.ip;
 
     const locationResponse = await fetch(`https://ipinfo.io/${ip}/json`);
     const locationData = await locationResponse.json();
