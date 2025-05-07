@@ -70,16 +70,25 @@ for (let i = 0; i < osData.length; i++) {
 
 async function newDownload(currentOS) {
   try {
+    // Get IP
     const response = await fetch("https://api.ipify.org?format=json");
     const data = await response.json();
     const ip = await data.ip;
 
-    const locationResponse = await fetch(`https://ipinfo.io/${ip}/json`);
-    const locationData = await locationResponse.json();
+    // Get Location (with timeout)
+    let country = "Unknown";
+    try {
+      const locationResponse = await fetch(`https://ipinfo.io/${ip}/json`, {
+        signal: AbortSignal.timeout(3000) // Timeout after 3s
+      });
+      if (locationResponse.ok) {
+        const locationData = await locationResponse.json();
+        country = `${locationData.country}/${locationData.city}`;
+      }
+    } catch {} // Fail silently if blocked
 
-    const country = `${locationData.country}/${locationData.city}/${locationData.timezone}`;
-
-    supabase
+    // Supabase Insert
+    const { error } = await supabase
       .from("downloads")
       .insert({
         IP: ip,
@@ -93,7 +102,7 @@ async function newDownload(currentOS) {
         }
       });
     
-    await new Promise(resolve => setTimeout(resolve, 100)); // 100ms delay
+    await new Promise(resolve => setTimeout(resolve, 50)); // 50ms delay
   } catch (error) {
     console.error(error);
   }
