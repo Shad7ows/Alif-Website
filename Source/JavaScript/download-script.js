@@ -68,31 +68,58 @@ for (let i = 0; i < osData.length; i++) {
     `;
 }
 
+// async function newDownload(currentOS) {
+//   try {
+//     const response = await fetch("https://api.ipify.org?format=json");
+//     const data = await response.json();
+//     const ip = data.ip;
+
+//     const locationResponse = await fetch(`https://ipinfo.io/${ip}/json`);
+//     const locationData = await locationResponse.json();
+
+//     const country = `${locationData.country}/${locationData.city}/${locationData.timezone}`;
+
+//     supabase
+//       .from("downloads")
+//       .insert({
+//         IP: ip,
+//         النظام_المحمل: currentOS,
+//         نظام_المستخدم: getOS(),
+//         الموقع: country,
+//       })
+//       .then(({error}) => {
+//         if (error) {
+//           console.error("Error inserting data:", error);
+//         }
+//       });
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
+
 async function newDownload(currentOS) {
   try {
-    const response = await fetch("https://api.ipify.org?format=json");
-    const data = await response.json();
-    const ip = data.ip;
-
-    const locationResponse = await fetch(`https://ipinfo.io/${ip}/json`);
-    const locationData = await locationResponse.json();
-
-    const country = `${locationData.country}/${locationData.city}/${locationData.timezone}`;
-
-    supabase
-      .from("downloads")
-      .insert({
-        IP: ip,
-        النظام_المحمل: currentOS,
-        نظام_المستخدم: getOS(),
-        الموقع: country,
-      })
-      .then(({error}) => {
-        if (error) {
-          console.error("Error inserting data:", error);
-        }
+      const userOS = getOS(); // Still get user OS client-side
+      const response = await fetch('/functions/v1/log-download', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+              currentOS: currentOS,
+              userOS: userOS // Pass OS to the function
+          })
       });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+          console.error("Error from Edge Function:", result.error);
+      } else {
+          console.log("Edge Function success:", result.message);
+      }
+
   } catch (error) {
-    console.error(error);
+      console.error("Error calling log-download function:", error);
   }
 }
