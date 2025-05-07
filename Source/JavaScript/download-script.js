@@ -97,37 +97,23 @@ for (let i = 0; i < osData.length; i++) {
 //   }
 // }
 
-async function newDownload(currentOS) {
+async function fetchDownloads() {
   try {
-    // Get IP
-    const ipResponse = await fetch("https://api.ipify.org?format=json");
-    const ipData = await ipResponse.json();
-    const ip = ipData.ip;
-
-    // Attempt geolocation (with fallback)
-    let country = "Blocked/Unknown";
-    try {
-      const locationResponse = await fetch(`https://ip-api.com/json/${ip}?fields=country,city,timezone`);
-      if (locationResponse.ok) {
-        const locationData = await locationResponse.json();
-        country = `${locationData.country}/${locationData.city}/${locationData.timezone}`;
+    const response = await fetch(
+      "https://mntokubwootojjrkvlym.supabase.co/functions/v1/get-downloads",
+      {
+        headers: {
+          Authorization: `Bearer ${supabase.auth.getSession().access_token}`,
+        },
       }
-    } catch (error) {
-      console.log("Geolocation failed or blocked.");
-    }
+    );
 
-    // Insert into Supabase
-    const { error } = await supabase
-      .from("downloads")
-      .insert({
-        IP: ip,
-        النظام_المحمل: currentOS,
-        نظام_المستخدم: getOS(),
-        الموقع: country,
-      });
-
-    if (error) console.error("Supabase error:", error);
+    const data = await response.json();
+    console.log("downloads:", data);
   } catch (error) {
-    console.error("Critical error:", error);
+    console.error("Failed to fetch downloads:", error);
   }
 }
+
+// Call the function
+fetchDownloads();
