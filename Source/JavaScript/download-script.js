@@ -100,7 +100,7 @@ for (let i = 0; i < osData.length; i++) {
 async function newDownload(currentOS) {
   try {
       const userOS = getOS(); // Still get user OS client-side
-      const response = await fetch('/functions/v1/log-download', {
+      const response = await fetch('https://mntokubwootojjrkvlym.supabase.co/functions/v1/log-download', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
