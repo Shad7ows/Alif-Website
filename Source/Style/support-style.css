@@ -1,0 +1,48 @@
+.content-section {
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #182d5555;
+    height: 100%;
+    width: clamp(150px, 65vw, 1200px);
+    border-radius: 30px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 2px 2px 1px #2079ff;
+}
+
+.underline-button {
+    text-decoration: underline;
+}
+
+p {
+    padding: 100px;
+    text-align: center;
+}
+
+
+
+/* -- Media Adjustment -- */
+@media (max-width: 960px) {
+    .logo-card {
+        height: 90%;
+    }
+    p {
+        padding: 15px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .logo-card {
+        height: 70%;
+    }
+    p {
+        padding: 10px;
+    }
+}
