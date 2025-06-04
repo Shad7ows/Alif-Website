@@ -385,9 +385,8 @@ function highlightAlifGrammar(code) {
 // نسخ الشفرة
 function copyCode(but, code) {
   let formattedCode = code
-    .replace(/  /g, "")
-    .replace(/&gt; /g, "")
-    .replace(/&lt; /g, "")
+    .replace(/&gt;/g, ">")
+    .replace(/&lt;/g, "<")
     .replace(/<br>/g, "\n")
     .replace(/<\/span>/g, "")
     .replace(/<span class="[^"]+">/g, "")
