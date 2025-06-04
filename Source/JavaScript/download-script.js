@@ -53,7 +53,7 @@ for (let i = 0; i < osData.length; i++) {
   cardsDiv.innerHTML += `
         <div class="card" style="
             order: ${isCurrent ? middleOrder : i >= middleOrder ? i + 1 : i};
-            ${isCurrent ? "transform: scale(1.1);" : ""}
+            ${isCurrent ? "scale: 1.05;" : ""}
         ">
             <img alt="${osData[i].name}" class="logo" src="../Source/Assets/${
     osData[i].img
