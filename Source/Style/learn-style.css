@@ -35,6 +35,7 @@
 }
 .content-section .card-grid .card .video-player .data {
     padding: 10px;
+    text-align: center;
 }
 
 .content-section .card-grid .card .video-player iframe {
