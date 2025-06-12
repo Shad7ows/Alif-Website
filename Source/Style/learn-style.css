@@ -9,51 +9,56 @@
     direction: rtl;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: space-between;
 }
 
 .content-section .card-grid .card {
     display: flex;
-    margin: 10px;
-    width: 30%;
+    margin: 25px 10px 25px 10px;
+    width: 31%;
     aspect-ratio: 16/9;
+    border-radius: 30px;
     flex-direction: column;
     align-items: center;
     transition: 0.3s ease-in-out;
 }
 
 .content-section .card-grid .card:hover {
-    scale: 1.1;
+    scale: 1.05;
 }
 
 .content-section .card-grid .card .video-player {
     border: 1px solid #182d5555;
-    width: 100%;
-    padding: 5px 3px;
-    border-radius: 20px;
+    height: 99%;
+    width: 99%;
+    border-radius: 30px;
     box-shadow: 1px 1px 1px #2079ff;
-}
-.content-section .card-grid .card .video-player .data {
-    padding: 10px;
-    text-align: center;
 }
 
 .content-section .card-grid .card .video-player iframe {
-    width: 100%;
-    aspect-ratio: 16/9;
+    height: 99%;
+    width: 99%;
     align-content: center;
     justify-content: center;
     align-self: center;
-    border-radius: 16px;
+    border-radius: 30px;
+}
+
+.video-title {
+    margin-bottom: 15px;
 }
 
 /* -- Media Adjustment -- */
-@media (max-width: 1000px) {
+@media (max-width: 1450px) {
     .content-section .card-grid .card {
         width: 45%;
     }
 }
-@media (max-width: 880px) {
+@media (max-width: 960px) {
+    .content-section .card-grid .card {
+        width: 100%;
+    }
+}
+@media (max-width: 480px) {
     .content-section .card-grid .card {
         width: 100%;
     }

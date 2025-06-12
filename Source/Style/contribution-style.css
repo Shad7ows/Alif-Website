@@ -1,9 +1,8 @@
 .card {
     display: flex;
     position: relative;
-    padding: 45px;
     border: 2px solid #182d5555;
-    height: 80%;
+    height: 100%;
     width: clamp(100px, 90%, 2048px);
     border-radius: 30px;
     backdrop-filter: blur(6px);
@@ -11,6 +10,11 @@
     box-shadow: 2px 2px 1px #2079ff;
     line-height: 1.7;
     overflow-y: scroll;
+}
+
+
+.card ol {
+    margin: 45px;
 }
 
 .card ol li:not(:first-child) {
