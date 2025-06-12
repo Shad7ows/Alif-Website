@@ -1,7 +1,6 @@
 .card {
     display: flex;
     position: relative;
-    padding: 45px;
     border: 2px solid #182d5555;
     height: 100%;
     width: clamp(100px, 90%, 2048px);
@@ -13,6 +12,11 @@
     overflow-y: scroll;
 }
 
+
+.card ol {
+    margin: 45px;
+}
+
 .card ol li:not(:first-child) {
     padding-top: 30px;
 }
@@ -21,16 +25,12 @@
     padding-bottom: 50px;
 }
 
-
-
-
 /* -- Media Adjustment -- */
 @media (max-width: 960px) {
     .card {
         height: 90%;
     }
 }
-
 
 @media (max-width: 480px) {
     .card {
