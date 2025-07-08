@@ -9,7 +9,7 @@ import {
 export default function Home() {
     return (
         <div>
-            <PrimaryButton text="السلام عليكم" href="https://aliflang.org" />
+            <PrimaryButton text="السلام" href="https://aliflang.org" />
             <br />
             <SecondaryButton text="السلام عليكم" href="https://aliflang.org" />
             <br />
