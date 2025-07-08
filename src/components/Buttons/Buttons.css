@@ -1,0 +1,196 @@
+/* --- Component --- */
+
+/* -- button1 -- */
+.button1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(91, 51, 152, 0.1);
+    box-shadow: 1px 1px 3px 0px #771eff, 0px 0px 50px -5px #771effff,
+        inset 0px 0px 16px #771eff99;
+    width: 140px;
+    height: 45px;
+    border-top: solid 2px #2079ffee;
+    border-left: solid 2px #2079ffee;
+    border-radius: 18px;
+    font-size: 15px;
+    font-weight: bold;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    transition: 1s;
+    animation: glowe 5s ease-in-out infinite;
+}
+
+/* -- button2 -- */
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.button2-front {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: bold;
+    width: 140px;
+    height: 45px;
+    border-radius: 30px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-top: 1px solid #ffffff50;
+    border-bottom: 1px solid #ffffff50;
+    transition: 1s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.button2-front:hover {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.button2 {
+    display: flex;
+    position: relative;
+    width: 140px;
+    height: 45px;
+    border-radius: 30px;
+}
+
+.button2::before,
+.button2::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: conic-gradient(
+        from var(--gradient-angle),
+        #2079ff,
+        #771eff,
+        #2079ff,
+        #771eff,
+        #771eff
+    );
+    border-radius: inherit;
+    animation: rotate 18s ease-in-out infinite;
+}
+
+.button2::after {
+    filter: blur(2rem);
+}
+
+@keyframes rotate {
+    0% {
+        --gradient-angle: 0deg;
+    }
+    100% {
+        --gradient-angle: 360deg;
+    }
+}
+
+/* -- button3 -- */
+.button3 {
+    position: relative;
+    width: 140px;
+    height: 45px;
+}
+
+.button3 .label {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 45px;
+    color: white;
+    z-index: 2;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: 0.5s;
+}
+
+.button3:hover .label {
+    font-size: 1.1rem;
+}
+
+.button3 .label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0.15),
+        transparent
+    );
+    transform: skewX(45deg) translateX(0);
+    transition: 0.5s;
+}
+
+.button3:hover .label::before {
+    transform: skewX(45deg) translateX(200%);
+}
+
+.button3::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1px;
+    width: 45px;
+    height: 10px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.button3:hover::before {
+    bottom: 0;
+    height: 55%;
+    width: 85%;
+    transition-delay: 0.2s;
+}
+
+.button3::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1px;
+    width: 45px;
+    height: 10px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.button3:hover::after {
+    top: 0;
+    height: 55%;
+    width: 85%;
+    transition-delay: 0.2s;
+}
+
+.button3::before {
+    z-index: 1;
+    background: #2079ff;
+    box-shadow: 0 0 5px #3184ff, 0 0 15px #3184ff, 0 0 30px #3184ff,
+        0 0 60px #3184ff, 0 0 120px #3184ff;
+}
+
+.button3::after {
+    background: #771eff;
+    box-shadow: 0 0 5px #8b3dff, 0 0 15px #8b3dff, 0 0 30px #8b3dff,
+        0 0 60px #8b3dff, 0 0 120px #8b3dff;
+}
