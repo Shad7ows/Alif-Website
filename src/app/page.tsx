@@ -1,10 +1,8 @@
-// import Image from "next/image";
-// import styles from "./page.module.css";
 import {
     PrimaryButton,
     SecondaryButton,
     TertiaryButton,
-} from "@/components/Buttons/Buttons";
+} from "@/components/buttons/buttons";
 
 export default function Home() {
     return (

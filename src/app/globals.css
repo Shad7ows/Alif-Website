@@ -18,7 +18,8 @@ body {
 
 body {
     color: var(--foreground);
-    background: var(--background);
+    background: url('/Assets/Background.webp');
+    background-size: cover;
     font-family: var(--font-tajawal);
     height: 100vh;
     -webkit-font-smoothing: antialiased;

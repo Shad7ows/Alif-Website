@@ -1,5 +1,3 @@
-/* --- Component --- */
-
 /* -- button1 -- */
 .button1 {
     display: flex;
@@ -13,8 +11,7 @@
     border-top: solid 2px #2079ffee;
     border-left: solid 2px #2079ffee;
     border-radius: 18px;
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 1em;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     transition: 1s;
