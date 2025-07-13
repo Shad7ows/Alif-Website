@@ -1,5 +1,3 @@
-/* --- Component --- */
-
 /* -- button1 -- */
 .button1 {
     display: flex;
@@ -13,8 +11,8 @@
     border-top: solid 2px #2079ffee;
     border-left: solid 2px #2079ffee;
     border-radius: 18px;
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 1em;
+    font-weight: normal;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     transition: 1s;
@@ -22,21 +20,15 @@
 }
 
 /* -- button2 -- */
-@property --gradient-angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-}
-
 .button2-front {
     display: flex;
     position: absolute;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
-    font-weight: bold;
     width: 140px;
     height: 45px;
+    font-size: 1em;
+    font-weight: normal;
     border-radius: 30px;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
@@ -44,11 +36,10 @@
     border-bottom: 1px solid #ffffff50;
     transition: 1s;
     z-index: 1;
-    cursor: pointer;
 }
 
 .button2-front:hover {
-    font-size: 16px;
+    font-size: 1em;
     letter-spacing: 1px;
 }
 
@@ -65,7 +56,6 @@
     content: "";
     position: absolute;
     inset: 0;
-    z-index: -1;
     background: conic-gradient(
         from var(--gradient-angle),
         #2079ff,
@@ -75,11 +65,11 @@
         #771eff
     );
     border-radius: inherit;
-    animation: rotate 18s ease-in-out infinite;
+    animation: rotate 14s ease-in-out infinite;
 }
 
 .button2::after {
-    filter: blur(2rem);
+    filter: blur(1.5rem);
 }
 
 @keyframes rotate {
@@ -89,6 +79,12 @@
     100% {
         --gradient-angle: 360deg;
     }
+}
+
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
 }
 
 /* -- button3 -- */
@@ -105,14 +101,13 @@
     height: 100%;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 1em;
+    font-weight: normal;
     background: rgba(255, 255, 255, 0.02);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 45px;
-    color: white;
     z-index: 2;
     overflow: hidden;
     backdrop-filter: blur(10px);
@@ -179,7 +174,7 @@
     top: 0;
     height: 55%;
     width: 85%;
-    transition-delay: 0.2s;
+    transition-delay: 0.3s;
 }
 
 .button3::before {

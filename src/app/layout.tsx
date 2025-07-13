@@ -15,11 +15,7 @@ export const metadata = {
     },
 };
 
-export default function RootLayout({
-    children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
+export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
     return (
         <html lang="ar">
             <body className={`${tajawalFont.variable}`}>{children}</body>
