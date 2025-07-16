@@ -1,22 +1,47 @@
 import Image from "next/image";
-import {
-    PrimaryButton,
-    SecondaryButton,
-    TertiaryButton,
-} from "@/components/Buttons/Buttons";
+import Link from "next/link";
+
+import { SecondaryButton } from "@/components/Buttons/Buttons";
 
 export default function Home() {
     return (
-        <div>
-            <PrimaryButton text="السلام" href="https://aliflang.org" />
-            <br />
-            <SecondaryButton text="السلام عليكم" href="https://aliflang.org" />
-            <br />
-            <TertiaryButton text="السلام عليكم" href="https://aliflang.org" />
-            <br />
-            <div className="GlassBG LogoCard">
-                <Image src="/Assets/AlifLogo.svg" alt="Alif Logo" width={100} height={100} />
+        <section className="Home Page">
+            <div className="right">
+                <div className="top">
+                    <h1 className="title">
+                        البرمجة
+                        <br />
+                        أصبحت أسهل
+                    </h1>
+                    <p className="paragraph">
+                        قم بتجربة لغة البرمجة العربية ألف والتي ستفتح لك آفاق
+                        جديدة في البرمجة
+                    </p>
+                </div>
+                <div className="bottom">
+                    <div className="download">
+                        <span className="line"></span>
+                        <SecondaryButton text="تحميل اللغة" href="/Download" />
+                    </div>
+                    <Link
+                        className="underline-button"
+                        href="https://t.me/aliflang"
+                    >
+                        انضم إلى المجتمع
+                    </Link>
+                </div>
             </div>
-        </div>
+            <div className="left">
+                <div className="LogoCard GlassBG">
+                    <Image
+                        alt="شعار ألف"
+                        width="256"
+                        height="256"
+                        className="logo"
+                        src="/Assets/AlifLogo.svg"
+                    />
+                </div>
+            </div>
+        </section>
     );
 }

@@ -1,0 +1,35 @@
+/* --- Footer --- */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 7rem;
+    padding-bottom: 3rem;
+    font-size: 16px;
+    height: 110px;
+    width: 100%;
+}
+footer .item {
+    display: flex;
+    margin-left: 6svw;
+    font-weight: normal;
+}
+footer .circle {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #2079ff;
+    cursor: pointer;
+    background: rgba(51, 91, 152, 0.2);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(3px);
+    box-shadow: 0px 2px 4px #2079ff, inset 0px 0px 6px #771eff;
+}
+footer .circle .img {
+    width: 60%;
+    aspect-ratio: 1;
+}
