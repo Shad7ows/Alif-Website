@@ -1,4 +1,4 @@
-import "./buttons.css";
+import "./Buttons.css";
 import Link from "next/link";
 
 export function PrimaryButton({ text, href }: { text: string; href: string }) {
