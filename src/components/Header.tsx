@@ -4,8 +4,7 @@ import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { SecondaryButton } from "@/components/Buttons/Buttons";
-import "./Header.css";
+import { SecondaryButton } from "@/components/Buttons";
 
 export default function Header() {
     useEffect(() => {
@@ -13,24 +12,17 @@ export default function Header() {
             "lines"
         ) as HTMLInputElement;
         const NavUl = document.querySelector(".MenuSection") as HTMLElement;
-        const PageClose = document.querySelector(".page") as HTMLElement;
         const links =
             document.querySelectorAll<HTMLAnchorElement>(".slide-menu a");
 
         const handleChange = () => {
-            if (MenuCheckbox.checked) {
-                NavUl.classList.add("open");
-                PageClose.classList.add("close");
-            } else {
-                NavUl.classList.remove("open");
-                PageClose.classList.remove("close");
-            }
+            if (MenuCheckbox.checked) NavUl.classList.add("open");
+            else NavUl.classList.remove("open");
         };
 
         const closeMenu = () => {
             MenuCheckbox.checked = false;
             NavUl.classList.remove("open");
-            PageClose.classList.remove("close");
         };
 
         MenuCheckbox.addEventListener("change", handleChange);

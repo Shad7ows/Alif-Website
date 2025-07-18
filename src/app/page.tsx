@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { SecondaryButton } from "@/components/Buttons/Buttons";
+import { SecondaryButton } from "@/components/Buttons";
 
 export default function Home() {
     return (
@@ -17,6 +17,7 @@ export default function Home() {
                         قم بتجربة لغة البرمجة العربية ألف والتي ستفتح لك آفاق
                         جديدة في البرمجة
                     </p>
+                    <LogoCard />
                 </div>
                 <div className="bottom">
                     <div className="download">
@@ -32,16 +33,22 @@ export default function Home() {
                 </div>
             </div>
             <div className="left">
-                <div className="LogoCard GlassBG">
-                    <Image
-                        alt="شعار ألف"
-                        width="256"
-                        height="256"
-                        className="logo"
-                        src="/Assets/AlifLogo.svg"
-                    />
-                </div>
+                <LogoCard />
             </div>
         </section>
+    );
+}
+
+function LogoCard() {
+    return (
+        <div className="LogoCard GlassBG">
+            <Image
+                alt="شعار ألف"
+                width="256"
+                height="256"
+                className="logo"
+                src="/Assets/AlifLogo.svg"
+            />
+        </div>
     );
 }

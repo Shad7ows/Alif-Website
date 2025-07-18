@@ -1,18 +1,19 @@
 import Image from "next/image";
-import "./Footer.css";
+import Link from "next/link";
 
 export default function Footer() {
     return (
         <footer>
-            <a className="item text" href="License/">
+            <Link className="item text" href="License/">
                 الـرخـصـة
-            </a>
-            <a className="item text" href="AboutUs/">
+            </Link>
+            <Link className="item text" href="AboutUs/">
                 مـن نـحـن
-            </a>
-            <a className="item text" href="/Alif2/index.html">
+            </Link>
+            <Link className="item text" href="/Alif2/index.html">
                 ألـف2
-            </a>
+            </Link>
+
             <a className="item circle" href="#">
                 <Image
                     className="Image"
