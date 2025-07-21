@@ -15,8 +15,14 @@ body {
     color: var(--foreground);
     background: url("/Assets/Background.webp");
     background-size: cover;
+    background-attachment: fixed;
+    background-position-x: right;
+    background-color: #08051b;
     font-family: var(--font-tajawal);
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -32,28 +38,24 @@ a {
     -webkit-backdrop-filter: blur(6px);
     box-shadow: 2px 2px 1px #2079ff;
 }
-
-.Page {
-    margin: 0 1rem;
-    min-height: calc(100vh - 210px);
+.Container {
+    margin: 5svh 9svw;
 }
+
 /* Home Page */
 .Home {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    height: calc(200px + 25svh);
 
     .right {
         display: flex;
         height: 100%;
-        min-height: 420px;
         align-items: start;
         flex-direction: column;
         justify-content: space-between;
-        padding: 2.5rem 0;
         h1 {
-            font-size: 3rem;
+            font-size: calc(36px + 1svw);
         }
         p {
             font-size: 1.2rem;
@@ -67,7 +69,7 @@ a {
         .bottom {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 3rem;
             .download {
                 position: relative;
             }
@@ -91,30 +93,43 @@ a {
             display: none;
         }
     }
+    .left {
+        height: 100%;
+    }
     .LogoCard {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 350px;
-        width: 350px;
+        aspect-ratio: 1;
+        img {
+            width: 70%;
+        }
+    }
+}
+@media (min-width: 1200px) {
+    .Home .LogoCard {
+        height: 100%;
     }
 }
 
 @media (max-width: 960px) {
     .Home {
-        justify-content: right;
+        justify-content: center;
+        height: calc(500px + 20svh);
+        margin-top: 1rem;
         .right {
             width: 100%;
             .top {
-                margin: 1rem 5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                width: 100%;
                 .LogoCard {
                     display: flex;
+                    width: 100%;
+                    max-width: 400px;
                     margin: auto;
-                    width: 300px;
-                    height: 300px;
-                    img {
-                        scale: 0.8;
-                    }
                 }
             }
         }
@@ -135,8 +150,6 @@ a {
                 width: 100%;
             }
             .top {
-                margin: 1rem 2rem;
-                margin-bottom: 3rem;
             }
         }
     }

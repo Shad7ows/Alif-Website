@@ -1,14 +1,13 @@
 /* --- Footer --- */
 footer {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: start;
-    padding: 0 7svw;
-    padding-bottom: 3rem;
-    font-size: 16px;
-    height: 110px;
-    width: 100%;
-    gap: 5svw;
+    font-size: 18px;
+    margin-top: 25px;
+    gap: 6rem;
+
     .item {
         display: flex;
         font-weight: normal;
@@ -34,9 +33,16 @@ footer {
     }
 }
 
+@media (max-width: 1200px) {
+    footer {
+        gap: 3rem;
+    }
+}
+
 @media (max-width: 480px) {
     footer {
         justify-content: center;
+        gap: 1.5rem;
         .text {
             display: none;
         }

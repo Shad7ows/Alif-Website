@@ -12,8 +12,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100px;
-    margin: 0 7rem;
+
     .menu {
         display: none;
     }
@@ -41,7 +40,7 @@ header {
             position: relative;
         }
         .contribute .line {
-            $width: 7rem;
+            $width: 9svw;
             position: absolute;
             width: $width;
             height: 0.8px;
@@ -103,7 +102,7 @@ header {
         align-items: stretch;
         margin: 0 4rem;
         .logo {
-            transform: translate(0, 10px);
+            transform: translate(0, -25px);
             align-self: center;
         }
         .top-menu .list {
@@ -140,7 +139,7 @@ header {
                 display: flex;
                 justify-content: center;
                 margin-bottom: 50px;
-                .logo-card {
+                .LogoCard {
                     display: flex;
                     align-items: center;
                     justify-content: center;

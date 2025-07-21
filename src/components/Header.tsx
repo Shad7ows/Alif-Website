@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { SecondaryButton } from "@/components/Buttons";
+import { S2Button } from "@/components/Buttons";
 
 export default function Header() {
     useEffect(() => {
@@ -38,7 +38,7 @@ export default function Header() {
 
     return (
         <div className="Headers">
-            <header className="header">
+            <header className="header Container">
                 <div className="menu">
                     <label className="lines">
                         <input type="checkbox" id="lines" />
@@ -80,7 +80,7 @@ export default function Header() {
                     </ul>
                     <div className="contribute">
                         <span className="line"></span>
-                        <SecondaryButton text="المساهمة" href="/Contribution" />
+                        <S2Button text="المساهمة" href="/Contribution" />
                     </div>
                 </div>
             </header>

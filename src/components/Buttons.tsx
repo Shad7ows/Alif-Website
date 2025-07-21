@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export function PrimaryButton({ text, href }: { text: string; href: string }) {
+export function S1Button({ text, href }: { text: string; href: string }) {
     return (
         <Link className="button1" href={href}>
             {text}
@@ -8,13 +8,7 @@ export function PrimaryButton({ text, href }: { text: string; href: string }) {
     );
 }
 
-export function SecondaryButton({
-    text,
-    href,
-}: {
-    text: string;
-    href: string;
-}) {
+export function S2Button({ text, href }: { text: string; href: string }) {
     return (
         <>
             <div className="button2-front">
@@ -25,7 +19,7 @@ export function SecondaryButton({
     );
 }
 
-export function TertiaryButton({ text, href }: { text: string; href: string }) {
+export function S3Button({ text, href }: { text: string; href: string }) {
     return (
         <div className="button3">
             <Link className="label" href={href}>

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer>
+        <footer className="Container">
             <Link className="item text" href="License/">
                 الـرخـصـة
             </Link>

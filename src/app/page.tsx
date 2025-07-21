@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { SecondaryButton } from "@/components/Buttons";
+import { S2Button } from "@/components/Buttons";
 
 export default function Home() {
     return (
-        <section className="Home Page">
+        <section className="Home Container">
             <div className="right">
                 <div className="top">
                     <h1 className="title">
@@ -22,7 +22,7 @@ export default function Home() {
                 <div className="bottom">
                     <div className="download">
                         <span className="line"></span>
-                        <SecondaryButton text="تحميل اللغة" href="/Download" />
+                        <S2Button text="تحميل اللغة" href="/Download" />
                     </div>
                     <Link
                         className="underline-button"
