@@ -1,5 +1,7 @@
 import { Tajawal } from "next/font/google";
-import "./globals.css";
+import "@/scss/Main.scss";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const tajawalFont = Tajawal({
     variable: "--font-tajawal",
@@ -15,10 +17,16 @@ export const metadata = {
     },
 };
 
-export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
+export default function RootLayout({
+    children,
+}: Readonly<{ children: React.ReactNode }>) {
     return (
-        <html lang="ar">
-            <body className={`${tajawalFont.variable}`}>{children}</body>
+        <html lang="ar" dir="rtl">
+            <body className={`${tajawalFont.variable}`}>
+                <Header />
+                {children}
+                <Footer />
+            </body>
         </html>
     );
 }

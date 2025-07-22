@@ -1,0 +1,264 @@
+.Headers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.MenuSection {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .menu {
+        display: none;
+    }
+    .logo img {
+        width: 50px;
+    }
+    .top-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .list {
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            margin-left: 9svw;
+        }
+        .list .item {
+            display: flex;
+            margin: 0 2vw 0 2vw;
+            font-weight: bold;
+        }
+        .contribute {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .contribute .line {
+            $width: 9svw;
+            position: absolute;
+            width: $width;
+            height: 0.8px;
+            background: white;
+            top: 51%;
+            left: -$width;
+            align-self: center;
+            z-index: -1;
+            opacity: 0.7;
+        }
+    }
+
+    /* Humburger */
+    input[type="checkbox"] {
+        display: none;
+    }
+    .menu .lines {
+        display: flex;
+        cursor: pointer;
+
+        .svg {
+            width: 40px;
+            transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .svg .line {
+            fill: none;
+            stroke: white;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 2;
+            transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .svg .top-bottom {
+            stroke-dasharray: 12 63;
+        }
+        input:checked + .svg {
+            transform: rotate(-45deg);
+        }
+        input:checked + .svg .top-bottom {
+            stroke-dasharray: 20 300;
+            stroke-dashoffset: -32.42;
+        }
+    }
+}
+@media (max-width: 960px) {
+    .page {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        color: var(--text--);
+        text-align: right;
+    }
+
+    /* --- Header --- */
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        margin: 0 4rem;
+        .logo {
+            transform: translate(0, -25px);
+            align-self: center;
+        }
+        .top-menu .list {
+            margin-left: auto;
+        }
+        .top-menu .list .item {
+            margin: 0 0 0 6svw;
+        }
+    }
+
+    /* --- Content --- */
+
+    .content-section {
+        justify-content: center;
+        height: calc(700px + 20svh);
+        .left {
+            display: none;
+        }
+        .right {
+            margin-left: 0;
+            width: 100%;
+            .title {
+                font-size: calc(36px + 2svw);
+                margin-bottom: 2svh;
+            }
+            .paragraph {
+                width: 60svw;
+                font-size: calc(16px + 1svw);
+                margin-bottom: 120px;
+                align-self: end;
+            }
+            .for-tab {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 50px;
+                .LogoCard {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 2px solid #182d5555;
+                    height: 90%;
+                    aspect-ratio: 1;
+                    border-radius: 30px;
+                    backdrop-filter: blur(6px);
+                    -webkit-backdrop-filter: blur(6px);
+                    box-shadow: 2px 2px 1px #2079ff;
+                }
+                .logo {
+                    width: 70%;
+                }
+                .code {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    transform: translate(85px, -45px);
+                    width: calc(90px + 10svw);
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    /* --- Footer --- */
+    .footer-section {
+        justify-content: space-evenly;
+        margin-top: 50px;
+    }
+
+    /* --- Space --- */
+    .page .space {
+        display: flex;
+        height: 10px;
+    }
+    .footer-section .item {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        background-image: url("/Assets/Background-Mobile.webp");
+        background-size: contain;
+        height: auto;
+    }
+
+    /* --- Header --- */
+    header {
+        align-items: center;
+        flex-direction: row;
+        margin: 0 2rem;
+
+        .logo {
+            margin-left: 42%;
+            margin-bottom: 0;
+            transform: translate(0, 0);
+            z-index: 5;
+        }
+        .top-menu {
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+            z-index: 5;
+        }
+    }
+    .MenuSection {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 9, 19, 0.7);
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
+        z-index: 4;
+        top: 0;
+        transform: translateX(100svw);
+        transition: 1s;
+    }
+    .MenuSection.open {
+        transform: translateX(0);
+    }
+    .MenuSection .slide-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #021232cd;
+        border-radius: 30px;
+        width: 70%;
+        height: 70%;
+        row-gap: 7svh;
+        margin-top: 50px;
+    }
+    .MenuSection .stroke-anim {
+        position: absolute;
+        background-color: #031c4a00;
+        border-radius: 30px;
+        width: 70%;
+        height: 70%;
+        border-bottom: 1px solid;
+        border-color: blue;
+        box-shadow: inset 0 -9px 21px -3px blue;
+        margin-top: 50px;
+        transition: 1s;
+        animation: stroke-color 3s ease-in-out infinite;
+        pointer-events: none;
+    }
+
+      @keyframes stroke-color {
+        50% {
+          filter: hue-rotate(35deg);
+        }
+      }
+}
+

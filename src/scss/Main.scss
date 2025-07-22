@@ -1,0 +1,156 @@
+@use "./components/Buttons.scss";
+@use "./components/Footer.scss";
+@use "./components/Header.scss";
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --background: #171717;
+    --foreground: #ededed;
+}
+body {
+    color: var(--foreground);
+    background: url("/Assets/Background.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-x: right;
+    background-color: #08051b;
+    font-family: var(--font-tajawal);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.GlassBG {
+    border: 2px solid #182d5555;
+    border-radius: 30px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 2px 2px 1px #2079ff;
+}
+.Container {
+    margin: 5svh 9svw;
+}
+
+/* Home Page */
+.Home {
+    display: flex;
+    justify-content: space-between;
+    height: calc(200px + 25svh);
+
+    .right {
+        display: flex;
+        height: 100%;
+        align-items: start;
+        flex-direction: column;
+        justify-content: space-between;
+        h1 {
+            font-size: calc(36px + 1svw);
+        }
+        p {
+            font-size: 1.2rem;
+            width: 80%;
+        }
+        .top {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .bottom {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            .download {
+                position: relative;
+            }
+            .line {
+                position: absolute;
+                width: 10vw;
+                height: 1px;
+                background: white;
+                top: 50%;
+                right: -10vw;
+                align-self: center;
+                z-index: -1;
+                opacity: 0.7;
+            }
+            .underline-button {
+                font-size: 1rem;
+                text-decoration: underline;
+            }
+        }
+        .LogoCard {
+            display: none;
+        }
+    }
+    .left {
+        height: 100%;
+    }
+    .LogoCard {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1;
+        img {
+            width: 70%;
+        }
+    }
+}
+@media (min-width: 1200px) {
+    .Home .LogoCard {
+        height: 100%;
+    }
+}
+
+@media (max-width: 960px) {
+    .Home {
+        justify-content: center;
+        height: calc(500px + 20svh);
+        margin-top: 1rem;
+        .right {
+            width: 100%;
+            .top {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                width: 100%;
+                .LogoCard {
+                    display: flex;
+                    width: 100%;
+                    max-width: 400px;
+                    margin: auto;
+                }
+            }
+        }
+        .left {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .Home {
+        .right {
+            h1 {
+                font-size: 36px;
+            }
+            p {
+                font-size: 16px;
+                width: 100%;
+            }
+            .top {
+            }
+        }
+    }
+}
