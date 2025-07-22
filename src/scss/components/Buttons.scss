@@ -16,8 +16,15 @@
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     transition: 1s;
-    animation: glowe 5s ease-in-out infinite;
+    animation: glowe 3s ease-in-out infinite;
 }
+
+@keyframes glowe {
+    50% {
+      box-shadow: 1px 1px 3px 0px #771eff, 0px 0px 50px -5px #771eff55,
+        inset 0px 0px 8px #771effaa;
+    }
+  }
 
 /* -- button2 -- */
 .button2-front {

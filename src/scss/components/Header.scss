@@ -251,7 +251,14 @@ header {
         box-shadow: inset 0 -9px 21px -3px blue;
         margin-top: 50px;
         transition: 1s;
-        animation: stroke-color 5s ease-in-out infinite;
+        animation: stroke-color 3s ease-in-out infinite;
         pointer-events: none;
     }
+
+      @keyframes stroke-color {
+        50% {
+          filter: hue-rotate(35deg);
+        }
+      }
 }
+

@@ -12,7 +12,9 @@ export function S2Button({ text, href }: { text: string; href: string }) {
     return (
         <>
             <div className="button2-front">
-                <Link href={href}>{text}</Link>
+                <Link href={href}>
+                    {text}
+                </Link>
             </div>
             <div className="button2"></div>
         </>

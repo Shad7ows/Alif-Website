@@ -79,12 +79,12 @@ a {
                 height: 1px;
                 background: white;
                 top: 50%;
-                right: calc(10px - 10vw);
+                right: -10vw;
                 align-self: center;
                 z-index: -1;
                 opacity: 0.7;
             }
-            a:nth-child(2) {
+            .underline-button {
                 font-size: 1rem;
                 text-decoration: underline;
             }
