@@ -45,7 +45,7 @@ function openWindow(height) {
     winBack.style.opacity = 1;
   }, 20);
   setTimeout(() => {
-    window.style.height = !height ? "120px" : height;
+    window.style.height = !height ? "150px" : height;
   }, 50);
 }
 

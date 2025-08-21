@@ -1,0 +1,58 @@
+.content-section {
+    height: auto;
+}
+.release {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    direction: rtl;
+}
+.release .top {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 1rem;
+    margin-top: 5svw;
+    margin-bottom: 3svw;
+}
+.release .top h1 {
+    font-size: 40px;
+}
+.release .top p {
+    color: gray;
+    font-size: 17px;
+}
+.release .top p a {
+    text-decoration: underline;
+    color: var(--light-bur--);
+}
+
+.button4 {
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 100px;
+    background-color: #fff;
+    transition: 0.3s ease-in-out;
+}
+.button4:hover {
+    background-color: #fffd;
+}
+
+.versions {
+    padding: 20px 30px;
+}
+
+@media screen and (max-width: 500px) {
+    .release .top h1 {
+        font-size: 28px;
+    }
+    .release .top p {
+        font-size: 15px;
+    }
+    .button4 {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+}

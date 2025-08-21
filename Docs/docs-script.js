@@ -201,7 +201,7 @@ function highlightAlif(code) {
   sanitizedCode = sanitizedCode.replace(
     formattedStringPattern,
     (match, before, expr, after, offset) => {
-      let formattedReplacement = `<span class="string">"${before}</span>{${expr}}<span class="string">${after}"</span>`;
+      let formattedReplacement = `<span class="string">"${before}</span>{${highlightAlif(expr)}}<span class="string">${after}"</span>`;
       stringMatches.push({
         index: offset,
         length: match.length,
