@@ -44,6 +44,24 @@
     padding: 20px 30px;
 }
 
+pre {
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #182d5555;
+    border-radius: 20px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 2px 2px 1px #2079ff;
+}
+code{
+    font-family: "Tajawal";
+}
+
+@media screen and (max-width: 1000px) {
+    .versions {
+        width: 90%;
+    }
+}
 @media screen and (max-width: 500px) {
     .release .top h1 {
         font-size: 28px;
@@ -54,5 +72,8 @@
     .button4 {
         padding: 10px 20px;
         font-size: 13px;
+    }
+    .versions {
+        width: 80%;
     }
 }

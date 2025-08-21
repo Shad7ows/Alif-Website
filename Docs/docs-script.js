@@ -172,7 +172,7 @@ if (
 }
 
 // تلوين الشفرة
-function highlightAlif(code) {
+export function highlightAlif(code) {
   let stringPattern = /م?"[^"]*"|'[^']*'/g;
   let formattedStringPattern = /"([^"]*?)\{(.*?)\}([^"]*?)"/g;
   let stringMatches = [];
@@ -189,7 +189,7 @@ function highlightAlif(code) {
   });
   let explainPattern = /(?:!!.*$)/gm;
   let explains = [];
-  sanitizedCode = code.replace(explainPattern, (match, offset) => {
+  sanitizedCode = sanitizedCode.replace(explainPattern, (match, offset) => {
     explains.push({
       index: offset,
       length: match.length,
@@ -201,7 +201,9 @@ function highlightAlif(code) {
   sanitizedCode = sanitizedCode.replace(
     formattedStringPattern,
     (match, before, expr, after, offset) => {
-      let formattedReplacement = `<span class="string">"${before}</span>{${highlightAlif(expr)}}<span class="string">${after}"</span>`;
+      let formattedReplacement = `<span class="string">"${before}</span>{${highlightAlif(
+        expr
+      )}}<span class="string">${after}"</span>`;
       stringMatches.push({
         index: offset,
         length: match.length,
@@ -224,7 +226,7 @@ function highlightAlif(code) {
     { txt: /\b\d+(\.\d+)?\b/g, className: "number" },
     { txt: /(صح|خطأ|خطا|_تهيئة_|عدم|هذا.)(\)|]|\s)+/g, className: "boolean" },
     {
-      txt: /(?<!\w)(دالة|اذا|إذا|استورد|حاول|خلل|نهاية|عام|ارجع|بينما|لأجل|لاجل|استمر|توقف|احذف|اوإذا|اواذا|والا|وإلا|صنف|الزمن|الرياضيات|نوع)(?!\w)/g,      className: "keyword",
+      txt: /(?<!\w)(دالة|اذا|إذا|استورد|حاول|خلل|نهاية|عام|ارجع|بينما|لأجل|لكل|لاجل|استمر|توقف|احذف|اوإذا|اواذا|والا|وإلا|صنف|الزمن|الرياضيات|نوع)(?!\w)/g,      className: "keyword",
     },
     {
       txt: /(\+=|-=|\*=|\/=|\^=|==|!=|&lt;|&gt;|\+|- |\||\*|\\|\^|=| و | او | ليس )/g,
@@ -248,7 +250,7 @@ function highlightAlif(code) {
     }
   });
 
-  matches = matches.concat(stringMatches).concat(comments).concat(explains);
+  matches = [...comments, ...explains, ...stringMatches, ...matches];
   matches.sort((a, b) => a.index - b.index);
 
   let highlightedCode = "";
@@ -261,6 +263,7 @@ function highlightAlif(code) {
 
   return highlightedCode.replace(/\n/g, "<br>");
 }
+
 
 // تلوين قواعد مطابقة  ألف
 function highlightAlifGrammar(code) {
@@ -383,7 +386,7 @@ function highlightAlifGrammar(code) {
 }
 
 // نسخ الشفرة
-function copyCode(but, code) {
+export function copyCode(but, code) {
   let formattedCode = code
     .replace(/&gt;/g, ">")
     .replace(/&lt;/g, "<")

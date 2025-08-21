@@ -978,14 +978,14 @@
                     <li data-aos="fade-up" id="حالة-لاجل-او-لكل">
                         <h5>حالة "لاجل" او "لكل":</h5>
                         <p>- حيث أنه أصبح بالإمكان استخدام الكلمة المفتاحية "لاجل" او "لكل" -</p>
-                        <pre><div class="nums"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p></div><code><span class="keyword">لاجل</span> ب في <span class="function">مدى</span>(<span class="number">10</span>):<br>    <span class="function">اطبع</span>(ب)<br>    <br>لكل ب في <span class="function">مدى</span>(<span class="number">10</span>):<br>    <span class="function">اطبع</span>(ب)<br><div class="copy">نسخ</div></code></pre>
+                        <pre><div class="nums"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p></div><code><span class="keyword">لاجل</span> ب في <span class="function">مدى</span>(<span class="number">10</span>):<br>    <span class="function">اطبع</span>(ب)<br>    <br><span class="keyword">لكل</span> ب في <span class="function">مدى</span>(<span class="number">10</span>):<br>    <span class="function">اطبع</span>(ب)<br><div class="copy">نسخ</div></code></pre>
                         <p>في هذا المثال يتم عمل حلقة "لاجل" او "لكل" لتنفيذ برنامج يطبع قيمة ب .<br>حيث تبدأ الحلقة
                             بالعدد 0 وتقوم بإسناده إلى المتغير ب ومن ثم تنفذ جسم الحلقة.<br>يتكرر الأمر حتى وصول الحلقة
                             إلى العدد 9 - وهو العاشر لأن الحلقة بدأت من 0 - وبالتالي يتوقف التنفيذ.</p>
-                        <pre><div class="nums"><p>1</p><p>2</p></div><code>لكل ب في <span class="function">مدى</span>(<span class="number">2</span>,<span class="number">100</span>,<span class="number">20</span>):<br>    <span class="function">اطبع</span>(ب)<br><div class="copy">نسخ</div></code></pre>
+                        <pre><div class="nums"><p>1</p><p>2</p></div><code><span class="keyword">لكل</span> ب في <span class="function">مدى</span>(<span class="number">2</span>,<span class="number">100</span>,<span class="number">20</span>):<br>    <span class="function">اطبع</span>(ب)<br><div class="copy">نسخ</div></code></pre>
                         <p>سيتم إسناد 20 إلى المتغير ب ومن ثم يقوم بتنفيذ الحلقة.<br>بعد الإنتهاء سيتم إسناد 22 إلى
                             المتغير ب وذلك لأن عدد التزايد المحدد هو 2.<br>وهكذا حتى يصل المتغير ب الى العدد 100. </p>
-                        <pre><div class="nums"><p>1</p><p>2</p></div><code>لكل ب <span class="function">في </span>(<span class="string">"سلام"</span>, <span class="number">1</span> , <span class="boolean">خطأ)</span>:<br>    <span class="function">اطبع</span>(ب)<br><div class="copy">نسخ</div></code></pre>
+                        <pre><div class="nums"><p>1</p><p>2</p></div><code><span class="keyword">لكل</span> ب <span class="function">في </span>(<span class="string">"سلام"</span>, <span class="number">1</span> , <span class="boolean">خطأ)</span>:<br>    <span class="function">اطبع</span>(ب)<br><div class="copy">نسخ</div></code></pre>
                         <p>حيث هنا سيقوم بطباعة القيم الموجودة ضمن المترابطة.</p>
                     </li>
                     <li data-aos="fade-up" id="حالة-بينما">
@@ -1081,7 +1081,7 @@
         <div class="space"></div>
     </section>
 
-    <script class="scripe" src="./docs-script.js" defer></script>
+    <script type="module" class="scripe" src="./docs-script.js" defer></script>
     <script class="scripe" src="../Source/JavaScript/markdown.js" defer></script>
     <script class="scripe" src="../Source/JavaScript/script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>

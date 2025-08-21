@@ -85,7 +85,7 @@ input[type="checkbox"] {
   display: none;
 }
 
-.GlassBG{
+.GlassBG {
   border: 2px solid #182d5555;
   border-radius: 30px;
   backdrop-filter: blur(6px);
