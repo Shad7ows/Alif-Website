@@ -2,7 +2,9 @@
 const supabaseUrl = "https://mntokubwootojjrkvlym.supabase.co";
 const supabaseKey =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1udG9rdWJ3b290b2pqcmt2bHltIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY1MTY2NTUsImV4cCI6MjA2MjA5MjY1NX0.3p9FSzibsKmXZDz7lnFG4v4AB0m6AApnH0JTlt6tliw";
-const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+let supabase = null;
+if (window.supabase) supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
 
 // القائمة
 document.addEventListener("DOMContentLoaded", function () {
