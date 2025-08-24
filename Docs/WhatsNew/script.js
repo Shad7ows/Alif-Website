@@ -26,15 +26,19 @@ async function getFileTxt() {
         lastVer.innerText = versionsDiv.firstElementChild.id;
         lastVer.href = `#${versionsDiv.firstElementChild.id}`;
 
-        document.querySelectorAll(".versions code").forEach((block) => {
-            block.innerHTML = highlightAlif(block.innerHTML);
-            let copyButton = document.createElement("div");
-            copyButton.className = "copy";
-            copyButton.innerText = "نسخ";
-            copyButton.onclick = function () {
-                copyCode(this, block.innerHTML);
-            };
-            block.appendChild(copyButton);
+        const codes = document.querySelectorAll(".versions code");
+        codes.forEach((block) => {
+            if (!block.dataset.enhanced) {
+                block.innerHTML = highlightAlif(block.innerText);
+                const copyButton = document.createElement("div");
+                copyButton.className = "copy";
+                copyButton.innerHTML = "نسخ";
+                copyButton.addEventListener("click", () =>
+                    copyCode(copyButton, block.innerText)
+                );
+                block.appendChild(copyButton);
+                block.dataset.enhanced = "1";
+            }
         });
     } catch (err) {
         console.error("Error:", err);

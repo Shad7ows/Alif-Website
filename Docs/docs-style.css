@@ -205,6 +205,9 @@ hr {
     border: 1px solid gray;
 }
 
+.mainC{
+    color: white;
+}
 .keyword {
     color: #fe8730;
     font-weight: 500;

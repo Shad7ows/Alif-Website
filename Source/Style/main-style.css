@@ -59,6 +59,10 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10vh;
+}
 
 :root {
   --text--: #fff;
