@@ -12,11 +12,15 @@ async function showDocs(docType) {
     if (docType === "إرشادات استعمال ألف") {
         location.hash = "";
         try {
-            const res = await fetch(
-                "https://raw.githubusercontent.com/alifcommunity/Alif/refs/heads/Alif5.0/documents/إرشادات إستعمال ألف.md"
-            );
-            if (!res.ok) throw new Error("الملف غير موجود");
-            const markdown = await res.text();
+            const url =
+                "https://raw.githubusercontent.com/alifcommunity/Alif/refs/heads/Alif5.0/documents/إرشادات إستعمال ألف.md";
+            const cacheKey = "doc-" + docType;
+            let markdown = localStorage.getItem(cacheKey);
+            if (!markdown) {
+                const res = await fetch(url);
+                markdown = await res.text();
+                localStorage.setItem(cacheKey, markdown);
+            }
 
             GramDiv.style.display = "none";
             CatDiv.style.display = "block";
@@ -25,20 +29,7 @@ async function showDocs(docType) {
             CatDiv.innerHTML = marked.parse(markdown);
 
             // اضافة زر نسخ الشفرة وتلوين الشفرة
-            const codes = document.querySelectorAll("code");
-            codes.forEach((block) => {
-                if (!block.dataset.enhanced) {
-                    block.innerHTML = highlightAlif(block.innerText);
-                    const copyButton = document.createElement("div");
-                    copyButton.className = "copy";
-                    copyButton.innerHTML = "نسخ";
-                    copyButton.addEventListener("click", () =>
-                        copyCode(copyButton, block.innerText)
-                    );
-                    block.appendChild(copyButton);
-                    block.dataset.enhanced = "1";
-                }
-            });
+            observeCodeBlocks();
 
             // اضافة العناوين الجانبية
             const headings = CatDiv.querySelectorAll("h5");
@@ -70,26 +61,28 @@ async function showDocs(docType) {
             }
 
             // تلوين الزر مع القسم المعروض
-            let ticking = false;
+            const links = heads.querySelectorAll(".section-link");
+            const sectionMap = {};
+            links.forEach((link) => (sectionMap[link.dataset.id] = link));
+            const sections = CatDiv.querySelectorAll("ol li");
+            const offset = 20;
             window.addEventListener("scroll", () => {
-                if (!ticking) {
-                    requestAnimationFrame(() => {
-                        let currentSection = "";
-                        titles.forEach((sec) => {
-                            const rect = sec.getBoundingClientRect();
-                            if (rect.top <= 100) currentSection = sec.id;
-                        });
-                        heads
-                            .querySelectorAll(".section-link")
-                            .forEach((link) => {
-                                link.style.color =
-                                    link.dataset.id === currentSection
-                                        ? "var(--bur--)"
-                                        : "#fff";
-                            });
-                        ticking = false;
+                let currentSection = null;
+                let minTop = Infinity;
+                sections.forEach((sec) => {
+                    const rect = sec.getBoundingClientRect();
+                    if (rect.top >= offset && rect.top < minTop) {
+                        minTop = rect.top;
+                        currentSection = sec.id;
+                    }
+                });
+                if (currentSection) {
+                    links.forEach((link) => {
+                        link.style.color =
+                            link.dataset.id === currentSection
+                                ? "var(--bur--)"
+                                : "#fff";
                     });
-                    ticking = true;
                 }
             });
         } catch (e) {
@@ -119,6 +112,34 @@ async function showDocs(docType) {
             console.error(e.message);
         }
     }
+}
+// التلوين Lazy
+function observeCodeBlocks() {
+    const codes = document.querySelectorAll("code");
+    const observer = new IntersectionObserver(
+        (entries, obs) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const block = entry.target;
+                    if (!block.dataset.enhanced) {
+                        block.innerHTML = highlightAlif(block.innerText);
+                        const copyButton = document.createElement("div");
+                        copyButton.className = "copy";
+                        copyButton.innerHTML = "نسخ";
+                        copyButton.addEventListener("click", () =>
+                            copyCode(copyButton, block.innerText)
+                        );
+                        block.appendChild(copyButton);
+                        block.dataset.enhanced = "1";
+                    }
+                    obs.unobserve(block); // عشان مينفذش تاني
+                }
+            });
+        },
+        { threshold: 0.2 }
+    ); // يبدأ التلوين لما 20% من الكود يظهر
+
+    codes.forEach((block) => observer.observe(block));
 }
 
 // التبديل بين المستندات
