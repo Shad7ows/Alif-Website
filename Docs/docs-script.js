@@ -13,7 +13,7 @@ async function showDocs(docType) {
         location.hash = "";
         try {
             const res = await fetch(
-                "https://raw.githubusercontent.com/Shad7ows/Alif/refs/heads/Alif5.0/documents/إرشادات إستعمال ألف.md"
+                "https://raw.githubusercontent.com/alifcommunity/Alif/refs/heads/Alif5.0/documents/إرشادات إستعمال ألف.md"
             );
             if (!res.ok) throw new Error("الملف غير موجود");
             const markdown = await res.text();
@@ -21,7 +21,7 @@ async function showDocs(docType) {
             GramDiv.style.display = "none";
             CatDiv.style.display = "block";
             headingsDiv.style.display = "flex";
-            if (screen.width < 500) openHeadsButton.style.display = "flex";
+            if (window.innerWidth < 500) openHeadsButton.style.display = "flex";
             CatDiv.innerHTML = marked.parse(markdown);
 
             // اضافة زر نسخ الشفرة وتلوين الشفرة
@@ -98,17 +98,23 @@ async function showDocs(docType) {
     } else if (docType === "قواعد مطابق ألف") {
         try {
             const res = await fetch(
-                "https://raw.githubusercontent.com/Shad7ows/Alif/refs/heads/Alif5.0/documents/قواعد مطابق ألف.md"
+                "https://raw.githubusercontent.com/alifcommunity/Alif/refs/heads/Alif5.0/documents/قواعد مطابق ألف.md"
             );
             if (!res.ok) throw new Error("الملف غير موجود");
-            const markdown = await res.text();
+            const docs = await res.text();
 
             GramDiv.style.display = "block";
             CatDiv.style.display = "none";
             headingsDiv.style.display = "none";
             heads.innerHTML = "";
             openHeadsButton.style.display = "none";
-            GramDiv.innerHTML = marked.parse(markdown);
+
+            // GramDiv.innerHTML = highlightAlif(
+            //     docs.replaceAll(/\[\^\d+\]/g, "")
+            // ).replaceAll(
+            //     /<span class="(keyword|boolean|explain|operator)">(.*?)<\/span>/g,
+            //     "$2"
+            // );
         } catch (e) {
             console.error(e.message);
         }
