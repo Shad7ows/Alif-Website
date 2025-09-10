@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="ar">
+
+<head>
+    <title>ما الجديد في الف</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ما الجديد في لغة البرمجة العربية ألف بنسختها الخامسة">
+    <link rel="shortcut icon" href="../../Source/Assets/AlifLogo.svg" type="image/x-icon">
+    <link rel="preload" as="font" type="font/woff2" href="../../Source/Fonts/Tajawal-Bold.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="../../Source/Fonts/Tajawal-Regular.woff2" crossorigin>
+    <link rel="stylesheet" href="../../Source/Style/main-style.css" defer />
+    <link rel="stylesheet" href="../docs-style.css" defer />
+    <link rel="stylesheet" href="./style.css" defer />
+</head>
+
+<body class="page">
+    <section class="container header-section">
+        <header class="header">
+
+            <div class="menu">
+                <label class="lines">
+                    <input type="checkbox" id="lines">
+                    <svg class="svg" viewBox="0 0 32 32">
+                        <path class="line top-bottom"
+                            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                        </path>
+                        <path class="line middle" d="M7 16 27 16"></path>
+                    </svg>
+                </label>
+            </div>
+
+            <div class="logo">
+                <a href="/"><img alt="شعار ألف" width="36px" height="36px" src="../../Source/Assets/AlifLogo.svg" /></a>
+            </div>
+
+            <div class="top-menu">
+                <ul class="list">
+                    <li class="item"><a href="/Learn/">الـتـعـلـيـم</a></li>
+                    <li class="item"><a href="/Docs/">الـوثـائـق</a></li>
+                    <li class="item"><a href="/Support/">الـدعـم</a></li>
+                </ul>
+                <div class="contribute">
+                    <span class="line"></span>
+                    <!-- button1 -->
+                    <!-- <a href="#" class="button1">المساهمة</a> -->
+                    <!-- button2 -->
+                    <div class="button2-front"><a href="/Contribution/">المساهمة</a></div>
+                    <div class="button2"></div>
+                    <!-- button3 -->
+                    <!-- <div class="button3"><a href="#" class="label">المساهمة</a></div> -->
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <section class="menu-section">
+        <div class="stroke-anim"></div>
+        <div class="slide-menu">
+            <a href="/Learn/">الـتـعـلـيــم</a>
+            <a href="/Docs/">الـوثـائـق</a>
+            <a href="/Support/">الـدعـم</a>
+            <a href="/License/">الـرخـصـة</a>
+            <a href="/AboutUs/">مـن نـحـن</a>
+            <a href="/Contribution/">المساهمة</a>
+        </div>
+    </section>
+
+    <section class="container content-section release">
+        <div class="top">
+            <h1>ما الجديد في لغة ألف نـ5</h1>
+            <p>جميع التحديثات والتغيرات في لغة برمجة ألف
+                <br>
+                من <a href="#5.1.0">الإصدار الاول</a> حتى اخر إصدار <a href="#" id="lastVer">5.1.0</a>
+            </p>
+            <br>
+            <a href="https://github.com/alifcommunity/Alif/releases" class="button4">الإصدارات على جيت هاب</a>
+        </div>
+        <div class="versions GlassBG">
+            <h2 id="5.1.0"><span>الجديد في نسخة ألف 5.1.0: . <a
+                        href="https://github.com/alifcommunity/Alif/releases/tag/v5.1.0">جيت هاب</a></span><span
+                    class="date">التاريخ: 1/4/1447</span></h2>
+            <ul>
+                <li>
+                    <h4>الإضافات:</h4>
+                </li>
+            </ul>
+            <p>1- إضافة ميزة جمع نصين عن طريق عملية الجمع،
+                مثال:</p>
+            <pre><code>س <span class="operator">=</span> <span class="string">"السلام "</span> <span class="operator">+</span> <span class="string">"عليكم"</span><br><span class="function">اطبع</span>(س)<br><span class="comment">#السلام عليكم</span><br><div class="copy">نسخ</div></code></pre>
+            <p>2- إضافة ميزة ترتيب المصفوفة تصاعديا،
+                مثال:</p>
+            <pre><code>س <span class="operator">=</span> [<span class="number">5</span>، <span class="number">9</span>، <span class="number">1</span>، <span class="number">6</span>]<br>س.<span class="function">رتب</span>()<br><span class="function">اطبع</span>(س)<br><span class="comment"># [1، 5، 6، 9]</span><br><div class="copy">نسخ</div></code></pre>
+            <p>3- حقن النص بسطر جديد:
+                مثال:</p>
+            <pre><code>س <span class="operator">=</span> <span class="string">"سطر\س سطر جديد"</span><br><span class="function">اطبع</span>(س)<br><span class="comment"># سطر</span><br><span class="comment">#  سطر جديد</span><br><div class="copy">نسخ</div></code></pre>
+            <p>4- إضافة دالة وقت() لمكتبة الوقت
+                حيث أنها تقوم بإرجاع المعلومات على شكل فهرس.
+                النتيجة المرجعة: {السنة:2025، الشهر: 7، اليوم: 9، الساعة "بنظام الـ24 ساعة": 13، الدقيقة: 4، الثانية:
+                56، يوم_اسبوع "ترتيب اليوم في الاسبوع حيث يبدأ من الاثنين": 2، يوم_سنة "ترتيب اليوم خلال السنة":
+                183،هل_صيفي "هل نظام التوقيت الصيفي مفعل أم لا": 0، النطاق: "Arab Standard"، الإزاحة: 10800}
+                مثال:</p>
+            <pre><code><span class="keyword">استورد</span> الوقت<br>س <span class="operator">=</span> الوقت.<span class="function">وقت</span>()<br><span class="function">اطبع</span>(م<span class="string">"التاريخ: </span>{س[<span class="string">"السنة"</span>]}<span class="string">-{س["</span>الشهر<span class="string">"]}-</span>{س[<span class="string">"اليوم"</span>]}<span class="string"> \سالوقت: {س["</span>الساعة<span class="string">"]}:</span>{س[<span class="string">"الدقيقة"</span>]}<span class="string">:{س["</span>الثانية<span class="string">"]}"</span>)<br><span class="comment"># التاريخ: 2025-10-1</span><br><span class="comment"># الوقت: 3:20:55</span><br><div class="copy">نسخ</div></code></pre>
+            <p>6- إضافة دالة منسق() لمكتبة الوقت
+                حيث تقوم بإرجاع معلومات الوقت بشكل منسق على شكل نص.
+                مثال:</p>
+            <pre><code><span class="keyword">استورد</span> <span class="function">الوقت</span>()<br>س <span class="operator">=</span> الوقت.<span class="function">منسق</span>()<br><span class="function">اطبع</span>(س)<br><span class="comment"># الخميس يوليو  2 13:27:28 2025</span><br><div class="copy">نسخ</div></code></pre>
+            <p>7- إضافة قراءة قيم الفهرس، حيث يمكن تحويلها إلى مصفوفة للعمل عليها
+                مثال:</p>
+            <pre><code>س <span class="operator">=</span> {<span class="string">"أ"</span>: <span class="number">3</span>, <span class="string">"ب"</span>: <span class="number">5</span>, <span class="string">"ت"</span>: <span class="number">7</span>}<br><span class="function">اطبع</span>(س.<span class="function">قيم</span>())<br><span class="comment"># قيم_فهرس([3, 5, 7])</span><br><div class="copy">نسخ</div></code></pre>
+            <p>8 - إضافة دالة ضمنية لقراءة الملف كامل او سطر منه مع إغلاقه بعد الإنتهاء، حيث حرف "ق" يعبر عن قراءة.
+                مثال:</p>
+            <pre><code>س <span class="operator">=</span> <span class="function">افتح</span>(<span class="string">"ملف.json"</span>، <span class="string">"ق"</span>)<br><span class="function">اطبع</span>(س.<span class="function">اقرا_سطر</span>())<br><span class="function">اطبع</span>(س.<span class="function">اقرا</span>())<br>س.<span class="function">اغلق</span>()<br><span class="comment"># محتويات الملف</span><br><div class="copy">نسخ</div></code></pre>
+            <p>9- إضافة القدرة على جذر الاعداد العشرية
+                مثال:</p>
+            <pre><code>س <span class="operator">=</span> <span class="operator">\</span><span class="operator">^</span> <span class="number">3.9</span><br><span class="function">اطبع</span>(س)<br><span class="comment"># 1.9748417658131</span><br><div class="copy">نسخ</div></code></pre>
+            <p>10- القدرة على تشغيل حالة عن طريق الطرفية
+                مثال:</p>
+            <pre><code>alif -ص <span class="string">"اطبع(9)"</span><br><span class="comment"># 9</span><br><div class="copy">نسخ</div></code></pre>
+            <ul>
+                <li>
+                    <h4>تصحيح الأخطاء:</h4>
+                </li>
+            </ul>
+            <p>1- تم تصحيح مشكلة تظهر عند عدم إغلاق القوس حيث كان الخطأ لا يظهر باللغة العربية
+                2- تصحيح طباعة الوقت الحالي في مكتبة الوقت من الوقت.الوقت() --&gt; الوقت.الان()</p>
+            <ul>
+                <li>
+                    <h4>تحسينات:</h4>
+                </li>
+            </ul>
+            <p>1- الان لاحقة الملف يمكن أن تكون .الف او .alif<br>مثال:</p>
+            <pre><code>مثال.الف<br>example.alif<br><div class="copy">نسخ</div></code></pre>
+            <p>2- طريقة طباعة المساعدة والنسخة في الطرفية أصبحت كالتالي: </p>
+            <pre><code>alif -م<span class="operator"> او </span>--مساعدة : للمساعدة <br>alif -ن<span class="operator"> او </span>--نسخة : نسخة ألف الحالية<br><div class="copy">نسخ</div></code></pre>
+            <p>3- حالة (لاجل) اصبحت تقبل (لكل)<br>مثال:</p>
+            <pre><code><span class="operator">|</span><span class="keyword">لاجل</span> ب في <span class="function">مدى</span>(<span class="number">50</span>):		<span class="operator">|</span><span class="keyword">لكل</span> ب في <span class="function">مدى</span>(<span class="number">50</span>):<br><span class="operator">|</span>	<span class="function">اطبع</span>(ب)				<span class="operator">|</span>	<span class="function">اطبع</span>(ب)			<br><div class="copy">نسخ</div></code></pre>
+        </div>
+    </section>
+
+    <section class="container footer-section">
+        <a class="item text" href="License/">الـرخـصـة</a>
+        <a class="item text" href="AboutUs/">مـن نـحـن</a>
+        <a class="item text" href="Alif2/">ألـف2</a>
+        <a class="item circle" href="#">
+            <img class="img" alt="انستاغرام" width="30px" height="30px" src="../../Source/Assets/Instagram.svg" />
+        </a>
+        <a class="item circle" href="https://youtube.com/@aliflang47" target="_blank">
+            <img class="img" alt="يوتيوب" width="30px" height="30px" src="../../Source/Assets/Youtube.svg" />
+        </a>
+        <a class="item circle" href="https://github.com/alifcommunity/Alif" target="_blank">
+            <img class="img" alt="غيتهب" width="30px" height="30px" src="../../Source/Assets/Github.svg" />
+        </a>
+    </section>
+
+    <section>
+        <div class="space"></div>
+    </section>
+
+    <!-- <script type="module" src="./script.js" defer></script> -->
+    <script class="scripe" src="../../Source/JavaScript/markdown.js" defer></script>
+    <script class="scripe" src="../../Source/JavaScript/script.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+.content-section {
+    height: auto;
+}
+.release {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    direction: rtl;
+}
+.release .top {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 1rem;
+    margin-top: 5svw;
+    margin-bottom: 3svw;
+}
+.release .top h1 {
+    font-size: 40px;
+}
+.release .top p {
+    color: gray;
+    font-size: 17px;
+}
+.release .top p a,
+.versions h2 a {
+    text-decoration: underline;
+    color: var(--light-bur--);
+}
+
+.button4 {
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 100px;
+    background-color: #fff;
+    transition: 0.3s ease-in-out;
+}
+.button4:hover {
+    background-color: #fffd;
+}
+
+.versions {
+    padding: 20px 30px;
+}
+.versions h2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.versions h2 .date {
+    color: gray;
+    font-size: 15px;
+}
+.versions h2 a {
+    font-size: 13px;
+}
+
+pre {
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #182d5555;
+    border-radius: 20px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 2px 2px 1px #2079ff;
+}
+code {
+    font-family: "Tajawal";
+}
+
+@media screen and (max-width: 1000px) {
+    .versions {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .release .top h1 {
+        font-size: 28px;
+    }
+    .release .top p {
+        font-size: 15px;
+    }
+    .button4 {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    .versions {
+        width: 80%;
+    }
+    .versions h2 {
+        font-size: 15px;
+    }
+    .versions h2 .date {
+        font-size: 12px;
+    }
+}
