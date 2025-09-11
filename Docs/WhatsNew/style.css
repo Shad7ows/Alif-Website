@@ -16,7 +16,8 @@
     margin-bottom: 3svw;
 }
 .release .top h1 {
-    font-size: 40px;
+    margin-block: 0.67em;
+    font-size: 2em;
 }
 .release .top p {
     color: gray;
