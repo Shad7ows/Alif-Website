@@ -284,13 +284,13 @@ hr {
         right: 5px;
     }
     .headBack {
-        position: absolute;
+        position: fixed;
         display: none;
         height: 100vh;
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 100;
+        z-index: 10;
     }
     #toggleHeadings:checked ~ .headings {
         transform: translateX(0px);
