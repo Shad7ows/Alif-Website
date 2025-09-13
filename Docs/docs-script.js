@@ -16,10 +16,15 @@ async function showDocs(docType) {
                 "https://raw.githubusercontent.com/alifcommunity/Alif/refs/heads/Alif5.0/documents/إرشادات إستعمال ألف.md";
             const cacheKey = "doc-" + docType;
             let markdown = localStorage.getItem(cacheKey);
-            if (!markdown) {
+            let date = localStorage.getItem(cacheKey + "date");
+            if (
+                !markdown ||
+                new Date().getTime() - date > 7 * 24 * 60 * 60 * 1000
+            ) {
                 const res = await fetch(url);
                 markdown = await res.text();
                 localStorage.setItem(cacheKey, markdown);
+                localStorage.setItem(cacheKey + "date", new Date().getTime());
             }
 
             GramDiv.style.display = "none";
@@ -90,18 +95,17 @@ async function showDocs(docType) {
         }
     } else if (docType === "قواعد مطابق ألف") {
         try {
-            const res = await fetch(
-                "https://raw.githubusercontent.com/alifcommunity/Alif/refs/heads/Alif5.0/documents/قواعد مطابق ألف.md"
-            );
-            if (!res.ok) throw new Error("الملف غير موجود");
-            const docs = await res.text();
-
             GramDiv.style.display = "block";
             CatDiv.style.display = "none";
             headingsDiv.style.display = "none";
             heads.innerHTML = "";
             openHeadsButton.style.display = "none";
 
+            // const res = await fetch(
+            //     "https://raw.githubusercontent.com/alifcommunity/Alif/refs/heads/Alif5.0/documents/قواعد مطابق ألف.md"
+            // );
+            // if (!res.ok) throw new Error("الملف غير موجود");
+            // const docs = await res.text();
             // GramDiv.innerHTML = highlightAlif(
             //     docs.replaceAll(/\[\^\d+\]/g, "")
             // ).replaceAll(
