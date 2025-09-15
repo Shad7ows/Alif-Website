@@ -26,21 +26,21 @@ const osData = [
     os: "Linux",
     name: "لينكس",
     img: "LinuxOS.svg",
-    link: "https://github.com/Shad7ows/SpectrumIDEV3/releases/download/Pre-Release/SpectrumInstaller-linux-ubuntu-x64.zip",
+    link: "https://github.com/alifcommunity/TaifEditor/releases/latest/download/TaifInstaller-Linux-X64",
     info: ` تحميل اللغة لنظام تشغيل لينكس معمارية 64x`,
   },
   {
     os: "Windows",
     name: "ويندوز",
     img: "WindowsOS.svg",
-    link: "https://github.com/Shad7ows/SpectrumIDEV3/releases/download/Pre-Release/SpectrumInstaller-win-x64.zip",
+    link: "https://github.com/alifcommunity/TaifEditor/releases/latest/download/TaifInstaller-Win-X64.exe",
     info: `تحميل اللغة لنظام تشغيل ويندوز 10-11 معمارية 64x `,
   },
   {
     os: "MacOS",
     name: "ماك",
     img: "MacOS.svg",
-    link: "https://github.com/Shad7ows/SpectrumIDEV3/releases/download/Pre-Release/SpectrumInstaller-macos-x64.zip",
+    link: "https://github.com/alifcommunity/TaifEditor/releases/latest/download/TaifInstaller-MacOS-X64.app.zip",
     info: `تحميل اللغة لنظام تشغيل ماك معالج انتل معمارية 64x`,
   },
 ];
@@ -63,7 +63,7 @@ for (let i = 0; i < osData.length; i++) {
             <button onclick="newDownload('${osData[i].os}' ,event)" style="width: fit-content;">
             <a href="${osData[i].link}" class="button1">تحميل</a>
             </button>
-            <h5 class="vers">لغة ألف | نـ5.0.0</h5>
+            <h5 class="vers">لغة ألف | نـ5.1.0</h5>
         </div>
     `;
 }
