@@ -4,7 +4,7 @@ Redirect 301 /AboutUs/index.html https://www.aliflang.org/aboutus/index.html
 Redirect 301 /Contribution/index.html https://www.aliflang.org/contribution/index.html
 Redirect 301 /Docs/index.html https://www.aliflang.org/docs/index.html
 Redirect 301 /Download/index.html https://www.aliflang.org/download/index.html
-Redirect 301 /Learn/index.html https://www.aliflang.org/learn/index.html
+Redirect 301 https://www.aliflang.org/Learn/index.html /learn/index.html
 Redirect 301 /Libraries/index.html https://www.aliflang.org/libraries/index.html
 Redirect 301 /License/index.html https://www.aliflang.org/license/index.html
 Redirect 301 /Support/index.html https://www.aliflang.org/support/index.html
