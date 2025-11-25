@@ -1,10 +1,10 @@
 RewriteEngine on
 
-Redirect 301 https://www.aliflang.org/download/index.html https://www.aliflang.org/Download/index.html
-<!-- Redirect 301 /AboutUs/index.html https://www.aliflang.org/aboutus/index.html
-Redirect 301 /Contribution/index.html https://www.aliflang.org/contribution/index.html
-Redirect 301 /Docs/index.html https://www.aliflang.org/docs/index.html
-Redirect 301 /Learn/index.html /learn/index.html
-Redirect 301 /Libraries/index.html https://www.aliflang.org/libraries/index.html
-Redirect 301 /License/index.html https://www.aliflang.org/license/index.html
-Redirect 301 /Support/index.html https://www.aliflang.org/support/index.html -->
+Redirect 301 /aboutus /AboutUs
+Redirect 301 /contribution /Contribution
+Redirect 301 /docs /Docs
+Redirect 301 /download/index.html https://www.aliflang.org/Download/index.html
+Redirect 301 /learn /Learn
+Redirect 301 /libraries /Libraries
+Redirect 301 /license /License
+Redirect 301 /support /Support
