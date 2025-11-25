@@ -1,6 +1,6 @@
 RewriteEngine on
 
-Redirect 301 https://www.aliflang.org/Download/index.html https://www.aliflang.org/download/index.html
+Redirect 301 https://www.aliflang.org/download/index.html https://www.aliflang.org/Download/index.html
 <!-- Redirect 301 /AboutUs/index.html https://www.aliflang.org/aboutus/index.html
 Redirect 301 /Contribution/index.html https://www.aliflang.org/contribution/index.html
 Redirect 301 /Docs/index.html https://www.aliflang.org/docs/index.html
