@@ -3,7 +3,7 @@ RewriteEngine on
 Redirect 301 /aboutus /AboutUs
 Redirect 301 /contribution /Contribution
 Redirect 301 /docs /Docs
-Redirect 301 /download /Download
+Redirect 301 /download/index.html https://www.aliflang.org/Download/index.html
 Redirect 301 /learn /Learn
 Redirect 301 /libraries /Libraries
 Redirect 301 /license /License
