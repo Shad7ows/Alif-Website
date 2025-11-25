@@ -1,2 +1,2 @@
 RewriteEngine on
-Redirect 301 /download/index.html /Download/index.html
+Redirect 301 /download /Download
