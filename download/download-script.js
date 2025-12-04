@@ -55,7 +55,7 @@ for (let i = 0; i < osData.length; i++) {
             order: ${isCurrent ? middleOrder : i >= middleOrder ? i + 1 : i};
             ${isCurrent ? "scale: 1.05;" : ""}
         ">
-            <img alt="${osData[i].name}" class="logo" src="../Source/Assets/${
+            <img alt="${osData[i].name}" class="logo" src="../source/assets/${
     osData[i].img
   }" height="100px" />
             <h1 class="platform">${osData[i].name}</h1>
