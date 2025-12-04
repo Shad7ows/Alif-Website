@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Tajawal";
-  src: url("../Fonts/Tajawal-Medium.woff2") format("woff2"),
-    url("../Fonts/Tajawal-Medium.ttf") format("truetype");
+  src: url("../fonts/Tajawal-Medium.woff2") format("woff2"),
+    url("../fonts/Tajawal-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -246,7 +246,7 @@ input[type="checkbox"] {
 /* --- Page --- */
 .page {
   display: flex;
-  background-image: url("../Assets/Background.webp");
+  background-image: url("../assets/Background.webp");
   background-size: cover;
   background-attachment: fixed;
   background-position-x: right;
@@ -566,7 +566,7 @@ input[type="checkbox"] {
 
 @media (max-width: 480px) {
   .page {
-    background-image: url("../Assets/Background-Mobile.webp");
+    background-image: url("../assets/Background-Mobile.webp");
     background-size: contain;
     height: auto;
   }
