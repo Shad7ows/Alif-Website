@@ -1,146 +1,183 @@
 <!DOCTYPE html>
 
 <html lang="ar">
-
-<head>
+  <head>
     <title>لغة البرمجة الف</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="تعليم لغة البرمجة العربية ألف بنسختها الخامسة">
-    <link rel="shortcut icon" href="../source/assets/AlifLogo.svg" type="image/x-icon">
-    <link rel="preload" as="font" type="font/woff2" href="../source/fonts/Tajawal-Medium.woff2" crossorigin>
+    <meta
+      name="description"
+      content="تعليم لغة البرمجة العربية ألف بنسختها الخامسة"
+    />
+    <link
+      rel="shortcut icon"
+      href="../source/assets/AlifLogo.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../source/fonts/Tajawal-Medium.woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="../source/style/main-style.css" defer />
     <link rel="stylesheet" href="./contribution-style.css" defer />
-</head>
+  </head>
 
-<body class="page">
+  <body class="page">
     <section class="container header-section">
-        <header class="header">
+      <header class="header">
+        <div class="menu">
+          <label class="lines">
+            <input type="checkbox" id="lines" />
+            <svg class="svg" viewBox="0 0 32 32">
+              <path
+                class="line top-bottom"
+                d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+              ></path>
+              <path class="line middle" d="M7 16 27 16"></path>
+            </svg>
+          </label>
+        </div>
 
-            <div class="menu">
-                <label class="lines">
-                    <input type="checkbox" id="lines">
-                    <svg class="svg" viewBox="0 0 32 32">
-                        <path class="line top-bottom"
-                            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
-                        </path>
-                        <path class="line middle" d="M7 16 27 16"></path>
-                    </svg>
-                </label>
-            </div>
+        <div class="logo">
+          <a href="/"
+            ><img
+              alt="شعار ألف"
+              width="36px"
+              height="36px"
+              src="../source/assets/AlifLogo.svg"
+          /></a>
+        </div>
 
-            <div class="logo">
-                <a href="/"><img alt="شعار ألف" width="36px" height="36px"
-                        src="../source/assets/AlifLogo.svg" /></a>
-            </div>
-
-            <div class="top-menu">
-                <ul class="list">
-                    <li class="item"><a href="../learn/">الـتـعـلـيـم</a></li>
-                    <li class="item"><a href="../docs/">الـوثـائـق</a></li>
-                    <li class="item"><a href="../support/">الـدعـم</a></li>
-                </ul>
-                <div class="contribute">
-                    <span class="line"></span>
-                    <!-- button1 -->
-                    <!-- <a href="#" class="button1">المساهمة</a> -->
-                    <!-- button2 -->
-                    <div class="button2-front"><a href="#">المساهمة</a></div>
-                    <div class="button2"></div>
-                    <!-- button3 -->
-                    <!-- <div class="button3"><a href="#" class="label">المساهمة</a></div> -->
-                </div>
-            </div>
-        </header>
+        <div class="top-menu">
+          <ul class="list">
+            <li class="item"><a href="../learn/">الـتـعـلـيـم</a></li>
+            <li class="item"><a href="../docs/">الـوثـائـق</a></li>
+            <li class="item"><a href="../support/">الـدعـم</a></li>
+          </ul>
+          <div class="contribute">
+            <span class="line"></span>
+            <!-- button1 -->
+            <!-- <a href="#" class="button1">المساهمة</a> -->
+            <!-- button2 -->
+            <div class="button2-front"><a href="#">المساهمة</a></div>
+            <div class="button2"></div>
+            <!-- button3 -->
+            <!-- <div class="button3"><a href="#" class="label">المساهمة</a></div> -->
+          </div>
+        </div>
+      </header>
     </section>
 
     <section class="menu-section">
-        <div class="stroke-anim"></div>
-        <div class="slide-menu">
-            <a href="../learn/">الـتـعـلـيــم</a>
-            <a href="../docs/">الـوثـائـق</a>
-            <a href="../support/">الـدعـم</a>
-            <a href="../license/">الـرخـصـة</a>
-            <a href="../about-us/">مـن نـحـن</a>
-            <a href="../contribution/">المساهمة</a>
-        </div>
+      <div class="stroke-anim"></div>
+      <div class="slide-menu">
+        <a href="../learn/">الـتـعـلـيــم</a>
+        <a href="../docs/">الـوثـائـق</a>
+        <a href="../support/">الـدعـم</a>
+        <a href="../license/">الـرخـصـة</a>
+        <a href="../about-us/">مـن نـحـن</a>
+        <a href="../contribution/">المساهمة</a>
+      </div>
     </section>
 
     <section class="container content-section">
-            <div class="card" dir="rtl">
-                <ol>
-                    <li>
-                        <h2>
-                            المساهمة المادية:
-                        </h2>
-                        <p>
-                            يمكن المساهمة بمبلغ مادي لدعم فريق ألف عن طريق التبرع لـ:<br>
-                        </p>
-                        <div dir="ltr">    
-                            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
-                            <script type='text/javascript'>kofiwidget2.init('ادعمونا عبر ko-fi', '#1d6bf2', 'B0B51MTGQD');kofiwidget2.draw();</script> 
-                        </div>
-                    </li>
-                    <li>
-                        <h2>
-                            المساهمة الإعلامية:
-                        </h2>
-                        <p>
-                            حيث يمكن المساهمة بنشر اللغة على مواقع التواصل او في دائرة المعرفة الخاصة بالمساهم
-                        </p>
-                    </li>
-                    <li>
-                        <h2>
-                            المساهمة البرمجية:
-                        </h2>
-                        <p>
-                            حيث يستطيع المساهم الإنضمام لفريق مطوري لغة ألف <br>
-                            ليقوم بالمساهمة في تطوير نواة اللغة او الموقع الإلكتروني <br>
-                            او كتابة وترتيب مستندات اللغة او حتى إنشاء محتوى تعليمي
-                        </p>
-                    </li>
-                    <li>
-                        <h2>
-                            المساهمة المعنوية:
-                        </h2>
-                        <p>
-                            وذلك عن طريق القيام بوضع نجمة لمشروع ألف في منصة Github <br>
-                            او مجرد الإنضمام لمجتمع ألف على Telegram <br>
-                            او مشاهدة المقاطع التعليمية الخاصة باللغة على Youtube
-                        </p>
-                    </li>
-                    <li>
-                        <h2>
-                            المساهمة العامة:
-                        </h2>
-                        <p>
-                            اي ان المساهم له حرية الاختيار والابتكار في طرق مساعدة اللغة 
-                        </p>
-                    </li>
-                </ol>
+      <div class="card" dir="rtl">
+        <ol>
+          <li>
+            <h2>المساهمة المادية:</h2>
+            <p>
+              يمكن المساهمة بمبلغ مادي لدعم فريق ألف عن طريق التبرع لـ:<br />
+            </p>
+            <div dir="ltr">
+              <script
+                type="text/javascript"
+                src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"
+              ></script>
+              <script type="text/javascript">
+                kofiwidget2.init("ادعمونا عبر ko-fi", "#1d6bf2", "B0B51MTGQD");
+                kofiwidget2.draw();
+              </script>
             </div>
+          </li>
+          <li>
+            <h2>المساهمة الإعلامية:</h2>
+            <p>
+              حيث يمكن المساهمة بنشر اللغة على مواقع التواصل او في دائرة المعرفة
+              الخاصة بالمساهم
+            </p>
+          </li>
+          <li>
+            <h2>المساهمة البرمجية:</h2>
+            <p>
+              حيث يستطيع المساهم الإنضمام لفريق مطوري لغة ألف <br />
+              ليقوم بالمساهمة في تطوير نواة اللغة او الموقع الإلكتروني <br />
+              او كتابة وترتيب مستندات اللغة او حتى إنشاء محتوى تعليمي
+            </p>
+          </li>
+          <li>
+            <h2>المساهمة المعنوية:</h2>
+            <p>
+              وذلك عن طريق القيام بوضع نجمة لمشروع ألف في منصة Github <br />
+              او مجرد الإنضمام لمجتمع ألف على Telegram <br />
+              او مشاهدة المقاطع التعليمية الخاصة باللغة على Youtube
+            </p>
+          </li>
+          <li>
+            <h2>المساهمة العامة:</h2>
+            <p>اي ان المساهم له حرية الاختيار والابتكار في طرق مساعدة اللغة</p>
+          </li>
+        </ol>
+      </div>
     </section>
 
     <section class="container footer-section">
-        <a class="item text" href="../license/">الـرخـصـة</a>
-        <a class="item text" href="../aboutUs/">مـن نـحـن</a>
-        <a class="item text" href="../alif2/">ألـف2</a>
-        <a class="item circle" href="#">
-            <img class="img" alt="انستاغرام" width="30px" height="30px" src="../source/assets/Instagram.svg" />
-        </a>
-        <a class="item circle" href="https://youtube.com/@aliflang47" target="_blank">
-            <img class="img" alt="يوتيوب" width="30px" height="30px" src="../source/assets/Youtube.svg" />
-        </a>
-        <a class="item circle" href="https://github.com/alifcommunity/Alif" target="_blank">
-            <img class="img" alt="غيتهب" width="30px" height="30px" src="../source/assets/Github.svg" />
-        </a>
+      <a class="item text" href="../license/">الـرخـصـة</a>
+      <a class="item text" href="../about-us/">مـن نـحـن</a>
+      <a class="item text" href="../alif2/">ألـف2</a>
+      <a class="item circle" href="#">
+        <img
+          class="img"
+          alt="انستاغرام"
+          width="30px"
+          height="30px"
+          src="../source/assets/Instagram.svg"
+        />
+      </a>
+      <a
+        class="item circle"
+        href="https://youtube.com/@aliflang47"
+        target="_blank"
+      >
+        <img
+          class="img"
+          alt="يوتيوب"
+          width="30px"
+          height="30px"
+          src="../source/assets/Youtube.svg"
+        />
+      </a>
+      <a
+        class="item circle"
+        href="https://github.com/alifcommunity/Alif"
+        target="_blank"
+      >
+        <img
+          class="img"
+          alt="غيتهب"
+          width="30px"
+          height="30px"
+          src="../source/assets/Github.svg"
+        />
+      </a>
     </section>
 
     <section>
-        <div class="space"></div>
+      <div class="space"></div>
     </section>
 
     <script class="scripe" src="../source/javascript/script.js" defer></script>
-</body>
-
+  </body>
 </html>
