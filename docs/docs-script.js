@@ -13,7 +13,7 @@ async function showDocs(docType) {
         location.hash = "";
         try {
             const url =
-                "https://raw.githubusercontent.com/alifcommunity/Alif/refs/heads/Alif5.0/documents/إرشادات إستعمال ألف.md";
+                "https://raw.githubusercontent.com/alifcommunity/Alif/refs/heads/main/documents/إرشادات إستعمال ألف.md";
             const cacheKey = "doc-" + docType;
             let markdown = localStorage.getItem(cacheKey);
             let date = localStorage.getItem(cacheKey + "date");
@@ -102,7 +102,7 @@ async function showDocs(docType) {
             openHeadsButton.style.display = "none";
 
             // const res = await fetch(
-            //     "https://raw.githubusercontent.com/alifcommunity/Alif/refs/heads/Alif5.0/documents/قواعد مطابق ألف.md"
+            //     "https://raw.githubusercontent.com/alifcommunity/Alif/refs/heads/main/documents/قواعد مطابق ألف.md"
             // );
             // if (!res.ok) throw new Error("الملف غير موجود");
             // const docs = await res.text();
