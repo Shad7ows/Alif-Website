@@ -82,7 +82,7 @@ async function newDownload(currentOS, event) {
     let country = "Unknown";
     try {
       const locationResponse = await fetch(`https://ipinfo.io/${ip}/json`, {
-        signal: AbortSignal.timeout(3000) // Timeout after 3s
+        signal: AbortSignal.timeout(5000) // Timeout after 5s
       });
       if (locationResponse.ok) {
         const locationData = await locationResponse.json();
