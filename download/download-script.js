@@ -68,9 +68,15 @@ for (let i = 0; i < osData.length; i++) {
     `;
 }
 
+
 async function newDownload(currentOS, event) {
   event.preventDefault(); // Stop immediate navigation
   const downloadLink = event.target.href; // Get original download URL
+
+  // supabase
+  const supabaseUrl = "https://mntokubwootojjrkvlym.supabase.co";
+  const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1udG9rdWJ3b290b2pqcmt2bHltIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY1MTY2NTUsImV4cCI6MjA2MjA5MjY1NX0.3p9FSzibsKmXZDz7lnFG4v4AB0m6AApnH0JTlt6tliw";
+  let supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
   try {
     // Get IP
@@ -88,12 +94,10 @@ async function newDownload(currentOS, event) {
         const locationData = await locationResponse.json();
         country = `${locationData.country}/${locationData.city}/${locationData.timezone}`;
       }
-    } catch {} // Fail silently if blocked
+    } catch {}; // Fail silently if blocked
 
     // Supabase Insert
-    await supabase
-      .from("downloads")
-      .insert({
+    await supabase.from("downloads").insert({
         IP: ip,
         النظام_المحمل: currentOS,
         نظام_المستخدم: getOS(),
