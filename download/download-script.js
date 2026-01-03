@@ -47,13 +47,13 @@ const osData = [
 
 const cardsDiv = document.querySelector(".os");
 const currentOS = getOS();
-const middleOrder = Math.ceil(osData.length / 2);
+let pos = 0;
 for (let i = 0; i < osData.length; i++) {
   const isCurrent = osData[i].os === currentOS;
   cardsDiv.innerHTML += `
         <div class="card" style="
-            order: ${isCurrent ? middleOrder : i >= middleOrder ? i + 1 : i};
-            ${isCurrent ? "scale: 1.05;" : ""}
+            order: ${isCurrent ? 1 : pos};
+            ${isCurrent ? "scale: 1.06;" : ""}
         ">
             <img alt="${osData[i].name}" class="logo" src="../source/assets/${
     osData[i].img
@@ -66,6 +66,7 @@ for (let i = 0; i < osData.length; i++) {
             <h5 class="vers">لغة ألف | نـ5.1.0</h5>
         </div>
     `;
+    if (!isCurrent) { pos += 2};
 }
 
 
