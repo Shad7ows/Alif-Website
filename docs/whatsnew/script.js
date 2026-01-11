@@ -1,4 +1,4 @@
-// import { highlightAlif, copyCode } from "../docs-script.js";
+import { highlightAlif, copyCode } from "../docs-script.js";
 
 const versionsDiv = document.querySelector(".versions");
 let lastVer = document.getElementById("lastVer");
