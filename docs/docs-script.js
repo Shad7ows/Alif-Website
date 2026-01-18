@@ -117,7 +117,7 @@ async function showDocs(docType) {
         }
     }
 }
-// التلوين Lazy
+
 function observeCodeBlocks() {
     const codes = document.querySelectorAll("code");
     const observer = new IntersectionObserver(
@@ -136,12 +136,12 @@ function observeCodeBlocks() {
                         block.appendChild(copyButton);
                         block.dataset.enhanced = "1";
                     }
-                    obs.unobserve(block); // عشان مينفذش تاني
+                    obs.unobserve(block);
                 }
             });
         },
         { threshold: 0.2 }
-    ); // يبدأ التلوين لما 20% من الكود يظهر
+    );
 
     codes.forEach((block) => observer.observe(block));
 }
@@ -242,6 +242,7 @@ export function copyCode(but, code) {
         .replace(/&gt;/g, ">")
         .replace(/&lt;/g, "<")
         .replace(/<br>/g, "\n")
+        .replace("نسخ", "")
         .replace(/<\/?span[^>]*>/g, "");
     navigator.clipboard.writeText(formatted);
     but.textContent = "نُسِخ";

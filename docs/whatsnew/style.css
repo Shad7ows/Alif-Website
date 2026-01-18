@@ -44,6 +44,7 @@
 
 .versions {
     padding: 20px 30px;
+    margin-bottom: 20px;
 }
 .versions h2 {
     display: flex;
