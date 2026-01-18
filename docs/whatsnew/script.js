@@ -6,7 +6,7 @@ let lastVer = document.getElementById("lastVer");
 async function getFileTxt() {
     try {
         const res = await fetch(
-            "https://raw.githubusercontent.com/Shad7ows/Alif/main/documents/ما الجديد.md",
+            "https://raw.githubusercontent.com/alifcommunity/Alif/main/documents/ما الجديد.md",
         );
         if (!res.ok) throw new Error("لم يتم تحميل الملف");
         let fileTxt = await res.text();
