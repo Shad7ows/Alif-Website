@@ -119,31 +119,39 @@ async function showDocs(docType) {
 }
 
 function observeCodeBlocks() {
-    const codes = document.querySelectorAll("code");
-    const observer = new IntersectionObserver(
-        (entries, obs) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const block = entry.target;
-                    if (!block.dataset.enhanced) {
-                        block.innerHTML = highlightAlif(block.innerText);
-                        const copyButton = document.createElement("div");
-                        copyButton.className = "copy";
-                        copyButton.innerHTML = "نسخ";
-                        copyButton.addEventListener("click", () =>
-                            copyCode(copyButton, block.innerText)
-                        );
-                        block.appendChild(copyButton);
-                        block.dataset.enhanced = "1";
-                    }
-                    obs.unobserve(block);
+// Only target proper code blocks, not inline code
+const codeContainers = document.querySelectorAll("pre");
+const observer = new IntersectionObserver(
+    (entries, obs) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const container = entry.target;
+                const codeBlock = container.querySelector("code");
+                
+                if (!container.dataset.enhanced && codeBlock) {
+                    // Highlight the code
+                    codeBlock.innerHTML = highlightAlif(codeBlock.innerText);
+                    
+                    // Create copy button
+                    const copyButton = document.createElement("div");
+                    copyButton.className = "copy";
+                    copyButton.innerHTML = "نسخ";
+                    copyButton.addEventListener("click", () =>
+                        copyCode(copyButton, codeBlock.innerText)
+                    );
+                    
+                    // Add copy button to the container
+                    container.appendChild(copyButton);
+                    container.dataset.enhanced = "1";
                 }
-            });
-        },
-        { threshold: 0.2 }
-    );
+                obs.unobserve(container);
+            }
+        });
+    },
+    { threshold: 0.2 }
+);
 
-    codes.forEach((block) => observer.observe(block));
+codeContainers.forEach((container) => observer.observe(container));
 }
 
 // التبديل بين المستندات
