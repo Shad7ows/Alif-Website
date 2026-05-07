@@ -24,7 +24,7 @@
     font-size: 17px;
 }
 .release .top p a,
-.versions h2 a {
+.version h2 a {
     text-decoration: underline;
     color: var(--light-bur--);
 }
@@ -42,11 +42,11 @@
     background-color: #fffd;
 }
 
-.versions {
+.version {
     padding: 20px 30px;
     margin-bottom: 20px;
 }
-.versions h2 {
+.version h2 {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -55,12 +55,12 @@
     font-size: 20px;
     margin-bottom: 10px;
 }
-.versions h2 .date {
+.version h2 .date {
     color: gray;
     font-size: 15px;
 }
-.versions h2 a {
-    font-size: 13px;
+.version h2 a {
+    font-size: 0.7em;
 }
 
 li {
@@ -81,8 +81,8 @@ code {
 }
 
 @media screen and (max-width: 1000px) {
-    .versions {
-        width: 90%;
+    #versions-container {
+        width: 100%;
     }
 }
 @media screen and (max-width: 500px) {
@@ -96,13 +96,13 @@ code {
         padding: 10px 20px;
         font-size: 13px;
     }
-    .versions {
+    .version {
         width: 80%;
     }
-    .versions h2 {
+    .version h2 {
         font-size: 15px;
     }
-    .versions h2 .date {
+    .version h2 .date {
         font-size: 12px;
     }
 }

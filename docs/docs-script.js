@@ -1,3 +1,9 @@
+import { marked } from "../source/javascript/markdown.js";
+
+let alifRepo = "alifcommunity/Alif";
+export let alifRowRepoLink = `https://raw.githubusercontent.com/${alifRepo}/refs/heads/main/documents`;
+export let alifRepoLink = `https://github.com/${alifRepo}`;
+
 const heads = document.querySelector(".heads");
 const CatDiv = document.querySelector("#Catalogue");
 const GramDiv = document.getElementById("Grammar");
@@ -12,8 +18,7 @@ async function showDocs(docType) {
     if (docType === "إرشادات استعمال ألف") {
         location.hash = "";
         try {
-            const url =
-                "https://raw.githubusercontent.com/alifcommunity/Alif/refs/heads/main/documents/إرشادات إستعمال ألف.md";
+            const url = `${alifRowRepoLink}/إرشادات إستعمال ألف.md`;
             const cacheKey = "doc-" + docType;
             let markdown = localStorage.getItem(cacheKey);
             let date = localStorage.getItem(cacheKey + "date");
@@ -31,6 +36,10 @@ async function showDocs(docType) {
             CatDiv.style.display = "block";
             headingsDiv.style.display = "flex";
             if (window.innerWidth < 500) openHeadsButton.style.display = "flex";
+            marked.setOptions({
+                gfm: true,
+                breaks: true,
+            });
             CatDiv.innerHTML = marked.parse(markdown);
 
             // اضافة زر نسخ الشفرة وتلوين الشفرة
@@ -67,29 +76,26 @@ async function showDocs(docType) {
 
             // تلوين الزر مع القسم المعروض
             const links = heads.querySelectorAll(".section-link");
-            const sectionMap = {};
-            links.forEach((link) => (sectionMap[link.dataset.id] = link));
             const sections = CatDiv.querySelectorAll("ol li");
-            const offset = 20;
-            window.addEventListener("scroll", () => {
-                let currentSection = null;
-                let minTop = Infinity;
-                sections.forEach((sec) => {
-                    const rect = sec.getBoundingClientRect();
-                    if (rect.top >= offset && rect.top < minTop) {
-                        minTop = rect.top;
-                        currentSection = sec.id;
-                    }
-                });
-                if (currentSection) {
-                    links.forEach((link) => {
-                        link.style.color =
-                            link.dataset.id === currentSection
-                                ? "var(--bur--)"
-                                : "#fff";
+
+            const sectionObserver = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const currentSectionId = entry.target.id;
+                            links.forEach((link) => {
+                                link.style.color =
+                                    link.dataset.id === currentSectionId
+                                        ? "var(--bur--)"
+                                        : "#fff";
+                            });
+                        }
                     });
-                }
-            });
+                },
+                { rootMargin: "-20% 0px -80% 0px" },
+            );
+
+            sections.forEach((sec) => sectionObserver.observe(sec));
         } catch (e) {
             console.error(e.message);
         }
@@ -102,7 +108,7 @@ async function showDocs(docType) {
             openHeadsButton.style.display = "none";
 
             // const res = await fetch(
-            //     "https://raw.githubusercontent.com/alifcommunity/Alif/refs/heads/main/documents/قواعد مطابق ألف.md"
+            //     `${alifRowRepoLink}/قواعد مطابق ألف.md`
             // );
             // if (!res.ok) throw new Error("الملف غير موجود");
             // const docs = await res.text();
@@ -119,52 +125,56 @@ async function showDocs(docType) {
 }
 
 function observeCodeBlocks() {
-// Only target proper code blocks, not inline code
-const codeContainers = document.querySelectorAll("pre");
-const observer = new IntersectionObserver(
-    (entries, obs) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                const container = entry.target;
-                const codeBlock = container.querySelector("code");
-                
-                if (!container.dataset.enhanced && codeBlock) {
-                    // Highlight the code
-                    codeBlock.innerHTML = highlightAlif(codeBlock.innerText);
-                    
-                    // Create copy button
-                    const copyButton = document.createElement("div");
-                    copyButton.className = "copy";
-                    copyButton.innerHTML = "نسخ";
-                    copyButton.addEventListener("click", () =>
-                        copyCode(copyButton, codeBlock.innerText)
-                    );
-                    
-                    // Add copy button to the container
-                    container.appendChild(copyButton);
-                    container.dataset.enhanced = "1";
-                }
-                obs.unobserve(container);
-            }
-        });
-    },
-    { threshold: 0.2 }
-);
+    // Only target proper code blocks, not inline code
+    const codeContainers = document.querySelectorAll("pre");
+    const observer = new IntersectionObserver(
+        (entries, obs) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const container = entry.target;
+                    const codeBlock = container.querySelector("code");
 
-codeContainers.forEach((container) => observer.observe(container));
+                    if (!container.dataset.enhanced && codeBlock) {
+                        // Highlight the code
+                        codeBlock.innerHTML = highlightAlif(
+                            codeBlock.innerText,
+                        );
+
+                        // Create copy button
+                        const copyButton = document.createElement("div");
+                        copyButton.className = "copy";
+                        copyButton.innerHTML = "نسخ";
+                        copyButton.addEventListener("click", () =>
+                            copyCode(copyButton, codeBlock.innerText),
+                        );
+
+                        // Add copy button to the container
+                        container.appendChild(copyButton);
+                        container.dataset.enhanced = "1";
+                    }
+                    obs.unobserve(container);
+                }
+            });
+        },
+        { threshold: 0.2 },
+    );
+
+    codeContainers.forEach((container) => observer.observe(container));
 }
 
 // التبديل بين المستندات
 document.addEventListener("DOMContentLoaded", () => {
-    const docButtons = document.querySelectorAll(
-        "#window button[data-doc-type]"
-    );
-    docButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            const docType = button.getAttribute("data-doc-type");
-            showDocs(docType);
+    if (!document.getElementById("Grammar")) return;
+
+    const windowDiv = document.getElementById("window");
+    if (windowDiv) {
+        windowDiv.addEventListener("click", (e) => {
+            const button = e.target.closest("button[data-doc-type]");
+            if (button) {
+                showDocs(button.getAttribute("data-doc-type"));
+            }
         });
-    });
+    }
 
     const urlHash = decodeURIComponent(location.hash.replace("#", ""));
     if (urlHash === "قواعد_مطابق_ألف") showDocs("قواعد مطابق ألف");
@@ -190,70 +200,70 @@ document.addEventListener("click", (e) => {
     }
 });
 
-export function highlightAlif(code) {
-    const tokens = [
-        { regex: /alif\s/y, cls: "function" },
-        { regex: /-{1,2}[ء-يA-Za-z_][ء-يA-Za-z0-9_]*/y, cls: "explain" },
-        {
-            regex: /م?(['"])(?:\\.|(?!\1).)*?(?:\{.*?\}(?:\\.|(?!\1).)*?)*\1/y,
-            cls: "string",
-            inner: (match) =>
-                match.replace(
-                    /\{([^}]*)\}/g,
-                    (m, inside) =>
-                        `<span class="interp"><span class="mainC">{</span>${highlightAlif(
-                            inside
-                        )}<span class="mainC">}</span></span>`
-                ),
-        },
-        { regex: /!![^\r\n]*/y, cls: "explain" },
-        { regex: /#[^\r\n]*/y, cls: "comment" },
-        { regex: /\b\d+(?:\.\d+)?\b/y, cls: "number" },
-        {
-            regex: /(?<!\w)(دالة|اذا|إذا|استورد|حاول|خلل|نهاية|عام|ارجع|بينما|لأجل|لكل|لاجل|استمر|توقف|احذف|اوإذا|اواذا|والا|وإلا|صنف|الزمن|الرياضيات|نوع)(?!\w)/y,
-            cls: "keyword",
-        },
-        { regex: /\s*(صح|خطأ|خطا)(?=(?:\s|[\)\]]|$))/y, cls: "boolean" },
-        {
-            regex: /(?:\+=|-=|\*=|\/=|\^=|==|!=|<|>|\+|-|\||\*|\\|\^|=|و |او | ليس )/y,
-            cls: "operator",
-        },
-        { regex: /([ء-يA-Za-z_][ء-يA-Za-z0-9_]*)\s*(?=\()/y, cls: "function" },
-    ];
+const alifTokens = [
+    { regex: /alif\s/y, cls: "function" },
+    { regex: /-{1,2}[ء-يA-Za-z_][ء-يA-Za-z0-9_]*/y, cls: "explain" },
+    {
+        regex: /م?(['"])(?:\\.|(?!\1).)*?(?:\{.*?\}(?:\\.|(?!\1).)*?)*\1/y,
+        cls: "string",
+        inner: (match) =>
+            match.replace(
+                /\{([^}]*)\}/g,
+                (m, inside) =>
+                    `<span class="interp"><span class="mainC">{</span>${highlightAlif(
+                        inside,
+                    )}<span class="mainC">}</span></span>`,
+            ),
+    },
+    { regex: /!![^\r\n]*/y, cls: "explain" },
+    { regex: /#[^\r\n]*/y, cls: "comment" },
+    { regex: /\b\d+(?:\.\d+)?\b/y, cls: "number" },
+    {
+        regex: /(?<![\u0600-\u06FF])(دالة|اذا|إذا|استورد|حاول|خلل|نهاية|عام|ارجع|بينما|لأجل|لكل|لاجل|استمر|توقف|احذف|اوإذا|اواذا|والا|وإلا|صنف|الزمن|الرياضيات|نوع)(?![\u0600-\u06FF])/y,
+        cls: "keyword",
+    },
+    { regex: /\s*(صح|خطأ|خطا)(?=(?:\s|[\)\]]|$))/y, cls: "boolean" },
+    {
+        regex: /(?:\+=|-=|\*=|\/=|\^=|==|!=|<|>|\+|-|\||\*|\\|\^|=|و |او | ليس )/y,
+        cls: "operator",
+    },
+    { regex: /([ء-يA-Za-z_][ء-يA-Za-z0-9_]*)\s*(?=\()/y, cls: "function" },
+];
 
-    let out = "";
+export function highlightAlif(code) {
+    const out = [];
     let i = 0;
     while (i < code.length) {
         let hit = false;
-        for (const { regex, cls, inner } of tokens) {
+        for (const { regex, cls, inner } of alifTokens) {
             regex.lastIndex = i;
             const m = regex.exec(code);
             if (m && m.index === i) {
                 let content = inner ? inner(m[0]) : m[0];
-                out += `<span class="${cls}">${content}</span>`;
+                out.push(`<span class="${cls}">${content}</span>`);
                 i += m[0].length;
                 hit = true;
                 break;
             }
         }
         if (!hit) {
-            out += code[i] === "\n" ? "<br>" : code[i];
+            out.push(code[i] === "\n" ? "<br>" : code[i]);
             i++;
         }
     }
-    return out;
+    return out.join("");
 }
 
 // نسخ الشفرة
-export function copyCode(but, code) {
-    const formatted = code
-        .replace(/&gt;/g, ">")
-        .replace(/&lt;/g, "<")
-        .replace(/<br>/g, "\n")
-        .replace("نسخ", "")
-        .replace(/<\/?span[^>]*>/g, "");
-    navigator.clipboard.writeText(formatted);
-    but.textContent = "نُسِخ";
-    notify("تم النسخ إلى الحافظة");
-    setTimeout(() => (but.textContent = "نسخ"), 3000);
+export async function copyCode(but, text) {
+    try {
+        await navigator.clipboard.writeText(text);
+        but.textContent = "نُسِخ";
+        notify("تم النسخ إلى الحافظة");
+    } catch (err) {
+        console.error("فشل النسخ:", err.message);
+        notify("حدث خطأ أثناء النسخ");
+    } finally {
+        setTimeout(() => (but.textContent = "نسخ"), 3000);
+    }
 }
