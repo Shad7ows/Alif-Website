@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { NavLink } from "./NavLink";
 import { PrimaryButton } from "@/ui/PrimaryButton";
@@ -15,10 +18,28 @@ import { Logo } from "@/ui/Logo";
  * - Logo on the RIGHT (start in RTL = right side)
  * - Navigation links in the CENTER
  * - Auth buttons on the LEFT (end in RTL = left side)
+ * - Background appears only after scrolling down
  */
 export function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-800 bg-site-bg/95 backdrop-blur-md">
+    <header
+      className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
+        isScrolled
+          ? "border-gray-800 bg-site-bg backdrop-blur-md"
+          : "border-transparent bg-transparent"
+      }`}
+    >
       <div className="mx-auto flex h-22.5 max-w-[1440] items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo - Right side (start in RTL) */}
         <Link href="/">
