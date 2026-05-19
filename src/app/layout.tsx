@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Tajawal, Noto_Kufi_Arabic } from "next/font/google";
 import "@/styles/globals.css";
+import { Header } from "@/components/Header";
 
 const tajawal = Tajawal({
   variable: "--font-tajawal",
@@ -31,7 +32,10 @@ export default function RootLayout({
       dir="rtl"
       className={`${tajawal.variable} ${notoKufiArabic.variable}`}
     >
-      <body className="min-h-full flex flex-col antialiased">{children}</body>
+      <body className="min-h-full flex flex-col antialiased">
+        <Header />
+        <main className="flex flex-1 flex-col">{children}</main>
+      </body>
     </html>
   );
 }

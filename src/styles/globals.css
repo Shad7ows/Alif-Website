@@ -3,8 +3,11 @@
 @theme inline {
   --font-sans: var(--font-tajawal), Arial, Helvetica, sans-serif;
   --font-kufi: var(--font-noto-kufi-arabic), monospace;
+  --color-site-bg: #0C001C;
 }
 
 body {
   font-family: var(--font-tajawal), sans-serif;
+  background-color: #0C001C;
+  color: #EEEEEE;
 }
