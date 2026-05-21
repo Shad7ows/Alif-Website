@@ -19,7 +19,7 @@ export function SocialButton({
       target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel}
-      className="group relative flex h-11.25 w-11.25 items-center justify-center"
+      className="group relative flex h-12 w-12 items-center justify-center"
     >
       {/* Glow path in top right corner - behind the button */}
       <div className="pointer-events-none absolute top-0.5 right-0.5 z-0">
@@ -50,8 +50,8 @@ export function SocialButton({
 
       {/* Main Button Background & Border (Layered in the middle) */}
       <div
-        className="absolute inset-0 rounded-2xl border border-(--brd-color)/21
-        backdrop-blur-md transition-all duration-600 group-hover:border-(--brd-color)/45 z-10"
+        className="absolute inset-0 rounded-2xl border border-(--brd-color)/21 backdrop-blur-lg 
+        transition-all duration-500 group-hover:border-(--brd-color)/45 group-hover:bg-(--brd-color)/9 z-10"
         style={{ "--brd-color": bgColor } as React.CSSProperties}
       />
 
