@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { NavLink } from "./NavLink";
-import { PrimaryButton } from "@/ui/PrimaryButton";
-import { SecondaryButton } from "@/ui/SecondaryButton";
-import { Logo } from "@/ui/Logo";
+import { PrimaryButton } from "./ui/PrimaryButton";
+import { SecondaryButton } from "./ui/SecondaryButton";
+import { Logo } from "./ui/Logo";
 
 /**
  * Header component displayed on all pages
@@ -36,7 +36,7 @@ export function Header() {
     <header
       className={`sticky top-0 z-50 w-full border-b transition-all duration-600 ${
         isScrolled
-          ? "border-gray-800 bg-site-bg backdrop-blur-md"
+          ? "border-gray-800 bg-site-bg/90"
           : "border-transparent bg-transparent"
       }`}
     >

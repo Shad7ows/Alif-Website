@@ -1,5 +1,5 @@
-import { Logo } from "@/ui/Logo";
-import { SocialButton } from "./SocialButton";
+import { Logo } from "./ui/Logo";
+import { SocialButton } from "./ui/SocialButton";
 
 /**
  * Footer component displayed at the bottom of all pages
