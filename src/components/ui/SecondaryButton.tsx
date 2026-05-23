@@ -35,7 +35,7 @@ export function SecondaryButton({
         type={type}
         onClick={onClick}
         className={`
-          px-3 rounded-2xl h-12.5 w-35 font-medium transition-all cursor-pointer text-[16px] z-10
+          px-3 rounded-2xl h-12.5 w-35 font-medium transition-all cursor-pointer text-[1rem] z-10
           relative text-[#eeeeee] bg-[#247BFF]/3 backdrop-blur-md
         `.trim()}
       >

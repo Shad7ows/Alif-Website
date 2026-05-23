@@ -28,8 +28,8 @@ export function PrimaryButton({
       type={type}
       onClick={onClick}
       className={`
-        px-3 rounded-2xl h-12.5 w-35 font-medium transition-all cursor-pointer text-[16px]
-        bg-[#247BFF] text-[#EEEEEE] hover:bg-[#1a6de8] shadow-[0_0_36px_rgba(32,121,255,0.9)]
+        px-3 rounded-2xl h-12.5 w-35 font-medium transition-all cursor-pointer text-[1rem]
+        bg-[#247BFF] text-[#EEEEEE] hover:bg-[#1a6de8] shadow-[0_0_2.25rem_rgba(32,121,255,0.9)]
         ${className}
       `.trim()}
     >

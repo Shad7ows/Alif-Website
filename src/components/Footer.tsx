@@ -177,7 +177,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-7 border-t border-gray-900 pt-1 text-[14px]">
+        <div className="mt-7 border-t border-gray-900 pt-1 text-[0.875rem]">
           <div className="flex h-16 flex-col items-center justify-between gap-4 md:flex-row">
             <p className="text-[#9C9C9C] font-tajawal">
               صُنع بـ 💙 من مطوري ألف – جميع الحقوق محفوظة © 2023

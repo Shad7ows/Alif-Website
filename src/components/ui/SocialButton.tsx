@@ -24,13 +24,13 @@ export function SocialButton({
       {/* Glow path in top right corner - behind the button */}
       <div className="pointer-events-none absolute top-0.5 right-0.5 z-0">
         <svg
-          width="25"
-          height="25"
+          width="1.5rem"
+          height="1.5rem"
           viewBox="0 0 22 22"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           style={{
-            filter: "blur(9px)",
+            filter: "blur(0.5625rem)",
             position: "absolute",
             top: 0,
             right: 0,
@@ -61,6 +61,7 @@ export function SocialButton({
         alt={ariaLabel}
         width={23}
         height={23}
+        style={{width: '1.5rem', height:'1.5rem'}}
         className="relative z-10"
       />
     </a>

@@ -3,12 +3,12 @@ import { SecondaryButton } from "@/components/ui/SecondaryButton";
 
 export default function Home() {
   return (
-    <div className=" relative flex min-h-270 flex-col items-center justify-center bg-site-bg overflow-hidden">
+    <div className=" relative flex h-auto min-h-160 max-h-300 flex-col items-center justify-center bg-site-bg overflow-hidden">
       {/* Main Content Grid */}
       <div className="relative z-10 w-full max-w-360 mx-auto px-8">
         <div className="grid grid-cols-2 h-full">
           {/* Right Block - Content */}
-          <div className="flex flex-col items-start justify-center gap-8">
+          <div className="flex flex-col items-start justify-center gap-1">
             {/* Release Badge */}
             <div className="inline-flex items-center justify-center gap-2 px-4 py-2">
               <span className="absolute w-6 h-6 bg-[#247BFF] right-7 blur-md rounded-full z-0"></span>
@@ -26,7 +26,7 @@ export default function Home() {
                   <br />
                   أصبحت أسهل
                 </span>
-                <span className="absolute w-45 h-15 rounded-full left-0 bottom-3 bg-[#00F2FF] blur-[125px]"></span>
+                <span className="absolute w-45 h-15 rounded-full left-0 bottom-3 bg-[#00F2FF] blur-[7.5rem]"></span>
               </h1>
             </div>
             {/* Description Text */}
@@ -36,9 +36,9 @@ export default function Home() {
               آفاق جديدة في البرمجة
             </p>
             {/* Paddle Components (Info Cards) */}
-            <div className="flex gap-6 mt-4">
+            <div className="flex gap-6 mt-12">
               {/* Version Card */}
-              <div className="flex flex-col items-center justify-center w-42 h-19 rounded-[21px] border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md">
+              <div className="flex flex-col items-center justify-center w-42 h-19 rounded-[1.3rem] border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md">
                 <span className="text-2xl font-bold text-[#247BFF] font-tajawal">
                   5.4
                 </span>
@@ -48,7 +48,7 @@ export default function Home() {
               </div>
 
               {/* Built With Card */}
-              <div className="flex flex-col items-center justify-center w-42 h-19 rounded-[21px] border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md">
+              <div className="flex flex-col items-center justify-center w-42 h-19 rounded-[1.3rem] border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md">
                 <span
                   dir="ltr"
                   className="text-2xl font-bold text-[#247BFF] font-tajawal"
@@ -60,7 +60,7 @@ export default function Home() {
                 </span>
               </div>
               {/* Built With Card */}
-              <div className="flex flex-col items-center justify-center w-42 h-19 rounded-[21px] border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md">
+              <div className="flex flex-col items-center justify-center w-42 h-19 rounded-[1.3rem] border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md">
                 <span
                   dir="ltr"
                   className="text-2xl font-bold text-[#247BFF] font-tajawal"
@@ -73,7 +73,7 @@ export default function Home() {
               </div>
             </div>
             {/* Buttons */}
-            <div className="flex gap-6 mt-8">
+            <div className="flex gap-6 mt-12">
               {/* Primary Button */}
               <PrimaryButton>تحميل اللغة</PrimaryButton>
 

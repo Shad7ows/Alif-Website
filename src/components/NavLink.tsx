@@ -23,7 +23,7 @@ export function NavLink({ href, children }: NavLinkProps) {
     <Link
       href={href}
       className={`
-        px-4 py-2 rounded-md font-medium transition-all cursor-pointer text-[16px]
+        px-4 py-2 rounded-md font-medium transition-all cursor-pointer text-[1rem]
         ${
           pathname === href
             ? "text-[#247BFF]"
