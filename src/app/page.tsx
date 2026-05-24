@@ -1,9 +1,10 @@
 import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
+import ArabicCodeEditor from "@/components/ArabicCodeEditor";
 
 export default function Home() {
   return (
-    <div className=" relative flex h-auto min-h-160 max-h-300 flex-col items-center justify-center bg-site-bg overflow-hidden">
+    <div className="relative flex h-auto min-h-180 max-h-300 flex-col items-center justify-center bg-site-bg overflow-hidden">
       {/* Main Content Grid */}
       <div className="relative z-10 w-full max-w-360 mx-auto px-8">
         <div className="grid grid-cols-2 h-full">
@@ -40,7 +41,7 @@ export default function Home() {
               {/* Version Card */}
               <div className="flex flex-col items-center justify-center w-42 h-19 rounded-[1.3rem] border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md">
                 <span className="text-2xl font-bold text-[#247BFF] font-tajawal">
-                  5.4
+                  5.3
                 </span>
                 <span className="text-[#EEEEEE]/70 text-sm font-tajawal">
                   الإصدار
@@ -81,8 +82,10 @@ export default function Home() {
               <SecondaryButton>اكتشف المزيد</SecondaryButton>
             </div>
           </div>
-          {/* Left Block - Empty */}
-          <div />
+          {/* Left Block - Code Editor */}
+          <div className="flex items-center justify-center">
+            <ArabicCodeEditor />
+          </div>
         </div>
       </div>
       {/* Scroll indicator */}

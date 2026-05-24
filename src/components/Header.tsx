@@ -34,7 +34,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full border-b transition-all duration-600 ${
+      className={`fixed top-0 z-50 w-full self-center border-b transition-all duration-600 ${
         isScrolled
           ? "border-gray-800 bg-site-bg/90"
           : "border-transparent bg-transparent"
