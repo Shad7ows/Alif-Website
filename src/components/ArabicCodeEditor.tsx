@@ -39,12 +39,12 @@ const codeExamples: CodeExample[] = [
     title: "حلقة تكرار",
     code: `# حلقة تكرار بسيطة
 لكل رقم في مدى(1, 3):
-    اطبع("العدد: ", رقم)
+      اطبع("العدد: ", رقم)
 
 # مجموع الأعداد
 مجموع = 0
 لكل رقم في مدى(1, 11):
-    مجموع += رقم
+      مجموع += رقم
 اطبع("المجموع: ",مجموع)`,
     output: `العدد: 1
 العدد: 2
@@ -54,15 +54,15 @@ const codeExamples: CodeExample[] = [
     title: "دالة وشرط",
     code: `# تعريف دالة
 دالة احسب_مساحة(طول, عرض):
-    مساحة = طول * عرض
-    ارجع مساحة
+      مساحة = طول * عرض
+      ارجع مساحة
 
 # استخدام الدالة
 مساحة = احسب_مساحة(5, 3)
 إذا مساحة > 10:
-    اطبع("المساحة كبيرة: ", مساحة)
+      اطبع("المساحة كبيرة: ", مساحة)
 وإلا:
-    اطبع("المساحة صغيرة")`,
+      اطبع("المساحة صغيرة")`,
     output: `المساحة كبيرة: 15`,
   },
 ];
@@ -207,7 +207,11 @@ function SyntaxHighlightedCode({ code }: { code: string }) {
           <span className="select-none text-white/20 text-right w-8 shrink-0 text-sm leading-6 font-mono">
             {i + 1}
           </span>
-          <span dir="rtl" className="flex-1 text-sm leading-6">
+          <span
+            dir="rtl"
+            className="flex-1 text-sm leading-6"
+            style={{ whiteSpace: "pre-wrap" }}
+          >
             {tokenizeLine(line).map((token, j) => (
               <span
                 key={j}
