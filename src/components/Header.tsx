@@ -40,7 +40,7 @@ export function Header() {
           : "border-transparent bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-22.5 w-full items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-22.5 w-full max-w-360 items-center justify-between px-8">
         {/* Logo - Right side (start in RTL) */}
         <Link href="/">
           <Logo />
