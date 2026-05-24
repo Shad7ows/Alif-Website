@@ -1,4 +1,5 @@
 import Image from "next/image";
+import AlifLogo from "@/assets/icons/AlifLogo.svg";
 
 /**
  * Alif Logo component
@@ -12,7 +13,7 @@ export function Logo({ className }: { className?: string }) {
     <div className={`relative inline-block ${className ?? ""}`}>
       {/* Blurred background copy - creates the glow */}
       <Image
-        src="/AlifLogo.svg"
+        src={AlifLogo}
         alt=""
         width={60}
         height={47}
@@ -22,7 +23,7 @@ export function Logo({ className }: { className?: string }) {
 
       {/* Sharp foreground copy */}
       <Image
-        src="/AlifLogo.svg"
+        src={AlifLogo}
         alt="ألف"
         width={60}
         height={47}

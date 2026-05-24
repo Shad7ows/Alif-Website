@@ -1,5 +1,9 @@
 import { Logo } from "./ui/Logo";
 import { SocialButton } from "./ui/SocialButton";
+import GitHubIcon from "@/assets/icons/github.svg";
+import TelegramIcon from "@/assets/icons/telegram.svg";
+import YouTubeIcon from "@/assets/icons/youtube.svg";
+import EmailIcon from "@/assets/icons/email.svg";
 
 /**
  * Footer component displayed at the bottom of all pages
@@ -25,25 +29,25 @@ export function Footer() {
             <div className="flex gap-5">
               <SocialButton
                 href="https://github.com"
-                icon="/github.svg"
+                icon={GitHubIcon}
                 bgColor="#FF00F2"
                 ariaLabel="GitHub"
               />
               <SocialButton
                 href="https://t.me"
-                icon="/telegram.svg"
+                icon={TelegramIcon}
                 bgColor="#00F2FF"
                 ariaLabel="Telegram"
               />
               <SocialButton
                 href="https://youtube.com"
-                icon="/youtube.svg"
+                icon={YouTubeIcon}
                 bgColor="#FF0000"
                 ariaLabel="YouTube"
               />
               <SocialButton
                 href="mailto:aliflang47@gmail.com"
-                icon="/email.svg"
+                icon={EmailIcon}
                 bgColor="#33FF00"
                 ariaLabel="Email"
               />
