@@ -16,9 +16,9 @@ import EmailIcon from "@/assets/icons/email.svg";
 export function Footer() {
   return (
     <footer className="w-full bg-site-bg py-2">
-      <div className="mx-auto max-w-360 px-4 sm:px-6 lg:px-8">
+      <div className="flex mx-auto w-full flex-col items-center justify-center">
         {/* Top Section */}
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-6">
+        <div className="grid w-full max-w-360 grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-6">
           {/* Logo and Description - Right side in RTL */}
           <div className="flex flex-col items-start gap-6 lg:col-span-3">
             <Logo />
@@ -181,8 +181,8 @@ export function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-7 border-t border-gray-900 pt-1 text-[0.875rem]">
-          <div className="flex h-16 flex-col items-center justify-between gap-4 md:flex-row">
+        <div className="flex mt-9 w-full items-center justify-center border-t border-gray-900 pt-1 text-[0.875rem]">
+          <div className="flex h-16 w-full max-w-360 flex-col items-center justify-between md:flex-row">
             <p className="text-[#9C9C9C] font-tajawal">
               صُنع بـ 💙 من مطوري ألف – جميع الحقوق محفوظة © 2023
             </p>
