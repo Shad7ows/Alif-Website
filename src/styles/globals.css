@@ -45,7 +45,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-primary-deep);
+  background: var(--color-accent-primary);
 }
 
 * {

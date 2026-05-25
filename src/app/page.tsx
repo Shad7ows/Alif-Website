@@ -1,6 +1,7 @@
 import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
 import ArabicCodeEditor from "@/components/ArabicCodeEditor";
+import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
   return (
@@ -100,6 +101,8 @@ export default function Home() {
           <div className="w-1 h-2 rounded-full bg-[#247BFF] animate-bounce" />
         </div>
       </div>
+      {/* Back to Top Button */}
+      <BackToTop />
     </div>
   );
 }
