@@ -18,11 +18,11 @@ export function Footer() {
     <footer className="w-full bg-site-bg py-2">
       <div className="flex mx-auto w-full flex-col items-center justify-center">
         {/* Top Section */}
-        <div className="grid w-full max-w-360 grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-6">
+        <div className="grid w-full max-w-360 grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-6 px-9">
           {/* Logo and Description - Right side in RTL */}
           <div className="flex flex-col items-start gap-6 lg:col-span-3">
             <Logo />
-            <p className="max-w-sm text-[#BBBBBB] leading-relaxed text-right font-tajawal">
+            <p className="max-w-sm text-text-secondary leading-relaxed text-right font-tajawal">
               ألف هي أول لغة برمجة عربية متكاملة، مبنية بـ C++ وتعتمد قواعد
               Python. نؤمن بأن البرمجة يجب أن تكون متاحة للجميع بلغتهم الأم.
             </p>
@@ -56,12 +56,12 @@ export function Footer() {
 
           {/* Language Column */}
           <div className="flex w-35 flex-col items-start gap-4">
-            <h3 className="text-lg font-bold text-[#EEEEEE]">اللغة</h3>
+            <h3 className="text-lg font-bold text-text">اللغة</h3>
             <ul className="flex flex-col gap-3 mr-3">
               <li>
                 <a
                   href="/docs"
-                  className="text-[#BBBBBB] transition-colors hover:text-[#247BFF]"
+                  className="text-text-secondary transition-colors hover:text-primary"
                 >
                   الوثائق
                 </a>
@@ -69,7 +69,7 @@ export function Footer() {
               <li>
                 <a
                   href="/libraries"
-                  className="text-[#BBBBBB] transition-colors hover:text-[#247BFF]"
+                  className="text-text-secondary transition-colors hover:text-primary"
                 >
                   المكتبات القياسية
                 </a>
@@ -77,7 +77,7 @@ export function Footer() {
               <li>
                 <a
                   href="/roadmap"
-                  className="text-[#BBBBBB] transition-colors hover:text-[#247BFF]"
+                  className="text-text-secondary transition-colors hover:text-primary"
                 >
                   خارطة الطريق
                 </a>
@@ -87,12 +87,12 @@ export function Footer() {
 
           {/* Community Column */}
           <div className="flex w-35 flex-col items-start gap-4">
-            <h3 className="text-lg font-bold text-[#EEEEEE]">المجتمع</h3>
+            <h3 className="text-lg font-bold text-text">المجتمع</h3>
             <ul className="flex flex-col gap-3 mr-3">
               <li>
                 <a
                   href="/forum"
-                  className="text-[#BBBBBB] transition-colors hover:text-[#247BFF]"
+                  className="text-text-secondary transition-colors hover:text-primary"
                 >
                   المنتدى
                 </a>
@@ -100,7 +100,7 @@ export function Footer() {
               <li>
                 <a
                   href="https://t.me"
-                  className="text-[#BBBBBB] transition-colors hover:text-[#247BFF]"
+                  className="text-text-secondary transition-colors hover:text-primary"
                 >
                   Telegram
                 </a>
@@ -108,7 +108,7 @@ export function Footer() {
               <li>
                 <a
                   href="https://github.com"
-                  className="text-[#BBBBBB] transition-colors hover:text-[#247BFF]"
+                  className="text-text-secondary transition-colors hover:text-primary"
                 >
                   Github
                 </a>
@@ -116,7 +116,7 @@ export function Footer() {
               <li>
                 <a
                   href="/contribute"
-                  className="text-[#BBBBBB] transition-colors hover:text-[#247BFF]"
+                  className="text-text-secondary transition-colors hover:text-primary"
                 >
                   المساهمة
                 </a>
@@ -124,7 +124,7 @@ export function Footer() {
               <li>
                 <a
                   href="/blog"
-                  className="text-[#BBBBBB] transition-colors hover:text-[#247BFF]"
+                  className="text-text-secondary transition-colors hover:text-primary"
                 >
                   المدونة
                 </a>
@@ -134,12 +134,12 @@ export function Footer() {
 
           {/* Resources Column */}
           <div className="flex w-35 flex-col items-start gap-4">
-            <h3 className="text-lg font-bold text-[#EEEEEE]">المصادر</h3>
+            <h3 className="text-lg font-bold text-text">المصادر</h3>
             <ul className="flex flex-col gap-3 mr-3">
               <li>
                 <a
                   href="/tutorials"
-                  className="text-[#BBBBBB] transition-colors hover:text-[#247BFF]"
+                  className="text-text-secondary transition-colors hover:text-primary"
                 >
                   البرامج التعليمية
                 </a>
@@ -147,7 +147,7 @@ export function Footer() {
               <li>
                 <a
                   href="/youtube"
-                  className="text-[#BBBBBB] transition-colors hover:text-[#247BFF]"
+                  className="text-text-secondary transition-colors hover:text-primary"
                 >
                   قناة اليوتيوب
                 </a>
@@ -155,7 +155,7 @@ export function Footer() {
               <li>
                 <a
                   href="/examples"
-                  className="text-[#BBBBBB] transition-colors hover:text-[#247BFF]"
+                  className="text-text-secondary transition-colors hover:text-primary"
                 >
                   أمثلة
                 </a>
@@ -163,7 +163,7 @@ export function Footer() {
               <li>
                 <a
                   href="/open-source"
-                  className="text-[#BBBBBB] transition-colors hover:text-[#247BFF]"
+                  className="text-text-secondary transition-colors hover:text-primary"
                 >
                   مشاريع مفتوحة
                 </a>
@@ -171,7 +171,7 @@ export function Footer() {
               <li>
                 <a
                   href="/faq"
-                  className="text-[#BBBBBB] transition-colors hover:text-[#247BFF]"
+                  className="text-text-secondary transition-colors hover:text-primary"
                 >
                   الأسئلة الشائعة
                 </a>
@@ -181,7 +181,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="flex mt-9 w-full items-center justify-center border-t border-gray-900 pt-1 text-[0.875rem]">
+        <div className="flex mt-9 px-9 w-full items-center justify-center border-t border-gray-900 pt-1 text-[0.875rem]">
           <div className="flex h-16 w-full max-w-360 flex-col items-center justify-between md:flex-row">
             <p className="text-[#9C9C9C] font-tajawal">
               صُنع بـ 💙 من مطوري ألف – جميع الحقوق محفوظة © 2023
@@ -189,19 +189,19 @@ export function Footer() {
             <div className="flex items-center gap-8">
               <a
                 href="/license"
-                className="text-[#9C9C9C] transition-colors hover:text-[#247BFF] font-tajawal"
+                className="text-[#9C9C9C] transition-colors hover:text-primary font-tajawal"
               >
                 رخصة ألف
               </a>
               <a
                 href="/terms"
-                className="text-[#9C9C9C] transition-colors hover:text-[#247BFF] font-tajawal"
+                className="text-[#9C9C9C] transition-colors hover:text-primary font-tajawal"
               >
                 شروط الإستخدم
               </a>
               <a
                 href="/privacy"
-                className="text-[#9C9C9C] transition-colors hover:text-[#247BFF] font-tajawal"
+                className="text-[#9C9C9C] transition-colors hover:text-primary font-tajawal"
               >
                 سياسة الخصوصية
               </a>
