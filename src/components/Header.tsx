@@ -6,6 +6,7 @@ import { NavLink } from "./NavLink";
 import { PrimaryButton } from "./ui/PrimaryButton";
 import { SecondaryButton } from "./ui/SecondaryButton";
 import { Logo } from "./ui/Logo";
+import FeatureNotification from "./FeatureNotification";
 
 /**
  * Header component displayed on all pages
@@ -22,6 +23,7 @@ import { Logo } from "./ui/Logo";
  */
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showNotification, setShowNotification] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,9 +59,24 @@ export function Header() {
 
         {/* Auth Buttons - Left side (end in RTL) */}
         <div className="flex items-center gap-9">
-          <SecondaryButton>تسجيل الدخول</SecondaryButton>
-          <PrimaryButton>تسجيل حساب</PrimaryButton>
+          <SecondaryButton onClick={() => setShowNotification(true)}>
+            تسجيل الدخول
+          </SecondaryButton>
+          <PrimaryButton onClick={() => setShowNotification(true)}>
+            تسجيل حساب
+          </PrimaryButton>
         </div>
+
+        {/* Feature Notification */}
+        {showNotification && (
+          <FeatureNotification
+            title="قيد التطوير"
+            message="نعمل حالياً على نظام تسجيل حساب ضمن موقع ألف ونحتاج بعض الوقت للإنتهاء منه
+            لا تذهب بعيداً، قد تتوفر الميزة في أي وقت"
+            duration={5000}
+            onDismiss={() => setShowNotification(false)}
+          />
+        )}
       </div>
     </header>
   );

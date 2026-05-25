@@ -4,7 +4,7 @@ import ArabicCodeEditor from "@/components/ArabicCodeEditor";
 
 export default function Home() {
   return (
-    <div className="relative flex h-svh min-h-180 max-h-300 flex-col items-center justify-center bg-site-bg overflow-hidden">
+    <div className="relative flex h-svh min-h-180 max-h-320 flex-col items-center justify-center bg-site-bg overflow-hidden">
       {/* Main Content Grid */}
       <div className="relative z-10 w-full max-w-360 mx-auto px-8">
         <div className="grid grid-cols-2 h-full">
