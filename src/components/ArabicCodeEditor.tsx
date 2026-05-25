@@ -1,11 +1,6 @@
 "use client";
 
 import { useState, useRef } from "react";
-import Image from "next/image";
-import CheckIcon from "@/assets/icons/check.svg";
-import CopyIcon from "@/assets/icons/copy.svg";
-import RotateIcon from "@/assets/icons/rotate-ccw.svg";
-import PlayIcon from "@/assets/icons/play.svg";
 
 type TokenType =
   | "keyword"
@@ -75,15 +70,7 @@ function tokenizeLine(line: string): Array<{ text: string; type: TokenType }> {
     return tokens;
   }
 
-  const keywords = [
-    "لكل",
-    "في",
-    "مدى",
-    "إذا",
-    "وإلا",
-    "دالة",
-    "ارجع",
-  ];
+  const keywords = ["لكل", "في", "مدى", "إذا", "وإلا", "دالة", "ارجع"];
   const functions = ["اطبع", "نص", "احسب_مساحة"];
 
   let remaining = line;
@@ -158,7 +145,9 @@ function tokenizeLine(line: string): Array<{ text: string; type: TokenType }> {
 
     if (!matched) {
       // Arabic/Latin words (variables, identifiers)
-      const wordMatch = remaining.match(/^([\u0600-\u06FFa-zA-Z_][\u0600-\u06FFa-zA-Z_0-9]*)/);
+      const wordMatch = remaining.match(
+        /^([\u0600-\u06FFa-zA-Z_][\u0600-\u06FFa-zA-Z_0-9]*)/,
+      );
       if (wordMatch) {
         tokens.push({ text: wordMatch[1], type: "arabic" });
         remaining = remaining.slice(wordMatch[1].length);
@@ -281,26 +270,66 @@ export default function ArabicCodeEditor() {
       >
         {/* Editor Header */}
         <div className="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-white/3">
-
-        {/* Action buttons */}
+          {/* Action buttons */}
           <div className="flex items-center gap-2">
             <button
               onClick={handleCopy}
-              className="p-1.5 rounded-md hover:bg-white/5 transition-all"
+              className="p-1.5 rounded-md text-text-secondary hover:bg-white/5 transition-all hover:text-accent-primary"
               title="نسخ الشيفرة"
             >
               {copied ? (
-                <Image src={CheckIcon} alt="تم النسخ" width={14} height={14} />
+                // تم النسخ
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#247BFF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
               ) : (
-                <Image src={CopyIcon} alt="نسخ" width={14} height={14} />
+                // نسخ
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+                  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+                </svg>
               )}
             </button>
             <button
               onClick={handleReset}
-              className="p-1.5 rounded-md hover:bg-white/5 transition-all"
+              className="p-1.5 rounded-md text-text-secondary hover:bg-white/5 transition-all hover:text-accent-primary"
               title="إعادة تعيين"
             >
-              <Image src={RotateIcon} alt="إعادة تعيين الشيفرة" width={14} height={14} />
+              {/* إعادة تعيين الشيفرة */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                <path d="M3 3v5h5" />
+              </svg>
             </button>
           </div>
 
@@ -310,10 +339,10 @@ export default function ArabicCodeEditor() {
               <button
                 key={i}
                 onClick={() => handleExampleChange(i)}
-                className={`px-3 py-1 rounded-md text-xs font-medium transition-all ${
+                className={`px-3 py-1 rounded-md text-xs font-medium border-0 transition-all duration-300 ${
                   activeExample === i
                     ? "bg-[#247BFF]/18 text-[#247BFF] border border-[#247BFF]/40"
-                    : "text-white/45 hover:text-white/70 hover:bg-white/5"
+                    : "text-text-secondary hover:text-text hover:bg-white/5"
                 }`}
                 style={{ fontFamily: "'Tajawal', sans-serif" }}
               >
@@ -322,7 +351,7 @@ export default function ArabicCodeEditor() {
             ))}
           </div>
 
-        {/* Window dots */}
+          {/* Window dots */}
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-[#296BCD]" />
             <div className="w-3 h-3 rounded-full bg-[#CDAC29]" />
@@ -344,9 +373,9 @@ export default function ArabicCodeEditor() {
           <button
             onClick={handleRun}
             disabled={isRunning}
-            className="flex items-center gap-2 px-5 py-2 rounded-lg bg-[#247BFF] text-white/90 text-sm font-semibold hover:bg-[#358bff] transition-all disabled:opacity-60 disabled:cursor-not-allowed shadow-[0_0_1rem_rgba(32,121,255,0.7)]"
+            className="flex items-center gap-2 px-5 py-2 rounded-lg bg-[#247BFF] text-text text-sm font-semibold hover:bg-[#358bff] transition-all disabled:opacity-60 disabled:cursor-not-allowed shadow-[0_0_1rem_rgba(32,121,255,0.7)] "
             style={{ fontFamily: "'Tajawal', sans-serif" }}
-            >
+          >
             {isRunning ? (
               <>
                 <div className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -355,11 +384,25 @@ export default function ArabicCodeEditor() {
             ) : (
               <>
                 تشغيل
-                <Image src={PlayIcon} alt="تشغيل" width={14} height={14} />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <g transform="rotate(180 12 12)">
+                    <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" />
+                  </g>
+                </svg>
               </>
             )}
           </button>
-                    <span className="text-xs text-white/30 font-[Tajawal]">
+          <span className="text-xs text-white/30 font-[Tajawal]">
             ألف نـ5.3 - "{codeExamples[activeExample].title}.ألف"
           </span>
         </div>
