@@ -3,6 +3,7 @@ import { Tajawal, Noto_Kufi_Arabic } from "next/font/google";
 import "@/styles/globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ScrollProgress } from "@/components/ScrollProgress";
 
 const tajawal = Tajawal({
   variable: "--font-tajawal",
@@ -34,6 +35,7 @@ export default function RootLayout({
       className={`${tajawal.variable} ${notoKufiArabic.variable}`}
     >
       <body className="min-h-full flex flex-col antialiased">
+        <ScrollProgress />
         <Header />
         <main className="flex flex-1 flex-col">{children}</main>
         <Footer />
