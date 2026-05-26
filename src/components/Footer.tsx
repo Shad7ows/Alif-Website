@@ -18,9 +18,9 @@ export function Footer() {
     <footer className="w-full bg-site-bg py-2">
       <div className="flex mx-auto w-full flex-col items-center justify-center">
         {/* Top Section */}
-        <div className="grid w-full max-w-360 grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-6 px-9">
+        <div className="grid w-full max-w-360 grid-cols-1 gap-12 md:grid-cols-5 lg:grid-cols-6 px-9">
           {/* Logo and Description - Right side in RTL */}
-          <div className="flex flex-col items-start gap-6 lg:col-span-3">
+          <div className="flex flex-col items-start gap-6 md:col-span-2 lg:col-span-3">
             <Logo />
             <p className="max-w-sm text-text-secondary leading-relaxed text-right font-tajawal">
               ألف هي أول لغة برمجة عربية متكاملة، مبنية بـ C++ وتعتمد قواعد
@@ -34,8 +34,8 @@ export function Footer() {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="27"
-                  height="27"
+                  width="1.7rem"
+                  height="1.7rem"
                   viewBox="0 0 24 24"
                 >
                   <g
@@ -57,8 +57,8 @@ export function Footer() {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="27"
-                  height="27"
+                  width="1.7rem"
+                  height="1.7rem"
                   viewBox="0 0 48 48"
                 >
                   <path
@@ -78,8 +78,8 @@ export function Footer() {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="27"
-                  height="27"
+                  width="1.7rem"
+                  height="1.7rem"
                   viewBox="0 0 24 24"
                 >
                   <g
@@ -101,8 +101,8 @@ export function Footer() {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="27"
-                  height="27"
+                  width="1.7rem"
+                  height="1.7rem"
                   viewBox="0 0 24 24"
                 >
                   <g
