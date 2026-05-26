@@ -1,15 +1,13 @@
-import Image from "next/image";
-
 interface SocialButtonProps {
+  children: React.ReactNode;
   href: string;
-  icon: string;
   bgColor: string;
   ariaLabel: string;
 }
 
 export function SocialButton({
+  children,
   href,
-  icon,
   bgColor,
   ariaLabel,
 }: SocialButtonProps) {
@@ -50,20 +48,12 @@ export function SocialButton({
 
       {/* Main Button Background & Border (Layered in the middle) */}
       <div
-        className="absolute inset-0 rounded-2xl border border-(--brd-color)/21 backdrop-blur-lg 
-        transition-all duration-500 group-hover:border-(--brd-color)/45 group-hover:bg-(--brd-color)/9 z-10"
+        className="flex w-full h-full items-center justify-center inset-0 rounded-2xl text-text-secondary/75 border border-(--brd-color)/21 backdrop-blur-lg 
+        transition-all duration-500 group-hover:text-text group-hover:border-(--brd-color)/45 group-hover:bg-(--brd-color)/9 z-10"
         style={{ "--brd-color": bgColor } as React.CSSProperties}
-      />
-
-      {/* Icon */}
-      <Image
-        src={icon}
-        alt={ariaLabel}
-        width={23}
-        height={23}
-        style={{width: '1.5rem', height:'1.5rem'}}
-        className="relative z-10"
-      />
+      >
+        {children}
+      </div>
     </a>
   );
 }
