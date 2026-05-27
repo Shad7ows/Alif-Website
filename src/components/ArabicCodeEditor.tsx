@@ -255,13 +255,13 @@ export default function ArabicCodeEditor() {
   return (
     <div className="relative flex items-center justify-center">
       {/* Glow effects behind the editor */}
-      <div className="absolute w-70 h-70 bg-[#247BFF]/25 rounded-full blur-3xl -top-15 -left-15 pointer-events-none" />
-      <div className="absolute w-64 h-64 bg-[#00F2FF]/15 rounded-full blur-3xl -bottom-5 -right-20 pointer-events-none" />
-      <div className="absolute w-260 h-48 bg-[#812EFF]/15 rounded-full blur-3xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+      <div className="absolute w-70 h-70 bg-primary/25 rounded-full blur-3xl -top-15 -left-15 pointer-events-none" />
+      <div className="absolute w-64 h-64 bg-accent-primary/15 rounded-full blur-3xl -bottom-5 -right-20 pointer-events-none" />
+      <div className="absolute w-260 h-48 bg-secondary/15 rounded-full blur-3xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
 
       {/* Editor Container */}
       <div
-        className="relative w-full max-w-xl rounded-2xl overflow-hidden border border-[#247BFF]/45"
+        className="relative w-full max-w-xl rounded-2xl overflow-hidden border border-primary/45"
         style={{
           background:
             "linear-gradient(135deg, rgba(36,123,255,0.1) 0%, rgba(129,46,255,0.05) 100%)",
@@ -281,8 +281,8 @@ export default function ArabicCodeEditor() {
                 // تم النسخ
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
+                  width="0.875rem"
+                  height="0.875rem"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="#247BFF"
@@ -296,8 +296,8 @@ export default function ArabicCodeEditor() {
                 // نسخ
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
+                  width="0.875rem"
+                  height="0.875rem"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -318,8 +318,8 @@ export default function ArabicCodeEditor() {
               {/* إعادة تعيين الشيفرة */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="14"
-                height="14"
+                width="0.875rem"
+                height="0.875rem"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -386,8 +386,8 @@ export default function ArabicCodeEditor() {
                 تشغيل
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
+                  width="0.875rem"
+                  height="0.875rem"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
