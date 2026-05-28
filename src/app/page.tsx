@@ -5,24 +5,48 @@ import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
   return (
-    <div className="relative flex h-svh min-h-180 max-h-320 flex-col items-center justify-center bg-site-bg overflow-hidden">
+    <div
+      className="relative flex h-auto flex-col items-center justify-center bg-site-bg overflow-hidden 
+    tablet:min-h-180 tablet:max-h-320"
+    >
       {/* Main Content Grid */}
-      <div className="relative z-10 w-full max-w-360 mx-auto px-8">
-        <div className="grid grid-cols-2 h-full">
+      <div
+        className="relative z-10 w-full max-w-360 mx-1 px-4
+      tablet:mx-auto tablet:px-8"
+      >
+        <div
+          className="grid h-full grid-cols-1
+        tablet:grid-cols-2"
+        >
           {/* Right Block - Content */}
-          <div className="flex flex-col items-start justify-center gap-1">
+          <div className="flex flex-col h-svh items-start justify-center gap-1">
             {/* Release Badge */}
-            <div className="inline-flex items-center justify-center gap-2 px-4 py-2">
-              <span className="absolute w-6 h-6 bg-[#247BFF] right-7 blur-md rounded-full z-0"></span>
-              <span className="absolute w-45 h-10 rounded-full border border-[#247BFF]/40 bg-[#247BFF]/10 backdrop-blur-md z-10"></span>
-              <div className="w-2 h-2 rounded-full bg-[#247BFF] animate-pulse z-20" />
-              <span className="text-[#247BFF] text-sm font-medium font-tajawal z-20">
+            <div className="inline-flex items-center justify-center gap-2 px-5 py-2">
+              <span
+                className="absolute w-4.5 h-4.5 bg-[#247BFF] right-5 blur-sm rounded-full z-0  
+              tablet:w-6 tablet:h-6 tablet:right-7 tablet:blur-md"
+              ></span>
+              <span
+                className="absolute w-33.75 h-7.5 rounded-full border border-[#247BFF]/40 bg-[#247BFF]/10 backdrop-blur-md z-10 
+              tablet:w-45 tablet:h-10"
+              ></span>
+              <div
+                className="w-1.5 h-1.5 rounded-full bg-[#247BFF] animate-pulse z-20
+              tablet:w-2 tablet:h-2"
+              />
+              <span
+                className="text-[#247BFF] text-[0.65rem] font-medium font-tajawal z-20
+              tablet:text-sm"
+              >
                 الإصدار 5.3 - متاح الآن
               </span>
             </div>
             {/* Gradient Title */}
             <div className="flex relative items-center justify-center">
-              <h1 className="relative text-6xl md:text-7xl font-bold font-tajawal text-start leading-tight justify-center ">
+              <h1
+                className="relative text-5xl font-bold font-tajawal text-start leading-tight justify-center 
+              tablet:text-7xl"
+              >
                 <span className="bg-linear-to-r/srgb from-[#00F2FF] to-[#812EFF] bg-clip-text text-transparent">
                   البرمجة
                   <br />
@@ -32,7 +56,7 @@ export default function Home() {
               </h1>
             </div>
             {/* Description Text */}
-            <p className="text-2xl md:text-2xl text-[#BBBBBB] font-tajawal text-start leading-relaxed">
+            <p className="tablet:text-2xl text-text-secondary font-tajawal text-start leading-relaxed">
               قم بتجربة لغة البرمجة العربية ألف والتي ستفتح لك
               <br />
               آفاق جديدة في البرمجة
@@ -84,7 +108,7 @@ export default function Home() {
             </div>
           </div>
           {/* Left Block - Code Editor */}
-          <div className="flex items-center justify-center">
+          <div className="flex h-svh items-center justify-center">
             <ArabicCodeEditor />
           </div>
         </div>
