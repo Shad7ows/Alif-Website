@@ -62,38 +62,64 @@ export default function Home() {
               آفاق جديدة في البرمجة
             </p>
             {/* Paddle Components (Info Cards) */}
-            <div className="flex gap-6 mt-12">
+            <div
+              className="relative flex items-center justify-between mt-9 w-full
+            tablet:mt-12 tablet:gap-6 tablet:w-auto"
+            >
               {/* Version Card */}
-              <div className="flex flex-col items-center justify-center w-42 h-19 rounded-[1.3rem] border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md">
-                <span className="text-2xl font-bold text-[#247BFF] font-tajawal">
+              <div
+                className="flex flex-col items-center justify-center w-27 h-14.25 rounded-2xl border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md 
+                tablet:rounded-[1.3rem] tablet:w-42 tablet:h-19"
+              >
+                <span
+                  className="text-lg font-bold text-[#247BFF] font-tajawal 
+                  tablet:text-2xl"
+                >
                   5.3
                 </span>
-                <span className="text-[#EEEEEE]/70 text-sm font-tajawal">
+                <span
+                  className="text-[0.65rem] text-[#EEEEEE]/70 font-tajawal 
+                  tablet:text-sm"
+                >
                   الإصدار
                 </span>
               </div>
 
               {/* Built With Card */}
-              <div className="flex flex-col items-center justify-center w-42 h-19 rounded-[1.3rem] border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md">
+              <div
+                className="flex flex-col items-center justify-center w-27 h-14.25 rounded-2xl border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md 
+                tablet:rounded-[1.3rem] tablet:w-42 tablet:h-19"
+              >
                 <span
                   dir="ltr"
-                  className="text-2xl font-bold text-[#247BFF] font-tajawal"
+                  className="text-lg font-bold text-[#247BFF] font-tajawal 
+                  tablet:text-2xl"
                 >
                   C++
                 </span>
-                <span className="text-[#EEEEEE]/70 text-sm font-tajawal">
+                <span
+                  className="text-[0.65rem] text-[#EEEEEE]/70 font-tajawal 
+                  tablet:text-sm"
+                >
                   مبنية بـ
                 </span>
               </div>
               {/* Built With Card */}
-              <div className="flex flex-col items-center justify-center w-42 h-19 rounded-[1.3rem] border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md">
+              <div
+                className="flex flex-col items-center justify-center w-27 h-14.25 rounded-2xl border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md 
+                tablet:rounded-[1.3rem] tablet:w-42 tablet:h-19"
+              >
                 <span
                   dir="ltr"
-                  className="text-2xl font-bold text-[#247BFF] font-tajawal"
+                  className="text-lg font-bold text-[#247BFF] font-tajawal 
+                  tablet:text-2xl"
                 >
                   Python
                 </span>
-                <span className="text-[#EEEEEE]/70 text-sm font-tajawal">
+                <span
+                  className="text-[0.65rem] text-[#EEEEEE]/70 font-tajawal 
+                  tablet:text-sm"
+                >
                   قواعد
                 </span>
               </div>
