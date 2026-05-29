@@ -28,8 +28,9 @@ export function PrimaryButton({
       type={type}
       onClick={onClick}
       className={`
-        px-3 rounded-2xl h-12.5 w-35 font-medium transition-all cursor-pointer text-[1rem]
-        bg-[#247BFF] text-[#EEEEEE] hover:bg-[#1a6de8] shadow-[0_0_2.25rem_rgba(32,121,255,0.9)]
+        h-9.5 w-26.25 px-2 rounded-xl font-medium transition-all cursor-pointer text-[0.75rem]
+        bg-primary text-text shadow-[0_0_1.7rem_rgba(32,121,255,0.75)]
+        tablet:shadow-[0_0_2.25rem_rgba(32,121,255,0.9)] tablet:hover:shadow-[0_0_3rem_rgba(32,121,255,1)] tablet:px-3 tablet:rounded-2xl tablet:h-12.5 tablet:w-35 tablet:text-[1rem]
         ${className}
       `.trim()}
     >

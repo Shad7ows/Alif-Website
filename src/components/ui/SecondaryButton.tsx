@@ -25,18 +25,21 @@ export function SecondaryButton({
 }: SecondaryButtonProps) {
   return (
     <div
-      className={`relative inline-flex items-center justify-center ${
+      className={`relative inline-flex items-center justify-center group ${
         className ?? ""
       }`}
     >
       {/* Oval glow effect behind the button */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-7 bg-[#247BFF] blur-sm rounded-full pointer-events-none" />
+      <div
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-18 h-5.25 bg-[#247BFF] blur-xs rounded-full pointer-events-none transition-all duration-300 group-hover:w-22
+        tablet:w-24 tablet:h-7 tablet:blur-sm tablet:group-hover:w-30"
+      />
       <button
         type={type}
         onClick={onClick}
         className={`
-          px-3 rounded-2xl h-12.5 w-35 font-medium transition-all cursor-pointer text-[1rem] z-10
-          relative text-[#eeeeee] bg-[#247BFF]/3 backdrop-blur-md
+          relative px-2 rounded-xl h-9.5 w-26.25 font-medium transition-all cursor-pointer text-[0.75rem] z-10 text-text bg-[#247BFF]/3 backdrop-blur-sm
+          tablet:px-3 tablet:rounded-2xl tablet:h-12.5 tablet:w-35 tablet:text-[1rem] tablet:backdrop-blur-md
         `.trim()}
       >
         {children}

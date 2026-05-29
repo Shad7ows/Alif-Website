@@ -21,7 +21,7 @@ export default function Home() {
           {/* Right Block - Content */}
           <div className="flex flex-col h-svh items-start justify-center gap-1">
             {/* Release Badge */}
-            <div className="inline-flex items-center justify-center gap-2 px-5 py-2">
+            <div className="inline-flex items-center justify-center gap-2 px-3.5 py-2 tablet:px-5">
               <span
                 className="absolute w-4.5 h-4.5 bg-[#247BFF] right-5 blur-sm rounded-full z-0  
               tablet:w-6 tablet:h-6 tablet:right-7 tablet:blur-md"
@@ -52,7 +52,10 @@ export default function Home() {
                   <br />
                   أصبحت أسهل
                 </span>
-                <span className="absolute w-45 h-15 rounded-full left-0 bottom-3 bg-[#00F2FF] blur-[7.5rem]"></span>
+                <span
+                  className="absolute w-33.75 h-11.25 rounded-full -left-2 bottom-2 bg-[#00F2FF] blur-[5.5rem] 
+                tablet:w-45 tablet:h-15 tablet:left-0 tablet:bottom-3 tablet:blur-[7.5rem]"
+                ></span>
               </h1>
             </div>
             {/* Description Text */}
