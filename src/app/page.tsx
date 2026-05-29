@@ -5,157 +5,159 @@ import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
   return (
-    <div
-      className="relative flex h-auto flex-col items-center justify-center bg-site-bg overflow-hidden 
-    tablet:min-h-180 tablet:max-h-320"
-    >
-      {/* Main Content Grid */}
+    <>
       <div
-        className="relative z-10 w-full max-w-360 mx-1 px-4
-      tablet:mx-auto tablet:px-8"
+        className="relative flex h-auto flex-col items-center justify-center bg-site-bg overflow-hidden 
+        tablet:min-h-180 tablet:max-h-320"
       >
+        {/* Main Content Grid */}
         <div
-          className="grid h-full grid-cols-1
+          className="relative z-10 w-full max-w-360 mx-1 px-4
+      tablet:mx-auto tablet:px-8"
+        >
+          <div
+            className="grid h-full grid-cols-1
         tablet:grid-cols-2"
-        >
-          {/* Right Block - Content */}
-          <div className="flex flex-col h-svh items-start justify-center gap-1">
-            {/* Release Badge */}
-            <div className="inline-flex items-center justify-center gap-2 px-3.5 py-2 tablet:px-5">
-              <span
-                className="absolute w-4.5 h-4.5 bg-[#247BFF] right-5 blur-sm rounded-full z-0  
+          >
+            {/* Right Block - Content */}
+            <div className="flex flex-col h-svh items-start justify-center gap-1">
+              {/* Release Badge */}
+              <div className="inline-flex items-center justify-center gap-2 px-3.5 py-2 tablet:px-5">
+                <span
+                  className="absolute w-4.5 h-4.5 bg-[#247BFF] right-5 blur-sm rounded-full z-0  
               tablet:w-6 tablet:h-6 tablet:right-7 tablet:blur-md"
-              ></span>
-              <span
-                className="absolute w-33.75 h-7.5 rounded-full border border-[#247BFF]/40 bg-[#247BFF]/10 backdrop-blur-md z-10 
-              tablet:w-45 tablet:h-10"
-              ></span>
-              <div
-                className="w-1.5 h-1.5 rounded-full bg-[#247BFF] animate-pulse z-20
-              tablet:w-2 tablet:h-2"
-              />
-              <span
-                className="text-[#247BFF] text-[0.65rem] font-medium font-tajawal z-20
-              tablet:text-sm"
-              >
-                الإصدار 5.3 - متاح الآن
-              </span>
-            </div>
-            {/* Gradient Title */}
-            <div className="flex relative items-center justify-center">
-              <h1
-                className="relative text-5xl font-bold font-tajawal text-start leading-tight justify-center 
-              tablet:text-7xl"
-              >
-                <span className="bg-linear-to-r/srgb from-[#00F2FF] to-[#812EFF] bg-clip-text text-transparent">
-                  البرمجة
-                  <br />
-                  أصبحت أسهل
-                </span>
-                <span
-                  className="absolute w-33.75 h-11.25 rounded-full -left-2 bottom-2 bg-[#00F2FF] blur-[5.5rem] 
-                tablet:w-45 tablet:h-15 tablet:left-0 tablet:bottom-3 tablet:blur-[7.5rem]"
                 ></span>
-              </h1>
-            </div>
-            {/* Description Text */}
-            <p className="tablet:text-2xl text-text-secondary font-tajawal text-start leading-relaxed">
-              قم بتجربة لغة البرمجة العربية ألف والتي ستفتح لك
-              <br />
-              آفاق جديدة في البرمجة
-            </p>
-            {/* Paddle Components (Info Cards) */}
-            <div
-              className="relative flex items-center justify-between mt-9 w-full
+                <span
+                  className="absolute w-33.75 h-7.5 rounded-full border border-[#247BFF]/40 bg-[#247BFF]/10 backdrop-blur-md z-10 
+              tablet:w-45 tablet:h-10"
+                ></span>
+                <div
+                  className="w-1.5 h-1.5 rounded-full bg-[#247BFF] animate-pulse z-20
+              tablet:w-2 tablet:h-2"
+                />
+                <span
+                  className="text-[#247BFF] text-[0.65rem] font-medium font-tajawal z-20
+              tablet:text-sm"
+                >
+                  الإصدار 5.3 - متاح الآن
+                </span>
+              </div>
+              {/* Gradient Title */}
+              <div className="flex relative items-center justify-center">
+                <h1
+                  className="relative text-5xl font-bold font-tajawal text-start leading-tight justify-center 
+              tablet:text-7xl"
+                >
+                  <span className="bg-linear-to-r/srgb from-[#00F2FF] to-[#812EFF] bg-clip-text text-transparent">
+                    البرمجة
+                    <br />
+                    أصبحت أسهل
+                  </span>
+                  <span
+                    className="absolute w-33.75 h-11.25 rounded-full -left-2 bottom-2 bg-[#00F2FF] blur-[5.5rem] 
+                tablet:w-45 tablet:h-15 tablet:left-0 tablet:bottom-3 tablet:blur-[7.5rem]"
+                  ></span>
+                </h1>
+              </div>
+              {/* Description Text */}
+              <p className="tablet:text-2xl text-text-secondary font-tajawal text-start leading-relaxed">
+                قم بتجربة لغة البرمجة العربية ألف والتي ستفتح لك
+                <br />
+                آفاق جديدة في البرمجة
+              </p>
+              {/* Paddle Components (Info Cards) */}
+              <div
+                className="relative flex items-center justify-between mt-9 w-full
             tablet:mt-12 tablet:gap-6 tablet:w-auto"
-            >
-              {/* Version Card */}
-              <div
-                className="flex flex-col items-center justify-center w-27 h-14.25 rounded-2xl border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md 
-                tablet:rounded-[1.3rem] tablet:w-42 tablet:h-19"
               >
-                <span
-                  className="text-lg font-bold text-[#247BFF] font-tajawal 
+                {/* Version Card */}
+                <div
+                  className="flex flex-col items-center justify-center w-27 h-14.25 rounded-2xl border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md 
+                tablet:rounded-[1.3rem] tablet:w-42 tablet:h-19"
+                >
+                  <span
+                    className="text-lg font-bold text-[#247BFF] font-tajawal 
                   tablet:text-2xl"
-                >
-                  5.3
-                </span>
-                <span
-                  className="text-[0.65rem] text-[#EEEEEE]/70 font-tajawal 
+                  >
+                    5.3
+                  </span>
+                  <span
+                    className="text-[0.65rem] text-[#EEEEEE]/70 font-tajawal 
                   tablet:text-sm"
-                >
-                  الإصدار
-                </span>
-              </div>
+                  >
+                    الإصدار
+                  </span>
+                </div>
 
-              {/* Built With Card */}
-              <div
-                className="flex flex-col items-center justify-center w-27 h-14.25 rounded-2xl border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md 
+                {/* Built With Card */}
+                <div
+                  className="flex flex-col items-center justify-center w-27 h-14.25 rounded-2xl border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md 
                 tablet:rounded-[1.3rem] tablet:w-42 tablet:h-19"
-              >
-                <span
-                  dir="ltr"
-                  className="text-lg font-bold text-[#247BFF] font-tajawal 
+                >
+                  <span
+                    dir="ltr"
+                    className="text-lg font-bold text-[#247BFF] font-tajawal 
                   tablet:text-2xl"
-                >
-                  C++
-                </span>
-                <span
-                  className="text-[0.65rem] text-[#EEEEEE]/70 font-tajawal 
+                  >
+                    C++
+                  </span>
+                  <span
+                    className="text-[0.65rem] text-[#EEEEEE]/70 font-tajawal 
                   tablet:text-sm"
+                  >
+                    مبنية بـ
+                  </span>
+                </div>
+                {/* Built With Card */}
+                <div
+                  className="flex flex-col items-center justify-center w-27 h-14.25 rounded-2xl border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md 
+                tablet:rounded-[1.3rem] tablet:w-42 tablet:h-19"
                 >
-                  مبنية بـ
-                </span>
+                  <span
+                    dir="ltr"
+                    className="text-lg font-bold text-[#247BFF] font-tajawal 
+                  tablet:text-2xl"
+                  >
+                    Python
+                  </span>
+                  <span
+                    className="text-[0.65rem] text-[#EEEEEE]/70 font-tajawal 
+                  tablet:text-sm"
+                  >
+                    قواعد
+                  </span>
+                </div>
               </div>
-              {/* Built With Card */}
-              <div
-                className="flex flex-col items-center justify-center w-27 h-14.25 rounded-2xl border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md 
-                tablet:rounded-[1.3rem] tablet:w-42 tablet:h-19"
-              >
-                <span
-                  dir="ltr"
-                  className="text-lg font-bold text-[#247BFF] font-tajawal 
-                  tablet:text-2xl"
-                >
-                  Python
-                </span>
-                <span
-                  className="text-[0.65rem] text-[#EEEEEE]/70 font-tajawal 
-                  tablet:text-sm"
-                >
-                  قواعد
-                </span>
+              {/* Buttons */}
+              <div className="flex gap-4 mt-9 tablet:gap-6 tablet:mt-12">
+                {/* Primary Button */}
+                <PrimaryButton>تحميل اللغة</PrimaryButton>
+
+                {/* Secondary Button */}
+                <SecondaryButton>اكتشف المزيد</SecondaryButton>
               </div>
             </div>
-            {/* Buttons */}
-            <div className="flex gap-6 mt-12">
-              {/* Primary Button */}
-              <PrimaryButton>تحميل اللغة</PrimaryButton>
-
-              {/* Secondary Button */}
-              <SecondaryButton>اكتشف المزيد</SecondaryButton>
+            {/* Left Block - Code Editor */}
+            <div className="flex h-svh items-center justify-center">
+              <ArabicCodeEditor />
             </div>
           </div>
-          {/* Left Block - Code Editor */}
-          <div className="flex h-svh items-center justify-center">
-            <ArabicCodeEditor />
+        </div>
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+          <span
+            className="text-xs text-white/30"
+            style={{ fontFamily: "'Tajawal', sans-serif" }}
+          >
+            اسحب للأسفل
+          </span>
+          <div className="w-5 h-8 rounded-full border border-white/20 flex items-start justify-center pt-1.5">
+            <div className="w-1 h-2 rounded-full bg-[#247BFF] animate-bounce" />
           </div>
         </div>
+        {/* Back to Top Button */}
+        <BackToTop />
       </div>
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-        <span
-          className="text-xs text-white/30"
-          style={{ fontFamily: "'Tajawal', sans-serif" }}
-        >
-          اسحب للأسفل
-        </span>
-        <div className="w-5 h-8 rounded-full border border-white/20 flex items-start justify-center pt-1.5">
-          <div className="w-1 h-2 rounded-full bg-[#247BFF] animate-bounce" />
-        </div>
-      </div>
-      {/* Back to Top Button */}
-      <BackToTop />
-    </div>
+    </>
   );
 }

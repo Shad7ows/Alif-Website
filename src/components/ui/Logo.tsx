@@ -17,7 +17,7 @@ export function Logo({ className }: { className?: string }) {
         alt=""
         width={60}
         height={47}
-        className="pointer-events-none absolute inset-0 h-12 w-auto blur-sm"
+        className="pointer-events-none absolute inset-0 h-9 w-auto blur-xs tablet:blur-sm tablet:h-12"
         aria-hidden="true"
       />
 
@@ -27,7 +27,7 @@ export function Logo({ className }: { className?: string }) {
         alt="ألف"
         width={60}
         height={47}
-        className="relative h-12 w-auto"
+        className="relative h-9 w-auto tablet:h-12"
       />
     </div>
   );
