@@ -6,6 +6,18 @@ import BackToTop from "@/components/BackToTop";
 export default function Home() {
   return (
     <>
+      {/* Scroll indicator */}
+      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce z-50">
+        <span
+          className="text-xs text-white/30"
+          style={{ fontFamily: "'Tajawal', sans-serif" }}
+        >
+          اسحب للأسفل
+        </span>
+        <div className="w-5 h-8 rounded-full border border-white/20 flex items-start justify-center pt-1.5">
+          <div className="w-1 h-2 rounded-full bg-[#247BFF] animate-bounce" />
+        </div>
+      </div>
       <div
         className="relative flex h-auto flex-col items-center justify-center bg-site-bg overflow-hidden 
         tablet:min-h-180 tablet:max-h-320"
@@ -13,11 +25,11 @@ export default function Home() {
         {/* Main Content Grid */}
         <div
           className="relative z-10 w-full max-w-360 mx-1 px-4
-      tablet:mx-auto tablet:px-8"
+          tablet:mx-auto tablet:px-8"
         >
           <div
             className="grid h-full grid-cols-1
-        tablet:grid-cols-2"
+            tablet:grid-cols-2"
           >
             {/* Right Block - Content */}
             <div className="flex flex-col h-svh items-start justify-center gap-1">
@@ -43,12 +55,12 @@ export default function Home() {
                 </span>
               </div>
               {/* Gradient Title */}
-              <div className="flex relative items-center justify-center">
+              <div className="flex relative items-center justify-center py-2">
                 <h1
                   className="relative text-5xl font-bold font-tajawal text-start leading-tight justify-center 
               tablet:text-7xl"
                 >
-                  <span className="bg-linear-to-r/srgb from-[#00F2FF] to-[#812EFF] bg-clip-text text-transparent">
+                  <span className="py-2 bg-linear-to-r/srgb from-[#00F2FF] to-[#812EFF] bg-clip-text text-transparent">
                     البرمجة
                     <br />
                     أصبحت أسهل
@@ -141,18 +153,6 @@ export default function Home() {
             <div className="flex h-svh items-center justify-center">
               <ArabicCodeEditor />
             </div>
-          </div>
-        </div>
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-          <span
-            className="text-xs text-white/30"
-            style={{ fontFamily: "'Tajawal', sans-serif" }}
-          >
-            اسحب للأسفل
-          </span>
-          <div className="w-5 h-8 rounded-full border border-white/20 flex items-start justify-center pt-1.5">
-            <div className="w-1 h-2 rounded-full bg-[#247BFF] animate-bounce" />
           </div>
         </div>
         {/* Back to Top Button */}
