@@ -1,21 +1,8 @@
 import type { Metadata } from "next";
-import { Tajawal, Noto_Kufi_Arabic } from "next/font/google";
 import "@/styles/globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/ScrollProgress";
-
-const tajawal = Tajawal({
-  variable: "--font-tajawal",
-  subsets: ["arabic", "latin"],
-  weight: ["300", "400", "500", "700", "900"],
-});
-
-const notoKufiArabic = Noto_Kufi_Arabic({
-  variable: "--font-noto-kufi-arabic",
-  subsets: ["arabic"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
 
 export const metadata: Metadata = {
   title: "ألف - لغة برمجة عربية",
@@ -29,11 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="ar"
-      dir="rtl"
-      className={`${tajawal.variable} ${notoKufiArabic.variable}`}
-    >
+    <html lang="ar" dir="rtl">
       <body className="min-h-full flex flex-col antialiased">
         <ScrollProgress />
         <Header />
