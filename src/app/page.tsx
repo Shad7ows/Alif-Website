@@ -36,7 +36,7 @@ export default function Home() {
               {/* Release Badge */}
               <div className="inline-flex items-center justify-center gap-2 px-3.5 py-2 tablet:px-5">
                 <span
-                  className="absolute w-4.5 h-4.5 bg-[#247BFF] right-5 blur-sm rounded-full z-0  
+                  className="absolute w-4.5 h-4.5 bg-[#247BFF] right-4 blur-sm rounded-full z-0  
               tablet:w-6 tablet:h-6 tablet:right-7 tablet:blur-md"
                 ></span>
                 <span
