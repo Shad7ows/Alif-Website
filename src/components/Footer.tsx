@@ -1,9 +1,5 @@
 import { Logo } from "./ui/Logo";
 import { SocialButton } from "./ui/SocialButton";
-import GitHubIcon from "@/assets/icons/github.svg";
-import TelegramIcon from "@/assets/icons/telegram.svg";
-import YouTubeIcon from "@/assets/icons/youtube.svg";
-import EmailIcon from "@/assets/icons/email.svg";
 
 /**
  * Footer component displayed at the bottom of all pages
@@ -18,11 +14,11 @@ export function Footer() {
     <footer className="w-full bg-site-bg py-2">
       <div className="flex mx-auto w-full flex-col items-center justify-center">
         {/* Top Section */}
-        <div className="grid w-full max-w-360 grid-cols-1 gap-12 md:grid-cols-5 lg:grid-cols-6 px-9">
+        <div className="grid w-full max-w-360 grid-cols-1 gap-12 md:grid-cols-5 lg:grid-cols-6 px-4 tablet:px-8">
           {/* Logo and Description - Right side in RTL */}
           <div className="flex flex-col items-start gap-6 md:col-span-2 lg:col-span-3">
             <Logo />
-            <p className="max-w-sm text-text-secondary leading-relaxed text-right font-tajawal">
+            <p className="max-w-sm text-sm text-text-secondary leading-relaxed text-right tablet:text-base">
               ألف هي أول لغة برمجة عربية متكاملة، مبنية بـ C++ وتعتمد قواعد
               Python. نؤمن بأن البرمجة يجب أن تكون متاحة للجميع بلغتهم الأم.
             </p>
@@ -120,12 +116,14 @@ export function Footer() {
 
           {/* Language Column */}
           <div className="flex w-35 flex-col items-start gap-4">
-            <h3 className="text-lg font-bold text-text">اللغة</h3>
-            <ul className="flex flex-col gap-3 mr-3">
+            <h3 className="text-base font-bold text-text tablet:text-lg">
+              اللغة
+            </h3>
+            <ul className="flex flex-col gap-2 mr-3 tablet:gap-3">
               <li>
                 <a
                   href="/docs"
-                  className="text-text-secondary transition-colors hover:text-primary"
+                  className="text-sm text-text-secondary transition-colors hover:text-primary tablet:text-base"
                 >
                   الوثائق
                 </a>
@@ -133,7 +131,7 @@ export function Footer() {
               <li>
                 <a
                   href="/libraries"
-                  className="text-text-secondary transition-colors hover:text-primary"
+                  className="text-sm text-text-secondary transition-colors hover:text-primary tablet:text-base"
                 >
                   المكتبات القياسية
                 </a>
@@ -141,7 +139,7 @@ export function Footer() {
               <li>
                 <a
                   href="/roadmap"
-                  className="text-text-secondary transition-colors hover:text-primary"
+                  className="text-sm text-text-secondary transition-colors hover:text-primary tablet:text-base"
                 >
                   خارطة الطريق
                 </a>
@@ -151,12 +149,14 @@ export function Footer() {
 
           {/* Community Column */}
           <div className="flex w-35 flex-col items-start gap-4">
-            <h3 className="text-lg font-bold text-text">المجتمع</h3>
-            <ul className="flex flex-col gap-3 mr-3">
+            <h3 className="text-base font-bold text-text tablet:text-lg">
+              المجتمع
+            </h3>
+            <ul className="flex flex-col gap-2 mr-3 tablet:gap-3">
               <li>
                 <a
                   href="/forum"
-                  className="text-text-secondary transition-colors hover:text-primary"
+                  className="text-sm text-text-secondary transition-colors hover:text-primary tablet:text-base"
                 >
                   المنتدى
                 </a>
@@ -164,7 +164,7 @@ export function Footer() {
               <li>
                 <a
                   href="https://t.me"
-                  className="text-text-secondary transition-colors hover:text-primary"
+                  className="text-sm text-text-secondary transition-colors hover:text-primary tablet:text-base"
                 >
                   Telegram
                 </a>
@@ -172,7 +172,7 @@ export function Footer() {
               <li>
                 <a
                   href="https://github.com"
-                  className="text-text-secondary transition-colors hover:text-primary"
+                  className="text-sm text-text-secondary transition-colors hover:text-primary tablet:text-base"
                 >
                   Github
                 </a>
@@ -180,7 +180,7 @@ export function Footer() {
               <li>
                 <a
                   href="/contribute"
-                  className="text-text-secondary transition-colors hover:text-primary"
+                  className="text-sm text-text-secondary transition-colors hover:text-primary tablet:text-base"
                 >
                   المساهمة
                 </a>
@@ -188,7 +188,7 @@ export function Footer() {
               <li>
                 <a
                   href="/blog"
-                  className="text-text-secondary transition-colors hover:text-primary"
+                  className="text-sm text-text-secondary transition-colors hover:text-primary tablet:text-base"
                 >
                   المدونة
                 </a>
@@ -198,12 +198,14 @@ export function Footer() {
 
           {/* Resources Column */}
           <div className="flex w-35 flex-col items-start gap-4">
-            <h3 className="text-lg font-bold text-text">المصادر</h3>
-            <ul className="flex flex-col gap-3 mr-3">
+            <h3 className="text-base font-bold text-text tablet:text-lg">
+              المصادر
+            </h3>
+            <ul className="flex flex-col gap-2 mr-3 tablet:gap-3">
               <li>
                 <a
                   href="/tutorials"
-                  className="text-text-secondary transition-colors hover:text-primary"
+                  className="text-sm text-text-secondary transition-colors hover:text-primary tablet:text-base"
                 >
                   البرامج التعليمية
                 </a>
@@ -211,7 +213,7 @@ export function Footer() {
               <li>
                 <a
                   href="/youtube"
-                  className="text-text-secondary transition-colors hover:text-primary"
+                  className="text-sm text-text-secondary transition-colors hover:text-primary tablet:text-base"
                 >
                   قناة اليوتيوب
                 </a>
@@ -219,7 +221,7 @@ export function Footer() {
               <li>
                 <a
                   href="/examples"
-                  className="text-text-secondary transition-colors hover:text-primary"
+                  className="text-sm text-text-secondary transition-colors hover:text-primary tablet:text-base"
                 >
                   أمثلة
                 </a>
@@ -227,7 +229,7 @@ export function Footer() {
               <li>
                 <a
                   href="/open-source"
-                  className="text-text-secondary transition-colors hover:text-primary"
+                  className="text-sm text-text-secondary transition-colors hover:text-primary tablet:text-base"
                 >
                   مشاريع مفتوحة
                 </a>
@@ -235,7 +237,7 @@ export function Footer() {
               <li>
                 <a
                   href="/faq"
-                  className="text-text-secondary transition-colors hover:text-primary"
+                  className="text-sm text-text-secondary transition-colors hover:text-primary tablet:text-base"
                 >
                   الأسئلة الشائعة
                 </a>
@@ -245,12 +247,12 @@ export function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="flex mt-9 px-9 w-full items-center justify-center border-t border-gray-900 pt-1 text-[0.875rem]">
+        <div className="flex mt-9 px-4 w-full items-center justify-center border-t border-gray-900 pt-1 text-sm tablet:px-8">
           <div className="flex h-16 w-full max-w-360 flex-col items-center justify-between md:flex-row">
             <p className="text-[#9C9C9C] font-tajawal">
               صُنع بـ 💙 من مطوري ألف – جميع الحقوق محفوظة © 2023
             </p>
-            <div className="flex items-center gap-8">
+            <div className="flex items-center justify-between w-full tablet:w-auto tablet:gap-8">
               <a
                 href="/license"
                 className="text-[#9C9C9C] transition-colors hover:text-primary font-tajawal"
