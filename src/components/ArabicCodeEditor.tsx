@@ -192,13 +192,13 @@ function SyntaxHighlightedCode({ code }: { code: string }) {
   return (
     <div className="code-editor">
       {lines.map((line, i) => (
-        <div key={i} className="flex gap-3 items-start">
-          <span className="select-none text-white/20 text-right w-8 shrink-0 text-sm leading-6 font-mono">
+        <div key={i} className="flex gap-1 items-start tablet:gap-3">
+          <span className="select-none text-white/20 text-right w-5 text-xs shrink-0 leading-6 font-mono tablet:w-8 tablet:text-sm">
             {i + 1}
           </span>
           <span
             dir="rtl"
-            className="flex-1 text-sm leading-6"
+            className="flex-1 text-xs leading-6 tablet:text-sm"
             style={{ whiteSpace: "pre-wrap" }}
           >
             {tokenizeLine(line).map((token, j) => (
@@ -253,15 +253,15 @@ export default function ArabicCodeEditor() {
   };
 
   return (
-    <div className="relative flex items-center justify-center">
+    <div className="relative flex items-center justify-center px-4 w-svw tablet:w-auto tablet:px-auto">
       {/* Glow effects behind the editor */}
-      <div className="absolute w-70 h-70 bg-primary/25 rounded-full blur-3xl -top-15 -left-15 pointer-events-none" />
-      <div className="absolute w-64 h-64 bg-accent-primary/15 rounded-full blur-3xl -bottom-5 -right-20 pointer-events-none" />
-      <div className="absolute w-260 h-48 bg-secondary/15 rounded-full blur-3xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+      <div className="absolute w-52 h-52 bg-primary/25 rounded-full blur-2xl -top-11.25 -left-11.25 pointer-events-none tablet:w-70 tablet:h-70 tablet:blur-3xl tablet:-top-15 tablet:-left-15" />
+      <div className="absolute w-48 h-48 bg-accent-primary/15 rounded-full blur-2xl -bottom-3 -right-15 pointer-events-none tablet:w-64 tablet:h-64 tablet:blur-3xl tablet:-bottom-5 tablet:-right-20" />
+      <div className="absolute w-190 h-35 bg-secondary/15 rounded-full blur-2xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none tablet:w-260 tablet:h-48 tablet:blur-3xl" />
 
       {/* Editor Container */}
       <div
-        className="relative w-full max-w-xl rounded-2xl overflow-hidden border border-primary/45"
+        className="relative w-full max-w-xl rounded-xl overflow-hidden border border-primary/45 tablet:rounded-2xl"
         style={{
           background:
             "linear-gradient(135deg, rgba(36,123,255,0.1) 0%, rgba(129,46,255,0.05) 100%)",
@@ -269,17 +269,18 @@ export default function ArabicCodeEditor() {
         }}
       >
         {/* Editor Header */}
-        <div className="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-white/3">
+        <div className="flex items-center justify-between px-3 py-2 border-b border-white/5 bg-white/3 tablet:px-4 tablet:py-3">
           {/* Action buttons */}
           <div className="flex items-center gap-2">
             <button
               onClick={handleCopy}
-              className="p-1.5 rounded-md text-text-secondary hover:bg-white/5 transition-all hover:text-accent-primary"
+              className="p-1 rounded-md text-text-secondary hover:bg-white/5 transition-all hover:text-accent-primary tablet:p-1.5"
               title="نسخ الشيفرة"
             >
               {copied ? (
                 // تم النسخ
                 <svg
+                  className="w-2.75 h-2.75 tablet:w-3.5 tablet:h-3.5"
                   xmlns="http://www.w3.org/2000/svg"
                   width="0.875rem"
                   height="0.875rem"
@@ -295,6 +296,7 @@ export default function ArabicCodeEditor() {
               ) : (
                 // نسخ
                 <svg
+                  className="w-2.75 h-2.75 tablet:w-3.5 tablet:h-3.5"
                   xmlns="http://www.w3.org/2000/svg"
                   width="0.875rem"
                   height="0.875rem"
@@ -312,11 +314,12 @@ export default function ArabicCodeEditor() {
             </button>
             <button
               onClick={handleReset}
-              className="p-1.5 rounded-md text-text-secondary hover:bg-white/5 transition-all hover:text-accent-primary"
+              className="p-1 rounded-md text-text-secondary hover:bg-white/5 transition-all hover:text-accent-primary tablet:p-1.5"
               title="إعادة تعيين"
             >
               {/* إعادة تعيين الشيفرة */}
               <svg
+                className="w-2.75 h-2.75 tablet:w-3.5 tablet:h-3.5"
                 xmlns="http://www.w3.org/2000/svg"
                 width="0.875rem"
                 height="0.875rem"
@@ -339,7 +342,7 @@ export default function ArabicCodeEditor() {
               <button
                 key={i}
                 onClick={() => handleExampleChange(i)}
-                className={`px-3 py-1 rounded-md text-xs font-medium border-0 transition-all duration-300 ${
+                className={`px-2 py-1 rounded-md text-[0.625rem] font-medium border-0 transition-all duration-300 tablet:px-3 tablet:text-xs ${
                   activeExample === i
                     ? "bg-[#247BFF]/18 text-[#247BFF] border border-[#247BFF]/40"
                     : "text-text-secondary hover:text-text hover:bg-white/5"
@@ -352,39 +355,41 @@ export default function ArabicCodeEditor() {
           </div>
 
           {/* Window dots */}
-          <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-[#296BCD]" />
-            <div className="w-3 h-3 rounded-full bg-[#CDAC29]" />
-            <div className="w-3 h-3 rounded-full bg-[#8B29CD]" />
+          <div className="flex items-center gap-1.5 tablet:gap-2">
+            <div className="w-2 h-2 rounded-full bg-[#296BCD] tablet:w-3 tablet:h-3" />
+            <div className="w-2 h-2 rounded-full bg-[#CDAC29] tablet:w-3 tablet:h-3" />
+            <div className="w-2 h-2 rounded-full bg-[#8B29CD] tablet:w-3 tablet:h-3" />
           </div>
         </div>
 
         {/* Code Area - Tall editor */}
         <div
           ref={editorRef}
-          className="p-5 w-120 min-h-80 max-h-100 overflow-y-auto bg-[#0A0A1A]/60"
+          className="p-4 w-90 min-h-75 max-h-100 overflow-y-auto bg-[#0A0A1A]/60 tablet:p-5 tablet:w-120 tablet:min-h-80"
           dir="rtl"
         >
           <SyntaxHighlightedCode code={codeExamples[activeExample].code} />
         </div>
 
         {/* Bottom bar */}
-        <div className="px-5 py-3 border-t border-white/5 flex items-center justify-between bg-white/2">
+        <div className="px-4 py-2 border-t border-white/5 flex items-center justify-between bg-white/2 tablet:px-5 tablet:py-3">
           <button
             onClick={handleRun}
             disabled={isRunning}
-            className="flex items-center gap-2 px-5 py-2 rounded-lg bg-[#247BFF] text-text text-sm font-semibold hover:bg-[#358bff] transition-all disabled:opacity-60 disabled:cursor-not-allowed shadow-[0_0_1rem_rgba(32,121,255,0.7)] "
+            className="flex items-center gap-2 px-5 py-2 rounded-md bg-[#247BFF] text-text text-xs font-semibold hover:bg-[#358bff] transition-all disabled:opacity-60 disabled:cursor-not-allowed shadow-[0_0_1rem_rgba(32,121,255,0.7)] 
+            tablet:rounded-lg tablet:text-sm"
             style={{ fontFamily: "'Tajawal', sans-serif" }}
           >
             {isRunning ? (
               <>
-                <div className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                <div className="w-2.75 h-2.75 border-2 border-white/30 border-t-white rounded-full animate-spin tablet:w-3.5 tablet:h-3.5" />
                 جاري التشغيل...
               </>
             ) : (
               <>
                 تشغيل
                 <svg
+                  className="w-2.75 h-2.75 tablet:w-3.5 tablet:h-3.5"
                   xmlns="http://www.w3.org/2000/svg"
                   width="0.875rem"
                   height="0.875rem"
@@ -425,7 +430,7 @@ export default function ArabicCodeEditor() {
               </span>
             </div>
             <pre
-              className="text-sm text-[#86EFAC] font-mono whitespace-pre-wrap leading-6"
+              className="text-xs text-[#86EFAC] font-mono whitespace-pre-wrap leading-6 tablet:text-sm"
               dir="rtl"
               style={{ fontFamily: "'Noto Kufi Arabic', monospace" }}
             >
