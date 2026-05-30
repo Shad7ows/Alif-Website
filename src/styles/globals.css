@@ -8,8 +8,6 @@
   font-weight: 100;
   font-style: normal;
   font-display: swap;
-  ascent-override: 105%;
-  descent-override: 10%;
 }
 
 @font-face {
@@ -19,8 +17,6 @@
   font-weight: 200;
   font-style: normal;
   font-display: swap;
-  ascent-override: 105%;
-  descent-override: 10%;
 }
 
 @font-face {
@@ -30,8 +26,6 @@
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-  ascent-override: 105%;
-  descent-override: 10%;
 }
 
 @font-face {
@@ -41,8 +35,6 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  ascent-override: 105%;
-  descent-override: 10%;
 }
 
 @font-face {
@@ -52,8 +44,6 @@
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  ascent-override: 105%;
-  descent-override: 10%;
 }
 
 @font-face {
@@ -63,8 +53,6 @@
   font-weight: 600;
   font-style: normal;
   font-display: swap;
-  ascent-override: 105%;
-  descent-override: 10%;
 }
 
 @font-face {
@@ -74,8 +62,6 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  ascent-override: 105%;
-  descent-override: 10%;
 }
 
 @font-face {
@@ -85,8 +71,6 @@
   font-weight: 800;
   font-style: normal;
   font-display: swap;
-  ascent-override: 105%;
-  descent-override: 10%;
 }
 
 @font-face {
@@ -96,8 +80,6 @@
   font-weight: 900;
   font-style: normal;
   font-display: swap;
-  ascent-override: 105%;
-  descent-override: 10%;
 }
 
 /* ── Local Fonts: Tajawal ── */
@@ -107,8 +89,7 @@
   font-weight: 200;
   font-style: normal;
   font-display: swap;
-  ascent-override: 105%;
-  descent-override: 10%;
+  ascent-override: 105%; /* Pushes the text down by enlarging the top bounding box */
 }
 
 @font-face {
@@ -118,7 +99,6 @@
   font-style: normal;
   font-display: swap;
   ascent-override: 105%;
-  descent-override: 10%;
 }
 
 @font-face {
@@ -128,7 +108,6 @@
   font-style: normal;
   font-display: swap;
   ascent-override: 105%;
-  descent-override: 10%;
 }
 
 @font-face {
@@ -138,7 +117,6 @@
   font-style: normal;
   font-display: swap;
   ascent-override: 105%;
-  descent-override: 10%;
 }
 
 @font-face {
@@ -148,7 +126,6 @@
   font-style: normal;
   font-display: swap;
   ascent-override: 105%;
-  descent-override: 10%;
 }
 
 @font-face {
@@ -158,7 +135,6 @@
   font-style: normal;
   font-display: swap;
   ascent-override: 105%;
-  descent-override: 10%;
 }
 
 @font-face {
@@ -168,7 +144,6 @@
   font-style: normal;
   font-display: swap;
   ascent-override: 105%;
-  descent-override: 10%;
 }
 
 @theme inline {
