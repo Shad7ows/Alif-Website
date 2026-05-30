@@ -3,140 +3,172 @@
 /* ── Local Fonts: Noto Kufi Arabic ── */
 @font-face {
   font-family: "Noto Kufi Arabic";
-  src: url("@/assets/fonts/NotoKufiArabic/NotoKufiArabic-Thin.ttf")
+  src: "@/assets/fonts/NotoKufiArabic/NotoKufiArabic-Thin.ttf"
     format("truetype");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
+  ascent-override: 105%;
+  descent-override: 10%;
 }
 
 @font-face {
   font-family: "Noto Kufi Arabic";
-  src: url("@/assets/fonts/NotoKufiArabic/NotoKufiArabic-ExtraLight.ttf")
+  src: "@/assets/fonts/NotoKufiArabic/NotoKufiArabic-ExtraLight.ttf"
     format("truetype");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
+  ascent-override: 105%;
+  descent-override: 10%;
 }
 
 @font-face {
   font-family: "Noto Kufi Arabic";
-  src: url("@/assets/fonts/NotoKufiArabic/NotoKufiArabic-Light.ttf")
+  src: "@/assets/fonts/NotoKufiArabic/NotoKufiArabic-Light.ttf"
     format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
+  ascent-override: 105%;
+  descent-override: 10%;
 }
 
 @font-face {
   font-family: "Noto Kufi Arabic";
-  src: url("@/assets/fonts/NotoKufiArabic/NotoKufiArabic-Regular.ttf")
+  src: "@/assets/fonts/NotoKufiArabic/NotoKufiArabic-Regular.ttf"
     format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+  ascent-override: 105%;
+  descent-override: 10%;
 }
 
 @font-face {
   font-family: "Noto Kufi Arabic";
-  src: url("@/assets/fonts/NotoKufiArabic/NotoKufiArabic-Medium.ttf")
+  src: "@/assets/fonts/NotoKufiArabic/NotoKufiArabic-Medium.ttf"
     format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
+  ascent-override: 105%;
+  descent-override: 10%;
 }
 
 @font-face {
   font-family: "Noto Kufi Arabic";
-  src: url("@/assets/fonts/NotoKufiArabic/NotoKufiArabic-SemiBold.ttf")
+  src: "@/assets/fonts/NotoKufiArabic/NotoKufiArabic-SemiBold.ttf"
     format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
+  ascent-override: 105%;
+  descent-override: 10%;
 }
 
 @font-face {
   font-family: "Noto Kufi Arabic";
-  src: url("@/assets/fonts/NotoKufiArabic/NotoKufiArabic-Bold.ttf")
+  src: "@/assets/fonts/NotoKufiArabic/NotoKufiArabic-Bold.ttf"
     format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+  ascent-override: 105%;
+  descent-override: 10%;
 }
 
 @font-face {
   font-family: "Noto Kufi Arabic";
-  src: url("@/assets/fonts/NotoKufiArabic/NotoKufiArabic-ExtraBold.ttf")
+  src: "@/assets/fonts/NotoKufiArabic/NotoKufiArabic-ExtraBold.ttf"
     format("truetype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
+  ascent-override: 105%;
+  descent-override: 10%;
 }
 
 @font-face {
   font-family: "Noto Kufi Arabic";
-  src: url("@/assets/fonts/NotoKufiArabic/NotoKufiArabic-Black.ttf")
+  src: "@/assets/fonts/NotoKufiArabic/NotoKufiArabic-Black.ttf"
     format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
+  ascent-override: 105%;
+  descent-override: 10%;
 }
 
 /* ── Local Fonts: Tajawal ── */
 @font-face {
   font-family: "Tajawal";
-  src: url("@/assets/fonts/Tajawal/Tajawal-ExtraLight.ttf") format("truetype");
+  src: "@/assets/fonts/Tajawal/Tajawal-ExtraLight.ttf" format("truetype");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
+  ascent-override: 105%;
+  descent-override: 10%;
 }
 
 @font-face {
   font-family: "Tajawal";
-  src: url("@/assets/fonts/Tajawal/Tajawal-Light.ttf") format("truetype");
+  src: "@/assets/fonts/Tajawal/Tajawal-Light.ttf" format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
+  ascent-override: 105%;
+  descent-override: 10%;
 }
 
 @font-face {
   font-family: "Tajawal";
-  src: url("@/assets/fonts/Tajawal/Tajawal-Regular.ttf") format("truetype");
+  src: "@/assets/fonts/Tajawal/Tajawal-Regular.ttf" format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+  ascent-override: 105%;
+  descent-override: 10%;
 }
 
 @font-face {
   font-family: "Tajawal";
-  src: url("@/assets/fonts/Tajawal/Tajawal-Medium.ttf") format("truetype");
+  src: "@/assets/fonts/Tajawal/Tajawal-Medium.ttf" format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
+  ascent-override: 105%;
+  descent-override: 10%;
 }
 
 @font-face {
   font-family: "Tajawal";
-  src: url("@/assets/fonts/Tajawal/Tajawal-Bold.ttf") format("truetype");
+  src: "@/assets/fonts/Tajawal/Tajawal-Bold.ttf" format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+  ascent-override: 105%;
+  descent-override: 10%;
 }
 
 @font-face {
   font-family: "Tajawal";
-  src: url("@/assets/fonts/Tajawal/Tajawal-ExtraBold.ttf") format("truetype");
+  src: "@/assets/fonts/Tajawal/Tajawal-ExtraBold.ttf" format("truetype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
+  ascent-override: 105%;
+  descent-override: 10%;
 }
 
 @font-face {
   font-family: "Tajawal";
-  src: url("@/assets/fonts/Tajawal/Tajawal-Black.ttf") format("truetype");
+  src: "@/assets/fonts/Tajawal/Tajawal-Black.ttf" format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
+  ascent-override: 105%;
+  descent-override: 10%;
 }
 
 @theme inline {
