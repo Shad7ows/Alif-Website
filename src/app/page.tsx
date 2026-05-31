@@ -2,6 +2,7 @@ import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
 import ArabicCodeEditor from "@/components/ArabicCodeEditor";
 import BackToTop from "@/components/BackToTop";
+import { MobileBottomMenu } from "@/components/MobileBottomMenu";
 
 export default function Home() {
   return (
@@ -157,6 +158,9 @@ export default function Home() {
         </div>
         {/* Back to Top Button */}
         <BackToTop />
+
+        {/* Mobile Bottom Sheet Navigation Menu */}
+        <MobileBottomMenu />
       </div>
     </>
   );
