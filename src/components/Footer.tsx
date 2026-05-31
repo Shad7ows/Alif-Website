@@ -21,7 +21,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-site-bg py-2 mb-9">
+    <footer className="w-full bg-site-bg py-2 mb-9 tablet:mb-0">
       <div className="flex mx-auto w-full flex-col items-center justify-center">
         {/* Top Section */}
         <div className="grid w-full max-w-360 grid-cols-1 gap-12 md:grid-cols-5 lg:grid-cols-6 px-4 tablet:px-8">
