@@ -26,8 +26,8 @@ export function NavLink({ href, children }: NavLinkProps) {
         px-4 py-2 rounded-md font-medium transition-all cursor-pointer text-[1rem]
         ${
           pathname === href
-            ? "text-[#247BFF]"
-            : "text-[#BBBBBB] hover:text-[#247BFF]"
+            ? "text-primary"
+            : "text-text-secondary hover:text-primary"
         }
       `.trim()}
     >

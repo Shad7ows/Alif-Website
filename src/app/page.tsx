@@ -60,13 +60,13 @@ export default function Home() {
                   className="relative text-5xl font-bold font-tajawal text-start leading-tight justify-center 
               tablet:text-7xl"
                 >
-                  <span className="py-2 bg-linear-to-r/srgb from-[#00F2FF] to-[#812EFF] bg-clip-text text-transparent">
+                  <span className="py-2 bg-linear-to-r/srgb from-accent-primary to-secondary bg-clip-text text-transparent">
                     البرمجة
                     <br />
                     أصبحت أسهل
                   </span>
                   <span
-                    className="absolute w-33.75 h-11.25 rounded-full -left-2 bottom-2 bg-[#00F2FF] blur-[5.5rem] 
+                    className="absolute w-33.75 h-11.25 rounded-full -left-2 bottom-2 bg-accent-primary blur-[5.5rem] 
                 tablet:w-45 tablet:h-15 tablet:left-0 tablet:bottom-3 tablet:blur-[7.5rem]"
                   ></span>
                 </h1>
@@ -100,7 +100,7 @@ export default function Home() {
                       5.3
                     </span>
                     <span
-                      className="text-[0.65rem] text-[#EEEEEE]/70 font-tajawal 
+                      className="text-[0.65rem] texttext/70 font-tajawal 
                     tablet:text-sm"
                     >
                       الإصدار
@@ -127,7 +127,7 @@ export default function Home() {
                       C++
                     </span>
                     <span
-                      className="text-[0.65rem] text-[#EEEEEE]/70 font-tajawal 
+                      className="text-[0.65rem] texttext/70 font-tajawal 
                   tablet:text-sm"
                     >
                       مبنية بـ
@@ -153,7 +153,7 @@ export default function Home() {
                       Python
                     </span>
                     <span
-                      className="text-[0.65rem] text-[#EEEEEE]/70 font-tajawal 
+                      className="text-[0.65rem] texttext/70 font-tajawal 
                   tablet:text-sm"
                     >
                       قواعد

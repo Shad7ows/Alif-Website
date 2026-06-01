@@ -146,7 +146,7 @@ function tokenizeLine(line: string): Array<{ text: string; type: TokenType }> {
     if (!matched) {
       // Arabic/Latin words (variables, identifiers)
       const wordMatch = remaining.match(
-        /^([\u0600-\u06FFa-zA-Z_][\u0600-\u06FFa-zA-Z_0-9]*)/,
+        /^([\u0600-\u06FFa-zA-Z_][\u0600-\u06FFa-zA-Z_0-9]*)/
       );
       if (wordMatch) {
         tokens.push({ text: wordMatch[1], type: "arabic" });
@@ -344,7 +344,7 @@ export default function ArabicCodeEditor() {
                 onClick={() => handleExampleChange(i)}
                 className={`px-2 py-1 rounded-md text-[0.625rem] font-medium border-0 transition-all duration-300 tablet:px-3 tablet:text-xs ${
                   activeExample === i
-                    ? "bg-[#247BFF]/18 text-[#247BFF] border border-[#247BFF]/40"
+                    ? "bg-primary/18 text-primary border border-primary/40"
                     : "text-text-secondary hover:text-text hover:bg-white/5"
                 }`}
                 style={{ fontFamily: "'Tajawal', sans-serif" }}
@@ -376,7 +376,7 @@ export default function ArabicCodeEditor() {
           <button
             onClick={handleRun}
             disabled={isRunning}
-            className="flex items-center gap-2 px-5 py-2 rounded-md bg-[#247BFF] text-text text-xs font-semibold hover:bg-[#358bff] transition-all disabled:opacity-60 disabled:cursor-not-allowed shadow-[0_0_1rem_rgba(32,121,255,0.7)] 
+            className="flex items-center gap-2 px-5 py-2 rounded-md bg-primary text-text text-xs font-semibold hover:bg-[#358bff] transition-all disabled:opacity-60 disabled:cursor-not-allowed shadow-[0_0_1rem_rgba(32,121,255,0.7)] 
             tablet:rounded-lg tablet:text-sm"
             style={{ fontFamily: "'Tajawal', sans-serif" }}
           >
@@ -408,7 +408,7 @@ export default function ArabicCodeEditor() {
             )}
           </button>
           <span className="text-xs text-white/30 font-[Tajawal]">
-            ألف نـ5.3 - "{codeExamples[activeExample].title}.ألف"
+            ألف نـ5.3 - &quot;{codeExamples[activeExample].title}.ألف&quot;
           </span>
         </div>
 
@@ -421,9 +421,9 @@ export default function ArabicCodeEditor() {
             }}
           >
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-2 h-2 rounded-full bg-[#247BFF] animate-pulse" />
+              <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span
-                className="text-xs text-[#247BFF] font-medium"
+                className="text-xs text-primary font-medium"
                 style={{ fontFamily: "'Tajawal', sans-serif" }}
               >
                 المخرجات

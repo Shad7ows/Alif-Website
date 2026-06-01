@@ -70,9 +70,9 @@ export function Footer() {
               اللغة
             </h3>
             <ul className="flex flex-col gap-2 mr-3 tablet:gap-3">
-              <FooterLink href="/docs" children="الوثائق" />
-              <FooterLink href="/libraries" children="المكتبات القياسية" />
-              <FooterLink href="/roadmap" children="خارطة الطريق" />
+              <FooterLink href="/docs">الوثائق</FooterLink>
+              <FooterLink href="/libraries">المكتبات القياسية</FooterLink>
+              <FooterLink href="/roadmap">خارطة الطريق</FooterLink>
             </ul>
           </div>
 
@@ -82,11 +82,11 @@ export function Footer() {
               المجتمع
             </h3>
             <ul className="flex flex-col gap-2 mr-3 tablet:gap-3">
-              <FooterLink href="/forum" children="المنتدى" />
-              <FooterLink href={SOCIAL_LINKS.telegram} children="Telegram" />
-              <FooterLink href={SOCIAL_LINKS.github} children="Github" />
-              <FooterLink href="/contribute" children="المساهمة" />
-              <FooterLink href="/blog" children="المدونة" />
+              <FooterLink href="/forum">المنتدى</FooterLink>
+              <FooterLink href={SOCIAL_LINKS.telegram}>Telegram</FooterLink>
+              <FooterLink href={SOCIAL_LINKS.github}>Github</FooterLink>
+              <FooterLink href="/contribute">المساهمة</FooterLink>
+              <FooterLink href="/blog">المدونة</FooterLink>
             </ul>
           </div>
 
@@ -96,11 +96,11 @@ export function Footer() {
               المصادر
             </h3>
             <ul className="flex flex-col gap-2 mr-3 tablet:gap-3">
-              <FooterLink href="/tutorials" children="البرامج التعليمية" />
-              <FooterLink href="/youtube" children="قناة اليوتيوب" />
-              <FooterLink href="/examples" children="أمثلة" />
-              <FooterLink href="/open-source" children="مشاريع مفتوحة" />
-              <FooterLink href="/faq" children="الأسئلة الشائعة" />
+              <FooterLink href="/tutorials">البرامج التعليمية</FooterLink>
+              <FooterLink href="/youtube">قناة اليوتيوب</FooterLink>
+              <FooterLink href="/examples">أمثلة</FooterLink>
+              <FooterLink href="/open-source">مشاريع مفتوحة</FooterLink>
+              <FooterLink href="/faq">الأسئلة الشائعة</FooterLink>
             </ul>
           </div>
         </div>
