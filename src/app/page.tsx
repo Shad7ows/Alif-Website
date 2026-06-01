@@ -15,7 +15,7 @@ export default function Home() {
           اسحب للأسفل
         </span>
         <div className="w-5 h-8 rounded-full border border-white/20 flex items-start justify-center pt-1.5">
-          <div className="w-1 h-2 rounded-full bg-[#247BFF] animate-bounce" />
+          <div className="w-1 h-2 rounded-full bg-primary animate-bounce" />
         </div>
       </div>
       <div
@@ -36,19 +36,19 @@ export default function Home() {
               {/* Release Badge */}
               <div className="inline-flex items-center justify-center gap-2 px-3.5 py-2 tablet:px-5">
                 <span
-                  className="absolute w-4.5 h-4.5 bg-[#247BFF] right-4 blur-sm rounded-full z-0  
+                  className="absolute w-4.5 h-4.5 bg-primary right-4 blur-sm rounded-full z-0  
               tablet:w-6 tablet:h-6 tablet:right-7 tablet:blur-md"
                 ></span>
                 <span
-                  className="absolute w-33.75 h-7.5 rounded-full border border-[#247BFF]/40 bg-[#247BFF]/10 backdrop-blur-md z-10 
+                  className="absolute w-33.75 h-7.5 rounded-full border border-primary/40 bg-primary/10 backdrop-blur-md z-10 
               tablet:w-45 tablet:h-10"
                 ></span>
                 <div
-                  className="w-1.5 h-1.5 rounded-full bg-[#247BFF] animate-pulse z-20
+                  className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse z-20
               tablet:w-2 tablet:h-2"
                 />
                 <span
-                  className="text-[#247BFF] text-[0.65rem] font-medium font-tajawal z-20
+                  className="text-primary text-[0.65rem] font-medium font-tajawal z-20
               tablet:text-sm"
                 >
                   الإصدار 5.3 - متاح الآن
@@ -83,61 +83,82 @@ export default function Home() {
             tablet:mt-12 tablet:gap-6 tablet:w-auto"
               >
                 {/* Version Card */}
-                <div
-                  className="flex flex-col items-center justify-center w-27 h-14.25 rounded-2xl border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md 
-                tablet:rounded-[1.3rem] tablet:w-42 tablet:h-19"
-                >
+                <div className="relative">
                   <span
-                    className="text-lg font-bold text-[#247BFF] font-tajawal 
-                  tablet:text-2xl"
+                    className="absolute w-20 h-6 bottom-3 left-1/2 -translate-x-1/2 blur-md
+                   rounded-full bg-primary/45 tablet:blur-lg tablet:w-27 tablet:h-9"
+                  />
+                  <div
+                    className="flex flex-col items-center justify-center w-27 h-14.25 rounded-2xl
+                    border border-primary/70 bg-primary/10 backdrop-blur-lg
+                    tablet:rounded-[1.3rem] tablet:w-42 tablet:h-19"
                   >
-                    5.3
-                  </span>
-                  <span
-                    className="text-[0.65rem] text-[#EEEEEE]/70 font-tajawal 
-                  tablet:text-sm"
-                  >
-                    الإصدار
-                  </span>
+                    <span
+                      className="text-lg font-bold text-primary font-tajawal 
+                    tablet:text-2xl"
+                    >
+                      5.3
+                    </span>
+                    <span
+                      className="text-[0.65rem] text-[#EEEEEE]/70 font-tajawal 
+                    tablet:text-sm"
+                    >
+                      الإصدار
+                    </span>
+                  </div>
                 </div>
 
                 {/* Built With Card */}
-                <div
-                  className="flex flex-col items-center justify-center w-27 h-14.25 rounded-2xl border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md 
-                tablet:rounded-[1.3rem] tablet:w-42 tablet:h-19"
-                >
+                <div className="relative">
                   <span
-                    dir="ltr"
-                    className="text-lg font-bold text-[#247BFF] font-tajawal 
+                    className="absolute w-20 h-6 bottom-3 left-1/2 -translate-x-1/2 blur-md
+                   rounded-full bg-primary/45 tablet:blur-lg tablet:w-27 tablet:h-9"
+                  />
+                  <div
+                    className="flex flex-col items-center justify-center w-27 h-14.25 rounded-2xl
+                    border border-primary/70 bg-primary/10 backdrop-blur-lg 
+                    tablet:rounded-[1.3rem] tablet:w-42 tablet:h-19"
+                  >
+                    <span
+                      dir="ltr"
+                      className="text-lg font-bold text-primary font-tajawal 
                   tablet:text-2xl"
-                  >
-                    C++
-                  </span>
-                  <span
-                    className="text-[0.65rem] text-[#EEEEEE]/70 font-tajawal 
+                    >
+                      C++
+                    </span>
+                    <span
+                      className="text-[0.65rem] text-[#EEEEEE]/70 font-tajawal 
                   tablet:text-sm"
-                  >
-                    مبنية بـ
-                  </span>
+                    >
+                      مبنية بـ
+                    </span>
+                  </div>
                 </div>
-                {/* Built With Card */}
-                <div
-                  className="flex flex-col items-center justify-center w-27 h-14.25 rounded-2xl border border-[#247BFF]/60 bg-[#247BFF]/10 backdrop-blur-md 
-                tablet:rounded-[1.3rem] tablet:w-42 tablet:h-19"
-                >
+                {/* Grammer Of Card */}
+                <div className="relative">
                   <span
-                    dir="ltr"
-                    className="text-lg font-bold text-[#247BFF] font-tajawal 
+                    className="absolute w-20 h-6 bottom-3 left-1/2 -translate-x-1/2 blur-md
+                   rounded-full bg-primary/45 tablet:blur-lg tablet:w-27 tablet:h-9"
+                  />
+                  <div
+                    className="flex flex-col items-center justify-center w-27 h-14.25 rounded-2xl
+                    border border-primary/70 bg-primary/10 backdrop-blur-lg 
+                    tablet:rounded-[1.3rem] tablet:w-42 tablet:h-19 "
+                  >
+                    <span
+                      dir="ltr"
+                      className="text-lg font-bold text-primary font-tajawal 
                   tablet:text-2xl"
-                  >
-                    Python
-                  </span>
-                  <span
-                    className="text-[0.65rem] text-[#EEEEEE]/70 font-tajawal 
+                    >
+                      Python
+                    </span>
+                    <span
+                      className="text-[0.65rem] text-[#EEEEEE]/70 font-tajawal 
                   tablet:text-sm"
-                  >
-                    قواعد
-                  </span>
+                    >
+                      قواعد
+                    </span>
+                  </div>
                 </div>
               </div>
               {/* Buttons */}
