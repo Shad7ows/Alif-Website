@@ -75,10 +75,10 @@ export default function FeatureNotification({
     >
       <div className="pointer-events-auto relative mx-auto mt-4 max-w-lg px-4">
         {/* Glow effect behind notification */}
-        <div className="absolute -inset-1 bg-[#247BFF]/30 rounded-xl blur-2xl pointer-events-none" />
+        <div className="absolute -inset-1 bg-primary/30 rounded-xl blur-2xl pointer-events-none" />
 
         <div
-          className="relative flex items-center gap-6 rounded-xl border border-[#247BFF]/40 px-5 py-7"
+          className="relative flex items-center gap-6 rounded-xl border border-primary/40 px-5 py-7"
           style={{
             background: "rgba(36,123,255,0.12)",
             backdropFilter: "blur(16px)",
@@ -86,13 +86,13 @@ export default function FeatureNotification({
         >
           {/* Status indicator */}
           <div className="shrink-0">
-            <div className="w-3 h-3 rounded-full bg-[#247BFF] animate-pulse" />
+            <div className="w-3 h-3 rounded-full bg-primary animate-pulse" />
           </div>
 
           {/* Text content */}
           <div className="flex-1" dir="rtl">
             <p
-              className="text-sm font-semibold text-[#247BFF] mb-1"
+              className="text-sm font-semibold text-primary mb-1"
               style={{ fontFamily: "'Tajawal', sans-serif" }}
             >
               {title}
