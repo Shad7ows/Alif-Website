@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/ScrollProgress";
+import MobileNavMenu from "@/components/MobileNavMenu";
 
 export const metadata: Metadata = {
   title: "ألف - لغة برمجة عربية",
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Header />
         <main className="flex flex-1 flex-col">{children}</main>
         <Footer />
+        <MobileNavMenu />
       </body>
     </html>
   );
