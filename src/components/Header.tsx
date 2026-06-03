@@ -73,7 +73,7 @@ export function Header() {
             title="قيد التطوير"
             message="نعمل حالياً على نظام تسجيل حساب ضمن موقع ألف ونحتاج بعض الوقت للإنتهاء منه
             لا تذهب بعيداً، قد تتوفر الميزة في أي وقت"
-            duration={5000}
+            duration={8000}
             onDismiss={() => setShowNotification(false)}
           />
         )}
