@@ -291,7 +291,7 @@ function NavMenuItem({ item, onClick }: NavMenuItemProps) {
         }
         onClick();
       }}
-      className="mx-2 flex items-center gap-3 rounded-xl px-4 py-3 text-text-secondary transition-colors hover:bg-white/5 hover:text-text active:bg-white/10"
+      className="mx-2 flex items-center gap-3 rounded-xl px-4 py-3 text-text-secondary transition-colors hover:bg-primary/5 hover:text-text active:bg-white/10"
     >
       <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5">
         <IconComponent
@@ -456,12 +456,12 @@ export default function MobileNavMenu({
           "transition-all duration-600 ease-[cubic-bezier(0.32,0.72,0,1)]",
           "hover:scale-105",
           "active:scale-95",
-          isOpen ? "translate-y-[-81.5svh]" : "translate-y-0",
+          isOpen ? "translate-y-[-82svh]" : "translate-y-0",
         ].join(" ")}
       >
         {/* SVG Menu Icon (three lines → X animation) */}
         <svg
-          className="svg w-7 h-7"
+          className="svg w-7 h-7 text-text-secondary"
           viewBox="0 0 32 32"
           style={{
             transition: "transform 900ms cubic-bezier(0.4, 0, 0.2, 1)",
@@ -538,7 +538,7 @@ export default function MobileNavMenu({
         aria-hidden={!isOpen}
         className={[
           "fixed bottom-0 left-0 right-0 z-60 md:hidden",
-          "h-[90vh]",
+          "h-[90svh]",
           "bg-site-bg/10 backdrop-blur-xl",
           "rounded-t-3xl",
           "border-t border-primary/40",
@@ -557,7 +557,7 @@ export default function MobileNavMenu({
           onTouchEnd={handleTouchEnd}
         >
           <div
-            className="w-12 h-1.5 bg-accent-primary rounded-full"
+            className="w-12 h-1.5 bg-accent-primary/90 rounded-full"
             role="grabber"
             aria-label="اسحب للأسفل لإغلاق القائمة"
           />
@@ -565,14 +565,13 @@ export default function MobileNavMenu({
 
         {/* ── Header ───────────────────────────────────────────────────── */}
         <div className="flex items-center justify-between px-6 pb-2 shrink-0">
-          <h2 className="text-xl font-bold text-primary tracking-wide">
-            القائمة
-          </h2>
+          <h2 className="text-xl font-bold text-text tracking-wide">القائمة</h2>
           <button
             type="button"
             aria-label="إغلاق القائمة"
             onClick={closeMenu}
-            className="flex h-8 w-8 items-center justify-center rounded-xl text-text-secondary hover:text-text hover:bg-white/10 transition-colors"
+            className="flex h-8 w-8 items-center justify-center rounded-xl text-text-secondary
+             hover:text-text hover:bg-accent-primary/10 transition-colors"
           >
             <XIcon size={18} strokeWidth={2.5} aria-hidden="true" />
           </button>
