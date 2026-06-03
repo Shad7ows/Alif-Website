@@ -6,18 +6,6 @@ import BackToTop from "@/components/BackToTop";
 export default function Home() {
   return (
     <>
-      {/* Scroll indicator */}
-      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce z-50">
-        <span
-          className="text-xs text-white/30"
-          style={{ fontFamily: "'Tajawal', sans-serif" }}
-        >
-          اسحب للأسفل
-        </span>
-        <div className="w-5 h-8 rounded-full border border-white/20 flex items-start justify-center pt-1.5">
-          <div className="w-1 h-2 rounded-full bg-primary animate-bounce" />
-        </div>
-      </div>
       <div
         className="relative flex h-auto flex-col items-center justify-center bg-site-bg overflow-hidden 
         tablet:min-h-180 tablet:max-h-320"
@@ -176,9 +164,21 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* Back to Top Button */}
-        <BackToTop />
       </div>
+      {/* Scroll indicator */}
+      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce z-50">
+        <span
+          className="text-xs text-white/30"
+          style={{ fontFamily: "'Tajawal', sans-serif" }}
+        >
+          اسحب للأسفل
+        </span>
+        <div className="w-5 h-8 rounded-full border border-white/20 flex items-start justify-center pt-1.5">
+          <div className="w-1 h-2 rounded-full bg-primary animate-bounce" />
+        </div>
+      </div>
+      {/* Back to Top Button */}
+      <BackToTop />
     </>
   );
 }
