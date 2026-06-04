@@ -32,14 +32,16 @@ export function SecondaryButton({
       {/* Oval glow effect behind the button */}
       <div
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-18 h-5.25 bg-primary blur-xs rounded-full pointer-events-none transition-all duration-300 group-hover:w-22
-        tablet:w-24 tablet:h-7 tablet:blur-sm tablet:group-hover:w-30"
+                
+        laptop:w-24 laptop:h-7 laptop:blur-sm laptop:group-hover:w-30"
       />
       <button
         type={type}
         onClick={onClick}
         className={`
           relative px-2 rounded-xl h-9.5 w-26.25 font-medium transition-all cursor-pointer text-[0.75rem] z-10 text-text bg-primary/3 backdrop-blur-sm
-          tablet:px-3 tablet:rounded-2xl tablet:h-12.5 tablet:w-35 tablet:text-[1rem] tablet:backdrop-blur-md
+          
+          laptop:px-3 laptop:rounded-2xl laptop:h-12.5 laptop:w-35 laptop:text-base laptop:backdrop-blur-md
         `.trim()}
       >
         {children}

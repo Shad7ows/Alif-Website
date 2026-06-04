@@ -154,24 +154,24 @@
   --color-site-bg: #0c001c;
 
   /* Primary Colors */
-  --color-primary: #247BFF;
-  --color-primary-deep: #335B98;
+  --color-primary: #247bff;
+  --color-primary-deep: #335b98;
 
   /* Secondary Colors */
-  --color-secondary: #812EFF;
-  --color-secondary-deep: #5B3398;
+  --color-secondary: #812eff;
+  --color-secondary-deep: #5b3398;
 
   /* Accent Colors */
-  --color-accent-primary: #00F2FF;
-  --color-accent-secondary: #FF00F2;
+  --color-accent-primary: #00f2ff;
+  --color-accent-secondary: #ff00f2;
 
   /* Text Colors */
-  --color-text: #EEEEEE;
-  --color-text-secondary: #BBBBBB;
+  --color-text: #eeeeee;
+  --color-text-secondary: #bbbbbb;
 
   /* Custom Breakpoint */
   --breakpoint-tablet: 48rem;
-  --breakpoint-labtop: 80rem;
+  --breakpoint-laptop: 80rem;
   --breakpoint-desktop: 120rem;
 }
 

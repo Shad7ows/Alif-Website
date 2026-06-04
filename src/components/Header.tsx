@@ -42,14 +42,18 @@ export function Header() {
           : "border-transparent bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-22.5 w-full max-w-360 items-center justify-between px-4 tablet:px-8">
+      <div
+        className="mx-auto flex h-22.5 w-full max-w-360 items-center justify-between px-4 
+      tablet:px-6 
+      laptop:px-8"
+      >
         {/* Logo - Right side (start in RTL) */}
         <Link href="/">
           <Logo />
         </Link>
 
         {/* Navigation Links - Center */}
-        <nav className="hidden tablet:flex items-center gap-7">
+        <nav className="hidden tablet:flex items-center gap-4.5 laptop:gap-7">
           <NavLink href="/">الرئيسية</NavLink>
           <NavLink href="/education">التعليم</NavLink>
           <NavLink href="/docs">الوثائق</NavLink>
@@ -58,7 +62,7 @@ export function Header() {
         </nav>
 
         {/* Auth Buttons - Left side (end in RTL) */}
-        <div className="flex items-center gap-9">
+        <div className="flex items-center gap-4.5 laptop:gap-9">
           <SecondaryButton onClick={() => setShowNotification(true)}>
             تسجيل الدخول
           </SecondaryButton>

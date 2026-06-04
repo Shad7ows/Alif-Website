@@ -146,7 +146,7 @@ function tokenizeLine(line: string): Array<{ text: string; type: TokenType }> {
     if (!matched) {
       // Arabic/Latin words (variables, identifiers)
       const wordMatch = remaining.match(
-        /^([\u0600-\u06FFa-zA-Z_][\u0600-\u06FFa-zA-Z_0-9]*)/
+        /^([\u0600-\u06FFa-zA-Z_][\u0600-\u06FFa-zA-Z_0-9]*)/,
       );
       if (wordMatch) {
         tokens.push({ text: wordMatch[1], type: "arabic" });
@@ -365,7 +365,7 @@ export default function ArabicCodeEditor() {
         {/* Code Area - Tall editor */}
         <div
           ref={editorRef}
-          className="p-4 w-90 min-h-75 max-h-100 overflow-y-auto bg-[#0A0A1A]/60 tablet:p-5 tablet:w-120 tablet:min-h-80"
+          className="p-4 w-full min-h-75 max-h-100 overflow-y-auto bg-[#0A0A1A]/60 tablet:p-5 tablet:w-120 tablet:min-h-80"
           dir="rtl"
         >
           <SyntaxHighlightedCode code={codeExamples[activeExample].code} />
