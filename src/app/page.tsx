@@ -67,7 +67,7 @@ export default function Home() {
               </p>
               {/* Paddle Components (Info Cards) */}
               <div
-                className="relative flex items-center justify-between mt-9 w-full
+                className="relative flex items-center justify-start gap-4.5 mt-9 w-full
             tablet:mt-12 tablet:gap-6 tablet:w-auto"
               >
                 {/* Version Card */}
