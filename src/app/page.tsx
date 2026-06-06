@@ -12,7 +12,7 @@ export default function Home() {
       >
         {/* Main Content Grid */}
         <div
-          className="relative z-10 w-full max-w-360 mx-1 px-4
+          className="relative z-10 w-full max-w-400 mx-1 px-4
           laptop:mx-auto laptop:px-8"
         >
           <div

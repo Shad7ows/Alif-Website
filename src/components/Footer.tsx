@@ -24,7 +24,7 @@ export function Footer() {
     <footer className="w-full bg-site-bg py-2 mb-9 laptop:mb-0">
       <div className="flex mx-auto w-full flex-col items-center justify-center">
         {/* Top Section */}
-        <div className="grid w-full max-w-360 grid-cols-1 gap-12 md:grid-cols-5 lg:grid-cols-6 px-4 tablet:px-6 laptop:px-8">
+        <div className="grid w-full max-w-400 grid-cols-1 gap-12 md:grid-cols-5 lg:grid-cols-6 px-4 tablet:px-6 laptop:px-8">
           {/* Logo and Description - Right side in RTL */}
           <div className="flex flex-col items-start gap-6 md:col-span-2 lg:col-span-3">
             <Logo />
@@ -111,7 +111,7 @@ export function Footer() {
           tablet:px-6 tablet:text-xs
           laptop:text-sm laptop:px-8 laptop:pt-1"
         >
-          <div className="flex h-16 w-full max-w-360 flex-col items-center justify-between md:flex-row">
+          <div className="flex h-16 w-full max-w-400 flex-col items-center justify-between md:flex-row">
             <p className="text-[#9C9C9C] font-tajawal">
               صُنع بـ 💙 من مطوري ألف – جميع الحقوق محفوظة © 2023-{currentYear}
             </p>

@@ -43,7 +43,7 @@ export function Header() {
       }`}
     >
       <div
-        className="mx-auto flex h-22.5 w-full max-w-360 items-center justify-between px-4 
+        className="mx-auto flex h-22.5 w-full max-w-400 items-center justify-between px-4 
       tablet:px-6 
       laptop:px-8"
       >
