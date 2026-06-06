@@ -8,16 +8,16 @@ export default function Home() {
     <>
       <div
         className="relative flex h-auto flex-col items-center justify-center bg-site-bg overflow-hidden 
-        tablet:min-h-180 tablet:max-h-320"
+        laptop:min-h-180 laptop:max-h-320"
       >
         {/* Main Content Grid */}
         <div
           className="relative z-10 w-full max-w-360 mx-1 px-4
-          tablet:mx-auto tablet:px-8"
+          laptop:mx-auto laptop:px-8"
         >
           <div
             className="grid h-full grid-cols-1
-            tablet:grid-cols-2"
+            laptop:grid-cols-2"
           >
             {/* Right Block - Content */}
             <div className="flex flex-col h-svh items-start justify-center gap-1">
@@ -152,10 +152,21 @@ export default function Home() {
               {/* Buttons */}
               <div className="flex gap-4 mt-9 tablet:gap-6 tablet:mt-12">
                 {/* Primary Button */}
-                <PrimaryButton>تحميل اللغة</PrimaryButton>
+                <PrimaryButton
+                  className="
+                tablet:shadow-[0_0_2.25rem_rgba(32,121,255,0.9)] tablet:hover:shadow-[0_0_3rem_rgba(32,121,255,1)] tablet:px-3 tablet:rounded-2xl tablet:h-12.5 tablet:w-35 tablet:text-base"
+                >
+                  تحميل اللغة
+                </PrimaryButton>
 
                 {/* Secondary Button */}
-                <SecondaryButton>اكتشف المزيد</SecondaryButton>
+                <SecondaryButton
+                  className="
+                        tablet:px-3 tablet:rounded-2xl tablet:h-12.5 tablet:w-35 tablet:text-base tablet:backdrop-blur-md"
+                  ovalStyle="tablet:w-24 tablet:h-7 tablet:blur-sm tablet:group-hover:w-30"
+                >
+                  اكتشف المزيد
+                </SecondaryButton>
               </div>
             </div>
             {/* Left Block - Code Editor */}

@@ -7,6 +7,8 @@ interface SecondaryButtonProps {
   onClick?: () => void;
   /** Optional CSS class for additional styling */
   className?: string;
+  /** Optional CSS class for additional styling */
+  ovalStyle?: string;
   /** HTML button type */
   type?: "button" | "submit" | "reset";
 }
@@ -21,19 +23,18 @@ export function SecondaryButton({
   children,
   onClick,
   className = "",
+  ovalStyle = "",
   type = "button",
 }: SecondaryButtonProps) {
   return (
-    <div
-      className={`relative inline-flex items-center justify-center group ${
-        className ?? ""
-      }`}
-    >
+    <div className="relative inline-flex items-center justify-center group">
       {/* Oval glow effect behind the button */}
       <div
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-18 h-5.25 bg-primary blur-xs rounded-full pointer-events-none transition-all duration-300 group-hover:w-22
+        className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-18 h-5.25 bg-primary blur-xs rounded-full pointer-events-none transition-all duration-300 group-hover:w-22
                 
-        laptop:w-24 laptop:h-7 laptop:blur-sm laptop:group-hover:w-30"
+        laptop:w-24 laptop:h-7 laptop:blur-sm laptop:group-hover:w-30
+        ${ovalStyle}
+        `.trim()}
       />
       <button
         type={type}
@@ -42,6 +43,7 @@ export function SecondaryButton({
           relative px-2 rounded-xl h-9.5 w-26.25 font-medium transition-all cursor-pointer text-[0.75rem] z-10 text-text bg-primary/3 backdrop-blur-sm
           
           laptop:px-3 laptop:rounded-2xl laptop:h-12.5 laptop:w-35 laptop:text-base laptop:backdrop-blur-md
+          ${className}
         `.trim()}
       >
         {children}
