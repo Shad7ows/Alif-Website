@@ -21,14 +21,14 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-site-bg py-2 mb-9 tablet:mb-0">
+    <footer className="w-full bg-site-bg py-2 mb-9 laptop:mb-0">
       <div className="flex mx-auto w-full flex-col items-center justify-center">
         {/* Top Section */}
-        <div className="grid w-full max-w-360 grid-cols-1 gap-12 md:grid-cols-5 lg:grid-cols-6 px-4 tablet:px-8">
+        <div className="grid w-full max-w-360 grid-cols-1 gap-12 md:grid-cols-5 lg:grid-cols-6 px-4 tablet:px-6 laptop:px-8">
           {/* Logo and Description - Right side in RTL */}
           <div className="flex flex-col items-start gap-6 md:col-span-2 lg:col-span-3">
             <Logo />
-            <p className="max-w-sm text-sm text-text-secondary leading-relaxed text-right tablet:text-base">
+            <p className="max-w-sm text-sm text-text-secondary leading-relaxed text-right laptop:text-base">
               ألف هي أول لغة برمجة عربية متكاملة، مبنية بـ C++ وتعتمد قواعد
               Python. نؤمن بأن البرمجة يجب أن تكون متاحة للجميع بلغتهم الأم.
             </p>
@@ -66,10 +66,10 @@ export function Footer() {
 
           {/* Language Column */}
           <div className="flex w-35 flex-col items-start gap-4">
-            <h3 className="text-base font-bold text-text tablet:text-lg">
+            <h3 className="text-base font-bold text-text laptop:text-lg">
               اللغة
             </h3>
-            <ul className="flex flex-col gap-2 mr-3 tablet:gap-3">
+            <ul className="flex flex-col gap-2 mr-3 laptop:gap-3">
               <FooterLink href="/docs">الوثائق</FooterLink>
               <FooterLink href="/libraries">المكتبات القياسية</FooterLink>
               <FooterLink href="/roadmap">خارطة الطريق</FooterLink>
@@ -78,10 +78,10 @@ export function Footer() {
 
           {/* Community Column */}
           <div className="flex w-35 flex-col items-start gap-4">
-            <h3 className="text-base font-bold text-text tablet:text-lg">
+            <h3 className="text-base font-bold text-text laptop:text-lg">
               المجتمع
             </h3>
-            <ul className="flex flex-col gap-2 mr-3 tablet:gap-3">
+            <ul className="flex flex-col gap-2 mr-3 laptop:gap-3">
               <FooterLink href="/forum">المنتدى</FooterLink>
               <FooterLink href={SOCIAL_LINKS.telegram}>Telegram</FooterLink>
               <FooterLink href={SOCIAL_LINKS.github}>Github</FooterLink>
@@ -92,10 +92,10 @@ export function Footer() {
 
           {/* Resources Column */}
           <div className="flex w-35 flex-col items-start gap-4">
-            <h3 className="text-base font-bold text-text tablet:text-lg">
+            <h3 className="text-base font-bold text-text laptop:text-lg">
               المصادر
             </h3>
-            <ul className="flex flex-col gap-2 mr-3 tablet:gap-3">
+            <ul className="flex flex-col gap-2 mr-3 laptop:gap-3">
               <FooterLink href="/tutorials">البرامج التعليمية</FooterLink>
               <FooterLink href="/youtube">قناة اليوتيوب</FooterLink>
               <FooterLink href="/examples">أمثلة</FooterLink>
@@ -106,7 +106,11 @@ export function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="flex mt-9 px-4 w-full items-center justify-center text-sm border-t border-gray-800 pt-9 tablet:text-sm tablet:px-8 tablet:pt-1">
+        <div
+          className="flex mt-9 px-4 w-full items-center justify-center text-sm border-t border-gray-800 pt-9 
+          tablet:px-6 tablet:text-xs
+          laptop:text-sm laptop:px-8 laptop:pt-1"
+        >
           <div className="flex h-16 w-full max-w-360 flex-col items-center justify-between md:flex-row">
             <p className="text-[#9C9C9C] font-tajawal">
               صُنع بـ 💙 من مطوري ألف – جميع الحقوق محفوظة © 2023-{currentYear}
@@ -152,7 +156,7 @@ function FooterLink({
     <li>
       <a
         href={href}
-        className="text-sm text-text-secondary transition-colors hover:text-primary tablet:text-base"
+        className="text-sm text-text-secondary transition-colors hover:text-primary laptop:text-base"
       >
         {children}
       </a>
