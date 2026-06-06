@@ -253,7 +253,7 @@ export default function ArabicCodeEditor() {
   };
 
   return (
-    <div className="relative flex items-center justify-center px-4 w-svw tablet:w-auto tablet:px-auto">
+    <div className="relative flex items-center justify-center w-svw tablet:w-auto tablet:px-auto">
       {/* Glow effects behind the editor */}
       <div className="absolute w-52 h-52 bg-primary/25 rounded-full blur-2xl -top-11.25 -left-11.25 pointer-events-none tablet:w-70 tablet:h-70 tablet:blur-3xl tablet:-top-15 tablet:-left-15" />
       <div className="absolute w-48 h-48 bg-accent-primary/15 rounded-full blur-2xl -bottom-3 -right-15 pointer-events-none tablet:w-64 tablet:h-64 tablet:blur-3xl tablet:-bottom-5 tablet:-right-20" />

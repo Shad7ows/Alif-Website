@@ -389,7 +389,7 @@ export default function MobileNavMenu({
     currentTranslate.current = deltaY;
     sheetRef.current?.style.setProperty(
       "transform",
-      `translateY(${currentTranslate.current}px)`
+      `translateY(${currentTranslate.current}px)`,
     );
   }, []);
 
@@ -431,7 +431,7 @@ export default function MobileNavMenu({
         closeMenu();
       }
     },
-    [closeMenu]
+    [closeMenu],
   );
 
   // ── Render ────────────────────────────────────────────────────────────────
@@ -456,7 +456,7 @@ export default function MobileNavMenu({
           "transition-all duration-600 ease-[cubic-bezier(0.32,0.72,0,1)]",
           "hover:scale-105",
           "active:scale-95",
-          isOpen ? "translate-y-[-82svh]" : "translate-y-0",
+          isOpen ? "translate-y-[-82.5svh]" : "translate-y-0",
         ].join(" ")}
       >
         {/* SVG Menu Icon (three lines → X animation) */}
