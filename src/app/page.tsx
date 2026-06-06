@@ -88,7 +88,7 @@ export default function Home() {
                       5.3
                     </span>
                     <span
-                      className="text-[0.65rem] texttext/70 font-tajawal 
+                      className="text-[0.65rem] text-text/70 font-tajawal 
                     tablet:text-sm"
                     >
                       الإصدار
@@ -115,7 +115,7 @@ export default function Home() {
                       C++
                     </span>
                     <span
-                      className="text-[0.65rem] texttext/70 font-tajawal 
+                      className="text-[0.65rem] text-text/70 font-tajawal 
                   tablet:text-sm"
                     >
                       مبنية بـ
@@ -141,7 +141,7 @@ export default function Home() {
                       Python
                     </span>
                     <span
-                      className="text-[0.65rem] texttext/70 font-tajawal 
+                      className="text-[0.65rem] text-text/70 font-tajawal 
                   tablet:text-sm"
                     >
                       قواعد
