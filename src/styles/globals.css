@@ -171,8 +171,8 @@
 
   /* Custom Breakpoint */
   --breakpoint-tablet: 48rem;
-  --breakpoint-laptop: 80rem;
-  --breakpoint-desktop: 120rem;
+  --breakpoint-laptop: 64rem;
+  --breakpoint-desktop: 90rem;
 }
 
 body {
