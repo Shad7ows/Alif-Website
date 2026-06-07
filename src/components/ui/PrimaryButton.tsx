@@ -28,7 +28,7 @@ export function PrimaryButton({
       type={type}
       onClick={onClick}
       className={`
-        h-9.5 w-26.25 px-2 rounded-xl font-medium transition-all cursor-pointer text-[0.75rem]
+        h-9.5 w-26.25 px-2 rounded-xl font-medium transition-all duration-450 cursor-pointer text-[0.75rem]
         bg-primary text-text shadow-[0_0_1.7rem_rgba(32,121,255,0.75)] hover:shadow-[0_0_2rem_rgba(32,121,255,1)]
         
         laptop:shadow-[0_0_2.25rem_rgba(32,121,255,0.9)] laptop:hover:shadow-[0_0_3rem_rgba(32,121,255,1)] laptop:px-3 laptop:rounded-2xl laptop:h-12.5 laptop:w-35 laptop:text-base
